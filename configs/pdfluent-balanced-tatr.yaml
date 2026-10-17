@@ -17,9 +17,12 @@ models:
     sha256: 8c28418690b896a845a53633736a62c22ef8c9a515a23c06e9976e61360f1fcf
     env: PDFLUENT_TABLE_MODEL_DIR
     layout: "<dir>/tatr-v1.1-all/tatr-v1.1-all.onnx"
+  - name: onnxruntime-1.23.2
+    note: the wheel ships no ONNX Runtime; `pdfluent models install` puts the platform's build in the model dir
 required_env: [PDFLUENT_TABLE_MODEL_DIR]
+install: "pdfluent models install layout tables (released 1.1.0 CLI, pins built in; see docker/pdfluent/Dockerfile)"
 image: pdfluent
 gpu:
   route: false
-  why: the published pdfluent 1.1.0 wheel ships a CPU ONNX Runtime; no CUDA build is published
+  why: the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published
 reproducible: public

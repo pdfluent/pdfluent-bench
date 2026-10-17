@@ -25,3 +25,10 @@ WORKDIR /bench
 RUN python -m venv /opt/ex/pymupdf4llm \
  && /opt/ex/pymupdf4llm/bin/pip install --no-cache-dir pymupdf4llm==1.28.2 \
  && /opt/ex/pymupdf4llm/bin/pip freeze > /opt/ex/pymupdf4llm/FREEZE.txt
+
+# Convert one fixture page while the image is built (pymupdf_layout's bundled
+# models load here), so an image that cannot serve the column does not build.
+COPY fixtures/pdf/tables-p1.pdf /warm/warm.pdf
+COPY engine/scripts/extraction/adapters /warm/engine/scripts/extraction/adapters
+COPY bench/adapters /warm/bench/adapters
+RUN /opt/ex/pymupdf4llm/bin/python /warm/engine/scripts/extraction/adapters/extract_structured.py --tool pymupdf4llm /warm/warm.pdf > /dev/null

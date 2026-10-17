@@ -77,9 +77,15 @@ def cmd_run(args: argparse.Namespace) -> int:
     record["runner"] = args.runner
     failures = 0
 
+    def save() -> None:
+        # Written after every step, so a partial copy of a round that never
+        # finished (a preempted spot VM) still says what ran and how.
+        (out / "run.json").write_text(json.dumps(record, indent=1) + "\n")
+
     def step(kind: str, config: dict, **fields) -> dict:
         row = {"kind": kind, "config": config["name"], **fields, "started": runinfo.now()}
         record["steps"].append(row)
+        save()
         return row
 
     for config in chosen:
@@ -124,6 +130,7 @@ def cmd_run(args: argparse.Namespace) -> int:
                               file=sys.stderr)
                         failures += 1
                     row["seconds"] = round(time.monotonic() - t0, 1)
+                    save()
         if not args.no_speed and all(s == "parsebench" for s in sets):
             step("speed", config, status="n/a",
                  why="ParseBench pages are not timed apart; add another set to time this column")
@@ -148,6 +155,7 @@ def cmd_run(args: argparse.Namespace) -> int:
                 print(f"[bench] FAIL: speed {config['name']}: {exc}", file=sys.stderr)
                 failures += 1
             row["seconds"] = round(time.monotonic() - t0, 1)
+            save()
 
     runinfo.finish(record, started, time.monotonic())
     record["failures"] = failures
@@ -235,7 +243,8 @@ def cmd_cost(args: argparse.Namespace) -> int:
     machine = configs.machine(args.machine)
     kind = "gpu" if machine.get("gpu") else "cpu"
     model = cost.round_hours(configs.resolve(args.configs), configs.resolve_sets(args.sets),
-                             [s for s in args.splits.split(",") if s], args.profile, kind, args.reps)
+                             [s for s in args.splits.split(",") if s], args.profile, kind, args.reps,
+                             speed=not args.no_speed, quality=not args.no_quality)
     for line in model["lines"]:
         print(f"  {line}")
     print(f"modelled round: {model['hours']} h on {args.machine}")
@@ -317,6 +326,8 @@ def parser() -> argparse.ArgumentParser:
     co.add_argument("--reps", type=int, default=3)
     co.add_argument("--hours", type=float, default=None, help="max VM lifetime; default: model x 1.25")
     co.add_argument("--budget", type=float, default=float(os.environ.get("BUDGET_EUR", "20")))
+    co.add_argument("--no-speed", action="store_true", help="the round measures no speed")
+    co.add_argument("--no-quality", action="store_true", help="the round measures no quality")
     co.set_defaults(func=cmd_cost)
     return ap
 

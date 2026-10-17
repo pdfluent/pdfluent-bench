@@ -11,6 +11,8 @@ WORK     ?= work
 OPTIONAL ?=
 BECAUSE  ?=
 RUNS     ?=
+# Extra `bench run` flags, e.g. EXTRA=--no-speed for a quality-only shard.
+EXTRA    ?=
 FAMILIES ?= pdfluent docling pymupdf4llm
 
 .PHONY: help test bench smoke report datasets datasets-plan images cost fixtures goldens port
@@ -33,7 +35,7 @@ test:
 bench:
 	$(PY) -m bench run --machine $(MACHINE) --configs $(CONFIGS) --sets $(SETS) \
 	  --splits $(SPLITS) --profile $(PROFILE) --reps $(REPS) --runner $(RUNNER) --work $(WORK) \
-	  $(if $(OPTIONAL),--optional $(OPTIONAL)) $(if $(BECAUSE),--because "$(BECAUSE)")
+	  $(if $(OPTIONAL),--optional $(OPTIONAL)) $(if $(BECAUSE),--because "$(BECAUSE)") $(EXTRA)
 
 # The CI smoke: both halves of the fixture set; pdfluent-fast is optional
 # because it needs pdfluent >= 1.1.0 from PyPI.

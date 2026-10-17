@@ -37,7 +37,7 @@ SPEED_FACTOR = 2 * 3 + 1  # two thread settings x three repetitions, plus cold s
 
 
 def round_hours(chosen: list[dict], sets: list[str], splits: list[str], profile: str,
-                kind: str, reps: int = 3, speed: bool = True) -> dict:
+                kind: str, reps: int = 3, speed: bool = True, quality: bool = True) -> dict:
     lines = []
     seconds = 0.0
     for config in chosen:
@@ -54,12 +54,14 @@ def round_hours(chosen: list[dict], sets: list[str], splits: list[str], profile:
             pages += per_split * len(splits)
             if set_name != "parsebench":  # timed inside its quality run only
                 speed_pages += configs.pages_for(set_name, profile, "speed_pages")
-        q = pages * rate * PASSES
+        q = pages * rate * PASSES if quality else 0.0
         s = speed_pages * rate * (2 * reps + 1) if speed else 0.0
         seconds += q + s
-        lines.append(f"{config['name']}: {pages} quality page(s) x {rate} s x {PASSES} passes"
-                     f" + {speed_pages} speed page(s) x {rate} s x {2 * reps + 1} = "
-                     f"{(q + s) / 3600:.1f} h")
+        q_text = (f"{pages} quality page(s) x {rate} s x {PASSES} passes" if quality
+                  else "no quality")
+        s_text = (f"{speed_pages} speed page(s) x {rate} s x {2 * reps + 1}" if speed
+                  else "no speed")
+        lines.append(f"{config['name']}: {q_text} + {s_text} = {(q + s) / 3600:.1f} h")
     hours = seconds / 3600 + OVERHEAD_H[kind]
     lines.append(f"overhead (boot, images, fetch, teardown): {OVERHEAD_H[kind]} h")
     return {"hours": round(hours, 2), "lines": lines}

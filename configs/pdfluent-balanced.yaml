@@ -11,8 +11,11 @@ models:
     sha256: b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa
     env: PDFLUENT_MODEL_DIR
     layout: "<dir>/layout-heron-ep03/heron_ep03.onnx"
+  - name: onnxruntime-1.23.2
+    note: the wheel ships no ONNX Runtime; `pdfluent models install` puts the platform's build in the model dir
+install: "pdfluent models install layout tables (released 1.1.0 CLI, pins built in; see docker/pdfluent/Dockerfile)"
 image: pdfluent
 gpu:
   route: false
-  why: the published pdfluent 1.1.0 wheel ships a CPU ONNX Runtime; no CUDA build is published
+  why: the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published
 reproducible: public

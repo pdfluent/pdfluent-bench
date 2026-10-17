@@ -29,12 +29,43 @@ RUN python -m venv /opt/ex/pdfluent \
  && for t in pdfluent_fast pdfluent_balanced pdfluent_balanced_tatr; do ln -s /opt/ex/pdfluent /opt/ex/$t; done \
  && /opt/ex/pdfluent/bin/pip freeze > /opt/ex/pdfluent/FREEZE.txt
 
-# The public model files, checked against the digests the engine pins.
-ADD --checksum=sha256:b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa \
-    https://github.com/pdfluent/pdfluent-sdk/releases/download/models-v1/heron_ep03.onnx \
-    /opt/models/layout-heron-ep03/heron_ep03.onnx
-ADD --checksum=sha256:8c28418690b896a845a53633736a62c22ef8c9a515a23c06e9976e61360f1fcf \
-    https://github.com/pdfluent/pdfluent-sdk/releases/download/models-v1/tatr-v1.1-all.onnx \
-    /opt/models/tatr-v1.1-all/tatr-v1.1-all.onnx
+# The models and the ONNX Runtime they run on, installed the way a user
+# installs them: `pdfluent models install layout tables` from the released
+# 1.1.0 CLI, which checks every file against the pins built into it. The wheel
+# itself ships no ONNX Runtime; it loads the one this command puts in the
+# model dir. The CLI archive is pinned by its digest in the release's
+# SHA256SUMS (github.com/pdfluent/pdfluent-sdk, tag v1.1.0).
+ARG PDFLUENT_CLI_VERSION=1.1.0
+ARG PDFLUENT_CLI_SHA256_X86_64=5d6782dff39c6a621305dea743d6392738c56edb6dbdcdfa4273eda9d4e7eb39
+ARG PDFLUENT_CLI_SHA256_AARCH64=c1a0abacc96ca5bebcd3b4f4fdafdb2392ead41a5b0033d58aad21ee4ea84d24
 ENV PDFLUENT_MODEL_DIR=/opt/models \
     PDFLUENT_TABLE_MODEL_DIR=/opt/models
+RUN arch="$(uname -m)" \
+ && case "$arch" in \
+      x86_64) want="$PDFLUENT_CLI_SHA256_X86_64";; \
+      aarch64) want="$PDFLUENT_CLI_SHA256_AARCH64";; \
+      *) echo "no pdfluent CLI archive for $arch" >&2; exit 2;; \
+    esac \
+ && name="pdfluent-${PDFLUENT_CLI_VERSION}-${arch}-unknown-linux-gnu.tar.gz" \
+ && python -c "import sys, urllib.request; urllib.request.urlretrieve(sys.argv[1], sys.argv[2])" \
+      "https://github.com/pdfluent/pdfluent-sdk/releases/download/v${PDFLUENT_CLI_VERSION}/$name" "/tmp/$name" \
+ && echo "$want  /tmp/$name" | sha256sum -c - \
+ && mkdir -p /opt/pdfluent-cli && tar xzf "/tmp/$name" -C /opt/pdfluent-cli \
+ && rm "/tmp/$name" \
+ && cli="$(find /opt/pdfluent-cli -type f -name pdfluent | head -n 1)" \
+ && ln -s "$cli" /usr/local/bin/pdfluent \
+ && pdfluent --version > /opt/models.cli-version.txt \
+ && pdfluent models install layout tables \
+ && pdfluent models status > /opt/models/STATUS.txt \
+ && cat /opt/models/STATUS.txt \
+ && grep -q "todo pins: none" /opt/models/STATUS.txt \
+ && (cd /opt/models && find . -type f ! -name STATUS.txt -exec sha256sum {} + | sort -k 2) > /opt/models/SHA256SUMS.installed
+
+# Convert one fixture page with each model column while the image is built,
+# so an image that cannot serve a column does not build.
+COPY fixtures/pdf/tables-p1.pdf /warm/warm.pdf
+COPY engine/scripts/extraction/adapters /warm/engine/scripts/extraction/adapters
+COPY bench/adapters /warm/bench/adapters
+RUN /opt/ex/pdfluent/bin/python /warm/engine/scripts/extraction/adapters/extract_structured.py --tool pdfluent_balanced /warm/warm.pdf > /dev/null \
+ && /opt/ex/pdfluent/bin/python /warm/engine/scripts/extraction/adapters/extract_structured.py --tool pdfluent_balanced_tatr /warm/warm.pdf > /tmp/warm.md \
+ && grep -q "| Retail |" /tmp/warm.md
