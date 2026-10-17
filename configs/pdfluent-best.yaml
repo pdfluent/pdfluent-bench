@@ -1,0 +1,24 @@
+name: pdfluent-best
+description: PDFluent best -- the ensemble (Heron-ft ep03 plus Egret-ft) through the ported teacher_ens adapter, with the engine's own text.
+tool: teacher_ens
+package: transformers
+version: "4.57.6"
+vision: true
+models:
+  - name: heron-ft-ep03
+    env: TEACHER_ENS_MODEL_A
+    sha256: 76520b1c21e09c3f47a5286f46d5129f0db63733d37e43dea3ee70492838937c
+    url: null
+  - name: egret-ft
+    env: TEACHER_ENS_MODEL_B
+    sha256: 7ad1d6942a6d91216d5bfa0a234797b25184602cc934203319a1e4e74cea7255
+    url: null
+# The adapter also needs three engine builds that are not published:
+# structured_markdown, render_page_png and feature_dump.
+required_env: [TEACHER_ENS_MODEL_A, TEACHER_ENS_MODEL_B, STRUCTURED_MARKDOWN, RENDER_PAGE_PNG, FEATURE_DUMP]
+image: best
+gpu:
+  route: false
+  why: the ported adapter pins the detectors to device="cpu"
+reproducible: internal
+reproducible_why: the weights and the engine builds this column needs are not published; until the best tier ships, the row is measured internally and marked so in every report

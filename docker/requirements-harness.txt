@@ -1,0 +1,6 @@
+# The harness interpreter (/opt/bench in every image): the scorer itself is
+# stdlib; these fetch datasets, read configs and count tokens.
+pyyaml==6.0.2
+tiktoken==0.14.0
+huggingface_hub==0.36.0
+pyarrow==22.0.0

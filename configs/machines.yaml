@@ -1,0 +1,29 @@
+# Machines a round runs on. Prices are ESTIMATES for europe-west4, written on
+# the date below and not read from the billing catalog; check them before a
+# round. The cost guard uses the on-demand price as the ceiling, because a spot
+# price can rise up to it.
+price_checked_on: "2026-10-17"
+price_note: estimate; verify with the GCP pricing calculator before a round
+machines:
+  local:
+    provider: local
+  c3-standard-8:
+    provider: gcp
+    region: europe-west4
+    zone: europe-west4-a
+    vcpus: 8
+    memory_gb: 32
+    gpu: null
+    disk_gb: 100
+    eur_per_hour: {on_demand: 0.45, spot: 0.18}
+  g2-standard-8:
+    provider: gcp
+    region: europe-west4
+    zone: europe-west4-a
+    vcpus: 8
+    memory_gb: 32
+    gpu: nvidia-l4
+    gpu_count: 1
+    disk_gb: 150
+    eur_per_hour: {on_demand: 0.95, spot: 0.40}
+disk_eur_per_gb_month: 0.11

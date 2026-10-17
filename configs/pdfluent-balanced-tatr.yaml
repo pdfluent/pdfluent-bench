@@ -1,0 +1,25 @@
+name: pdfluent-balanced-tatr
+description: PDFluent balanced plus the Table Transformer (TATR v1.1-all, ONNX) structuring each kept table region. Reported as its own row.
+tool: pdfluent_balanced_tatr
+package: pdfluent
+version: "1.1.0"
+vision: true
+models:
+  - name: layout-heron-ep03
+    file: heron_ep03.onnx
+    url: https://github.com/pdfluent/pdfluent-sdk/releases/download/models-v1/heron_ep03.onnx
+    sha256: b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa
+    env: PDFLUENT_MODEL_DIR
+    layout: "<dir>/layout-heron-ep03/heron_ep03.onnx"
+  - name: tatr-v1.1-all
+    file: tatr-v1.1-all.onnx
+    url: https://github.com/pdfluent/pdfluent-sdk/releases/download/models-v1/tatr-v1.1-all.onnx
+    sha256: 8c28418690b896a845a53633736a62c22ef8c9a515a23c06e9976e61360f1fcf
+    env: PDFLUENT_TABLE_MODEL_DIR
+    layout: "<dir>/tatr-v1.1-all/tatr-v1.1-all.onnx"
+required_env: [PDFLUENT_TABLE_MODEL_DIR]
+image: pdfluent
+gpu:
+  route: false
+  why: the published pdfluent 1.1.0 wheel ships a CPU ONNX Runtime; no CUDA build is published
+reproducible: public

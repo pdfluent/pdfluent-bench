@@ -1,0 +1,15 @@
+name: docling-minimal
+description: Docling with TableFormer off and OCR off. Docling has no PDF pipeline without its layout model, so the layout model still runs.
+tool: docling_minimal
+package: docling
+version: "2.126.0"
+vision: true
+models:
+  - name: docling-layout-heron
+    url: downloaded by Docling from Hugging Face on first use; the image fetches it at build time
+image: docling
+gpu:
+  route: true
+  image: docling-gpu
+  why: Docling runs its layout model on CUDA when torch sees a GPU
+reproducible: public

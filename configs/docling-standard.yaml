@@ -1,0 +1,15 @@
+name: docling-standard
+description: Docling 2.x standard PDF pipeline -- layout model plus TableFormer, OCR off.
+tool: docling
+package: docling
+version: "2.126.0"
+vision: true
+models:
+  - name: docling-layout-heron and docling-models (TableFormer)
+    url: downloaded by Docling from Hugging Face on first use; the image fetches them at build time
+image: docling
+gpu:
+  route: true
+  image: docling-gpu
+  why: Docling runs its models on CUDA when torch sees a GPU
+reproducible: public

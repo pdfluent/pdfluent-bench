@@ -1,0 +1,14 @@
+# Pages measured per set and per split, and the profiles that scale them.
+# A sample is seeded and drawn by whole documents (structured_bench.sample),
+# from one half of the sealed manifest; tuning and holdout are measured and
+# reported apart.
+sets:
+  doclaynet: {pages: 200, speed_pages: 25}
+  pubtables-1m: {pages: 120, speed_pages: 25}
+  fintabnet: {pages: 120, speed_pages: 25}
+  # ParseBench samples per category (table, chart, text).
+  parsebench: {pages: 40, speed_pages: 25}
+profiles:
+  full: {scale: 1.0}
+  # The mini subset: 20 pages per set (ParseBench: 7 per category).
+  mini: {pages: 20, parsebench_pages: 7, speed_pages: 10}

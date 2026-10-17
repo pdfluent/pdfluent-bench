@@ -1,0 +1,14 @@
+name: pymupdf4llm
+description: pymupdf4llm.to_markdown with defaults (pymupdf_layout installed), OCR off.
+tool: pymupdf4llm
+package: pymupdf4llm
+version: "1.28.2"
+vision: false
+models:
+  - name: pymupdf_layout bundled ONNX models
+    url: inside the pymupdf_layout 1.28.2 wheel
+image: pymupdf4llm
+gpu:
+  route: false
+  why: pymupdf4llm has no GPU path
+reproducible: public
