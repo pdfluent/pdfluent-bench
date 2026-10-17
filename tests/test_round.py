@@ -215,3 +215,19 @@ def test_vm_setup_installs_buildx():
     text = (ROOT / "infra" / "gcp" / "vm_setup.sh").read_text()
     assert "docker-buildx" in text
     assert "docker buildx version" in text
+
+
+def test_zone_can_be_overridden(tmp_path):
+    # Spot L4s ran out in europe-west4-a on 17-10 (create: "stockout"); the
+    # round has to be able to go to another zone of the same region.
+    env = _fake_gcloud(tmp_path, family_exists=True)
+    env.update(MACHINES="g2-standard-8", CONFIGS="docling-standard", SETS="doclaynet",
+               SPLITS="tuning", HOURS="2", BUDGET_EUR="20", ZONE="europe-west4-b")
+    done = subprocess.run(["bash", str(ROUND)], cwd=ROOT, env=env, capture_output=True,
+                          text=True)
+    assert done.returncode == 0, done.stdout + done.stderr
+    assert "--zone=europe-west4-b" in done.stdout and "europe-west4-a" not in done.stdout
+    env["ZONE"] = "us-central1-a"
+    done = subprocess.run(["bash", str(ROUND)], cwd=ROOT, env=env, capture_output=True,
+                          text=True)
+    assert done.returncode != 0 and "REFUSED" in done.stderr

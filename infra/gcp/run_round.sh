@@ -65,7 +65,12 @@ stamp="$(date -u +%Y%m%dT%H%M%SZ)"
 LOGS="$ROOT/work/gcp/$stamp"
 mkdir -p "$LOGS"
 
-zone_of() { "$PY" -c "import sys; sys.path.insert(0, '.'); from bench import configs; print(configs.machine(sys.argv[1])['zone'])" "$1"; }
+# ZONE overrides the machine's zone (a spot stockout); it must be in REGION.
+zone_of() { if [ -n "${ZONE:-}" ]; then echo "$ZONE"; else "$PY" -c "import sys; sys.path.insert(0, '.'); from bench import configs; print(configs.machine(sys.argv[1])['zone'])" "$1"; fi; }
+case "${ZONE:-$REGION-}" in
+  "$REGION"-*) ;;
+  *) echo "REFUSED: ZONE $ZONE is not in region $REGION" >&2; exit 2 ;;
+esac
 disk_of() { "$PY" -c "import sys; sys.path.insert(0, '.'); from bench import configs; print(configs.machine(sys.argv[1]).get('disk_gb', 100))" "$1"; }
 gpu_of()  { "$PY" -c "import sys; sys.path.insert(0, '.'); from bench import configs; print(configs.machine(sys.argv[1]).get('gpu') or '')" "$1"; }
 # The `bench run` flags for a machine: what it measures.
