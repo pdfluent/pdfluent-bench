@@ -1,0 +1,20 @@
+{
+ "docling": {
+  "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "built": "2026-10-17T16:13:20+00:00",
+  "image_id": "sha256:f0d61912da9543a403a96bb1904c77f81ff4dd498fb57e169ee51345d7c318fb",
+  "tag": "pdfluent-bench/docling:cbdae12"
+ },
+ "pdfluent": {
+  "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "built": "2026-10-17T16:11:19+00:00",
+  "image_id": "sha256:dbb41876120876bd9dbfa0c056a7063cb354a207c9a39e8d026ff2eb79661bfa",
+  "tag": "pdfluent-bench/pdfluent:cbdae12"
+ },
+ "pymupdf4llm": {
+  "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "built": "2026-10-17T16:13:36+00:00",
+  "image_id": "sha256:da3aa21998186ead12f6ab478167b0aadd6f1fc15572984f3c2b8f5959a6c3a0",
+  "tag": "pdfluent-bench/pymupdf4llm:cbdae12"
+ }
+}

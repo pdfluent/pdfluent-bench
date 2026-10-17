@@ -1,0 +1,8 @@
+{
+ "docling-gpu": {
+  "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "built": "2026-10-17T16:01:41+00:00",
+  "image_id": "sha256:f7f3d3b59a67d77b3521e53ff96e4a46fa42b96cfc5464468662f44268a99313",
+  "tag": "pdfluent-bench/docling-gpu:cbdae12"
+ }
+}

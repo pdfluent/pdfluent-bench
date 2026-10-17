@@ -1,0 +1,182 @@
+{
+ "run_id": "bench-g2-standard-8-20261017T162220Z",
+ "schema": 1,
+ "started": "2026-10-17T16:22:20+00:00",
+ "finished": "2026-10-17T16:32:53+00:00",
+ "wall_clock_s": 632.8,
+ "command": [
+  "/home/jasperdewinter/pdfluent-bench/bench/__main__.py",
+  "run",
+  "--machine",
+  "g2-standard-8",
+  "--configs",
+  "all",
+  "--sets",
+  "doclaynet,pubtables-1m,fintabnet",
+  "--splits",
+  "tuning",
+  "--profile",
+  "full",
+  "--reps",
+  "3",
+  "--runner",
+  "docker",
+  "--work",
+  "work",
+  "--optional",
+  "pdfluent-best",
+  "--no-quality"
+ ],
+ "machine": {
+  "type": "g2-standard-8",
+  "spec": {
+   "provider": "gcp",
+   "region": "europe-west4",
+   "zone": "europe-west4-a",
+   "vcpus": 8,
+   "memory_gb": 32,
+   "gpu": "nvidia-l4",
+   "gpu_count": 1,
+   "disk_gb": 150,
+   "eur_per_hour": {
+    "on_demand": 0.95,
+    "spot": 0.4
+   },
+   "name": "g2-standard-8"
+  },
+  "platform": "Linux-7.0.0-1013-gcp-x86_64-with-glibc2.39",
+  "cpu_model": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "cpus": 8,
+  "memory_gb": 31.3,
+  "gpus": [
+   {
+    "name": "NVIDIA L4",
+    "driver": "580.178.04",
+    "memory": "23034 MiB"
+   }
+  ],
+  "instance": "pdfluent-bench-g2-standard-8-20261017t154949z"
+ },
+ "images": {
+  "docling-gpu": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-17T16:01:41+00:00",
+   "image_id": "sha256:f7f3d3b59a67d77b3521e53ff96e4a46fa42b96cfc5464468662f44268a99313",
+   "tag": "pdfluent-bench/docling-gpu:cbdae12"
+  }
+ },
+ "harness": {
+  "commit": "cbdae12b9c6b5a47b16fb01c83d6e149d726a7ab",
+  "dirty": false
+ },
+ "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+ "datasets": {
+  "sets": {
+   "doclaynet": {
+    "file": "engine/corpus/structured/DOCLAYNET_TEST.json",
+    "sha256": "ddf1892f7abd5b24fe3dfc90fe00dc864cf1a7e734a82029aeaba7b24bf7967e"
+   },
+   "pubtables-1m": {
+    "file": "engine/corpus/structured/PUBTABLES1M.json",
+    "sha256": "3d0650e1aad4a69b975a2cbb9c136420444b79b487235cff4d003aefdb66247a"
+   },
+   "fintabnet": {
+    "file": "engine/corpus/structured/FINTABNET_DRAW.json",
+    "sha256": "5651af9525543a98e849e3d11be93cd808ec0774e32da2a4779c468045a1de28",
+    "drawn": {
+     "file": "engine/corpus/structured/FINTABNET.json",
+     "sha256": "bc7dba75bc061e8940cc626d400c95aa248910649c82d3affcd25bc1e2b88e9e"
+    }
+   }
+  },
+  "hash": "9cc3856426d8fe52689aed116f8465768a36debce23500dfec1282f7c54b905d"
+ },
+ "configs": {
+  "docling-minimal": {
+   "tool": "docling_minimal"
+  },
+  "docling-standard": {
+   "tool": "docling"
+  },
+  "pdfluent-balanced": {
+   "tool": "pdfluent_balanced"
+  },
+  "pdfluent-balanced-tatr": {
+   "tool": "pdfluent_balanced_tatr"
+  },
+  "pdfluent-best": {
+   "tool": "teacher_ens"
+  },
+  "pdfluent-fast": {
+   "tool": "pdfluent_fast"
+  },
+  "pymupdf4llm": {
+   "tool": "pymupdf4llm"
+  }
+ },
+ "steps": [
+  {
+   "kind": "speed",
+   "config": "docling-minimal",
+   "reps": 3,
+   "started": "2026-10-17T16:22:20+00:00",
+   "status": "ok",
+   "seconds": 180.5
+  },
+  {
+   "kind": "speed",
+   "config": "docling-standard",
+   "reps": 3,
+   "started": "2026-10-17T16:25:21+00:00",
+   "status": "ok",
+   "seconds": 452.1
+  },
+  {
+   "kind": "config",
+   "config": "pdfluent-balanced",
+   "status": "n/a",
+   "why": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published",
+   "started": "2026-10-17T16:32:53+00:00"
+  },
+  {
+   "kind": "config",
+   "config": "pdfluent-balanced-tatr",
+   "status": "n/a",
+   "why": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published",
+   "started": "2026-10-17T16:32:53+00:00"
+  },
+  {
+   "kind": "config",
+   "config": "pdfluent-best",
+   "status": "n/a",
+   "why": "the ported adapter pins the detectors to device=\"cpu\"",
+   "started": "2026-10-17T16:32:53+00:00"
+  },
+  {
+   "kind": "config",
+   "config": "pdfluent-fast",
+   "status": "n/a",
+   "why": "the fast tier runs no model",
+   "started": "2026-10-17T16:32:53+00:00"
+  },
+  {
+   "kind": "config",
+   "config": "pymupdf4llm",
+   "status": "n/a",
+   "why": "pymupdf4llm has no GPU path",
+   "started": "2026-10-17T16:32:53+00:00"
+  }
+ ],
+ "cost_eur_estimate": {
+  "spot": 0.07,
+  "on_demand": 0.17,
+  "basis": "wall clock x configs/machines.yaml price (an estimate; the bill is the record)"
+ },
+ "profile": "full",
+ "splits": [
+  "tuning"
+ ],
+ "reps": 3,
+ "runner": "docker",
+ "failures": 0
+}

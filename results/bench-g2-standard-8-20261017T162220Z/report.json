@@ -1,0 +1,345 @@
+{
+ "draft": false,
+ "missing": [],
+ "configs": [
+  "docling-minimal",
+  "docling-standard",
+  "pdfluent-balanced",
+  "pdfluent-balanced-tatr",
+  "pdfluent-best",
+  "pdfluent-fast",
+  "pymupdf4llm"
+ ],
+ "not_run": {},
+ "splits": [],
+ "internal": {
+  "pdfluent-best": "the weights and the engine builds this column needs are not published; until the best tier ships, the row is measured internally and marked so in every report"
+ },
+ "runs": [
+  {
+   "run_id": "bench-g2-standard-8-20261017T162220Z",
+   "machine": "g2-standard-8",
+   "cpu_model": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+   "gpus": [
+    {
+     "name": "NVIDIA L4",
+     "driver": "580.178.04",
+     "memory": "23034 MiB"
+    }
+   ],
+   "harness": {
+    "commit": "cbdae12b9c6b5a47b16fb01c83d6e149d726a7ab",
+    "dirty": false
+   },
+   "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+   "datasets_hash": "9cc3856426d8fe52689aed116f8465768a36debce23500dfec1282f7c54b905d",
+   "started": "2026-10-17T16:22:20+00:00",
+   "wall_clock_s": 632.8
+  }
+ ],
+ "rows": [
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "all",
+   "field": "ms_p50",
+   "label": "GPU ms/page p50, all cores",
+   "cells": {
+    "docling-minimal": {
+     "value": 152.0,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "docling-standard": {
+     "value": 592.0,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "all",
+   "field": "ms_p95",
+   "label": "GPU ms/page p95, all cores",
+   "cells": {
+    "docling-minimal": {
+     "value": 296.8,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "docling-standard": {
+     "value": 2160.8,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "all",
+   "field": "pages_per_s",
+   "label": "GPU pages/s, all cores",
+   "cells": {
+    "docling-minimal": {
+     "value": 6.02,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "docling-standard": {
+     "value": 1.321,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "all",
+   "field": "peak_rss_mb",
+   "label": "GPU peak RSS MB, all cores",
+   "cells": {
+    "docling-minimal": {
+     "value": 2028.1,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "docling-standard": {
+     "value": 2327.3,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "1",
+   "field": "ms_p50",
+   "label": "GPU ms/page p50, 1 thread",
+   "cells": {
+    "docling-minimal": {
+     "value": 155.0,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "docling-standard": {
+     "value": 595.0,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "1",
+   "field": "ms_p95",
+   "label": "GPU ms/page p95, 1 thread",
+   "cells": {
+    "docling-minimal": {
+     "value": 303.4,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "docling-standard": {
+     "value": 2127.6,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "1",
+   "field": "pages_per_s",
+   "label": "GPU pages/s, 1 thread",
+   "cells": {
+    "docling-minimal": {
+     "value": 5.916,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "docling-standard": {
+     "value": 1.323,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "threads": "1",
+   "field": "peak_rss_mb",
+   "label": "GPU peak RSS MB, 1 thread",
+   "cells": {
+    "docling-minimal": {
+     "value": 2072.1,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "docling-standard": {
+     "value": 2334.5,
+     "run_id": "bench-g2-standard-8-20261017T162220Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "gpu",
+   "field": "cold_start_ms",
+   "label": "GPU cold start ms (median)",
+   "cells": {
+    "docling-minimal": {
+     "value": 11337,
+     "run_id": "bench-g2-standard-8-20261017T162220Z"
+    },
+    "docling-standard": {
+     "value": 12043,
+     "run_id": "bench-g2-standard-8-20261017T162220Z"
+    },
+    "pdfluent-balanced": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-balanced-tatr": {
+     "na": "the ONNX Runtime that `pdfluent models install` installs for 1.1.0 is a CPU build; no CUDA route is published"
+    },
+    "pdfluent-best": {
+     "na": "the ported adapter pins the detectors to device=\"cpu\""
+    },
+    "pdfluent-fast": {
+     "na": "the fast tier runs no model"
+    },
+    "pymupdf4llm": {
+     "na": "pymupdf4llm has no GPU path"
+    }
+   }
+  }
+ ]
+}
