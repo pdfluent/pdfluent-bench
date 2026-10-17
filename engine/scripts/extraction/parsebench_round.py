@@ -400,7 +400,7 @@ def measure(args: argparse.Namespace) -> int:
         stored = (cache_load(key) if key and os.environ.get("BENCH_COMPETITOR_CACHE")
                   else None)  # pdfluent-bench: cache is opt-in
         if stored is not None:
-            tools[tool] = dict(stored["row"], from_cache=str(cache_file(key).relative_to(REPO)))
+            tools[tool] = dict(stored["row"], from_cache=str(cache_file(key)))  # pdfluent-bench:
             continue
         print(f"[{PREFIX}] {tool}: {len(pages)} page(s)", flush=True)
         md = work / "md" / tool
@@ -420,7 +420,7 @@ def measure(args: argparse.Namespace) -> int:
         # failed document, and the next round must measure it again.
         if (key is not None and not refusals and os.environ.get("BENCH_COMPETITOR_CACHE")
                 and all(g.get("successful") for g in tools[tool]["groups"].values())):
-            tools[tool]["cached_to"] = str(cache_save(key, tools[tool]).relative_to(REPO))
+            tools[tool]["cached_to"] = str(cache_save(key, tools[tool]))
     # A SCORER THAT READ NOTHING IS NOT A ZERO. A column that wrote Markdown
     # and got no evaluated example back failed in the harness, not on the page,
     # and a table printing `n/a` for it would read as the tool's verdict.
@@ -452,7 +452,7 @@ def measure(args: argparse.Namespace) -> int:
     path.write_text(json.dumps(run, indent=1) + "\n")
     (sb.RUNS / f"{run['run_id']}.md").write_text(table_of(run))
     print(table_of(run))
-    print(f"[{PREFIX}] run file {path.relative_to(REPO)}")
+    print(f"[{PREFIX}] run file {path}")  # pdfluent-bench: may be outside REPO
     if broken:
         print(f"[{PREFIX}] FAIL: the scorer evaluated nothing for {', '.join(broken)}",
               file=sys.stderr)

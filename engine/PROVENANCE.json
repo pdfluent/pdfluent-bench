@@ -149,7 +149,7 @@
   "scripts/extraction/parsebench_round.py": {
    "engine_sha256": "695ae730a82c64d38d111bedf0fca329bc06ef7d31b8ba56c904140fc5b3f65c",
    "patched": true,
-   "vendored_sha256": "0383b08497044e159c5877686f94133e4429934ee8b5b9c971810b47d0aad331"
+   "vendored_sha256": "063f3b92774a678e707f731f8bf5e947dcb1967f488bcdde4d2c9461c7bb816a"
   },
   "scripts/extraction/pb_summary.py": {
    "engine_sha256": "055f634d2b24282b069e6ba96d9f157cdf038692964c4b85805f55f763ad0b8b",

@@ -129,6 +129,13 @@ PATCHED: list[tuple[str, list[tuple[str, str, int]]]] = [
          '                  else None)  # ' + BENCH_NOTE + ' cache is opt-in\n', 1),
         ('        if (key is not None and not refusals\n',
          '        if (key is not None and not refusals and os.environ.get("BENCH_COMPETITOR_CACHE")\n', 1),
+        # BENCH_RUNS_DIR and BENCH_COMPETITOR_CACHE may lie outside the tree.
+        ('    print(f"[{PREFIX}] run file {path.relative_to(REPO)}")\n',
+         '    print(f"[{PREFIX}] run file {path}")  # ' + BENCH_NOTE + ' may be outside REPO\n', 1),
+        ('from_cache=str(cache_file(key).relative_to(REPO)))',
+         'from_cache=str(cache_file(key)))  # ' + BENCH_NOTE, 1),
+        ('str(cache_save(key, tools[tool]).relative_to(REPO))',
+         'str(cache_save(key, tools[tool]))', 1),
     ]),
     ("scripts/extraction/adapters/extract_structured.py", [
         ('TOOLS = {\n    "docling": with_docling,\n',
