@@ -15,7 +15,7 @@ RUNS     ?=
 EXTRA    ?=
 FAMILIES ?= pdfluent docling pymupdf4llm
 
-.PHONY: help test bench smoke report datasets datasets-plan images cost fixtures goldens port
+.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port
 
 help:
 	@echo "make test                         unit tests: scorers, equivalence, harness"
@@ -26,6 +26,7 @@ help:
 	@echo "make datasets-plan SETS=...       list what a fetch downloads, fetch nothing"
 	@echo "make images [FAMILIES=...]        build the containers and record their digests"
 	@echo "make report RUNS='results/<id> ...'"
+	@echo "make compare RUNS='results/<id> ...'  paired per-document diffs with 95% intervals"
 	@echo "make cost MACHINE=c3-standard-8   modelled round time and the cost guard"
 	@echo "infra/gcp/run_round.sh            a round on GCP (read it first; it spends money)"
 
@@ -55,6 +56,9 @@ images:
 
 report:
 	$(PY) -m bench report $(RUNS)
+
+compare:
+	$(PY) -m bench compare $(RUNS)
 
 cost:
 	$(PY) -m bench cost --machine $(MACHINE) --configs $(CONFIGS) --sets $(SETS) \

@@ -69,6 +69,7 @@ make datasets SETS=parsebench PROFILE=mini
 make bench MACHINE=local CONFIGS=pymupdf4llm SETS=parsebench PROFILE=mini
 make bench MACHINE=c3-standard-8 CONFIGS=all SETS=all SPLITS=tuning,holdout BECAUSE="monthly round" RUNNER=docker
 make report RUNS="results/<cpu run> results/<gpu run>"
+make compare RUNS="results/<cpu run> ..."   # paired per-document diffs, 95% bootstrap intervals
 ```
 
 Each column runs in its own interpreter. Natively that is the interpreter in

@@ -1,6 +1,6 @@
 # Copyright (c) 2026 Innovation Trigger B.V. All rights reserved.
 # Licence pending owner decision: see LICENSE-TBD.md.
-"""python -m bench <command>: run, quality-one, report, datasets, cost.
+"""python -m bench <command>: run, quality-one, report, compare, datasets, cost.
 
 `run` is what `make bench` calls. Per configuration it measures quality on
 every set and split asked for, then speed, writes run.json beside the
@@ -20,7 +20,7 @@ import subprocess
 import sys
 import time
 
-from bench import configs, cost, datasets, quality, report, runinfo, speed
+from bench import compare, configs, cost, datasets, quality, report, runinfo, speed
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -211,6 +211,13 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_compare(args: argparse.Namespace) -> int:
+    dirs = [pathlib.Path(d) for d in args.runs]
+    md, js = compare.write(dirs, pathlib.Path(args.out or dirs[0]))
+    print(f"[compare] {md}\n[compare] {js}")
+    return 0
+
+
 def cmd_datasets(args: argparse.Namespace) -> int:
     sets = configs.resolve_sets(args.sets)
     if args.action == "plan":
@@ -307,6 +314,11 @@ def parser() -> argparse.ArgumentParser:
     rep.add_argument("runs", nargs="+")
     rep.add_argument("--out", default=None)
     rep.set_defaults(func=cmd_report)
+
+    cmp_ = sub.add_parser("compare", help="paired per-document comparisons with 95% intervals")
+    cmp_.add_argument("runs", nargs="+")
+    cmp_.add_argument("--out", default=None)
+    cmp_.set_defaults(func=cmd_compare)
 
     ds = sub.add_parser("datasets")
     ds.add_argument("action", choices=("plan", "fetch"))
