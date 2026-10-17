@@ -1,0 +1,54 @@
+# Unit tests for the scorers and the harness, then a smoke run on the fixture
+# pages. Nothing here downloads a dataset.
+name: ci
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System tools the harness calls (pdftotext, mutool)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils mupdf-tools
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Scorers, engine equivalence, provenance, harness
+        run: python -m pytest -q tests
+
+  smoke:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils mupdf-tools
+      - run: python -m pip install -r requirements-dev.txt
+      - name: pymupdf4llm column (mandatory)
+        run: |
+          python -m venv "$RUNNER_TEMP/pymupdf4llm"
+          "$RUNNER_TEMP/pymupdf4llm/bin/pip" install -q pymupdf4llm==1.28.2
+      - name: pdfluent-fast column (optional until pdfluent 1.1.0 is on PyPI)
+        run: |
+          python -m venv "$RUNNER_TEMP/pdfluent"
+          if ! "$RUNNER_TEMP/pdfluent/bin/pip" install -q pdfluent==1.1.0; then
+            echo "SKIPPED (not a pass): pdfluent==1.1.0 is not installable from PyPI" >&2
+          fi
+      - name: Smoke run, both halves of the fixture set
+        env:
+          PYMUPDF4LLM_PYTHON: ${{ runner.temp }}/pymupdf4llm/bin/python
+          PDFLUENT_FAST_PYTHON: ${{ runner.temp }}/pdfluent/bin/python
+        run: make smoke PY=python WORK="$RUNNER_TEMP/work"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-results
+          path: results/smoke-*
