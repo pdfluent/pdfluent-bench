@@ -1,0 +1,6 @@
+# Harness and tests. The columns' own packages are pinned in configs/ and
+# installed into their own interpreters (docker/ images, or a venv named by
+# <TOOL>_PYTHON).
+pyyaml==6.0.2
+pytest==8.4.2
+tiktoken==0.14.0

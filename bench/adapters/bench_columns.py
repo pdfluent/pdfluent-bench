@@ -18,7 +18,8 @@ Columns:
   pdfluent_balanced       `quality="balanced"`: layout model from
                           PDFLUENT_MODEL_DIR (or the package's per-user dir)
   pdfluent_balanced_tatr  balanced plus the TATR table model from
-                          PDFLUENT_TABLE_MODEL_DIR (required)
+                          PDFLUENT_TABLE_MODEL_DIR (required): the model root
+                          that holds tatr-v1.1-all/tatr-v1.1-all.onnx
 
 OCR is off on every column (`ocr="never"`), as on every ported column.
 """
@@ -67,7 +68,7 @@ def _pdfluent(path: str, quality: str, tables: bool) -> str:
         table_dir = os.environ.get("PDFLUENT_TABLE_MODEL_DIR")
         if not table_dir:
             raise RuntimeError("pdfluent_balanced_tatr needs PDFLUENT_TABLE_MODEL_DIR "
-                               "(the directory holding tatr-v1.1-all.onnx)")
+                               "(the model root holding tatr-v1.1-all/tatr-v1.1-all.onnx)")
         kwargs["table_model_dir"] = table_dir
     document = pdfluent.open_pdf(path)
     return document.extract_markdown(**kwargs)
