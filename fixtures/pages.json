@@ -1,0 +1,260 @@
+[
+ {
+  "source": "fixtures/financial_reports",
+  "name": "report-p1.pdf",
+  "document": "report.pdf",
+  "page_no": 1,
+  "category": "financial_reports",
+  "sha256": "dac33de5814bc7156b2dedc01693be6ef7529601fde7447d1665200419c8e0ed",
+  "path": "fixtures/pdf/report-p1.pdf",
+  "blocks": [
+   {
+    "kind": "furniture",
+    "text": "Northwind Holdings annual report 2025",
+    "order": 0,
+    "bbox": [
+     50,
+     30,
+     495,
+     13.4
+    ]
+   },
+   {
+    "kind": "heading",
+    "text": "Annual Report 2025",
+    "order": 1,
+    "bbox": [
+     50,
+     70,
+     495,
+     33.7
+    ]
+   },
+   {
+    "kind": "paragraph",
+    "text": "Northwind grew revenue in every segment during the year. Retail demand was strong in the second half, and lower input costs lifted the operating margin across the group.",
+    "order": 2,
+    "bbox": [
+     50,
+     110,
+     495,
+     32.0
+    ]
+   },
+   {
+    "kind": "list_item",
+    "text": "Revenue rose to 1,450 million.",
+    "order": 3,
+    "bbox": [
+     62,
+     175,
+     495,
+     17.6
+    ]
+   },
+   {
+    "kind": "list_item",
+    "text": "The operating margin improved to 14 percent.",
+    "order": 4,
+    "bbox": [
+     62,
+     192,
+     495,
+     17.6
+    ]
+   },
+   {
+    "kind": "table",
+    "text": "Year Revenue Margin 2024 1,200 12% 2025 1,450 14%",
+    "order": 5,
+    "html": "<table><tr><th>Year</th><th>Revenue</th><th>Margin</th></tr><tr><td>2024</td><td>1,200</td><td>12%</td></tr><tr><td>2025</td><td>1,450</td><td>14%</td></tr></table>",
+    "bbox": [
+     50,
+     230,
+     360,
+     54
+    ]
+   },
+   {
+    "kind": "furniture",
+    "text": "Page 3",
+    "order": 6,
+    "bbox": [
+     280,
+     800,
+     60,
+     13.4
+    ]
+   }
+  ]
+ },
+ {
+  "source": "fixtures/financial_reports",
+  "name": "report-p2.pdf",
+  "document": "report.pdf",
+  "page_no": 1,
+  "category": "financial_reports",
+  "sha256": "9162e6213af424cb4cf5dcd6fdd688430091ccc038139ecdb8c688005dd07701",
+  "path": "fixtures/pdf/report-p2.pdf",
+  "blocks": [
+   {
+    "kind": "heading",
+    "text": "Outlook",
+    "order": 0,
+    "bbox": [
+     50,
+     70,
+     495,
+     26.9
+    ]
+   },
+   {
+    "kind": "paragraph",
+    "text": "The left column is read first. Management expects demand to stay firm and plans to open four new stores in the coming year.",
+    "order": 1,
+    "bbox": [
+     50,
+     110,
+     230,
+     46.4
+    ]
+   },
+   {
+    "kind": "paragraph",
+    "text": "The right column is read second. Capital spending will rise to fund the new stores and a second distribution centre.",
+    "order": 2,
+    "bbox": [
+     315,
+     110,
+     230,
+     46.4
+    ]
+   }
+  ]
+ },
+ {
+  "source": "fixtures/tables",
+  "name": "tables-p1.pdf",
+  "document": "tables.pdf",
+  "page_no": 1,
+  "category": "tables",
+  "sha256": "38ea74097ca328697a42ccd3af463436ec88469c13de589f98a08bbb425c1e5b",
+  "path": "fixtures/pdf/tables-p1.pdf",
+  "blocks": [
+   {
+    "kind": "table",
+    "text": "Segment Revenue Share Retail 1,020 70% Wholesale 290 20% Online 140 10%",
+    "order": 0,
+    "html": "<table><tr><th>Segment</th><th>Revenue</th><th>Share</th></tr><tr><td>Retail</td><td>1,020</td><td>70%</td></tr><tr><td>Wholesale</td><td>290</td><td>20%</td></tr><tr><td>Online</td><td>140</td><td>10%</td></tr></table>",
+    "bbox": [
+     50,
+     100,
+     370,
+     72
+    ]
+   }
+  ],
+  "annotates": [
+   "table"
+  ]
+ },
+ {
+  "source": "fixtures/government",
+  "name": "memo-p1.pdf",
+  "document": "memo.pdf",
+  "page_no": 1,
+  "category": "government",
+  "sha256": "87ca13f8a814fc1b6b0c7387c1fc480cd7bed1137c0a4a1546974928d07028a1",
+  "path": "fixtures/pdf/memo-p1.pdf",
+  "blocks": [
+   {
+    "kind": "heading",
+    "text": "Annual plan of the municipality",
+    "order": 0,
+    "bbox": [
+     50,
+     70,
+     495,
+     26.9
+    ]
+   },
+   {
+    "kind": "paragraph",
+    "text": "The council will spend more on schools and on care for older residents than in previous years, and it will publish a progress report every quarter.",
+    "order": 1,
+    "bbox": [
+     50,
+     105,
+     495,
+     32.0
+    ]
+   },
+   {
+    "kind": "furniture",
+    "text": "Page 1",
+    "order": 2,
+    "bbox": [
+     280,
+     800,
+     60,
+     13.4
+    ]
+   }
+  ]
+ },
+ {
+  "source": "fixtures/scientific_articles",
+  "name": "paper-p1.pdf",
+  "document": "paper.pdf",
+  "page_no": 1,
+  "category": "scientific_articles",
+  "sha256": "46d42d8c617acf96134828d23ef0a6bfcafdd3a217e8ce882dfafae224ebe7ab",
+  "path": "fixtures/pdf/paper-p1.pdf",
+  "blocks": [
+   {
+    "kind": "heading",
+    "text": "2 Related work",
+    "order": 0,
+    "bbox": [
+     50,
+     70,
+     495,
+     23.6
+    ]
+   },
+   {
+    "kind": "paragraph",
+    "text": "Earlier systems extract structure from documents with layout models and hand-written rules. Evaluating them needs reference annotations drawn by people, page by page.",
+    "order": 1,
+    "bbox": [
+     50,
+     100,
+     495,
+     32.0
+    ]
+   },
+   {
+    "kind": "list_item",
+    "text": "Layout detection with a trained model.",
+    "order": 2,
+    "bbox": [
+     62,
+     160,
+     495,
+     17.6
+    ]
+   },
+   {
+    "kind": "list_item",
+    "text": "Table structure recognition from cell boxes.",
+    "order": 3,
+    "bbox": [
+     62,
+     177,
+     495,
+     17.6
+    ]
+   }
+  ]
+ }
+]

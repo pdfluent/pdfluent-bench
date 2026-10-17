@@ -1,0 +1,67 @@
+{
+ "set": "fixtures",
+ "version": "synthetic, fixtures/make_fixtures.py",
+ "revision": "",
+ "source": "fixtures/make_fixtures.py",
+ "licence": "synthetic; part of this repository",
+ "seed": "pdfluent-bench-fixtures-2026-10-17",
+ "rule": "engine/scripts/ci/structured_holdout_rule.py",
+ "share": 0.4,
+ "counts": {
+  "pages": 5,
+  "tuning": 3,
+  "holdout": 2,
+  "documents": 4
+ },
+ "seal": {
+  "tuning": "8cab07cb0a267d23b3ab6c7e089a819dbd8cc92ae7cb4032a113ebf943573810",
+  "holdout": "48218fde3ff5fc346854967b43720681965bde3bca448b053cfcd6de2b3ed897"
+ },
+ "pages": [
+  {
+   "source": "fixtures/financial_reports",
+   "name": "report-p1.pdf",
+   "document": "report.pdf",
+   "page_no": 1,
+   "category": "financial_reports",
+   "sha256": "dac33de5814bc7156b2dedc01693be6ef7529601fde7447d1665200419c8e0ed",
+   "split": "tuning"
+  },
+  {
+   "source": "fixtures/financial_reports",
+   "name": "report-p2.pdf",
+   "document": "report.pdf",
+   "page_no": 1,
+   "category": "financial_reports",
+   "sha256": "9162e6213af424cb4cf5dcd6fdd688430091ccc038139ecdb8c688005dd07701",
+   "split": "tuning"
+  },
+  {
+   "source": "fixtures/tables",
+   "name": "tables-p1.pdf",
+   "document": "tables.pdf",
+   "page_no": 1,
+   "category": "tables",
+   "sha256": "38ea74097ca328697a42ccd3af463436ec88469c13de589f98a08bbb425c1e5b",
+   "split": "holdout"
+  },
+  {
+   "source": "fixtures/government",
+   "name": "memo-p1.pdf",
+   "document": "memo.pdf",
+   "page_no": 1,
+   "category": "government",
+   "sha256": "87ca13f8a814fc1b6b0c7387c1fc480cd7bed1137c0a4a1546974928d07028a1",
+   "split": "holdout"
+  },
+  {
+   "source": "fixtures/scientific_articles",
+   "name": "paper-p1.pdf",
+   "document": "paper.pdf",
+   "page_no": 1,
+   "category": "scientific_articles",
+   "sha256": "46d42d8c617acf96134828d23ef0a6bfcafdd3a217e8ce882dfafae224ebe7ab",
+   "split": "tuning"
+  }
+ ]
+}
