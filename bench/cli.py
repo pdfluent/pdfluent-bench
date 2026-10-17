@@ -124,7 +124,10 @@ def cmd_run(args: argparse.Namespace) -> int:
                               file=sys.stderr)
                         failures += 1
                     row["seconds"] = round(time.monotonic() - t0, 1)
-        if not args.no_speed:
+        if not args.no_speed and all(s == "parsebench" for s in sets):
+            step("speed", config, status="n/a",
+                 why="ParseBench pages are not timed apart; add another set to time this column")
+        elif not args.no_speed:
             row = step("speed", config, reps=args.reps)
             t0 = time.monotonic()
             try:
