@@ -241,6 +241,23 @@ def cmd_compare(args: argparse.Namespace) -> int:
     return 0
 
 
+def fetch_command(image: str, sets: str, work: pathlib.Path, profile: str,
+                  limit: int | None) -> list[str]:
+    built = runinfo.images(work).get(image)
+    if not built:
+        raise SystemExit(f"[bench] FATAL: image `{image}` is not built")
+    # Read-write: FinTabNet's draw writes engine/corpus/structured/FINTABNET.json.
+    # HF_HUB_OFFLINE=0: the Docling images are offline for measuring, and a
+    # fetch is the one step that must reach the Hub.
+    command = ["docker", "run", "--rm", "-v", f"{ROOT}:/bench", "-v", f"{work.resolve()}:/work",
+               "-e", "HF_HUB_OFFLINE=0"]
+    if os.environ.get("FINTABNET_ARCHIVE_URL"):
+        command += ["-e", "FINTABNET_ARCHIVE_URL"]
+    return command + [built["tag"], "/opt/bench/bin/python", "-m", "bench", "datasets", "fetch",
+                      "--sets", sets, "--work", "/work", "--profile", profile,
+                      *(["--limit", str(limit)] if limit else [])]
+
+
 def cmd_datasets(args: argparse.Namespace) -> int:
     sets = configs.resolve_sets(args.sets)
     if args.action == "plan":
@@ -255,14 +272,7 @@ def cmd_datasets(args: argparse.Namespace) -> int:
         return 0
     work = pathlib.Path(args.work)
     if args.in_image:
-        built = runinfo.images(work).get(args.in_image)
-        if not built:
-            raise SystemExit(f"[bench] FATAL: image `{args.in_image}` is not built")
-        # Read-write: FinTabNet's draw writes engine/corpus/structured/FINTABNET.json.
-        command = ["docker", "run", "--rm", "-v", f"{ROOT}:/bench", "-v", f"{work.resolve()}:/work",
-                   "-e", "FINTABNET_ARCHIVE_URL", built["tag"], "/opt/bench/bin/python", "-m",
-                   "bench", "datasets", "fetch", "--sets", args.sets, "--work", "/work",
-                   "--profile", args.profile, *(["--limit", str(args.limit)] if args.limit else [])]
+        command = fetch_command(args.in_image, args.sets, work, args.profile, args.limit)
         return subprocess.run(command, check=False).returncode
     for set_name in sets:
         print(json.dumps(datasets.fetch(set_name, work, args.limit, args.profile)))

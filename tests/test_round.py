@@ -231,3 +231,14 @@ def test_zone_can_be_overridden(tmp_path):
     done = subprocess.run(["bash", str(ROUND)], cwd=ROOT, env=env, capture_output=True,
                           text=True)
     assert done.returncode != 0 and "REFUSED" in done.stderr
+
+
+def test_dataset_fetch_in_an_offline_image_may_reach_the_hub(tmp_path, monkeypatch):
+    # The Docling images set HF_HUB_OFFLINE=1 so that a measurement never
+    # downloads a model; the GPU VM fetches the datasets inside docling-gpu
+    # and on 17-10 every DocLayNet file was refused in offline mode.
+    from bench import cli, runinfo
+    monkeypatch.setattr(runinfo, "images", lambda work: {"docling-gpu": {"tag": "t", "image_id": "i"}})
+    command = cli.fetch_command("docling-gpu", "doclaynet", tmp_path, "full", None)
+    assert command[command.index("HF_HUB_OFFLINE=0") - 1] == "-e"
+    assert command.index("HF_HUB_OFFLINE=0") < command.index("t")
