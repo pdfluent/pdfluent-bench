@@ -51,6 +51,8 @@ SPEED_ROWS = (("ms_p50", "ms/page p50"), ("ms_p95", "ms/page p95"),
 
 def _load_runs(dirs: list[pathlib.Path]) -> tuple[list[dict], dict, dict]:
     runs, quality, speed = [], {}, {}
+    # pdfluent-bench: a configuration the run was asked for but did not
+    # measure stays in the table, with the reason.
     for d in dirs:
         meta = d / "run.json"
         if not meta.is_file():
@@ -110,7 +112,13 @@ def _fmt(value, digits: int = 3) -> str:
 
 def build(dirs: list[pathlib.Path]) -> dict:
     runs, quality, speed = _load_runs(dirs)
-    names = sorted({k[3] for k in quality} | {k[1] for k in speed})
+    not_run = {}
+    for run in runs:
+        for step in run.get("steps") or []:
+            if step.get("kind") == "config" and step.get("status") in ("skipped", "failed"):
+                not_run[step["config"]] = f"{step['status']}: {step.get('why')}"
+    names = sorted({k[3] for k in quality} | {k[1] for k in speed}
+                   | {n for run in runs for n in run.get("configs") or {}})
     chosen = {n: configs.load(n) for n in names}
     sets_seen = [s for s in ("fintabnet", "pubtables-1m", "doclaynet", "parsebench", "fixtures")
                  if any(k[1] == s for k in quality)]
@@ -130,7 +138,9 @@ def build(dirs: list[pathlib.Path]) -> dict:
                 for split in splits_seen:
                     hit = quality.get(("cpu", set_name, split, name)) or quality.get(("gpu", set_name, split, name))
                     if hit is None:
-                        missing.append(f"{SET_TITLE[set_name]} {label} {split}: {name} has no run file")
+                        why = " (not measured; reason below)" if name in not_run else ""
+                        missing.append(f"{SET_TITLE[set_name]} {label} {split}: {name} has no run "
+                                       f"file{why}")
                         parts.append({"split": split, "mean": None})
                         continue
                     numbers = quality_numbers(hit[1], set_name).get(key) or {}
@@ -161,8 +171,9 @@ def build(dirs: list[pathlib.Path]) -> dict:
                         continue
                     hit = speed.get((kind, name))
                     if hit is None:
+                        why = " (not measured; reason below)" if name in not_run else ""
                         missing.append(f"{kind.upper()} speed {label} ({threads_key} threads): "
-                                       f"{name} has no speed file")
+                                       f"{name} has no speed file{why}")
                         cells[name] = {"value": None}
                         continue
                     block = next((v for k, v in hit[1]["threads"].items()
@@ -190,7 +201,7 @@ def build(dirs: list[pathlib.Path]) -> dict:
         table.append({"kind": "speed", "machine": kind, "field": "cold_start_ms",
                       "label": f"{kind.upper()} cold start ms (median)", "cells": cells})
 
-    return {"draft": bool(missing), "missing": missing, "configs": names,
+    return {"draft": bool(missing), "missing": missing, "configs": names, "not_run": not_run,
             "splits": splits_seen,
             "internal": {n: chosen[n].get("reproducible_why", "") for n in names
                          if chosen[n]["reproducible"] == "internal"},
@@ -210,6 +221,8 @@ def markdown(report: dict) -> str:
                   "`missing` in the table.", ""]
         lines += [f"- {m}" for m in report["missing"]] + [""]
     lines += ["# Benchmark overview", ""]
+    for name, why in sorted(report.get("not_run", {}).items()):
+        lines.append(f"- not measured: {name}, {why}")
     for run in report["runs"]:
         gpu = ", ".join(g["name"] for g in run["gpus"]) or "no GPU"
         lines.append(f"- run `{run['run_id']}` on {run['machine']} ({run['cpu_model']}; {gpu}), "
