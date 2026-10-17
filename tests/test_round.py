@@ -206,3 +206,12 @@ def test_docker_runner_skips_an_optional_column_without_its_image(tmp_path, monk
     assert [(s["kind"], s["status"]) for s in steps] == [("config", "skipped")]
     assert "not built" in steps[0]["why"]
     assert cli.main(args) == 1  # not optional: the run fails
+
+
+def test_vm_setup_installs_buildx():
+    # Ubuntu 24.04's docker.io (the GPU image family) has no BuildKit builder
+    # of its own; docker/build.sh sets DOCKER_BUILDKIT=1 and the GPU round of
+    # 17-10 stopped at "BuildKit is enabled but the buildx component is missing".
+    text = (ROOT / "infra" / "gcp" / "vm_setup.sh").read_text()
+    assert "docker-buildx" in text
+    assert "docker buildx version" in text

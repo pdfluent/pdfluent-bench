@@ -14,6 +14,14 @@ if ! command -v docker > /dev/null; then
   apt-get install -y -qq docker.io
 fi
 systemctl start docker
+# docker/build.sh builds with BuildKit. Docker 23 and later need the buildx
+# plugin for that (Ubuntu 24.04's docker.io does not pull it in); an older
+# daemon (Debian 12's 20.10) builds with BuildKit on its own.
+apt-get install -y -qq docker-buildx > /dev/null 2>&1 || true
+major="$(docker version --format '{{.Server.Version}}' | cut -d. -f1)"
+if ! docker buildx version > /dev/null 2>&1 && [ "${major:-0}" -ge 23 ]; then
+  echo "FATAL: docker $major has no buildx plugin; BuildKit builds would fail" >&2; exit 2
+fi
 if [ "$kind" = gpu ]; then
   for _ in $(seq 1 60); do nvidia-smi > /dev/null 2>&1 && break; sleep 10; done
   nvidia-smi || { echo "FATAL: no NVIDIA driver on the GPU VM" >&2; exit 2; }
