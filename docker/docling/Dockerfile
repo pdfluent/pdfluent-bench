@@ -3,18 +3,25 @@
 # Licence pending owner decision: see LICENSE-TBD.md.
 #
 # Build from the repository root: docker/build.sh (records the image digest).
-ARG BASE=python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c
+# Ubuntu 24.04 (noble-20260930.1): its mupdf-tools is 1.23.10, the only
+# version found that cuts the PubTables-1M pages to the bytes the manifest
+# seals (bench/datasets.py CUT_TOOL); bookworm's 1.21.1 reproduced 225 of 400.
+ARG BASE=ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
 FROM ${BASE}
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
- && apt-get install -y --no-install-recommends poppler-utils mupdf-tools git util-linux \
- && rm -rf /var/lib/apt/lists/*
+ && apt-get install -y --no-install-recommends python3 python3-venv ca-certificates \
+      poppler-utils mupdf-tools git util-linux \
+ && rm -rf /var/lib/apt/lists/* \
+ && mutool -v 2>&1 | tee /opt/mutool-version.txt | grep -q "mutool version 1.23.10" \
+ && pdftotext -v 2>&1 | head -n 1 > /opt/poppler-version.txt
 
 # The harness interpreter and the ParseBench scorer, the same in every image.
 COPY docker/requirements-harness.txt /tmp/requirements-harness.txt
-RUN python -m venv /opt/bench \
+RUN python3 -m venv /opt/bench \
  && /opt/bench/bin/pip install --no-cache-dir -r /tmp/requirements-harness.txt \
  && TIKTOKEN_CACHE_DIR=/opt/tiktoken /opt/bench/bin/python -c "import tiktoken; tiktoken.get_encoding(\"o200k_base\")" \
- && python -m venv /opt/ex/parsebench \
+ && python3 -m venv /opt/ex/parsebench \
  && /opt/ex/parsebench/bin/pip install --no-cache-dir parse-bench==1.0.4
 ENV TIKTOKEN_CACHE_DIR=/opt/tiktoken \
     PARSEBENCH_PYTHON=/opt/ex/parsebench/bin/python \
@@ -27,7 +34,7 @@ WORKDIR /bench
 # The CUDA wheels carry their own runtime libraries; the host provides the
 # driver through the NVIDIA container toolkit.
 ARG TORCH_INDEX=https://download.pytorch.org/whl/cpu
-RUN python -m venv /opt/ex/docling \
+RUN python3 -m venv /opt/ex/docling \
  && /opt/ex/docling/bin/pip install --no-cache-dir --extra-index-url ${TORCH_INDEX} docling==2.126.0 \
  && ln -s /opt/ex/docling /opt/ex/docling_minimal \
  && /opt/ex/docling/bin/pip freeze > /opt/ex/docling/FREEZE.txt

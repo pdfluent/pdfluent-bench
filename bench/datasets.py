@@ -22,8 +22,38 @@ from __future__ import annotations
 import json
 import os
 import pathlib
+import re
+import shutil
+import subprocess
 
 from bench import configs, engine_api
+
+# The tool that cut a set's sealed page bytes. PubTables-1M pages are cut out
+# of their articles with `mutool merge`; the cut bytes differ between MuPDF
+# versions, and the manifest seals the bytes. Measured 17-10 on the same
+# articles: 1.23.10 reproduced 17/17 pages, 1.23.7 13/17, 1.19.0-1.22.2 8/17,
+# 1.16.1 and 1.24.2-1.28.5 0/17.
+CUT_TOOL = {"pubtables-1m": "1.23.10"}
+
+
+def mutool_version() -> str | None:
+    if not shutil.which("mutool"):
+        return None
+    done = subprocess.run(["mutool", "-v"], capture_output=True, text=True, check=False)
+    found = re.search(r"mutool version (\S+)", (done.stdout or "") + (done.stderr or ""))
+    return found.group(1) if found else None
+
+
+def check_cut_tool(set_name: str) -> None:
+    """Refuse a fetch whose cut tool cannot reproduce the sealed bytes, before it starts."""
+    want = CUT_TOOL.get(set_name)
+    if want is None:
+        return
+    have = mutool_version()
+    if have != want:
+        raise SystemExit(f"[datasets] REFUSED: {set_name} pages are cut with mutool {want}, the "
+                         f"version that cut the sealed manifest; this machine has "
+                         f"{have or 'no mutool'}, and its pages would not be the sealed ones")
 
 
 def _pages_json(work: pathlib.Path, pages: list[dict]) -> pathlib.Path:
@@ -35,6 +65,7 @@ def _pages_json(work: pathlib.Path, pages: list[dict]) -> pathlib.Path:
 
 def fetch(set_name: str, work: pathlib.Path, limit: int | None = None,
           profile: str = "full") -> dict:
+    check_cut_tool(set_name)
     sb = engine_api.sb()
     entry = sb.dataset_entry(set_name)
     target = work / set_name

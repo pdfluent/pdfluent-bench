@@ -151,3 +151,58 @@ def test_run_json_is_written_after_every_step(tmp_path, monkeypatch):
     assert code == 0
     assert seen == [("tuning", True), ("holdout", True)]
     assert json.loads((out / "run.json").read_text())["finished"]
+
+
+def test_every_image_cuts_pages_with_the_mutool_that_sealed_them():
+    # The PubTables-1M pages are cut out of their articles with `mutool merge`,
+    # and the sealed manifest holds the cut bytes. On 17-10 the bookworm images
+    # (mutool 1.21.1) reproduced 225 of the 400 sealed pages; of thirteen
+    # versions tried on the same articles only 1.23.10 (Ubuntu 24.04)
+    # reproduced every one (1.19.0-1.22.2: 8/17, 1.23.7: 13/17, 1.24 and later
+    # and 1.16: 0/17).
+    for image in ("pdfluent", "docling", "pymupdf4llm", "best"):
+        text = _dockerfile(image)
+        assert re.search(r"^ARG BASE=ubuntu:24\.04@sha256:[0-9a-f]{64}$", text, re.M), image
+        assert "mutool -v" in _run_lines(text) and "1.23.10" in _run_lines(text), image
+
+
+def test_fetch_refuses_a_cut_tool_other_than_the_sealing_one(monkeypatch):
+    from bench import datasets
+    monkeypatch.setattr(datasets, "mutool_version", lambda: "1.21.1")
+    import pytest
+    with pytest.raises(SystemExit, match="1.23.10"):
+        datasets.check_cut_tool("pubtables-1m")
+    monkeypatch.setattr(datasets, "mutool_version", lambda: "1.23.10")
+    datasets.check_cut_tool("pubtables-1m")
+    datasets.check_cut_tool("doclaynet")  # not cut: any version
+
+
+def test_docker_passes_only_the_variables_the_host_has(tmp_path, monkeypatch):
+    # `docker run -e NAME` with NAME unset on the host cleared the image's own
+    # PDFLUENT_TABLE_MODEL_DIR, and every pdfluent-balanced-tatr step of the
+    # 17-10 mini round failed with "needs PDFLUENT_TABLE_MODEL_DIR".
+    from bench import cli, runinfo
+    monkeypatch.setattr(runinfo, "images", lambda work: {"pdfluent": {"tag": "t", "image_id": "i"}})
+    config = configs.load("pdfluent-balanced-tatr")
+    monkeypatch.delenv("PDFLUENT_TABLE_MODEL_DIR", raising=False)
+    command = cli.docker_command(config, False, tmp_path, tmp_path, ["x"])
+    assert "PDFLUENT_TABLE_MODEL_DIR" not in " ".join(command)
+    monkeypatch.setenv("PDFLUENT_TABLE_MODEL_DIR", "/elsewhere")
+    command = cli.docker_command(config, False, tmp_path, tmp_path, ["x"])
+    assert "PDFLUENT_TABLE_MODEL_DIR" in command
+
+
+def test_docker_runner_skips_an_optional_column_without_its_image(tmp_path, monkeypatch):
+    # pdfluent-best is optional and its image is not built without its private
+    # weights; the docker runner failed it five times instead of skipping it.
+    from bench import cli, runinfo
+    monkeypatch.setattr(runinfo, "images", lambda work: {})
+    monkeypatch.setattr(cli.report, "write", lambda dirs, out: (out / "r.md", out / "r.json"))
+    out = tmp_path / "out"
+    args = ["run", "--configs", "pdfluent-best", "--sets", "fixtures", "--splits", "tuning",
+            "--runner", "docker", "--work", str(tmp_path / "w"), "--out", str(out), "--run-id", "r"]
+    assert cli.main(args + ["--optional", "pdfluent-best"]) == 0
+    steps = json.loads((out / "run.json").read_text())["steps"]
+    assert [(s["kind"], s["status"]) for s in steps] == [("config", "skipped")]
+    assert "not built" in steps[0]["why"]
+    assert cli.main(args) == 1  # not optional: the run fails

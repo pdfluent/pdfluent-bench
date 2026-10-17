@@ -37,8 +37,8 @@ def _docker_image(config: dict, gpu: bool, work: pathlib.Path) -> tuple[str, str
     return built["tag"], built["image_id"]
 
 
-def _docker(config: dict, gpu: bool, work: pathlib.Path, out: pathlib.Path,
-            args: list[str]) -> int:
+def docker_command(config: dict, gpu: bool, work: pathlib.Path, out: pathlib.Path,
+                   args: list[str]) -> list[str]:
     tag, image_id = _docker_image(config, gpu, work)
     command = ["docker", "run", "--rm", f"--memory={os.environ.get('BENCH_MEMORY', '12g')}",
                "-v", f"{ROOT}:/bench:ro", "-v", f"{work.resolve()}:/work",
@@ -49,14 +49,26 @@ def _docker(config: dict, gpu: bool, work: pathlib.Path, out: pathlib.Path,
                "-e", "GIT_CONFIG_VALUE_0=*"]
     if gpu and config["gpu"]["route"]:
         command += ["--gpus", "all"]
-    for name in config.get("required_env") or []:
-        command += ["-e", name]
-    for name in ("FINTABNET_ARCHIVE_URL",):
+    # Only what the host has: `-e NAME` for an unset NAME clears the image's
+    # own value (the pdfluent image sets PDFLUENT_TABLE_MODEL_DIR itself).
+    for name in [*(config.get("required_env") or []), "FINTABNET_ARCHIVE_URL"]:
         if os.environ.get(name):
             command += ["-e", name]
     command += shlex.split(os.environ.get("BENCH_DOCKER_ARGS", ""))
     command += [tag, "/opt/bench/bin/python", "-m", "bench", *args]
-    return subprocess.run(command, check=False).returncode
+    return command
+
+
+def _docker(config: dict, gpu: bool, work: pathlib.Path, out: pathlib.Path,
+            args: list[str]) -> int:
+    return subprocess.run(docker_command(config, gpu, work, out, args), check=False).returncode
+
+
+def _docker_unavailable(config: dict, gpu: bool, work: pathlib.Path) -> str | None:
+    family = config["gpu"].get("image") if gpu and config["gpu"]["route"] else config["image"]
+    if not runinfo.images(work).get(family):
+        return f"image `{family}` is not built (docker/build.sh {family})"
+    return None
 
 
 def cmd_run(args: argparse.Namespace) -> int:
@@ -92,6 +104,17 @@ def cmd_run(args: argparse.Namespace) -> int:
         if gpu and not config["gpu"]["route"]:
             step("config", config, status="n/a", why=config["gpu"]["why"])
             continue
+        if args.runner == "docker":
+            why = _docker_unavailable(config, gpu, work)
+            if why:
+                if config["name"] in optional:
+                    skipped(f"{config['name']}: {why}")
+                    step("config", config, status="skipped", why=why)
+                    continue
+                print(f"[bench] FAIL: {config['name']} cannot run here: {why}", file=sys.stderr)
+                step("config", config, status="failed", why=why)
+                failures += 1
+                continue
         if args.runner == "native":
             why = configs.unavailable(config, configs.tool_python(config))
             if why:
