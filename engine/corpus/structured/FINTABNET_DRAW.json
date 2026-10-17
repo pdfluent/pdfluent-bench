@@ -1,0 +1,1507 @@
+{
+ "set": "fintabnet",
+ "mode": "walked, no pin",
+ "pages": [
+  {
+   "name": "HSY_2012_page_149.pdf",
+   "crc32": "c1bc1458",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2012_page_119.pdf",
+   "crc32": "2995c96c",
+   "split": "tuning"
+  },
+  {
+   "name": "FFIV_2019_page_71.pdf",
+   "crc32": "02c9cd0f",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2011_page_185.pdf",
+   "crc32": "8ba7f0ab",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2013_page_119.pdf",
+   "crc32": "d4956070",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2017_page_277.pdf",
+   "crc32": "3003fcdd",
+   "split": "tuning"
+  },
+  {
+   "name": "WHR_2018_page_82.pdf",
+   "crc32": "4d649b59",
+   "split": "tuning"
+  },
+  {
+   "name": "FCX_2013_page_134.pdf",
+   "crc32": "d1113dba",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2012_page_69.pdf",
+   "crc32": "f675decd",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2010_page_198.pdf",
+   "crc32": "7fb40404",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2013_page_30.pdf",
+   "crc32": "be67d80d",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2009_page_191.pdf",
+   "crc32": "afda2b66",
+   "split": "tuning"
+  },
+  {
+   "name": "FDX_2013_page_54.pdf",
+   "crc32": "1c56d2b0",
+   "split": "holdout"
+  },
+  {
+   "name": "HSY_2008_page_35.pdf",
+   "crc32": "0229f7ef",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2013_page_214.pdf",
+   "crc32": "e11924a7",
+   "split": "holdout"
+  },
+  {
+   "name": "ETR_2004_page_298.pdf",
+   "crc32": "b8e65bae",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2017_page_414.pdf",
+   "crc32": "8d185bc4",
+   "split": "tuning"
+  },
+  {
+   "name": "MO_2016_page_19.pdf",
+   "crc32": "692179c5",
+   "split": "tuning"
+  },
+  {
+   "name": "AFL_2007_page_39.pdf",
+   "crc32": "5ed15f9b",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2011_page_81.pdf",
+   "crc32": "53635172",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2010_page_131.pdf",
+   "crc32": "f8981b82",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2017_page_69.pdf",
+   "crc32": "5e064b2f",
+   "split": "tuning"
+  },
+  {
+   "name": "CDW_2015_page_44.pdf",
+   "crc32": "68f9698e",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2011_page_102.pdf",
+   "crc32": "75dfc216",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2006_page_61.pdf",
+   "crc32": "f49903c8",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2016_page_146.pdf",
+   "crc32": "c0acb294",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2015_page_61.pdf",
+   "crc32": "0bdc262b",
+   "split": "holdout"
+  },
+  {
+   "name": "ETR_2013_page_129.pdf",
+   "crc32": "12a68600",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2008_page_138.pdf",
+   "crc32": "96b8e492",
+   "split": "holdout"
+  },
+  {
+   "name": "ES_2016_page_22.pdf",
+   "crc32": "94942cce",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2015_page_21.pdf",
+   "crc32": "903c74b2",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2012_page_112.pdf",
+   "crc32": "47bf6920",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2011_page_208.pdf",
+   "crc32": "a1078b58",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2017_page_119.pdf",
+   "crc32": "5375db3e",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2017_page_39.pdf",
+   "crc32": "a2725f9e",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2008_page_34.pdf",
+   "crc32": "6b22181f",
+   "split": "tuning"
+  },
+  {
+   "name": "CDW_2014_page_85.pdf",
+   "crc32": "4a4a9c6a",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2011_page_142.pdf",
+   "crc32": "157a2012",
+   "split": "tuning"
+  },
+  {
+   "name": "SCHW_2013_page_104.pdf",
+   "crc32": "deb49907",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2009_page_171.pdf",
+   "crc32": "954c4204",
+   "split": "holdout"
+  },
+  {
+   "name": "BA_2018_page_34.pdf",
+   "crc32": "c0359958",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2007_page_28.pdf",
+   "crc32": "bcffbe9c",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2011_page_518.pdf",
+   "crc32": "e373420d",
+   "split": "tuning"
+  },
+  {
+   "name": "CDNS_2012_page_105.pdf",
+   "crc32": "95592e84",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2016_page_87.pdf",
+   "crc32": "74190134",
+   "split": "holdout"
+  },
+  {
+   "name": "RJF_2016_page_233.pdf",
+   "crc32": "8fe317c0",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2016_page_188.pdf",
+   "crc32": "3bb20796",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2008_page_81.pdf",
+   "crc32": "27c69be3",
+   "split": "holdout"
+  },
+  {
+   "name": "FCX_2017_page_86.pdf",
+   "crc32": "08fb16bd",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2014_page_39.pdf",
+   "crc32": "b6ca3c0b",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2014_page_81.pdf",
+   "crc32": "11220653",
+   "split": "tuning"
+  },
+  {
+   "name": "GLW_2010_page_77.pdf",
+   "crc32": "98c3c87a",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2012_page_44.pdf",
+   "crc32": "6700cfe6",
+   "split": "holdout"
+  },
+  {
+   "name": "ETR_2017_page_480.pdf",
+   "crc32": "bcdcdaa9",
+   "split": "tuning"
+  },
+  {
+   "name": "FLIR_2010_page_39.pdf",
+   "crc32": "6ee572d7",
+   "split": "tuning"
+  },
+  {
+   "name": "MKTX_2013_page_89.pdf",
+   "crc32": "b7da0fbc",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2017_page_40.pdf",
+   "crc32": "be21ab08",
+   "split": "holdout"
+  },
+  {
+   "name": "MNST_2009_page_68.pdf",
+   "crc32": "ac6c069e",
+   "split": "holdout"
+  },
+  {
+   "name": "WM_2013_page_189.pdf",
+   "crc32": "bad6cd57",
+   "split": "holdout"
+  },
+  {
+   "name": "CMS_2017_page_149.pdf",
+   "crc32": "7a6a284a",
+   "split": "tuning"
+  },
+  {
+   "name": "EXPE_2014_page_61.pdf",
+   "crc32": "c477d879",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2012_page_38.pdf",
+   "crc32": "c60456f4",
+   "split": "holdout"
+  },
+  {
+   "name": "KIM_2006_page_55.pdf",
+   "crc32": "d82c1bf4",
+   "split": "holdout"
+  },
+  {
+   "name": "CDNS_2007_page_56.pdf",
+   "crc32": "54b2f427",
+   "split": "tuning"
+  },
+  {
+   "name": "VRSN_2006_page_208.pdf",
+   "crc32": "1ce3e60a",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2016_page_197.pdf",
+   "crc32": "7485457b",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2015_page_30.pdf",
+   "crc32": "ed388bee",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2016_page_132.pdf",
+   "crc32": "547c6999",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2002_page_266.pdf",
+   "crc32": "012307e2",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2006_page_146.pdf",
+   "crc32": "8390293e",
+   "split": "tuning"
+  },
+  {
+   "name": "FLIR_2010_page_57.pdf",
+   "crc32": "a413072d",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2006_page_123.pdf",
+   "crc32": "a60e7bce",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2013_page_249.pdf",
+   "crc32": "8c20bbc6",
+   "split": "holdout"
+  },
+  {
+   "name": "HSY_2007_page_93.pdf",
+   "crc32": "d1a2c78f",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2017_page_55.pdf",
+   "crc32": "c6e021e2",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2017_page_115.pdf",
+   "crc32": "cd98ceab",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2009_page_173.pdf",
+   "crc32": "a3a62fbf",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2017_page_33.pdf",
+   "crc32": "8ca8f7fb",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2005_page_64.pdf",
+   "crc32": "763f1e19",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2013_page_40.pdf",
+   "crc32": "797e386d",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2006_page_18.pdf",
+   "crc32": "055f2444",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2013_page_109.pdf",
+   "crc32": "a5ed8a48",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2016_page_132.pdf",
+   "crc32": "8ed1d122",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2003_page_42.pdf",
+   "crc32": "8f77472c",
+   "split": "tuning"
+  },
+  {
+   "name": "AFL_2007_page_43.pdf",
+   "crc32": "4e242b1d",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2006_page_69.pdf",
+   "crc32": "1b4f6e39",
+   "split": "tuning"
+  },
+  {
+   "name": "TDG_2017_page_101.pdf",
+   "crc32": "d8de4783",
+   "split": "tuning"
+  },
+  {
+   "name": "PSX_2014_page_54.pdf",
+   "crc32": "d3e4f162",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2017_page_164.pdf",
+   "crc32": "28a9bdbb",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2009_page_50.pdf",
+   "crc32": "399c7402",
+   "split": "tuning"
+  },
+  {
+   "name": "MKTX_2004_page_97.pdf",
+   "crc32": "2efc9372",
+   "split": "tuning"
+  },
+  {
+   "name": "EXPE_2009_page_78.pdf",
+   "crc32": "03a65f56",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2012_page_144.pdf",
+   "crc32": "6200115c",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2007_page_67.pdf",
+   "crc32": "1e5bc703",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2004_page_273.pdf",
+   "crc32": "8cc4e2ec",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2018_page_135.pdf",
+   "crc32": "f221af5a",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2017_page_208.pdf",
+   "crc32": "73061ccb",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2016_page_59.pdf",
+   "crc32": "b0a4d0cc",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2004_page_359.pdf",
+   "crc32": "be5b337e",
+   "split": "tuning"
+  },
+  {
+   "name": "VRSN_2007_page_118.pdf",
+   "crc32": "5f9ff58d",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2013_page_84.pdf",
+   "crc32": "fb30255a",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2011_page_126.pdf",
+   "crc32": "d48bb5d5",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2013_page_57.pdf",
+   "crc32": "4d6ab7ac",
+   "split": "tuning"
+  },
+  {
+   "name": "SCHW_2008_page_29.pdf",
+   "crc32": "8863765c",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2012_page_90.pdf",
+   "crc32": "c05037aa",
+   "split": "holdout"
+  },
+  {
+   "name": "MET_2009_page_67.pdf",
+   "crc32": "8175f1da",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2016_page_113.pdf",
+   "crc32": "950f86db",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2008_page_393.pdf",
+   "crc32": "a944e3f7",
+   "split": "holdout"
+  },
+  {
+   "name": "WM_2018_page_67.pdf",
+   "crc32": "abffea9f",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2013_page_161.pdf",
+   "crc32": "d789a310",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2016_page_98.pdf",
+   "crc32": "3b409a0c",
+   "split": "holdout"
+  },
+  {
+   "name": "HSY_2009_page_6.pdf",
+   "crc32": "4f0bee21",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2014_page_89.pdf",
+   "crc32": "6da5d0d5",
+   "split": "tuning"
+  },
+  {
+   "name": "VRSN_2007_page_46.pdf",
+   "crc32": "3b627995",
+   "split": "tuning"
+  },
+  {
+   "name": "VRSN_2006_page_83.pdf",
+   "crc32": "3831621c",
+   "split": "tuning"
+  },
+  {
+   "name": "AFL_2009_page_87.pdf",
+   "crc32": "19872b6b",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2011_page_146.pdf",
+   "crc32": "df68017f",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2016_page_167.pdf",
+   "crc32": "1d3406e3",
+   "split": "tuning"
+  },
+  {
+   "name": "FLIR_2004_page_41.pdf",
+   "crc32": "a497587c",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2017_page_98.pdf",
+   "crc32": "f441e250",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2019_page_189.pdf",
+   "crc32": "c35ac1aa",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2004_page_69.pdf",
+   "crc32": "e0d2b7ae",
+   "split": "tuning"
+  },
+  {
+   "name": "CDNS_2006_page_89.pdf",
+   "crc32": "d7da3746",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2016_page_51.pdf",
+   "crc32": "a4feb7ba",
+   "split": "holdout"
+  },
+  {
+   "name": "EXPE_2010_page_40.pdf",
+   "crc32": "9d51d444",
+   "split": "holdout"
+  },
+  {
+   "name": "MO_2016_page_28.pdf",
+   "crc32": "e3aad181",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2013_page_103.pdf",
+   "crc32": "8f4b5122",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2009_page_98.pdf",
+   "crc32": "c4665b60",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2010_page_176.pdf",
+   "crc32": "cb28c3cb",
+   "split": "holdout"
+  },
+  {
+   "name": "RJF_2009_page_144.pdf",
+   "crc32": "c54a39a5",
+   "split": "holdout"
+  },
+  {
+   "name": "ETR_2013_page_157.pdf",
+   "crc32": "ec21efe5",
+   "split": "tuning"
+  },
+  {
+   "name": "ETR_2017_page_419.pdf",
+   "crc32": "2a26b57f",
+   "split": "tuning"
+  },
+  {
+   "name": "FLIR_2010_page_83.pdf",
+   "crc32": "dde4e207",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2014_page_162.pdf",
+   "crc32": "5423e2c5",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2010_page_99.pdf",
+   "crc32": "5c45e8bd",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2016_page_57.pdf",
+   "crc32": "582b0680",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2014_page_63.pdf",
+   "crc32": "7725b82b",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2014_page_90.pdf",
+   "crc32": "466cf21a",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2016_page_97.pdf",
+   "crc32": "ff12260e",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2010_page_174.pdf",
+   "crc32": "c9c54113",
+   "split": "holdout"
+  },
+  {
+   "name": "MAA_2018_page_38.pdf",
+   "crc32": "d90c614c",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2004_page_96.pdf",
+   "crc32": "1edb71bf",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2012_page_87.pdf",
+   "crc32": "41ca7700",
+   "split": "holdout"
+  },
+  {
+   "name": "CDNS_2007_page_58.pdf",
+   "crc32": "f6aa9885",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2007_page_43.pdf",
+   "crc32": "94cbe170",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2014_page_75.pdf",
+   "crc32": "830b5c42",
+   "split": "tuning"
+  },
+  {
+   "name": "TDG_2015_page_111.pdf",
+   "crc32": "b363a306",
+   "split": "tuning"
+  },
+  {
+   "name": "CDW_2015_page_35.pdf",
+   "crc32": "cc305612",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2013_page_141.pdf",
+   "crc32": "8bbc8f2c",
+   "split": "holdout"
+  },
+  {
+   "name": "KIM_2010_page_46.pdf",
+   "crc32": "de2de5b2",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2009_page_162.pdf",
+   "crc32": "b1b3b2af",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2012_page_178.pdf",
+   "crc32": "ecde9259",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2012_page_89.pdf",
+   "crc32": "cb2aeaee",
+   "split": "holdout"
+  },
+  {
+   "name": "INTU_2008_page_64.pdf",
+   "crc32": "4de4ba6e",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2016_page_100.pdf",
+   "crc32": "65251db0",
+   "split": "tuning"
+  },
+  {
+   "name": "FDX_2009_page_55.pdf",
+   "crc32": "9652053f",
+   "split": "tuning"
+  },
+  {
+   "name": "AFL_2008_page_53.pdf",
+   "crc32": "a15b4fc9",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2007_page_33.pdf",
+   "crc32": "4eb3bf54",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2017_page_93.pdf",
+   "crc32": "15c87658",
+   "split": "tuning"
+  },
+  {
+   "name": "NLOK_2016_page_114.pdf",
+   "crc32": "ce37cb23",
+   "split": "holdout"
+  },
+  {
+   "name": "KIM_2012_page_61.pdf",
+   "crc32": "2586f87a",
+   "split": "holdout"
+  },
+  {
+   "name": "NLOK_2004_page_34.pdf",
+   "crc32": "b26b17e3",
+   "split": "holdout"
+  },
+  {
+   "name": "HSY_2009_page_112.pdf",
+   "crc32": "6559629a",
+   "split": "tuning"
+  },
+  {
+   "name": "VRSN_2011_page_43.pdf",
+   "crc32": "18ddc69f",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2014_page_124.pdf",
+   "crc32": "72981ade",
+   "split": "tuning"
+  },
+  {
+   "name": "DIS_2019_page_3.pdf",
+   "crc32": "dea18e19",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2016_page_129.pdf",
+   "crc32": "770c64e3",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2018_page_181.pdf",
+   "crc32": "af276602",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2010_page_172.pdf",
+   "crc32": "a01281b3",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2007_page_91.pdf",
+   "crc32": "1506e3f0",
+   "split": "holdout"
+  },
+  {
+   "name": "FLIR_2010_page_33.pdf",
+   "crc32": "56a92f58",
+   "split": "tuning"
+  },
+  {
+   "name": "MKTX_2011_page_46.pdf",
+   "crc32": "b02903a2",
+   "split": "holdout"
+  },
+  {
+   "name": "RJF_2014_page_67.pdf",
+   "crc32": "4868ee6a",
+   "split": "tuning"
+  },
+  {
+   "name": "FCX_2012_page_47.pdf",
+   "crc32": "1f6d19b5",
+   "split": "tuning"
+  },
+  {
+   "name": "GLW_2011_page_69.pdf",
+   "crc32": "9adfafa1",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2015_page_136.pdf",
+   "crc32": "d10e7a6b",
+   "split": "holdout"
+  },
+  {
+   "name": "DIS_2019_page_39.pdf",
+   "crc32": "18e37904",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2011_page_65.pdf",
+   "crc32": "1c555cd1",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2014_page_136.pdf",
+   "crc32": "301511c0",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2013_page_182.pdf",
+   "crc32": "e9441625",
+   "split": "tuning"
+  },
+  {
+   "name": "TDG_2008_page_70.pdf",
+   "crc32": "b843ec28",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2009_page_83.pdf",
+   "crc32": "debe7897",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2016_page_177.pdf",
+   "crc32": "1e661d84",
+   "split": "tuning"
+  },
+  {
+   "name": "JNJ_2018_page_73.pdf",
+   "crc32": "3a57ad3d",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2018_page_95.pdf",
+   "crc32": "2256148d",
+   "split": "holdout"
+  },
+  {
+   "name": "MET_2010_page_211.pdf",
+   "crc32": "ee14b2fd",
+   "split": "holdout"
+  },
+  {
+   "name": "CDNS_2007_page_41.pdf",
+   "crc32": "d53fc479",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2016_page_57.pdf",
+   "crc32": "880b4ba3",
+   "split": "holdout"
+  },
+  {
+   "name": "INTU_2009_page_95.pdf",
+   "crc32": "9c2dec8c",
+   "split": "tuning"
+  },
+  {
+   "name": "CDNS_2015_page_51.pdf",
+   "crc32": "9f51faa4",
+   "split": "holdout"
+  },
+  {
+   "name": "CMS_2012_page_127.pdf",
+   "crc32": "b3c5ea90",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2012_page_196.pdf",
+   "crc32": "a327ac29",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2015_page_92.pdf",
+   "crc32": "6ee79d7a",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2004_page_71.pdf",
+   "crc32": "919d5023",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2007_page_79.pdf",
+   "crc32": "d22fd440",
+   "split": "tuning"
+  },
+  {
+   "name": "ATO_2016_page_43.pdf",
+   "crc32": "fa2984d6",
+   "split": "holdout"
+  },
+  {
+   "name": "CDW_2017_page_95.pdf",
+   "crc32": "754e771c",
+   "split": "tuning"
+  },
+  {
+   "name": "KIM_2014_page_100.pdf",
+   "crc32": "21047853",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2013_page_63.pdf",
+   "crc32": "49da2aa0",
+   "split": "tuning"
+  },
+  {
+   "name": "NLOK_2014_page_138.pdf",
+   "crc32": "9e8ed0de",
+   "split": "tuning"
+  },
+  {
+   "name": "FDX_2017_page_62.pdf",
+   "crc32": "dfc9ba01",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2011_page_103.pdf",
+   "crc32": "01b5f6d3",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2013_page_2.pdf",
+   "crc32": "bc5b1636",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2006_page_30.pdf",
+   "crc32": "4e3e9b63",
+   "split": "tuning"
+  },
+  {
+   "name": "NLOK_2015_page_119.pdf",
+   "crc32": "b0e9501c",
+   "split": "tuning"
+  },
+  {
+   "name": "PXD_2017_page_53.pdf",
+   "crc32": "006ca91d",
+   "split": "holdout"
+  },
+  {
+   "name": "BA_2009_page_49.pdf",
+   "crc32": "af1c86bf",
+   "split": "holdout"
+  },
+  {
+   "name": "FDX_2018_page_59.pdf",
+   "crc32": "c6b67e7c",
+   "split": "holdout"
+  },
+  {
+   "name": "DVN_2014_page_112.pdf",
+   "crc32": "51bae9d6",
+   "split": "tuning"
+  },
+  {
+   "name": "MKTX_2018_page_162.pdf",
+   "crc32": "07c50d37",
+   "split": "tuning"
+  },
+  {
+   "name": "GLW_2011_page_75.pdf",
+   "crc32": "6a23b6a7",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2008_page_104.pdf",
+   "crc32": "09a6c8db",
+   "split": "holdout"
+  },
+  {
+   "name": "RJF_2017_page_75.pdf",
+   "crc32": "fccb1679",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2008_page_62.pdf",
+   "crc32": "06cdd97d",
+   "split": "tuning"
+  },
+  {
+   "name": "FDX_2015_page_57.pdf",
+   "crc32": "00ddb94d",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2009_page_83.pdf",
+   "crc32": "9eb731c5",
+   "split": "holdout"
+  },
+  {
+   "name": "MET_2010_page_170.pdf",
+   "crc32": "4b30bd61",
+   "split": "holdout"
+  },
+  {
+   "name": "PXD_2017_page_105.pdf",
+   "crc32": "562341f3",
+   "split": "holdout"
+  },
+  {
+   "name": "MNST_2012_page_107.pdf",
+   "crc32": "11f26f97",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2012_page_89.pdf",
+   "crc32": "6ac0f4ef",
+   "split": "holdout"
+  },
+  {
+   "name": "MKTX_2011_page_4.pdf",
+   "crc32": "eb20fc4e",
+   "split": "holdout"
+  },
+  {
+   "name": "CMS_2010_page_122.pdf",
+   "crc32": "9273f574",
+   "split": "tuning"
+  },
+  {
+   "name": "DIS_2019_page_110.pdf",
+   "crc32": "5fe606e0",
+   "split": "tuning"
+  },
+  {
+   "name": "ATO_2019_page_46.pdf",
+   "crc32": "78fd9ab4",
+   "split": "tuning"
+  },
+  {
+   "name": "TDG_2018_page_142.pdf",
+   "crc32": "14751627",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2018_page_43.pdf",
+   "crc32": "7d8af2b7",
+   "split": "tuning"
+  },
+  {
+   "name": "PSX_2018_page_78.pdf",
+   "crc32": "b93e7dd2",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2017_page_170.pdf",
+   "crc32": "b0989830",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2015_page_100.pdf",
+   "crc32": "f8513160",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2016_page_161.pdf",
+   "crc32": "01b03858",
+   "split": "tuning"
+  },
+  {
+   "name": "HSY_2011_page_148.pdf",
+   "crc32": "35d83bfe",
+   "split": "holdout"
+  },
+  {
+   "name": "RJF_2018_page_181.pdf",
+   "crc32": "3df30737",
+   "split": "tuning"
+  },
+  {
+   "name": "LH_2018_page_120.pdf",
+   "crc32": "0fb71f15",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2008_page_156.pdf",
+   "crc32": "0fb90f40",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2014_page_211.pdf",
+   "crc32": "e22f9d67",
+   "split": "holdout"
+  },
+  {
+   "name": "INTU_2010_page_101.pdf",
+   "crc32": "0856b4a1",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2012_page_84.pdf",
+   "crc32": "709af821",
+   "split": "holdout"
+  },
+  {
+   "name": "CMS_2012_page_176.pdf",
+   "crc32": "f4947119",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2019_page_125.pdf",
+   "crc32": "266ffc5b",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2018_page_75.pdf",
+   "crc32": "6f74589b",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2018_page_107.pdf",
+   "crc32": "8add595d",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2017_page_28.pdf",
+   "crc32": "f94bffdf",
+   "split": "tuning"
+  },
+  {
+   "name": "FCX_2008_page_37.pdf",
+   "crc32": "1ef2e36d",
+   "split": "tuning"
+  },
+  {
+   "name": "MKTX_2014_page_60.pdf",
+   "crc32": "5b51cd7c",
+   "split": "holdout"
+  },
+  {
+   "name": "WM_2008_page_141.pdf",
+   "crc32": "11a709cf",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2015_page_93.pdf",
+   "crc32": "aa9d98a5",
+   "split": "tuning"
+  },
+  {
+   "name": "KIM_2014_page_119.pdf",
+   "crc32": "b5326685",
+   "split": "tuning"
+  },
+  {
+   "name": "SCHW_2010_page_102.pdf",
+   "crc32": "7c04fee6",
+   "split": "holdout"
+  },
+  {
+   "name": "MO_2014_page_38.pdf",
+   "crc32": "6a3c9f7b",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2016_page_21.pdf",
+   "crc32": "45036333",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2014_page_51.pdf",
+   "crc32": "8f407d61",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2010_page_64.pdf",
+   "crc32": "bcc5e10b",
+   "split": "tuning"
+  },
+  {
+   "name": "TDG_2009_page_37.pdf",
+   "crc32": "0f4c87da",
+   "split": "tuning"
+  },
+  {
+   "name": "SCHW_2014_page_130.pdf",
+   "crc32": "ea513478",
+   "split": "holdout"
+  },
+  {
+   "name": "KIM_2006_page_79.pdf",
+   "crc32": "e6127ce5",
+   "split": "holdout"
+  },
+  {
+   "name": "FDX_2007_page_51.pdf",
+   "crc32": "fa667676",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2009_page_99.pdf",
+   "crc32": "550a1695",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2013_page_54.pdf",
+   "crc32": "3328467e",
+   "split": "tuning"
+  },
+  {
+   "name": "KIM_2014_page_134.pdf",
+   "crc32": "bbfc586a",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2013_page_86.pdf",
+   "crc32": "58548ba8",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2010_page_161.pdf",
+   "crc32": "f71845ed",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2014_page_131.pdf",
+   "crc32": "35a94f20",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2017_page_205.pdf",
+   "crc32": "def03c1f",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2017_page_126.pdf",
+   "crc32": "0448099b",
+   "split": "tuning"
+  },
+  {
+   "name": "FDX_2010_page_68.pdf",
+   "crc32": "571b2ffb",
+   "split": "tuning"
+  },
+  {
+   "name": "VLO_2015_page_135.pdf",
+   "crc32": "af61b844",
+   "split": "tuning"
+  },
+  {
+   "name": "CDNS_2006_page_86.pdf",
+   "crc32": "9f2adf09",
+   "split": "tuning"
+  },
+  {
+   "name": "EFX_2016_page_68.pdf",
+   "crc32": "cb5a741b",
+   "split": "tuning"
+  },
+  {
+   "name": "INTU_2007_page_73.pdf",
+   "crc32": "58d6192a",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2004_page_83.pdf",
+   "crc32": "6411be36",
+   "split": "tuning"
+  },
+  {
+   "name": "MET_2007_page_34.pdf",
+   "crc32": "17af8c4a",
+   "split": "tuning"
+  },
+  {
+   "name": "BA_2016_page_44.pdf",
+   "crc32": "06f71fd9",
+   "split": "tuning"
+  },
+  {
+   "name": "FLIR_2004_page_63.pdf",
+   "crc32": "b286b404",
+   "split": "tuning"
+  },
+  {
+   "name": "PXD_2005_page_84.pdf",
+   "crc32": "9f446509",
+   "split": "tuning"
+  },
+  {
+   "name": "TDG_2009_page_95.pdf",
+   "crc32": "49540497",
+   "split": "tuning"
+  },
+  {
+   "name": "CMS_2008_page_132.pdf",
+   "crc32": "155559af",
+   "split": "holdout"
+  },
+  {
+   "name": "EFX_2018_page_122.pdf",
+   "crc32": "3b19b594",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2009_page_134.pdf",
+   "crc32": "63d4fefb",
+   "split": "holdout"
+  },
+  {
+   "name": "VLO_2018_page_118.pdf",
+   "crc32": "8a0f26f6",
+   "split": "tuning"
+  },
+  {
+   "name": "CDW_2013_page_49.pdf",
+   "crc32": "48c701d6",
+   "split": "tuning"
+  },
+  {
+   "name": "CHRW_2014_page_41.pdf",
+   "crc32": "0d60440b",
+   "split": "holdout"
+  },
+  {
+   "name": "INTU_2011_page_44.pdf",
+   "crc32": "cb46b076",
+   "split": "tuning"
+  },
+  {
+   "name": "VRSN_2007_page_115.pdf",
+   "crc32": "b73e205a",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2013_page_35.pdf",
+   "crc32": "19837fee",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2016_page_76.pdf",
+   "crc32": "7234be37",
+   "split": "tuning"
+  },
+  {
+   "name": "DVN_2012_page_103.pdf",
+   "crc32": "702870c8",
+   "split": "holdout"
+  },
+  {
+   "name": "RJF_2010_page_79.pdf",
+   "crc32": "a940d413",
+   "split": "tuning"
+  },
+  {
+   "name": "JNJ_2018_page_69.pdf",
+   "crc32": "407e3e9d",
+   "split": "tuning"
+  },
+  {
+   "name": "RJF_2010_page_105.pdf",
+   "crc32": "a6527211",
+   "split": "tuning"
+  },
+  {
+   "name": "MCHP_2016_page_134.pdf",
+   "crc32": "623e760a",
+   "split": "holdout"
+  },
+  {
+   "name": "FFIV_2019_page_74.pdf",
+   "crc32": "30aac285",
+   "split": "tuning"
+  },
+  {
+   "name": "CHRW_2008_page_49.pdf",
+   "crc32": "6abf36e6",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2011_page_123.pdf",
+   "crc32": "6d597717",
+   "split": "tuning"
+  },
+  {
+   "name": "MNST_2012_page_71.pdf",
+   "crc32": "d839d0c3",
+   "split": "tuning"
+  },
+  {
+   "name": "JNJ_2018_page_82.pdf",
+   "crc32": "5638915e",
+   "split": "tuning"
+  },
+  {
+   "name": "WM_2017_page_151.pdf",
+   "crc32": "2154a2b2",
+   "split": "tuning"
+  },
+  {
+   "name": "KIM_2008_page_77.pdf",
+   "crc32": "374c2774",
+   "split": "holdout"
+  },
+  {
+   "name": "CDNS_2015_page_76.pdf",
+   "crc32": "81e1e223",
+   "split": "holdout"
+  },
+  {
+   "name": "WM_2007_page_54.pdf",
+   "crc32": "d3932fb8",
+   "split": "holdout"
+  },
+  {
+   "name": "ATO_2018_page_49.pdf",
+   "crc32": "700a7563",
+   "split": "tuning"
+  }
+ ],
+ "sha256": "bab19469ce85164b58c3872aaefe679e0163b6dcb6b86c4834987c41db213647"
+}

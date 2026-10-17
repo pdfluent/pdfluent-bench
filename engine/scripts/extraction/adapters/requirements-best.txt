@@ -1,0 +1,20 @@
+# Copyright (c) 2026 Innovation Trigger B.V.
+#
+# PDFluent is available under two licences, at your option: the GNU AGPLv3, or
+# the PDFluent Commercial Licence. See the LICENSE file in this repository --
+# that file travels with the copy you received, which a URL does not.
+#
+# The best tier's Python environment (#641): exact versions, one file.
+# structured_bench_remote.sh installs the teacher venv from here, and the
+# adapter self-test refuses any torch/transformers pin beside this one.
+# torch is the CPU build (the +cpu local version, from the CPU index below --
+# the rig has no GPU); the detector runs CPU fp32 everywhere a go/no-go is
+# read (R-2). macOS has no +cpu wheel (that local version exists only on the
+# Linux/Windows CPU index), so darwin takes the plain wheel -- the SAME release
+# 2.5.1, per platform. transformers is the release the round-2 measurement ran.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu; sys_platform != "darwin"
+torch==2.5.1; sys_platform == "darwin"
+transformers==4.57.6
+pillow
+numpy<3

@@ -1,0 +1,121 @@
+# Reduced from the engine's register at e1f136aecf32 by scripts/port_from_engine.py.
+# Only the rows this benchmark runs are kept; the fields are unchanged.
+
+[meta]
+verdict_valid_days = 180
+capability = "structured-extraction"
+
+[datasets.doclaynet]
+name = "DocLayNet v1.2"
+what = "80,863 human-annotated pages from six document categories, with the original PDF page beside every annotation"
+vendor = "IBM Research (Deep Search)"
+licence = "CDLA-Permissive-1.0"
+training_use = "allowed: CDLA-Permissive-1.0 grants use and modification of the Data with no field-of-use limit; training a model is use (#598). Train only on documents outside corpus/structured/DOCLAYNET_TEST.json -- the whole rig, tuning half and sealed fifth -- which scripts/ci/learned_training_uses_no_rig_document.py enforces."
+pages = 4951
+version = "docling-project/DocLayNet-v1.2, split `test`"
+source = "https://huggingface.co/datasets/docling-project/DocLayNet-v1.2"
+repo_id = "docling-project/DocLayNet-v1.2"
+revision = "0daf93102e2efce76c3e11a274a5e0d0969391d3"
+parts = 6
+documents = "pdf"
+ground_truth = "Eleven block classes per page -- Caption, Footnote, Formula, List-item,\nPage-footer, Page-header, Picture, Section-header, Table, Text, Title -- as\nboxes, with the PDF text cells inside each box. Headings are Section-header and\nTitle, lists are List-item, tables are boxes WITHOUT an internal structure.\n"
+annotator = "human (boxes and classes); derived (the text inside them)"
+annotates = ["heading", "list_item", "table", "paragraph", "furniture"]
+words_excluded = [{ "document" = "CN100339781C.pdf", "why" = "scanned Chinese page; DocLayNet's cells are Latin-alphabet OCR (`HER, AFANFTER.`), not the page's text" }]
+publishable = true
+clause = "CDLA-Permissive-1.0, §2.1"
+quote = "Subject to the terms and conditions of this agreement, each Data Provider grants to You a perpetual, irrevocable, worldwide, non-exclusive, no-charge, royalty-free license to use, modify, and Publish the Data."
+licence_source = "https://huggingface.co/datasets/docling-project/DocLayNet-v1.2 (`Licensing Information`), and https://cdla.io/permissive-1-0/"
+read_on = "2026-09-17"
+verdict = "A permissive data licence with no field-of-use limit, no non-commercial clause\nand an explicit grant to publish. Nothing to weigh, which is why this is the set\nthe baseline runs on.\n\nTwo properties beyond the licence earned it the rig, and both are the reason\nthis milestone can be measured at all:\n\nIt ships the ORIGINAL PDF. Every other candidate ships renderings, and a page\nimage is a document our extraction cannot read -- not badly, at all. A baseline\ntaken there would report zero for us and a real number for two model pipelines,\nand the zero would be a statement about the corpus rather than about the code.\n\nIts ground truth is a human drawing boxes and naming them. That is what makes\nheadings, lists and reading order measurable rather than inferred from another\nextractor's opinion.\n\nTHE CAVEAT THAT HAS TO TRAVEL WITH EVERY TEXT NUMBER: the boxes and the classes\nare human, and the TEXT inside them is not -- `pdf_cells` is IBM's own parser\nreading the same PDF. So the text axis on this set is agreement with another\nextractor and not with a transcription, which is the same footing the oracle in\n`../../extraction/comparison/EXTRACTORS.toml` sits on and is stated for the same\nreason. The heading, list and order axes do not inherit it: which blocks are\nheadings is the human's judgement, and that is what those axes score.\n\nWHAT THE FIRST ROUND FOUND OUT ABOUT IT (run\nstructured-doclaynet-20260917T192519Z). The annotation order is NOT the order\ngeometry would give: over 188 pages it agrees with a plain top-down reading at\n0.606, and 131 of them are under 0.9. That is the evidence this set's `bboxes`\norder carries reading order rather than the order boxes happened to be drawn\nin -- so the order axis has something to measure. Both readings are reported\nanyway, because \"the annotator's order\" and \"what the page looks like\" are two\nquestions and a tool can be good at one.\n\nThe sample of that round was thirteen documents, 139 of its 200 pages financial\nreports. The set as a whole is six categories over 196 documents; a 200-page\nsample of whole documents is necessarily a handful of them, and any figure from\none round is a figure about those. The seeded rule makes the next round ask for\nthe same pages rather than a flattering draw, which is the property that\nmatters; a wider spread is a bigger round.\n\nIT ALSO CANNOT ANSWER THE TABLE QUESTION. A Table box says where the table is\nand nothing about its rows, so TEDS is not computable here. See the two rows\nbelow, which is where that question goes.\n"
+on_the_rig = true
+
+[datasets."pubtables-1m"]
+name = "PubTables-1M (cell structure) over the PMC Open Access Subset (documents)"
+what = "401,733 per-document table annotations with full cell structure in PDF coordinates, read against the PubMed Central articles they were made from"
+vendor = "Microsoft (annotations); US National Library of Medicine (documents)"
+licence = "CDLA-Permissive-2.0 (annotations); per article, CC0 or CC BY only (documents)"
+training_use = "allowed for the annotations: CDLA-Permissive-2.0 §3.1 puts no restriction on Results, and a trained model is a Result (#598); the documents only where the article is CC0 or CC BY, as on the rig. Never a page named in corpus/structured/PUBTABLES1M.json."
+pages = 0
+version = "bsmock/pubtables-1m, PubTables-1M-PDF_Annotations.tar.gz"
+source = "https://huggingface.co/datasets/bsmock/pubtables-1m"
+repo_id = "bsmock/pubtables-1m"
+revision = "35b1c097807e0b07ec5313879b85956b7b3890db"
+annotations_file = "PubTables-1M-PDF_Annotations.tar.gz"
+annotations_bytes = 3697954223
+annotations_sha256 = "6c7f9b0aa56c9690b4ba4a54d054dd8b510b35198c2c30d45f661cb11cf79932"
+documents_bucket = "https://pmc-oa-opendata.s3.amazonaws.com"
+documents_source = "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/"
+documents_licence_codes = ["CC0", "CC BY"]
+materialise_pages = 400
+walk_multiplier = 8
+documents = "pdf"
+ground_truth = "Per table: the cells, each with its row numbers, its column numbers, whether it\nis a column header, and its text as read from the PDF, plus the table's page\nindex and box in PDF coordinates. That is a grid, which is what TEDS needs and\nwhat DocLayNet cannot give.\n"
+annotator = "derived from the article's own JATS table markup, aligned to the PDF"
+annotates = ["table"]
+publishable = true
+clause = "CDLA-Permissive-2.0, §1.1 and §3.1 (annotations); per-article licence (documents)"
+quote = "A Data Recipient may use, modify, and share the Data made available by Data Provider(s) under this agreement if that Data Recipient follows the terms of this agreement. [...] This agreement does not impose any restriction or obligations with respect to the use, modification, or sharing of Results."
+licence_source = "https://huggingface.co/datasets/bsmock/pubtables-1m (`license: cdla-permissive-2.0`), https://cdla.dev/permissive-2-0/, and https://pmc.ncbi.nlm.nih.gov/tools/openftlist/"
+read_on = "2026-09-20"
+verdict = "On the rig, and it is the first set here whose verdict is two verdicts.\n\nTHE ANNOTATIONS. CDLA-Permissive-2.0, published by Microsoft beside the\ntable-transformer code. §1.1 grants use, modification and sharing with no\nfield-of-use limit and no non-commercial clause; §3.1 says in as many words\nthat the agreement imposes no restriction on Results, and a measurement is a\nResult. The only condition, §2.1, is on SHARING the data -- carry the text of\nthe agreement with it -- and nothing of this set is shared from this\nrepository: the manifest names documents and digests, as the two corpus rows\nnext door do.\n\nA correction that belongs in this file rather than in a commit message: the\nFinTabNet.c and PubTables-1M rows written on 2026-09-17 quoted CDLA-Permissive\n1.0's §2.1 under 2.0's number. The two agreements are not the same text -- 2.0\nis shorter, its grant is §1.1, and its §2.1 is the sharing condition. The\nreading did not change; the citation was wrong, and a register whose quote is\nnot the clause is a register that has been copied rather than read.\n\nTHE DOCUMENTS, which is the half that decided 2026-09-17 against this set and\nis the half that moved. PubTables-1M ships table and page images; the PDFs are\nthe PubMed Central articles the annotations were made from. Those are fetchable\n-- the PMC Cloud Service on AWS Open Data serves one PDF per article -- with\ntwo conditions the subset states itself:\n\n  1. \"The PMC Cloud Service, PMC OAI-PMH Service, E-Utilities and BioC API are\n     the only services that may be used for automated retrieval of PMC content.\n     Systematic retrieval (or bulk retrieval) of articles through any other\n     automated process is prohibited.\" So the fetch goes through the Cloud\n     Service and nowhere else. The old FTP tree, which the 2026-09-17 reading\n     would have reached for, is being removed and is not a permitted route in\n     any case.\n\n  2. \"License terms vary. Please refer to the license statement in each\n     article.\" A blanket reading of \"the Open Access Subset\" is therefore a\n     reading of nothing, and the subset contains non-commercial articles. The\n     Cloud Service publishes each article's own licence code in the metadata\n     beside its PDF, which is that statement in a form a protocol can obey, so\n     the fetch reads it per article and keeps CC0 and CC BY.\n\nWHY ONLY CC0 AND CC BY, when CC BY-SA and CC BY-ND also permit commercial use.\nThe same rule the refusals here were decided under: where the reading is a\njudgement, it errs against us. Share-alike and no-derivatives raise a question\nabout what a measurement and an evidence tarball are, and this set does not\nneed the articles that would make us answer it -- the subset is large and the\nround is a few hundred pages. An article with no code, or one whose code is not\nin the list, is refused by name and counted in the manifest, so the corpus can\nbe read back as \"what was allowed\" rather than \"what was taken\".\n\nWHAT THIS SET DOES NOT ANSWER. Everything except tables. It annotates tables\nand nothing else on the page, so the text, heading, list and reading-order axes\nare NOT scored here and the run file says so per axis rather than reporting a\nzero -- a zero on a text axis over a corpus that never drew the text is a\nstatement about the corpus. DocLayNet stays the set for those five.\n"
+on_the_rig = true
+
+[datasets.fintabnet]
+name = "FinTabNet 1.0.0 (documents) with FinTabNet.c (cell structure)"
+what = "89,646 single pages of S&P 500 annual reports with their tables' cell structure: IBM's original PDFs, Microsoft's corrected annotations"
+vendor = "IBM Research (documents, FinTabNet 1.0.0); Microsoft (annotations, FinTabNet.c)"
+licence = "CDLA-Permissive-1.0 (FinTabNet 1.0.0); CDLA-Permissive-2.0 (FinTabNet.c)"
+training_use = "allowed on the TRAIN side of the company split only (sha256(company) % 10 != 0, 387 companies); never a page of an eval company. CDLA-Permissive-1.0 §2 grants use and modification, and a trained model is a Result under CDLA-Permissive-2.0 §3.1 for the annotations (#598)."
+pages = 89646
+version = "IBM FinTabNet 1.0.0 (November 2020), via the mirror below; FinTabNet.c (2023)"
+source = "https://huggingface.co/datasets/Leon1207/FinTabNet (archive.zip, 16,776,878,936 bytes); https://huggingface.co/datasets/bsmock/FinTabNet.c"
+repo_id = "Leon1207/FinTabNet"
+revision = "e30b3df79e3c3d253af3fa5764e8ad7d702e5891"
+annotations_repo_id = "bsmock/FinTabNet.c"
+annotations_revision = "e5673a90b98d02c4832f9e836d72762f0e8933a0"
+annotations_file = "FinTabNet.c-PDF_Annotations.tar.gz"
+annotations_bytes = 255009483
+annotations_sha256 = "bc32348eb1e73a6a8207f41267eb1b5a81e6ef5b0ff79d656f53d5f2e36ce60f"
+documents_archive = "archive.zip"
+documents_archive_bytes = 16776878936
+documents_archive_sha256 = "ab90fe54fb88f66d7b6b21601733d45e4956c17c4b67beca3adc2102b1e04499"
+documents_pdfs = 89646
+jsonl_files = [{ "file" = "FinTabNet_1.0.0_cell_train.jsonl", "bytes" = 644614484, "sha256" = "c37e8f81c995eac91a60042fab603fa3bb4d089db801477dcfabcdbe8926f7c2" }, { "file" = "FinTabNet_1.0.0_cell_val.jsonl", "bytes" = 66439843, "sha256" = "b43e6a2a33fd27871504996f3df9683376228d0e25ecbf9766a34bc9d0ef07ee" }, { "file" = "FinTabNet_1.0.0_cell_test.jsonl", "bytes" = 69221661, "sha256" = "15bca990d02d79986413d3faa8f6521611e12e1e52caa1284a7f674d716ae168" }]
+materialise_pages = 300
+walk_multiplier = 3
+eval_companies = "sha256(company) % 10 == 0"
+documents = "pdf"
+ground_truth = "Per table: the cells with their row and column numbers, header flags and the\ntext Microsoft read from IBM's PDF, plus the table's box in PDF coordinates --\nPubTables-1M's format, so `pubtables_cells` reads it unchanged.\n"
+annotator = "derived: IBM's token matching of the PDF against the filing's HTML, canonicalised by Microsoft"
+annotates = ["table"]
+publishable = true
+clause = "CDLA-Permissive-1.0 §3.1(a) and (c), as printed in the release's own fintabnet/LICENSE.txt"
+quote = "3.1 If You Publish Data You Receive or Enhanced Data: (a) You may do so under a license of Your choice provided that You give anyone who Receives the Data from You the text of this Agreement, the name of this Agreement and/or a hyperlink or other method reasonably likely to provide a copy of the text of this Agreement; and [...] (c) If You Publish Data You Receive, You must preserve all credit or attribution to the Data Provider(s)."
+licence_source = "fintabnet/LICENSE.txt inside the release; IBM's own dataset page, http://web.archive.org/web/20220125180444/https://developer.ibm.com/exchanges/data/all/fintabnet/ (\"Format PDF, JSON  License CDLA-Permissive\", linking https://cdla.io/permissive-1-0/)"
+read_on = "2026-09-30"
+verdict = "REPLACES #575's refusal FOR THIS SOURCE (COS, 30-09-2026: check, then accept).\n#575 refused FinTabNet mirrors on provenance -- a licence tag on an anonymous\nre-upload is not evidence -- and that stays the rule. This mirror is accepted\nbecause its provenance was MEASURED rather than taken from its tag:\n\n* It is IBM's release member for member: 89,646 PDFs under\n  fintabnet/pdf/<company>/<year>/, the six FinTabNet_1.0.0_*.jsonl and IBM's\n  fintabnet/LICENSE.txt, which is the full CDLA-Permissive-1.0 -- what IBM's\n  own dataset page (archived 2022-01-25) describes: \"Format PDF, JSON\",\n  \"89,646 pages comprising 112,887 tables\", \"License CDLA-Permissive\", 16 GB.\n* Its PDFs are the PDFs Microsoft annotated FinTabNet.c from. On 852 pages,\n  two from each of the 428 companies, 38,967 table cells (92.9 %) read the\n  same text in the same place on our PDF as Microsoft's `pdf_text_content` and\n  `pdf_text_tight_bbox`, the box within 0.5 pt; the 2,828 that differ were\n  read in a different order (a superscript `(1)` sorted before its line) or\n  with the dot leaders Microsoft strips, and the text on both sides is the\n  same (gs://pdfluent-datasets/fintabnet/1.0.0/provenance_check/ftn_check.json).\n  Another set of PDFs could not agree to half a point on 39,000 cells.\n* No checksum of the release was ever published by IBM or Microsoft; the\n  archive's sha256 above and the jsonl files' in the provenance check are ours,\n  so that a later fetch can be held to this one.\n\nThe terms: CDLA-Permissive-1.0 §3.1 lets anyone who received the data publish\nit under a licence of their choice as long as the text of the agreement goes\nwith it and the credit to IBM is kept. The mirror carries the agreement's text\nand IBM's release unchanged, which is exactly that; so its copy is a lawful\ncopy of IBM's data under IBM's terms. The annotations are FinTabNet.c's, under\nCDLA-Permissive-2.0, as in its own row.\n\nThe documents are single pages of public SEC filings (annual reports) of\nS&P 500 companies; IBM licensed the compilation, and the filings are public\nrecords. That is the reading IBM's own page gives.\n"
+on_the_rig = true
+
+[datasets.parsebench]
+name = "ParseBench"
+what = "2,078 business-document pages (insurance filings, financial reports, government) in five categories: tables, charts, text content, formatting, layout"
+vendor = "LlamaIndex (run-llama)"
+licence = "Apache-2.0 (dataset card), over third-party documents it does not own"
+training_use = "refused: measurement only (#622); and the documents are third-party web PDFs no licence of theirs covers -- scripts/ci/learned_training_uses_no_rig_document.py refuses any of them in a training manifest."
+pages = 2037
+version = "llamaindex/ParseBench, the PDF pages under docs/ (chart, layout, table, text); the 42 JPG/PNG layout pages are left out"
+source = "https://huggingface.co/datasets/llamaindex/ParseBench"
+repo_id = "llamaindex/ParseBench"
+revision = "2805a1d940f95a203e0ae4b88be9934f7765b3fc"
+documents = "pdf"
+ground_truth = "Not blocks. Per category, a JSONL of test rules: tables as ground-truth HTML\n(scored GriTS + TableRecordMatch), charts as spot-check data points, text as\nrules generated from a full Markdown transcription (missing/extra words,\ndigits, pairwise reading order, header/footer), formatting as positive and\nnegative style tests, and layout as boxes with class, content and reading\norder (Text, Table, Picture, Page-Header, Page-Footer). A VLM labelled every\npage first; humans verified and corrected it.\n"
+annotator = "human-verified (VLM first pass, corrected by people)"
+annotates = ["table", "paragraph", "furniture"]
+publishable = true
+clause = "the dataset card's Copyright Statement, and Apache-2.0 §2 through the card's `license: apache-2.0`"
+quote = "All documents are sourced from public online channels. The dataset is released under the Apache 2.0 License. If there are any copyright concerns, please contact us via the GitHub repository."
+licence_source = "https://huggingface.co/datasets/llamaindex/ParseBench (README and cardData.license at 2805a1d9), https://github.com/run-llama/ParseBench/blob/main/LICENSE (code, Apache-2.0), arXiv:2604.08538 §2.2 (provenance)"
+read_on = "2026-09-23"
+verdict = "Cleared for measurement and for publishing aggregate numbers, with three\nconditions this programme sets itself. The reading is a judgement in one place,\nand it is taken against us.\n\nWHAT THE TERMS SAY. The card declares Apache-2.0 -- in its metadata and one\nsentence of its README; the repository has no LICENSE file of its own. There is\nno non-commercial, research-only, no-derivatives or no-training clause, and no\ngate or click-through. That is the difference from OmniDocBench two rows up,\nwhose own sentence forbids commercial use; nothing here does.\n\nTHE JUDGEMENT. LlamaIndex can license what it owns: the rules, the\ntranscriptions, the selection. It cannot license the documents. Per the paper\n(§2.2) they were crawled from the web -- SERFF insurance filings (54% of the\ntable pages), public financial reports, government documents -- with a few\npages from FinTabNet (CDLA-Permissive-2.0, read two rows down) and VRDU (not\nread; three table pages, not identifiable from the file names). Their owners'\ncopyright is untouched by the card's Apache-2.0, and the card says as much by\npointing copyright concerns at the maintainers.\n\nWhat we do with them is make a copy on a machine that is deleted after the\nround, run tools over it, and publish scores. A score is not a reproduction of\na document. So the reading is: measuring is fine, and nothing of a document may\nleave the machine in a form that republishes it. Hence the conditions:\n\n  1. nothing we publish carries page content -- no text excerpts, no renders,\n     no crops; a table may name a page by its file name and nothing more;\n  2. the round's evidence (every tool's output per page) is private, stays out\n     of the repository and is deleted with the machine's other copies;\n  3. never training, which #622 asks for and which the documents' status would\n     require anyway.\n\nPII is not addressed by the card, the README, the paper or the blog, and the\ntext category includes contracts, handwriting and scanned pages. Condition 1\nand 2 are also what keeps any of that from travelling.\n\nWHAT IT CAN AND CANNOT ANSWER. Its ground truth is rules, not the blocks our\naxes read, so the round measures it through its own scorer on each tool's\nMarkdown -- which is also what makes the numbers comparable with LlamaIndex's\npublished ones -- and the layout category, which has boxes, is the one that can\nspeak to our axes. Which of the two #623 runs is decided there; this row only\nclears the set.\n\nDECIDED IN #623: its own scorer, on three of the four PDF categories (table,\nchart, text as content and as formatting), through\n`scripts/extraction/parsebench_round.py`. Layout is left out and the run file\nsays why: ParseBench scores it from boxes in a LayoutOutput, and every column is\nhanded over as Markdown, so each would score nothing for a reason that is ours.\nCondition 2 is kept by the round and not by a promise: each column's Markdown\nstays in the machine's work directory, which the remote round does not stage,\nand the run file carries metric values and page names only (its self-test fails\nwhen page text reaches it).\n"
+on_the_rig = true

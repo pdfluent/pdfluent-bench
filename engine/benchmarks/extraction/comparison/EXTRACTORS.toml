@@ -1,0 +1,292 @@
+# Reduced from the engine's register at e1f136aecf32 by scripts/port_from_engine.py.
+# Only the rows this benchmark runs are kept; the fields are unchanged.
+
+[meta]
+verdict_valid_days = 180
+capability = "extraction"
+
+[extractors.pdfluent]
+name = "PDFluent"
+what = "ours, source build, `pdfluent-cli extract-text`"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial"
+licence_kind = "open"
+ours = true
+recipe = "target/release/pdfluent-cli extract-text {in}"
+version_command = "echo \"${PDFLUENT_COMMIT:-$(git rev-parse --short HEAD)}\""
+publishable = true
+clause = "our own"
+quote = ""
+source = "LICENSE"
+read_on = "2026-09-07"
+verdict = "Ourselves, in the same table and under the same rules, because a comparison in\nwhich only the other side has to declare its terms is not a comparison.\n\nOur version is the commit, which is what a source build has instead of a\nrelease. `PDFLUENT_COMMIT` overrides it because the rig runs from an export of\nthe tree rather than a checkout -- the alternative was shipping a clone\ncredential to a throwaway cloud machine to make `git rev-parse` work.\n\nThe extraction side has no watermark problem: `extract-text` on an unlicensed\nbuild writes the document's text and nothing of its own. That is worth stating\nbecause the PDF/A comparison next door has to caveat exactly this, and a reader\nwho has read that file will look for the same caveat here.\n"
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = true
+on_the_structured_rig = true
+ocr = "off: the text layer only"
+version_pin = "the commit"
+install = "cargo build --release --example structured_markdown"
+outputs = "markdown; blocks with bbox through the block model"
+offline = true
+grounding = "bbox + page per block (block model JSON)"
+confidence = "none yet (#599, #600)"
+
+[extractors.docling]
+name = "Docling"
+what = "IBM's document converter: layout model, table model, Markdown out"
+vendor = "the Docling project (IBM Research / LF AI & Data)"
+licence = "MIT"
+licence_kind = "open"
+weights = "docling-project/docling-models (CDLA-Permissive-2.0, Apache-2.0) and docling-project/docling-layout-heron (Apache-2.0)"
+recipe = "/opt/ex/docling/bin/python scripts/extraction/adapters/extract_text.py --tool docling --no-ocr {in}"
+version_command = "/opt/ex/docling/bin/python -c \"from importlib.metadata import version;print(version('docling'))\""
+publishable = true
+clause = "MIT, the grant; and CDLA-Permissive-2.0 §2 for the weights"
+quote = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software ... to deal in the Software without restriction."
+source = "https://raw.githubusercontent.com/docling-project/docling/main/LICENSE and https://huggingface.co/ds4sd/docling-models"
+read_on = "2026-09-07"
+verdict = "Both halves are permissive. The code is MIT. The weights the default pipeline\ndownloads are published under CDLA-Permissive-2.0 and Apache-2.0, neither of\nwhich carries a use restriction, a field-of-use limit or a competitor clause --\nwhich is precisely what makes Docling measurable and Marker not.\n\nThe two repositories the default pipeline pulled on the rig are named in the\n`weights` field above, read off the machine after the run rather than assumed:\n`docling-models` (layout and TableFormer) and `docling-layout-heron`. A model\nlicence that changed between this reading and the next round would otherwise be\ninvisible, so the next round reads the cache again rather than this line.\n\nOne measurement caveat that is not a licence question: Docling is a layout\npipeline, its natural output is Markdown, and our four axes read plain text.\nThe adapter takes its plain-text export. That is the fairest available reading\nof a tool whose selling point is structure, and it is also the reason a poor\nscore here is not a verdict on Docling: this table measures characters and\ntheir order, not tables and headings.\n"
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = true
+on_the_structured_rig = true
+ocr = "off: do_ocr = False (extract_structured.py)"
+version_pin = "2.126.0"
+install = "/opt/ex/docling venv, scripts/extraction/rig_bootstrap.sh"
+outputs = "markdown; blocks with bbox (DoclingDocument)"
+offline = true
+grounding = "bbox + page per item (provenance)"
+confidence = "page-level scores, none per block"
+model_cache = ["~/.cache/huggingface/hub/models--docling-project--docling-models", "~/.cache/huggingface/hub/models--docling-project--docling-layout-heron", "~/.cache/huggingface/hub/models--ds4sd--docling-models"]
+
+[extractors.pymupdf4llm]
+name = "pymupdf4llm"
+what = "Artifex's Markdown layer over PyMuPDF, with the pymupdf_layout ONNX models"
+vendor = "Artifex Software"
+licence = "AGPL-3.0-only OR LicenseRef-Artifex-Commercial"
+licence_kind = "open"
+weights = "bundled in the pymupdf_layout 1.28.2 wheel (layout_rf2.4.1.onnx, table_grid_model_*.onnx), same dual licence as the wheel"
+recipe = ""
+version_command = "/opt/ex/pymupdf4llm/bin/python -c \"from importlib.metadata import version;print(version('pymupdf4llm'))\""
+publishable = true
+clause = "AGPL-3.0 §2 (running) and §13 (remote network interaction)"
+quote = "This License explicitly affirms your unlimited permission to run the unmodified Program."
+source = "https://raw.githubusercontent.com/pymupdf/pymupdf4llm/main/LICENSE, https://raw.githubusercontent.com/pymupdf/PyMuPDF/main/COPYING, https://raw.githubusercontent.com/ArtifexSoftware/pymupdf_layout/main/LICENSE, and the wheel's COPYING"
+read_on = "2026-09-23"
+verdict = "Measurable and publishable. This is the AGPL verdict #620 asked for in writing.\n\nWe run the unmodified program on our own machine and publish numbers about its\noutput. §2 grants \"unlimited permission to run the unmodified Program\". §13 --\nthe clause that reaches network use -- applies only \"if you modify the\nProgram\", and we do not. Nothing is conveyed: the rig installs from PyPI and is\ndeleted after the round, and no part of pymupdf4llm, PyMuPDF or the bundled\nmodels enters our code or our distribution. Measuring is not distributing.\n\nThat it is AGPL matters in a different place: it is why a buyer shipping a\nclosed product needs Artifex's commercial licence, and the table's licence\ncolumn says so rather than letting \"open source\" stand for \"free to embed\".\nThe PyMuPDF column of #390 was read on the same terms.\n\nThe layout models are inside the wheel and carry the wheel's licence, so there\nis no separate weights licence to read, and nothing is downloaded at run time.\n"
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured on the structured rig (#619); its text engine is PyMuPDF, which is on the plain-text rig under its own name"
+on_the_structured_rig = true
+ocr = "off: OCRMode.NEVER in the adapter, although a Tesseract is on the rig for Unstructured"
+version_pin = "1.28.2 (pins pymupdf==1.28.2 and pymupdf_layout==1.28.2)"
+install = "pip install pymupdf4llm==1.28.2 into /opt/ex/pymupdf4llm"
+outputs = "markdown; json with bbox (to_json); page chunks with page_boxes"
+offline = true
+grounding = "bbox + page per layout box (to_json)"
+confidence = "none"
+
+[extractors.balanced]
+name = "PDFluent balanced"
+what = "#641's balanced tier: Heron-ft ep03 ONNX via the shared ort layer, plus our own PDF text"
+vendor = "PDFluent (a fine-tune of the Docling project's Heron-101, exported to ONNX)"
+licence = "Apache-2.0"
+licence_kind = "open"
+weights = "docling-project/docling-layout-heron-101 (Apache-2.0), fine-tuned on DocLayNet v1.2 /train (CDLA-Permissive-1.0), at most 10 pages per document, no rig document, 4 epochs (EMA), exported to ONNX as heron_ep03.onnx (sha256 b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa); private, fetched per round through a signed URL as BALANCED_MODEL_URL"
+recipe = ""
+version_command = "cat /opt/ex/balanced/VERSION"
+publishable = false
+clause = "Apache-2.0 §4 (redistribution of derivative works); CDLA-Permissive-1.0 §3 (Results)"
+quote = "You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications"
+source = "https://huggingface.co/docling-project/docling-layout-heron-101 (license: apache-2.0) and https://cdla.dev/permissive-1-0/"
+read_on = "2026-10-07"
+verdict = "Our own column, not a competitor: the balanced tier (#641), measured so its\ngate -- the ONNX export of the ep03 teacher behind `pdfluent extract\n--quality balanced` -- is read on the rig and not only on a parity proxy. The\nbase weights are Apache-2.0 and the fine-tune data CDLA-Permissive-1.0, whose\n§3 leaves Results unrestricted, so running it is permitted. Not publishable:\nit is an internal instrument, its weights are private, and a number for it is\na statement about a model no customer can obtain.\n"
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "a balanced-tier column for #641, measured on the structured rig only"
+on_the_structured_rig = true
+ocr = "off: the text layer only; the detector reads the rendered page for boxes, never for text"
+version_pin = "6eabc86f3e33a34d82ba2fd67b9ae54a1917cc4e b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa 1.23.2 1fa4dcaef22f6f7d5cd81b28c2800414350c10116f5fdd46a2160082551c5f9b"
+install = "structured_bench_remote.sh: model from BALANCED_MODEL_URL checked against the second hash in version_pin and the ORT 1.23.2 linux-x64 archive from the pinned microsoft/onnxruntime URL checked against the fourth, both fetched before the cargo build -p pdfluent-cli --features ort-layout"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+model_cache = ["/opt/ex/balanced/model", "/opt/ex/balanced/ort"]
+
+[extractors.balanced_tatr]
+name = "PDFluent balanced + table structure"
+what = "#636's balanced tier with TATR table structure (track B, P4): the ep03 layout boxes, each kept table region structured by the Table Transformer first, plus our own PDF text"
+vendor = "PDFluent (a fine-tune of the Docling project's Heron-101, exported to ONNX, plus Microsoft's Table Transformer v1.1-all, exported to ONNX)"
+licence = "MIT and Apache-2.0"
+licence_kind = "open"
+weights = "Layout: docling-project/docling-layout-heron-101 (Apache-2.0), fine-tuned on DocLayNet v1.2 /train (CDLA-Permissive-1.0), at most 10 pages per document, no rig document, 4 epochs (EMA), exported to ONNX as heron_ep03.onnx (sha256 b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa); Tables: microsoft/table-transformer-structure-recognition-v1.1-all@7587a7ef111d9dcbf8ac695f1376ab7014340a0c (MIT), exported to ONNX as tatr-v1.1-all.onnx (sha256 8c28418690b896a845a53633736a62c22ef8c9a515a23c06e9976e61360f1fcf), structured with the publisher's postprocess.py verbatim from microsoft/table-transformer@16d124f616109746b7785f03085100f1f6247575 (MIT); private, fetched per round through signed URLs as BALANCED_MODEL_URL and TATR_MODEL_URL"
+recipe = ""
+version_command = "cat /opt/ex/balanced/VERSION_TATR"
+publishable = false
+clause = "MIT (Table Transformer weights and code); Apache-2.0 §4 (redistribution of derivative works); CDLA-Permissive-1.0 §3 (Results)"
+quote = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction"
+source = "https://huggingface.co/microsoft/table-transformer-structure-recognition-v1.1-all (license: mit) and https://github.com/microsoft/table-transformer (license: mit); https://huggingface.co/docling-project/docling-layout-heron-101 (license: apache-2.0) and https://cdla.dev/permissive-1-0/"
+read_on = "2026-10-07"
+verdict = "Our own column, not a competitor: the balanced tier (#641) with TATR table\nstructure (#636, track B), measured so its gate -- kept table regions read\nby the Table Transformer rather than the engine grid -- is read on the rig\nand not only on a parity proxy. Both columns build from one binary off one\nbranch, so only TATR on/off differs. The table weights and their\nreconciliation code are MIT, the layout base weights Apache-2.0 and the\nfine-tune data CDLA-Permissive-1.0, whose §3 leaves Results unrestricted,\nso running it is permitted. Not publishable: it is an internal instrument,\nits weights are private, and a number for it is a statement about models\nno customer can obtain.\n"
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "a balanced-plus-TATR column for #636, measured on the structured rig only"
+on_the_structured_rig = true
+ocr = "off: the text layer only; the detector reads the rendered page for boxes, never for text"
+version_pin = "1658b0dc7f8dc3dc23491246d642d30660218073 b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa 8c28418690b896a845a53633736a62c22ef8c9a515a23c06e9976e61360f1fcf 1.23.2 1fa4dcaef22f6f7d5cd81b28c2800414350c10116f5fdd46a2160082551c5f9b"
+install = "structured_bench_remote.sh: cargo build -p pdfluent-cli --features ort-layout,ort-tables, layout model from BALANCED_MODEL_URL checked against the second hash in version_pin, TATR from TATR_MODEL_URL checked against the third, the ORT 1.23.2 linux-x64 archive checked against the fifth (the one ORT sha both columns pin)"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+model_cache = ["/opt/ex/balanced/model", "/opt/ex/balanced/ort"]
+
+[extractors.teacher_ens]
+name = "PDFluent teacher (ensemble)"
+what = "#641's strongest teacher: Heron-ft ep03 plus Egret-ft ep00, per-class thresholds, union, plus our own PDF text"
+vendor = "PDFluent (fine-tunes of the Docling project's Heron-101 and Egret)"
+licence = "Apache-2.0"
+licence_kind = "open"
+weights = "Heron: docling-project/docling-layout-heron-101 (Apache-2.0), fine-tuned on DocLayNet v1.2 /train (CDLA-Permissive-1.0), at most 10 pages per document, no rig document, 4 epochs (EMA), as teacher-ep03.tgz; Egret: docling-project/docling-layout-egret-xlarge (Apache-2.0; a D-FINE-X whose initial checkpoint its publisher does not name, see MODELS.toml egret-xlarge), fine-tuned on DocLayNet v1.2 /train, same cap and exclusions, 1 epoch, as teacher-egret-ep00.tgz; per-class thresholds from the /train holdout, union at IoU 0.5 with Heron winning; private, fetched per round through signed URLs"
+recipe = ""
+version_command = "paste -d ' ' /opt/ex/teacher/model-ep03/WEIGHTS_SHA256 /opt/ex/teacher/model-egret/WEIGHTS_SHA256"
+publishable = false
+clause = "Apache-2.0 §4 (redistribution of derivative works); CDLA-Permissive-1.0 §3 (Results)"
+quote = "You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications"
+source = "https://huggingface.co/docling-project/docling-layout-heron-101 (license: apache-2.0) and https://cdla.dev/permissive-1-0/"
+read_on = "2026-10-02"
+verdict = "Our own column, not a competitor: the teacher for distillation (#641), measured so\nits gate -- beat Docling on headings, lists and tables -- is read on the rig and\nnot only on a validation proxy the base models have probably seen. Both base\nweights are Apache-2.0 and the fine-tune data CDLA-Permissive-1.0, whose §3\nleaves Results unrestricted, so running it is permitted. Not publishable: it is\nan internal instrument, its weights are private, and a number for it is a\nstatement about models no customer can obtain.\n"
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "a structure teacher for #641, measured on the structured rig only"
+on_the_structured_rig = true
+ocr = "off: the text layer only (our feature_dump); the detectors read the rendered page for boxes, never for text"
+version_pin = "76520b1c21e09c3f47a5286f46d5129f0db63733d37e43dea3ee70492838937c 7ad1d6942a6d91216d5bfa0a234797b25184602cc934203319a1e4e74cea7255"
+install = "structured_bench_remote.sh: venv /opt/ex/teacher from requirements-best.txt (CPU torch 2.5.1, transformers 4.57.6, pillow), weights from TEACHER_EP03_WEIGHTS_URL and TEACHER_EGRET_WEIGHTS_URL checked against the two hashes in version_pin"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+model_cache = ["/opt/ex/teacher/model-ep03", "/opt/ex/teacher/model-egret"]
+
+# Rows added by pdfluent-bench (not in the engine register). Appended to the
+# reduced register by scripts/port_from_engine.py. Same fields, same rules:
+# a row without licence, clause, read_on and verdict is refused by the harness.
+
+[extractors.docling_minimal]
+name = "Docling (TableFormer off)"
+what = "Docling's PDF pipeline with do_table_structure = False and do_ocr = False. The layout model always runs: Docling has no PDF pipeline without it."
+vendor = "the Docling project (IBM Research / LF AI & Data)"
+licence = "MIT"
+licence_kind = "open"
+weights = "docling-project/docling-layout-heron (Apache-2.0); the table model is not loaded"
+recipe = ""
+version_command = "\"${DOCLING_MINIMAL_PYTHON:-/opt/ex/docling_minimal/bin/python}\" -c \"from importlib.metadata import version;print(version('docling'))\""
+publishable = true
+clause = "MIT, the grant; Apache-2.0 for the layout weights"
+quote = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software ... to deal in the Software without restriction."
+source = "https://raw.githubusercontent.com/docling-project/docling/main/LICENSE and https://huggingface.co/docling-project/docling-layout-heron"
+read_on = "2026-10-17"
+verdict = "The same software and terms as the `docling` row, run with one pipeline option switched off. Nothing new to weigh."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "a benchmark configuration of Docling, measured by pdfluent-bench only"
+on_the_structured_rig = true
+ocr = "off: do_ocr = False (bench_columns.py)"
+version_pin = "2.126.0"
+install = "docker/docling/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "bbox + page per item (provenance)"
+confidence = "page-level scores, none per block"
+model_cache = ["~/.cache/huggingface/hub/models--docling-project--docling-layout-heron"]
+
+[extractors.pdfluent_fast]
+name = "PDFluent fast"
+what = "the public `pdfluent` Python package, Document.extract_markdown(quality=\"fast\", ocr=\"never\")"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial"
+licence_kind = "open"
+recipe = ""
+version_command = "\"${PDFLUENT_FAST_PYTHON:-/opt/ex/pdfluent_fast/bin/python}\" -c \"from importlib.metadata import version;print(version('pdfluent'))\""
+publishable = true
+clause = "our own"
+quote = ""
+source = "https://pypi.org/project/pdfluent/"
+read_on = "2026-10-17"
+verdict = "Ourselves, measured through the published package rather than a source build, so that anybody can rerun the column."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured by pdfluent-bench"
+on_the_structured_rig = true
+ocr = "off: ocr=\"never\""
+version_pin = "1.1.0"
+install = "docker/pdfluent/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+
+[extractors.pdfluent_balanced]
+name = "PDFluent balanced"
+what = "the public `pdfluent` Python package, Document.extract_markdown(quality=\"balanced\", ocr=\"never\"): a layout model regions the page and the engine's own text fills the regions"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial (code); Apache-2.0 (layout weights, a fine-tune of docling-project/docling-layout-heron-101)"
+licence_kind = "open"
+weights = "the layout model installed by `pdfluent models install layout`, or PDFLUENT_MODEL_DIR"
+recipe = ""
+version_command = "\"${PDFLUENT_BALANCED_PYTHON:-/opt/ex/pdfluent_balanced/bin/python}\" -c \"from importlib.metadata import version;print(version('pdfluent'))\""
+publishable = false
+clause = "our own; Apache-2.0 section 4 for the weights"
+quote = "You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications"
+source = "https://pypi.org/project/pdfluent/ and https://huggingface.co/docling-project/docling-layout-heron-101"
+read_on = "2026-10-17"
+verdict = "Ourselves. `publishable` stays false until the owner decides it, as in the engine register's `balanced` row."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured by pdfluent-bench"
+on_the_structured_rig = true
+ocr = "off: ocr=\"never\"; the detector reads the rendered page for boxes, never for text"
+version_pin = "1.1.0"
+install = "docker/pdfluent/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+
+[extractors.pdfluent_balanced_tatr]
+name = "PDFluent balanced + TATR"
+what = "pdfluent_balanced with table_model_dir: each kept table region is structured by the Table Transformer v1.1-all first"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial (code); Apache-2.0 (layout weights); MIT (Table Transformer weights)"
+licence_kind = "open"
+weights = "layout as pdfluent_balanced; tatr-v1.1-all.onnx from PDFLUENT_TABLE_MODEL_DIR"
+recipe = ""
+version_command = "\"${PDFLUENT_BALANCED_TATR_PYTHON:-/opt/ex/pdfluent_balanced_tatr/bin/python}\" -c \"from importlib.metadata import version;print(version('pdfluent'))\""
+publishable = false
+clause = "our own; Apache-2.0 section 4; MIT"
+quote = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction"
+source = "https://pypi.org/project/pdfluent/, https://huggingface.co/microsoft/table-transformer-structure-recognition-v1.1-all"
+read_on = "2026-10-17"
+verdict = "Ourselves. `publishable` stays false until the owner decides it, as in the engine register's `balanced_tatr` row."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured by pdfluent-bench"
+on_the_structured_rig = true
+ocr = "off: ocr=\"never\"; the detectors read the rendered page for boxes, never for text"
+version_pin = "1.1.0"
+install = "docker/pdfluent/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"

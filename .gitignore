@@ -1,0 +1,9 @@
+# Materialised datasets, tool output and scratch: never committed.
+/work/
+/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Run results are committed deliberately, one directory per run, by hand.
+/results/local-*/
+/results/smoke-*/

@@ -1,0 +1,4027 @@
+{
+ "set": "pubtables-1m",
+ "version": "bsmock/pubtables-1m, PubTables-1M-PDF_Annotations.tar.gz",
+ "revision": "35b1c097807e0b07ec5313879b85956b7b3890db",
+ "source": "https://huggingface.co/datasets/bsmock/pubtables-1m",
+ "licence": "CDLA-Permissive-2.0 (annotations); per article, CC0 or CC BY only (documents)",
+ "drawn": "2026-09-20",
+ "seed": "pdfluent-structured-tables-holdout-2026-09-20",
+ "rule": "scripts/ci/structured_holdout_rule.py",
+ "share": 0.2,
+ "licence_codes": [
+  "CC BY",
+  "CC0"
+ ],
+ "counts": {
+  "pages": 400,
+  "tuning": 320,
+  "holdout": 80,
+  "documents": 210
+ },
+ "seal": {
+  "tuning": "0e045c6c46a2d489fdaa02defb7eaff0a060438be7313757924cc1568e3fcabc",
+  "holdout": "0428515208f9af1691c373d97059f82c51c1d621ebd0c67fe33fd4efa607cbc8"
+ },
+ "pages": [
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5120491-p0001.pdf",
+   "document": "PMC5120491",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "284a4c4b212102204630168e5be509874d99cd46bd46ad44763223dceb6477cb",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5120491-p0002.pdf",
+   "document": "PMC5120491",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "0a902ca9dc7f901fdeb2e711ebb22b52514dacbfb1aceb49122961ff4a18d77d",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4885852-p0005.pdf",
+   "document": "PMC4885852",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "3536d07766cccf94772949af6bfb87d6c8fda3adff82a34c226375b7c959b471",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4604245-p0002.pdf",
+   "document": "PMC4604245",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "49c6a3459d639bb839bbb6e3b7ae8dd2bd2e02fedfdbe93b5ed2c162dbcc63cc",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4604245-p0004.pdf",
+   "document": "PMC4604245",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "5b9d8d2be5fc3f14baf086821ea9e8b5b15e370f4030aed438ce718fd7793d13",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6111602-p0002.pdf",
+   "document": "PMC6111602",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "e6ad293c59217c0898c55f92b3a372ffd67ebb516406be5ea87ee8028487c1c1",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5974584-p0003.pdf",
+   "document": "PMC5974584",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "f5e7a3dbb4bcda1d27aaac4632911238f35a51b13af891c1e09598d0ae6d1d6a",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5974584-p0004.pdf",
+   "document": "PMC5974584",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "cb5aa05fe3b1ee0732e44ef352701c2c4ca8d7fdffa7db5b5ede5fc8e9e25e05",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3595254-p0004.pdf",
+   "document": "PMC3595254",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "1aa4b5d2c0a3484e21b2beff1de8773f7e43a7bc262a1c40827a816fbf6f2ee2",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2796649-p0002.pdf",
+   "document": "PMC2796649",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d336439c16a492c19103d654224f01c886d2cc34ce01336c43276ce07fd121b7",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2796649-p0003.pdf",
+   "document": "PMC2796649",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "6099acaea55ebc3edf9a24ed2c8a7d33a45c43e435e932875ed0785f2b98a4ef",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4863368-p0002.pdf",
+   "document": "PMC4863368",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "251c5fb61296ee1ed8b99603506af4962885240409e653f0b452088866d89c69",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6193196-p0003.pdf",
+   "document": "PMC6193196",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "9d1e33bd07bc9f247d37a8d1e8923752710a2a81f990fa89decbeb2c0348c889",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3515245-p0011.pdf",
+   "document": "PMC3515245",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "216dacdb8413e7487a970086fc5911fe1007b2d15aa8df4e68c1e7ec275abae9",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4549364-p0006.pdf",
+   "document": "PMC4549364",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "7d70f965825e310a4cfa712249eb8f9d7b4fbff1632db475531ebad7507c385f",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3557156-p0005.pdf",
+   "document": "PMC3557156",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "fa9b882371af496fcdde0a4688eaf599774e812c1aceb638715b59e4b16a0936",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6176070-p0003.pdf",
+   "document": "PMC6176070",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "4812df126cb423f0b8f21cb345d03e2acba131a7558977334f69b489955345ec",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5730249-p0002.pdf",
+   "document": "PMC5730249",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "728b24d671f6af40cc3ecfb3aa167101edecda7250b98ca0f1362dda432be4df",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5730249-p0010.pdf",
+   "document": "PMC5730249",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "31b69a0defd6b1d2385712b652dc4b368937a187587334264c52291a1d643aa6",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4750808-p0002.pdf",
+   "document": "PMC4750808",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "3bfaedf0b9c93b07f501f45dc8d9ec1c1d6874a1c51624616daebd8ab0dfdc8a",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4750808-p0003.pdf",
+   "document": "PMC4750808",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "9b0088cbcf977ce05c5f4bb6193007de400b71ca74bed906938a5ee5677ed5de",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5901860-p0002.pdf",
+   "document": "PMC5901860",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "aeb4fadc3ea34d8055571959fec0e64590cd19c1a5154cee7b42e56d3648767e",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070228-p0003.pdf",
+   "document": "PMC6070228",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "7e5b38660d5cf1c527cbb6a631cc11f461abfefe3afda5dbe048c7031ffd81a2",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070228-p0004.pdf",
+   "document": "PMC6070228",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "7c8a81360bd8dc25cca60960ba91c4eb00159618414c251a96199be69a3f42ea",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070228-p0005.pdf",
+   "document": "PMC6070228",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "ec7916f56acba27bb49f3263485436da5b0a82e6782f717e6ba7cc027398bf3d",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070228-p0006.pdf",
+   "document": "PMC6070228",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "ef5895a901958c959fab4bc18849577a7af4c142ca5844f35b24289b02f2ab50",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070228-p0007.pdf",
+   "document": "PMC6070228",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "a19f7bc40b11886b1fec5ad4992835f132ea47b53211101032f6ad8b0e1a4416",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070228-p0008.pdf",
+   "document": "PMC6070228",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "f92cdb94dbeb48cc2f753f0773271254bc9ec5891c7caef5cb2bcfd5a5bc1eb4",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2994367-p0001.pdf",
+   "document": "PMC2994367",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "4156d792ed65aec92ea1fa30a7adf46a1a40ac3690644c7608dcb48304103308",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4494560-p0003.pdf",
+   "document": "PMC4494560",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "88ab0c88089e10a380e7d515d9e1b1ad16fac59bce86944a106489733efb92bc",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5171794-p0003.pdf",
+   "document": "PMC5171794",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "3d654d075407d021b9acd20ada54f9828b51bea56f0df5dddbc2c52dfcb78cb2",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4501811-p0002.pdf",
+   "document": "PMC4501811",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "f86286cc0ab9369e6b54374d6419f7543d60827851037a736347b492554d9171",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3292471-p0004.pdf",
+   "document": "PMC3292471",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "694bf1c57a7e85203f50300de2d70170ee3264cd64e0550a8d84597052c7aa22",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3292471-p0006.pdf",
+   "document": "PMC3292471",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "7a77f1e9d6d8eda34b19a2000ee71bf1932d5201f56651f7c2f55352890b7f27",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3292471-p0007.pdf",
+   "document": "PMC3292471",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "9753a20e6084b389691f7caf8cc04ac5d633e6ff19b36af7f08cef9a901dec35",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3161824-p0003.pdf",
+   "document": "PMC3161824",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "8fe0ca9f4dc8f32a26dd2005a91d7849e97caf767b1eafff5112fcead5be6065",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3161824-p0004.pdf",
+   "document": "PMC3161824",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "7338c7a80b54954a00b6b3b4e51785a2b18a8323e80cbc159dbf4c462d4157f3",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3161824-p0005.pdf",
+   "document": "PMC3161824",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "6052ead5551608276fec7b6e9c608879740af20767d473dcaa1ce913c469eb95",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3161824-p0006.pdf",
+   "document": "PMC3161824",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "c6fc36a0027c8add576e7fad6022996d4017a1129aba0477246fe90b307863bd",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3161824-p0007.pdf",
+   "document": "PMC3161824",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "14197e4fa2bb81590de7c35f08b155ed4c385b553ddf4e0350c492f96aab50d7",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4374964-p0002.pdf",
+   "document": "PMC4374964",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "77513dbac04929675644fdad5ae489920bf0d05af58b52bfca1c7ab5130fa465",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4374964-p0004.pdf",
+   "document": "PMC4374964",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "272f03ba18921ac80c8703ae97098aef0980eda98d6ce051be93ccaae4760553",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4374964-p0006.pdf",
+   "document": "PMC4374964",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "2e11724cb04dc6c1b7d4f55f00b724de5828cd52b46b9a2910e079b01a8abc9a",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4753429-p0014.pdf",
+   "document": "PMC4753429",
+   "page_no": 14,
+   "category": "scientific articles",
+   "sha256": "4fe92fa802ee327f5209c8b889597f7cda76f0684226cb042ca0177330f31f94",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6199742-p0004.pdf",
+   "document": "PMC6199742",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "c41b4e26a9467abb017ae633441e54b0d09bdf8070b0e9a20a4c158eda9c74f0",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6199742-p0005.pdf",
+   "document": "PMC6199742",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "1d6c96eb4d916c05aa3ef3602826d2f2750d4192251a09c1022ae6c1b062e9e1",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4791228-p0003.pdf",
+   "document": "PMC4791228",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "77d0b410e9ce40fa36546dca2c6e5d7d218c07a7a8a939f3f27279e5b9552781",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3482579-p0002.pdf",
+   "document": "PMC3482579",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "1679f3254b78c578c71793009fbfe6511e2fd50aa541c4a3fd41f15ec5e25157",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3482579-p0003.pdf",
+   "document": "PMC3482579",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "9f9e0998aec221753a0f7fee2062567bb0bc6a6b26e196eb1c90d08406b53abf",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4621916-p0001.pdf",
+   "document": "PMC4621916",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "d4b892c0c5392f3659a478d845cd166afabd9842de9682da617b2c4be5e0a0e9",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4621916-p0006.pdf",
+   "document": "PMC4621916",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "286267eddc18f8bca028d7fa24a8c9a9fc979cfd255a25855b0f297de1d34ccd",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1260020-p0002.pdf",
+   "document": "PMC1260020",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d6bac210a2ad91639337baf9704c61512ee8be8ec6974fe8b2619ffab7b8c18d",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6232382-p0003.pdf",
+   "document": "PMC6232382",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "bab6374fd166ceb75d10442815b1b21910b9d7c3a0f18435242430c8defc4df9",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6232382-p0004.pdf",
+   "document": "PMC6232382",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "c41e25fdc8386be8269bcaaa3a0ce54b64934161d1c343f47a3aafa692d4e106",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6232382-p0005.pdf",
+   "document": "PMC6232382",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "deba20925864e94a904e295bda150af901fadd831ca8eb05621e320cb3a07641",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6232382-p0006.pdf",
+   "document": "PMC6232382",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "53425c48c6384c9c058cd0785e4ba6a2af5e5f086ff04f0a88946a99d42396e6",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6137092-p0005.pdf",
+   "document": "PMC6137092",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "92b46f70a8013e7f6998c87b08e1047db5ffc73db29a993f32fa10abc2d4b204",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2093937-p0005.pdf",
+   "document": "PMC2093937",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "3d239858723ed3d218a18fd29e2d4806f40aa89e214e4706721e2411f1079b16",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2950840-p0003.pdf",
+   "document": "PMC2950840",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "a31a5c626dfa5118f2152fae3035957328f97f0c1ce4a3ab4c689b13b47b62cd",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2950840-p0005.pdf",
+   "document": "PMC2950840",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "eeb8121155ffc05d3463e224192447149dedcb891c42f48141f4378008f0125c",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2572846-p0001.pdf",
+   "document": "PMC2572846",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "f0681c65cf6a37dc22ea0707f8e4c106e2993a5bbf2d436ee0e02466628cdf61",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3507304-p0002.pdf",
+   "document": "PMC3507304",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "973697fe6a89c80161358bd75e2b9cd058aa0eec5b191e62342e9a158823300a",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4595063-p0002.pdf",
+   "document": "PMC4595063",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "b66c1f1d2fac77ca4fff3d0b78d1f099081c4ac5fc9a4ae832461bb695463273",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4595063-p0005.pdf",
+   "document": "PMC4595063",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "aa3d15bc3c9fdbedf9cb261bfb8212e959ab30f892b6ebed80a9c23a5f8c4965",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4595063-p0006.pdf",
+   "document": "PMC4595063",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "83cea8f79e5ab7a868c57586cdf0c8e5c4b42e628fd1c49a06705f489dc383c4",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3583181-p0007.pdf",
+   "document": "PMC3583181",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "284c541305f60fb963bd5244483abaeb4d5cc4660667ac830587d2198604ecb3",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3614376-p0002.pdf",
+   "document": "PMC3614376",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "9e4f306c91f5eec152a36e020cd4dfc599ad41483a4e6620a779d9c08e96db20",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3614376-p0011.pdf",
+   "document": "PMC3614376",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "8456f05268cd94caeabe033b0a0845fc7ac93ee8876c501ef216a3ba170bf264",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6193148-p0001.pdf",
+   "document": "PMC6193148",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "40449ba23e5e1f2d962dd8de6e5162a4c40b9f0d1491ebe5e937f3dd737237d7",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2771904-p0001.pdf",
+   "document": "PMC2771904",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "fbd5841dcaa8287485687cce3961f4840ff3192bb2182227f022c115336e9bae",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2771904-p0002.pdf",
+   "document": "PMC2771904",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "ae7875341547c3c1fed43817484336f8a04c84df27e93253085e3bf00b17af36",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4402065-p0002.pdf",
+   "document": "PMC4402065",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "5d037fc2e570deb1f05bf3c854baae4068a421121346655d34d9ded13c088925",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4402065-p0003.pdf",
+   "document": "PMC4402065",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "82ba3fb772e02de99523387fa971d8b8079798c763a90139da426b14a8519b6b",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6112666-p0003.pdf",
+   "document": "PMC6112666",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "86c33b05f964656eaf58a129035c3f85901b69273257d7bb3038fe62e560cf4b",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6112666-p0004.pdf",
+   "document": "PMC6112666",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "96e7f731a78a2407bc9ee130d2e50c2038d731d9047eb7073d5f97d4c4fc593b",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2753363-p0003.pdf",
+   "document": "PMC2753363",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "1724a9886d517850ce0c8129137134c9576d9ada709c8f2f880f8d47513a9545",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2753363-p0006.pdf",
+   "document": "PMC2753363",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "f3a7e0e3bea24d976a79cb54e7026f4e388eb64b6e401ca179cf493a11e2c436",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2753363-p0007.pdf",
+   "document": "PMC2753363",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "3791e8c50d406cae32c0c143eba4bce0d07aff08a77f361a4ef4fdfe478ff752",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4586454-p0007.pdf",
+   "document": "PMC4586454",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "cf2e164979da0d50bad48d41fd4dd654b6ad11db72eb9c5d807e3d3e3895d58a",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3141784-p0004.pdf",
+   "document": "PMC3141784",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "0753b8584dbc0443e8083cc0922887cdbc43f8e0042850a02cc87ffc53263df4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3141784-p0006.pdf",
+   "document": "PMC3141784",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "446dfbcb5467b17e7ef005f7fe9bb9dd9137861b46446b077ef94837fc51b646",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4826663-p0004.pdf",
+   "document": "PMC4826663",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "0903abc11d0a44a899c26018352c583b25096411c954625f0e41f1b50e1163cf",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4826663-p0005.pdf",
+   "document": "PMC4826663",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "a76173478ec18c50d244b9f63a758d36e6062a44d2859664eeab47e501ed64c6",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4826663-p0006.pdf",
+   "document": "PMC4826663",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "54f57cd4d02aa06fe739bf806d44b9a8669c86b9347eace00d24dbf37ebc67ca",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6222413-p0004.pdf",
+   "document": "PMC6222413",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "878e707a479fc8c13a74ca2dce10a792500b6eea1e214fe4c7f6aa62b22a6910",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6222413-p0005.pdf",
+   "document": "PMC6222413",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "5a09ebf09a9a7dea9bc8cc67004a57dfc21e1f3124176cc093bb2c090b9e4e14",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6019521-p0002.pdf",
+   "document": "PMC6019521",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "fc8999a5df8c1c81af36778c141988b25a1475bacd519adcec40807cbd5fe3c0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6019521-p0003.pdf",
+   "document": "PMC6019521",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "b9f133fb330b6575c767996e9467d210bcf29486b83a27e3d6d74bc32fc96d2f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6019521-p0007.pdf",
+   "document": "PMC6019521",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "ec47369e6f7ef219183138c89aa64de3e16b36cd37e37f5ae25c63803143ee5d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6212588-p0002.pdf",
+   "document": "PMC6212588",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "fc99170803b22d578404c5e8aed277e3f206126be7d587aa45bdc544bdb78b10",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6212588-p0005.pdf",
+   "document": "PMC6212588",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "c3c3b700a4391617c5d8359c1160ac09eb262e529e29df505ef46e1507c71b23",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6212588-p0008.pdf",
+   "document": "PMC6212588",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "89ad5c73033b8d53ead9c6ad3014c6b3c2f4f81b2410e9a555fba4e9dc3d760c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4819190-p0009.pdf",
+   "document": "PMC4819190",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "2b5e20145cd1bfa77991d0aec110860f4a427ba1edfff2483690aca18fa50ba2",
+   "split": "holdout",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4817120-p0001.pdf",
+   "document": "PMC4817120",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "8f4779455b7774922e78b94aef7997d73a80bc140eeff875d89e6d7933fad468",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4817120-p0003.pdf",
+   "document": "PMC4817120",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "92b7b4566c0ad6c10da825011d661fd07522e25d87af6d2eb3165c407bd9aa1e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4352248-p0003.pdf",
+   "document": "PMC4352248",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "b9910934792dd477efbe70af8fa65cf158cc8e8077cc3a5248dd191ac310dbb1",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4352248-p0004.pdf",
+   "document": "PMC4352248",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "4a357d33d1384dc80268eec69ea0aa8dc37705add8c431f6ea5afbcde85109c8",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4352248-p0005.pdf",
+   "document": "PMC4352248",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "b8dbf7b7b63a14b049aa88a705ef2613f603ec52b78bcf33a1ff03aa6722ae52",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2676270-p0005.pdf",
+   "document": "PMC2676270",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "1d2bf907a74010d9c695383a1050cfa7c2498754f79bf5413be0066039eaf49f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2676270-p0006.pdf",
+   "document": "PMC2676270",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "b7d6cf0db80f9ee8aa3787567f0f0c82ca0f15c375565469574a84e7513b7a37",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2676270-p0007.pdf",
+   "document": "PMC2676270",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "565ff2be665292cfb1e202e525ba08f47a9f39f183d995fc8174eb980370fb2d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5724831-p0004.pdf",
+   "document": "PMC5724831",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "f5c1c6bd73e85b1c851a13787189cd32314732ac5179f0422cc90896e59c5df4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5724831-p0005.pdf",
+   "document": "PMC5724831",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "0fea872cfc8433ae318481394ce98121fbcf7231a1849b341259505e41ccfa59",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2961586-p0003.pdf",
+   "document": "PMC2961586",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "b793ee59aa1ec0672eb7820a471d3278843b4328db34b0b689242a8014638c36",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2961586-p0004.pdf",
+   "document": "PMC2961586",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "4fe1bbdb7accf161ac8e94a5bbb2dca10466b2cb15c06cf32f73ad09229ad291",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2961586-p0006.pdf",
+   "document": "PMC2961586",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "e774c9a2fcd1a56c458c2268fad05046750de14eaba3ead7f59581bb33206bbc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3006860-p0004.pdf",
+   "document": "PMC3006860",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "737c4f75d492cfe643345ee66f0dac92a8aa366ee635a4ad69b04360f4b3df7b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3006860-p0005.pdf",
+   "document": "PMC3006860",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "6f69d325757d15ea9d6fd9a8c7541e7e4676f0738c02a4d4609e70a95a1e6bac",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3006860-p0006.pdf",
+   "document": "PMC3006860",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "a130c68fac058f62653ec201f3486e7a6f080619d0b0b677e5d1c28665a799c3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2809736-p0004.pdf",
+   "document": "PMC2809736",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "e24507d560a873b2981b7636ad7c7c937c31f09849230cbd789b8f73b4f475f0",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2809736-p0005.pdf",
+   "document": "PMC2809736",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "494c5035e98451bcb5f86197036953bd7cdc893f84c32ca1ad8539130463191e",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2809736-p0006.pdf",
+   "document": "PMC2809736",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "1124951a56d8b4a436cdbc97429c334273d8c03ab7d816521e0f5f5649bc0515",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2993657-p0003.pdf",
+   "document": "PMC2993657",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "d4705edcc86e3c188e99eb45601be118ff2e075e99ac0a5c7633810c77b87ba8",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2993657-p0005.pdf",
+   "document": "PMC2993657",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "544ef0477f0996414e9fe01fc3d514ded56d4dc8d7dcd5bf5ba1f3411061e027",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2993657-p0006.pdf",
+   "document": "PMC2993657",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "1da4c60d5ee1f9a96c4c90e5083ba02dd3c93512eb3d15b3d5c53bb5e0302bfd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2993657-p0007.pdf",
+   "document": "PMC2993657",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "8e08d82292123972f089e53475e1b3f4e71d07a4c94a70d4e9d0efbda90267af",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3616986-p0004.pdf",
+   "document": "PMC3616986",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "f939a60e5d7f3f03052157039621eab97d9f11a3483bd6a16650cb7b3f457015",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3616986-p0005.pdf",
+   "document": "PMC3616986",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "e19e8b2a5e50fd8e522c5304294f49c9c01d1d40592228d6f09ca97e90786c7a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5727955-p0003.pdf",
+   "document": "PMC5727955",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "91ec2f2c17b72680d4b47ef582db6256de224d30f1b0aa05f3de8921ea59a1f4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5727955-p0005.pdf",
+   "document": "PMC5727955",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "33b04a83c52674bb9357a52e5dfde256ad559ecd23422bf12b419caa4b1ed439",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5727955-p0006.pdf",
+   "document": "PMC5727955",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "039c712cd2bbab3fd7ee6e8ed500e5189cf77ea67e43e5f5d27811644c5e664a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5751757-p0003.pdf",
+   "document": "PMC5751757",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "8620a25cbdbdef797bf50eaa55b10e2c9cfe156e742ac474f85e6b62f3b56bef",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5751757-p0009.pdf",
+   "document": "PMC5751757",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "da641cc15aee03bbdc51901b3d17a7a2ffcf1641e77494df12320efb8ac5e48b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3605190-p0004.pdf",
+   "document": "PMC3605190",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "80e51e0739c95820a4712a4a4dc7ff12705f4a18a416c313ae931cb3320ab99e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5122336-p0008.pdf",
+   "document": "PMC5122336",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "d60190e9d66cdc2e9bd965855c3857b67f8bdd047d675300082afbe3f02a7d3e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4636673-p0004.pdf",
+   "document": "PMC4636673",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "fb1f9bc0851897d3bb93d4b1d94a07aa992ec71f93df37e95eecb4cca301cdd4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4596566-p0002.pdf",
+   "document": "PMC4596566",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "c519c323c1adbbb69b34f0a4dea146c85540dddd22e8bb4e86b3c4b1616a49fa",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5821312-p0004.pdf",
+   "document": "PMC5821312",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "e774d5a86622a0e4b0b342b02f3936060f75ef09225684a50e3ca7803858a23f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1963474-p0003.pdf",
+   "document": "PMC1963474",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "e21d99d2f3fb08aac054e7cbf36eea0265efb7228f3cbe9b6bd3a9888ac0e9b6",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5136615-p0003.pdf",
+   "document": "PMC5136615",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "5dd0ebe5f646fa9efcc09ba9f5f69dc0883db29f2acc8a44b25faed722c2d960",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4548953-p0002.pdf",
+   "document": "PMC4548953",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "06159bc8ad1835026efabd866695f59f2d7756413225c98626eb55d4b1f29717",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4548953-p0003.pdf",
+   "document": "PMC4548953",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "6ea7d385f311ceb3adc67d1c578ba6a4a9429b67f2400b4128e15a31551c14e5",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4548953-p0010.pdf",
+   "document": "PMC4548953",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "38ff3a3f626ba89089c33f608c1c553d198a009fd7004b75dd307272caec3891",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4629003-p0003.pdf",
+   "document": "PMC4629003",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "faed53dfcfd3420e4f1476f5bb21d81871ca0a1d808cf1ad9aac56786dc5f4c5",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4629003-p0008.pdf",
+   "document": "PMC4629003",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "343ccae152cad97976f4d8a44746729df08259f43d9426748b9a6ce87c04d9ec",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3557211-p0002.pdf",
+   "document": "PMC3557211",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d50813dacdc18dc12baaf1075befcaa6419fdf5f7df64fca66f9cf8f3575a139",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4727914-p0004.pdf",
+   "document": "PMC4727914",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "ce71f645197e35e511abbe9d1a4de9fbbde775eaaf8fe23d85cb22ff1edee063",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4693228-p0003.pdf",
+   "document": "PMC4693228",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "3d8975810052cc804c5d227ab8a818b271571fdea1c3dd153beb8695cec10c0c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4693228-p0006.pdf",
+   "document": "PMC4693228",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "a134058825c604042ca7507d1300b2473745c7481ba35231de7bd1c2b01d476a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1413540-p0001.pdf",
+   "document": "PMC1413540",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "4d1fb82e3ed3de3efbcb560b8921aedaaaea4fb99623b05b35a74b8f51a14548",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4646639-p0002.pdf",
+   "document": "PMC4646639",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "0f8ac5fd4afbd073e95f4f4ed92efe17b4d7f402f81d8e9885d3f2a8269846ca",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4646639-p0007.pdf",
+   "document": "PMC4646639",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "55a755ae1c50b8cf1bdd9ae236ecb48898d10968e3789acdd117b76ed11d531b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4646639-p0008.pdf",
+   "document": "PMC4646639",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "fdad6eb45ae1eb4e0adeaf404b9710b8e5bb3b78a4843a279eecf836208e883a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2268700-p0003.pdf",
+   "document": "PMC2268700",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "0adad2ca6374a5ec0245451782e631a125e457db830807073e6a6058d1cf507c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2268700-p0005.pdf",
+   "document": "PMC2268700",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "685e1c66fa6105be20bcc8413625758caea15e924d0d431c1f4e31812cc1c46a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2268700-p0007.pdf",
+   "document": "PMC2268700",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "d8924e5ea4192011a654df9155fc924fcc5374a859ab418cda5c34ec9745b7f0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2268700-p0008.pdf",
+   "document": "PMC2268700",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "f3888136c5ce1be1719c629ab2016e0e04d31d38e451e04a569962c2e1d742cd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2268700-p0009.pdf",
+   "document": "PMC2268700",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "035801c7edcba6bac13232b45fcec2dc131a3b88d2eac8f16d63b66d716b5519",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3489787-p0007.pdf",
+   "document": "PMC3489787",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "a907e40e1b212ae845ce17e60be74eefc33f3e416e071069553755d5e2298bec",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3489787-p0008.pdf",
+   "document": "PMC3489787",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "5b2741262e1e9b0e0efe53ec80e490bb1b446284f3ffa61d1504c5d39ac068a4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3037919-p0002.pdf",
+   "document": "PMC3037919",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d280c3ee12e0e9a2611303cffcede4845c4bdf3d249c018e3bd017edb336b2c7",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3037919-p0003.pdf",
+   "document": "PMC3037919",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "e6dcd5aa2a0bee18ad9f7ef71e7c350800595fd1bb396218b89776f67d437164",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3037919-p0007.pdf",
+   "document": "PMC3037919",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "3b7e96562b991e4c45cda4a68ee09a6818eeb857ce67de4853d11ffc6cfc3d60",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3037919-p0010.pdf",
+   "document": "PMC3037919",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "5240b71ef1b9feb308d21c372dc1654c252bbe48ec0164cde3f26b33c5dfa7b2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3037919-p0012.pdf",
+   "document": "PMC3037919",
+   "page_no": 12,
+   "category": "scientific articles",
+   "sha256": "6c307b50ca9de4e05cf95b36eff422d6091037d836846a80c92c984e1864c2fb",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3234177-p0003.pdf",
+   "document": "PMC3234177",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "f82cc36b122afd335a352c0ad9666860b8c920a1e745e9ba8b31777f597dfcb4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3234177-p0004.pdf",
+   "document": "PMC3234177",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "1788fd1c97483dfbf91f619abe21e9b1e844d13b4634e877b7424bb71f67a352",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6031692-p0001.pdf",
+   "document": "PMC6031692",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "ae8f02cdc551a89e5af2195fdf12a7c21e98a971c3d2d92b8f6c7b007ac64ae8",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4845003-p0005.pdf",
+   "document": "PMC4845003",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "9045f31225d2ff7a6184cbda97268383e79a4ef2ba5e818f42cbc174102bd0d7",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4637155-p0008.pdf",
+   "document": "PMC4637155",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "4035c06a371f87d0f452df0f07fdafece04ae5a00c5eb6e47ddd4df4a83bcb8e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6051158-p0002.pdf",
+   "document": "PMC6051158",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "99205a758476078c14e3dc4a76aef4e743cca24d8a891217bc727129fce2faa9",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6051158-p0003.pdf",
+   "document": "PMC6051158",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "9e52ca6303c5993fc93abcee50e8f959eacdb50c9d62d4ecef347cc2739117b6",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6051158-p0005.pdf",
+   "document": "PMC6051158",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "db246a50d2b7e758408d29f62bb5a3a9bf29b4e65b7be00ef6db80abea544eaa",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6051158-p0006.pdf",
+   "document": "PMC6051158",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "ac6ca4159e5897bdc6496bb0973c8bb63a86189d3472aa6794a18a3a3ff1cc8c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5872286-p0006.pdf",
+   "document": "PMC5872286",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "199ea621edeca7910f1bb84b849f76de579e675e6c4f3aeb0a55bcb8f279e76d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5872286-p0007.pdf",
+   "document": "PMC5872286",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "eef8287921255afe449adfa078b0350da2c4c11cca9df7739982173138a2b6ee",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5752646-p0002.pdf",
+   "document": "PMC5752646",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d19ab7f1ccb81daae98a3bc576fc0759bdabbe25dce3301c4ec3adea0b986985",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5752646-p0003.pdf",
+   "document": "PMC5752646",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "4fbdd5054a7b3ff306ec900d5a4c85dc55baca65d1f624b4f839bc0d672e98e7",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4523823-p0003.pdf",
+   "document": "PMC4523823",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "90d25db1d99c8fc3bb3c3d5be82016550b27fa5be763bd4b1f0a1866b8b20155",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4523823-p0007.pdf",
+   "document": "PMC4523823",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "d03cd1f37380b6b2a89b48e78cd991194a7733b3a4167d5fa9e4b1883dcda210",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4523823-p0009.pdf",
+   "document": "PMC4523823",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "ffa13039defc563cdd2a979769784bd798e79d48905acbdb8aa828687f174846",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4873589-p0001.pdf",
+   "document": "PMC4873589",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "cee7530ebc7ab267b70ad56848434ae54a6fd7e3e9f4034fde8661338eb75bfc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4841212-p0008.pdf",
+   "document": "PMC4841212",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "99c45232e476e301507a732cd4f67cf2ba3144cdf245e219715b3772f240698e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4841212-p0010.pdf",
+   "document": "PMC4841212",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "58dc7fef9039a671e721817b541488760195bfa88be6ba918029cdb4a82ae681",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2635615-p0002.pdf",
+   "document": "PMC2635615",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "ae890c9fd490ac42581086bb5f2bc3736226ee1695b6912bc58005322ad4f328",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2635615-p0003.pdf",
+   "document": "PMC2635615",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "ac59c491aabf4712f3101139030c69d45966e1fe99b9fddc40133edd173d8c9d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5043013-p0005.pdf",
+   "document": "PMC5043013",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "a246abe73757e1be778269aff92bfb14b0280bff11274b54f9849a95dfa526e4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5043013-p0008.pdf",
+   "document": "PMC5043013",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "df25b9319a73983ca348a23816dada9b1debf2a3b7c31e8d0ed753df99cba3b6",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1184062-p0004.pdf",
+   "document": "PMC1184062",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "4de8bc70dc766c3fd59f4ede7d431bdb3f76ec3608cd9b64934c5bfce0d47a54",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1184062-p0005.pdf",
+   "document": "PMC1184062",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "dd396c7072db345f6edaa06ac2dfaaa25f5c24b2db095bfe81d9fff826c4a675",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5986424-p0004.pdf",
+   "document": "PMC5986424",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "b20fbdcad89c643e90fb9223dea5527ae14f78c2fb9d2fb4abe48268c74fafed",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3148553-p0001.pdf",
+   "document": "PMC3148553",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "b4269c3588760fb95ab66bcda1af2232c7a52247b798f5c31496a306e4f1eca2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3148553-p0005.pdf",
+   "document": "PMC3148553",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "4a0e8f1e28141f92007d2021be6c63230da9708e16fb47d35d8cecbb3c558eec",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3148553-p0006.pdf",
+   "document": "PMC3148553",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "512ecc49d1ebe1b1392b65823f6947d7261f90a3c67ecc53ffd2cb19d4b14a93",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3002942-p0002.pdf",
+   "document": "PMC3002942",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d0814953e6e7c02b30ae59f8f2a8f631de7318306ba148b0bec926ac566e5772",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3002942-p0003.pdf",
+   "document": "PMC3002942",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "425d9803cd183e955bfac1c347555d9d60dfbd21bcac1eb6978cbf83b264e2b4",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3002942-p0005.pdf",
+   "document": "PMC3002942",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "e467eb5b2a00f3e93bba7ee8921e63f8e28642782351b10a7194d30dc49edf06",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6050266-p0001.pdf",
+   "document": "PMC6050266",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "1bb5a54386429fc1c42c3841e73c8e9b0c561881dcf2c4ca2e0a529ce24fd1ed",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6050266-p0008.pdf",
+   "document": "PMC6050266",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "9e02bcf148b33833ed350daa4c9d95bbc5710ec8b6649f6159a4041ea0fa77c3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1277013-p0003.pdf",
+   "document": "PMC1277013",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "18c82524bc095bbebad67539a0ded6fae75db70ec4118edf43ba2ae3dfbbbb7e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1277013-p0004.pdf",
+   "document": "PMC1277013",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "fab37c79118f8d2985ea4216269d5e9b7ec021562d58664003245633e730e764",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6138982-p0001.pdf",
+   "document": "PMC6138982",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "d6359125bf325c622fda47c79c51f1db06f79be8df9fa5f9978462d554627d35",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6138982-p0008.pdf",
+   "document": "PMC6138982",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "08099f8af0611094a5608f54a77a8551c89c87c87b99f9c79dc3466d2e90a21c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3213573-p0003.pdf",
+   "document": "PMC3213573",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "99bae0759a3c9fc03d906d9da77fb82afbd86e454e9e9a54f5c5ff82991352da",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3213573-p0005.pdf",
+   "document": "PMC3213573",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "66e4388f9a8b4efd0084bee1094033962ebb8d7292f7d6be5fa94ea1e9bba547",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3213573-p0007.pdf",
+   "document": "PMC3213573",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "4ae7ead38c10ecf4f06eab3ba4cfc486c65c9714131de39fd79edaefe6840147",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3201443-p0003.pdf",
+   "document": "PMC3201443",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "1f477ae1aa806b9be6583e70d03f2ba5b589ba2f609618fc4c8b7ce1d4961899",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6158175-p0001.pdf",
+   "document": "PMC6158175",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "22b0722bc899a7fcd9a24222ad6d966dd179cde98c0f6dd866096e3846944058",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6158175-p0003.pdf",
+   "document": "PMC6158175",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "61bd28478be5b0d894e5ca970f1549dd176f142091caa3f70baec583eecee4fd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6158175-p0005.pdf",
+   "document": "PMC6158175",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "92cd1e8eaa2dc20f4c21842b9fa0d6f93e51b4b9beae2d74a2a9549386fd18bc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4529189-p0011.pdf",
+   "document": "PMC4529189",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "ff7ec3b0ee57671a4f163689f24911e389fe65afd876350947827bb2b393c3b2",
+   "split": "tuning",
+   "licence": "CC0"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3250413-p0018.pdf",
+   "document": "PMC3250413",
+   "page_no": 18,
+   "category": "scientific articles",
+   "sha256": "bde8699b4def31e2f358eec72c5dd8d1a1499d53611cc432acfa4e20b8c52276",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2235841-p0002.pdf",
+   "document": "PMC2235841",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "492347b435bf686ed6d0135f351603ef944c3600e104e42484e049ccb107c467",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3052011-p0003.pdf",
+   "document": "PMC3052011",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "eb04d0d059c5bda02bfe9cc13fc5cc1a68e5ac8c7ee9a20ebefaebecbca3f186",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3052011-p0007.pdf",
+   "document": "PMC3052011",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "681ce8ce0715640bc5eb0ce5b755a7a9b4b628590cb1e4aff7276fadd4514c11",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4482547-p0007.pdf",
+   "document": "PMC4482547",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "cc5472de9a8001abd74765c36305cea08a7d40cb8bb63e17062c9287c060d2f2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3664615-p0002.pdf",
+   "document": "PMC3664615",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d3da76a60a1d8775891c026ad79155fa37b42e079a9fd0c9d8c6f4eb6c5429dc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2621243-p0005.pdf",
+   "document": "PMC2621243",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "a748389132bf668f0fcf8945336d5e1e64fdbebb09224a105531c27d4630cd87",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2621243-p0007.pdf",
+   "document": "PMC2621243",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "6a0a4f7db0704760b4f4accce8b89fe8495db960f4d7402554716671875d72ee",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2621243-p0008.pdf",
+   "document": "PMC2621243",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "77f72db235939404cd8b22b5a103e118bb263de488ea88b72441e96e305cbb72",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2621243-p0009.pdf",
+   "document": "PMC2621243",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "15e45beedd54e9a3296e8f22bf737fdaafad306bab0821b147ab225a1dbef799",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3205027-p0001.pdf",
+   "document": "PMC3205027",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "5170f30ca48f80c7a6b7fe3d412ed2b3859e2e21a2cadcb21692b1a352e4aca1",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4350825-p0003.pdf",
+   "document": "PMC4350825",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "b3156c45dd2541514d2f8228a905dc8cd0bd1e8f8d1278163969d18a5f182169",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4350825-p0005.pdf",
+   "document": "PMC4350825",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "ea7f63129e912cee7fa178147e3897694d6f0fb0e3862af998a8b7b375bbb381",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4350825-p0006.pdf",
+   "document": "PMC4350825",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "03797d058996da3f082ee04d24c4fd25365154edaf1fca4752115422b626d9b6",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4908167-p0002.pdf",
+   "document": "PMC4908167",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "a86119271ec7ca034c9addcce609a5944eac27ba7028e76f1ee5bd048150434d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4690828-p0003.pdf",
+   "document": "PMC4690828",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "1b2c2866f6de415a9c24d2501f3a2f786429ec620c563449c641413e39aa1164",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2917851-p0002.pdf",
+   "document": "PMC2917851",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "6aca12419c8180f5a6cba11f1d9a05863d39ef910b8d73ed1df5e6bfe8abe166",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3051708-p0003.pdf",
+   "document": "PMC3051708",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "4609ecd124a6e06e18ed89097a158a3cb8fda100296354a95aa006185446415c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3051708-p0005.pdf",
+   "document": "PMC3051708",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "2973fb675ada0f5017c6fc9625874db87d4022dd10270ecd167462c077a0d58c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3050388-p0003.pdf",
+   "document": "PMC3050388",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "39af7e1e0ea1c1b74598af08d5b3561e4d79cd77bd229b9eb39d3253f733ae07",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3050388-p0005.pdf",
+   "document": "PMC3050388",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "ac8406b5d06fe443a9bef18dbb00a384eb398782b9b15957563e9f6683fac165",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3050388-p0006.pdf",
+   "document": "PMC3050388",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "019eb6b7890df0c375a3ddce696346207e0134a1d669168228ecfa5704666c0f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5854801-p0001.pdf",
+   "document": "PMC5854801",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "55a55e6dce33d967c4b44fba000169ab8988482c914364f7e9042223009d4983",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4473124-p0182.pdf",
+   "document": "PMC4473124",
+   "page_no": 182,
+   "category": "scientific articles",
+   "sha256": "c8a9df6c2064d9f5241530d2ef8f3cf064a74b7af5e1337fb25f2561d8605eba",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1779511-p0004.pdf",
+   "document": "PMC1779511",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "d9cf3a745651aa715a9beba06843e84dc7645b8aa67cd4e595f596067d2b3b8c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1779511-p0010.pdf",
+   "document": "PMC1779511",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "86b72105a8e69f3d6818652d046ebe82d31928e99e808f3f788c90ab654f1d46",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2680954-p0003.pdf",
+   "document": "PMC2680954",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "9bef9aa7f81908bdeaaa47ad2783b194b6fe9ad0699fff7981e6159bccd5dfb8",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2680954-p0004.pdf",
+   "document": "PMC2680954",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "4b93eb1c1f186eec5094948f79c9cc4dc2a74d64c4f1b3b93fee04a79168082d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4848907-p0003.pdf",
+   "document": "PMC4848907",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "44129a1cd73ba14b7c1801163024d998697bf079bc08a40c5969624fa97b158c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4848907-p0005.pdf",
+   "document": "PMC4848907",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "4ee9eda4e9151151a820138b1cbb859e6b923ce94131e5a3cddb1f2c9ddf0497",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6021193-p0003.pdf",
+   "document": "PMC6021193",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "7083136a23e33e38995b51c692a1b9069a6ba438071972cb88a91b897082af81",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4460707-p0006.pdf",
+   "document": "PMC4460707",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "5ee924b4970379a61909966277a97ae66e371a18fb52335cac501ac3ca75150f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4460707-p0007.pdf",
+   "document": "PMC4460707",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "9e844d8edb4bc6e56b794aeca4b5593bccdf4964335a9b9f10be06673ddcdf2a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1805444-p0004.pdf",
+   "document": "PMC1805444",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "b031bfe17bcba52e6f12eaeb86618b5b76a21ad53ce804e97b14b2e100c64298",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1805444-p0006.pdf",
+   "document": "PMC1805444",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "64b52db261264d188b79765bbaf66e5a34fa7cb0aead8411edaf7b334d35eaa4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1805444-p0007.pdf",
+   "document": "PMC1805444",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "3d250f3d72b87ff29a63169384d26f98cb26f358711cc2c7fdad0443e7366d29",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1805444-p0008.pdf",
+   "document": "PMC1805444",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "7c105f759e71e465510c9f0e1f4dcb1fbeb6fba6a970292c2e11141e1fbab71a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4482619-p0004.pdf",
+   "document": "PMC4482619",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "45c97780567d0abfe679c9b820b2fa9464456cda27c11cf61dafcffbcb1f74ee",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4482619-p0005.pdf",
+   "document": "PMC4482619",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "12b29591e2f45c719098ea74e25ed78c0c2423baf6e7865865e171fa1f9ef197",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5103380-p0004.pdf",
+   "document": "PMC5103380",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "f345542fac81578c1398a1e9bbde3e11e094f6b4d476bc12322ca97e481899fd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5103380-p0005.pdf",
+   "document": "PMC5103380",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "9bcfa2ee4d3f5ba362a827509556a8d2560e78d12123328f45c96e444dc80856",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2587699-p0002.pdf",
+   "document": "PMC2587699",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "041d5039ea7104fd932d0ad3679b38a7ba6c378dd3c420a5597a5c0ba01d8f63",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2587699-p0004.pdf",
+   "document": "PMC2587699",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "32b6a11b8226d9b9a2f6bc4ad76060ed775b4ff45fa863c523692efad3c45cfd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3552816-p0004.pdf",
+   "document": "PMC3552816",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "d41732a9e22869758165efee353e8a2eaf1ed0eacc5e1a7292739be66628f48c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4364980-p0003.pdf",
+   "document": "PMC4364980",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "85c189abe4991232795b832147fc7601a0e26021ed4056dec7a0b534d808e2b2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4364980-p0005.pdf",
+   "document": "PMC4364980",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "7c71511e7768baa6f88a6789c69138179d7781f85d80ce3cd79e2adc516e11c0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4364980-p0007.pdf",
+   "document": "PMC4364980",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "a46a948da4326895b3d4f3787ef3a456f7523dd69a9753185e96d9027089339d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4683990-p0009.pdf",
+   "document": "PMC4683990",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "9286ef4730496c7ac6cc736e2ce13bf8cc7f9471db4c3407c2bfee57ff7aa1bb",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5839007-p0002.pdf",
+   "document": "PMC5839007",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "ef9f841fa7d554c2c43d8b4d575b00bc4c1fb3817ad623978230fa9d31591e20",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5839007-p0003.pdf",
+   "document": "PMC5839007",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "43b6fa0223381157fab0471001684ecb313c5eb4e58f1b027e9298cdabae1213",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4783067-p0007.pdf",
+   "document": "PMC4783067",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "fa7bfec426b5ca6f8c2690eef26d22884323021c45c548b34f224e9f5ad59c9d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3061947-p0002.pdf",
+   "document": "PMC3061947",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "5161f49a12d59d7aeed48684fdfc54734c3fb51c3977d761fb5480c8d2aa721f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3061947-p0003.pdf",
+   "document": "PMC3061947",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "f3eb63da96d3ee71e5789857aebc2f492dbb7c622125a7099cc69be154ff705d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2984505-p0001.pdf",
+   "document": "PMC2984505",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "66aa19098df979ae0b85a45b2f0852325cca13fa7bcc9c1b04176e7688c483c5",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070449-p0003.pdf",
+   "document": "PMC6070449",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "80e5b78d88bcc92b47434d49db033965027f2c46c99860aa378f1c12525eb161",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6070449-p0004.pdf",
+   "document": "PMC6070449",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "81ff9008a821809bc116af189c7228012862fbe6b078a8b7145923f4f77c426f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4802721-p0003.pdf",
+   "document": "PMC4802721",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "5144eed18f7f04e511792275264b2f957b86286836f5db3406ff010cdfd9089c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4359767-p0011.pdf",
+   "document": "PMC4359767",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "142b8d2c985d16604795dad82a790e889b57dd7acff15c0bf4b818fd0fd0b3b5",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2200666-p0002.pdf",
+   "document": "PMC2200666",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "4c588ed67bd789093c38e912c9905037e5d961e304f8268d8b0deffd4094b2d2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5774841-p0006.pdf",
+   "document": "PMC5774841",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "4b199e22daf5dad08163eae82763e4ac895e30ad3110d6335ed111ec24a86cdf",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2886071-p0009.pdf",
+   "document": "PMC2886071",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "7b7c379577aa7429b85614a5022db4c3774431b14e5196fa9243d44972787b28",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2886071-p0010.pdf",
+   "document": "PMC2886071",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "f22b1739f5d9505d0625382675cc3938277c58f5d9ab8bb953476ea5f26cfd18",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5954787-p0004.pdf",
+   "document": "PMC5954787",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "87269716aebe81aada7c2a4d22c2655b73f5156c034e33254e5f1a79fb466601",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4497736-p0002.pdf",
+   "document": "PMC4497736",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "0d68e7f91ee6beba97362dfad5afc87e3b89ecae45ac99553f1379398d27b810",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4436221-p0010.pdf",
+   "document": "PMC4436221",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "debbc1b7891d0434f538a011e7c1ceea11291ed294fe7174f755cc0368c2a2fc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4436221-p0015.pdf",
+   "document": "PMC4436221",
+   "page_no": 15,
+   "category": "scientific articles",
+   "sha256": "129f1a33d1c267b39d5389d9f4ad56fabd1d40f0d4f573b468814451246df069",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4520666-p0004.pdf",
+   "document": "PMC4520666",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "5ac4747c0e41557a07bebaf4150072fa4dec15c68ede006bd363737317b95331",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3014869-p0002.pdf",
+   "document": "PMC3014869",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "ec49a0b902d2deb808b9c138664f627d8dda0722d2db4d2b2efd00cc406e1dcd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3014869-p0005.pdf",
+   "document": "PMC3014869",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "b9cc2d29eea77e26e6148b379b88fc1fc2747fef71141bd80c8d9575c10ee632",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3014869-p0006.pdf",
+   "document": "PMC3014869",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "620de5037eca629b4e4ca3b19deb1fedebd67d3b37a7f7635e8dff975425bee2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3214834-p0007.pdf",
+   "document": "PMC3214834",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "29911464638de9a2cb52122f80a063a5f35215fdaf34a700ff4c93a0c4141dfe",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3568845-p0002.pdf",
+   "document": "PMC3568845",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "cc47eeb6928db24913608a2d71da6c12ac8d87c096676f00de2b580711655d21",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3568845-p0003.pdf",
+   "document": "PMC3568845",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "f91b03cde97e39415f4c9645277c7a82e53bc25ff6bd10efc05780354ce80a8b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5711379-p0003.pdf",
+   "document": "PMC5711379",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "1af380f6b4f9dac85bd1f5880c48b57a3acbacb11a8dd317eb88c433473e41c4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5822643-p0003.pdf",
+   "document": "PMC5822643",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "3fe9920ccf61671be0b8840096d10064bf89e0f8ad3e251b05a594f978a74a0f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5822643-p0005.pdf",
+   "document": "PMC5822643",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "29c74e880f43ca0aa20dc35bd3141e24fa773934d335d830c2dada903eead429",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5822643-p0006.pdf",
+   "document": "PMC5822643",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "52911a576acd06aff5164e598b0c599213d656ac10c13fb548862fe87abb0c8d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5822643-p0007.pdf",
+   "document": "PMC5822643",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "5f3a89e1d23f16e01b47441c539c1c4510bf0e63814f003946db7beb06fff3e0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5822643-p0008.pdf",
+   "document": "PMC5822643",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "fc4df6568a47012fd0074b1c8ded535d5ee7305d2ea8aa7143314210545682da",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5712807-p0001.pdf",
+   "document": "PMC5712807",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "ce77c58c8f4159b35217a833613d3a1abbfb5e00780423a7564e793d31b56a83",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6219573-p0003.pdf",
+   "document": "PMC6219573",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "8e2810033bf06d18421c74f34ba8f4067b128c49feffdfba1a4019e67dfade70",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4891160-p0002.pdf",
+   "document": "PMC4891160",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "f300ccc84c2310bc46d1bd0737a29f46ad0d9eefdb47f2d7d06c40b0bb9e3b9d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC2948006-p0001.pdf",
+   "document": "PMC2948006",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "fceb2b02c8bb6f5e7271cd2caa534fcb0e0f137fd5dceca33c3439bddc264599",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3190331-p0003.pdf",
+   "document": "PMC3190331",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "ed1108e39394651a331826fbc79d90cd14f7459cf111872b8b7b320c887aac61",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4730235-p0004.pdf",
+   "document": "PMC4730235",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "1309a844f2157c403ed75db82b8987e2c417f163d4c754ed2a896c4117733828",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4537313-p0009.pdf",
+   "document": "PMC4537313",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "27684cef65e9af8c0174e12c687fe6121ca102e401f49bf005cd081ac14cf62c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3548739-p0004.pdf",
+   "document": "PMC3548739",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "6873347063f35493da755957ea6a123af4e851aab21226f70bc9ce2e40d75f65",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3548739-p0005.pdf",
+   "document": "PMC3548739",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "a88b3a4988c62ca1cbdddfe7bcf65ae93527dfd4ca185c48c65380250d39b411",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3362129-p0002.pdf",
+   "document": "PMC3362129",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "6a50ef87f103328bea5b1c65c058e8679aae3b2243f627f7dbb3426b3f179f80",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3362129-p0003.pdf",
+   "document": "PMC3362129",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "75b5bf717c5a04555035f1c820d2041fcea1fbd8e9d17956af3dd5f4cfcbdc91",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5783416-p0004.pdf",
+   "document": "PMC5783416",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "92acb1aaf5581912763aef7bfd811b7cbef7bb16c20e106207cfc025efee0ac3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5783416-p0005.pdf",
+   "document": "PMC5783416",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "34ff7348b25f1f1103dca3bf00b6ee1c577c5f68f883397b784d7bb043660800",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5783416-p0006.pdf",
+   "document": "PMC5783416",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "f67bc8f6519d376d01b867b952eafb283468216321f77c4563cdc073a8ab8ee9",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5783416-p0007.pdf",
+   "document": "PMC5783416",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "65b195619392e025590778a0a64302ac67e248a83e5229cb9d38fa9162923252",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4609319-p0004.pdf",
+   "document": "PMC4609319",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "3b985052748f9df73f8c53fdf3d61a22beec61c76ea98e73ef073b0cee240ef2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4567796-p0002.pdf",
+   "document": "PMC4567796",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "043048331b88f98911e11fd6cc7ce9281e4484b7cd9068fd89fed068e722e12b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4567796-p0003.pdf",
+   "document": "PMC4567796",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "935e3c65d6636db7ce5f00f74eaa3c4fabc90f6b0572a3b45c1b158ac70fc31b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5081522-p0001.pdf",
+   "document": "PMC5081522",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "5c85f8fe6943df160c779d023a532e1a8ae7622276d7f602e05a7fe5532f2df0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5081522-p0004.pdf",
+   "document": "PMC5081522",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "0f7a796bb17b250b3d78a3bf127d27412470aa67d1e8e2cff3997cce475e3a5c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4542615-p0005.pdf",
+   "document": "PMC4542615",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "e2c78d9a8bdeb7beb23ab070277aa407e9fd526de3598824d46ec2b891f0f354",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5960117-p0001.pdf",
+   "document": "PMC5960117",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "902e5c076c54420e5a9a75444ebfcfce18086a62c585b30e5435cbf0fd353d28",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5960117-p0004.pdf",
+   "document": "PMC5960117",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "2a4c320b985ffe0b91d30c2704188d01717882833916279416bf52e688bf6774",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5960117-p0005.pdf",
+   "document": "PMC5960117",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "0fce32c9cc92afe4fe3facfa09038ca199b4b7b700bf8a7c42d6edcbd294da39",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1559622-p0003.pdf",
+   "document": "PMC1559622",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "d210b7f994ce4b162377555788f44e6a352ef9d933cd35e9410ab300c7b80d74",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1559622-p0004.pdf",
+   "document": "PMC1559622",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "def5d0a390f746dc7531d782228b356f842c3e4220f3b7f2f387a7c78a5213b4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC1559622-p0005.pdf",
+   "document": "PMC1559622",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "26ea7e637c32b381369a1217a731065fce3f2767574210410245cf18d34aaa59",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4802625-p0003.pdf",
+   "document": "PMC4802625",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "1806b315c6f3060538d8b32610612096889bafc627213b5be8db9196f97dea77",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3414928-p0004.pdf",
+   "document": "PMC3414928",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "f52bfa979dd46ef532d7a3ef2997b107b08cf02e7c17e522136741755be95099",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3414928-p0005.pdf",
+   "document": "PMC3414928",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "1d93ef72a29abcac10248489687b5ab558460b8d971391ee0abef48864bd3f38",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5764568-p0003.pdf",
+   "document": "PMC5764568",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "26565b081077b73094d0f3487807907ae03ec8fa8b1157c3bb4d6a8a401e0e94",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5764568-p0004.pdf",
+   "document": "PMC5764568",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "ac2510df7222948fb5d5b91f6ef75d18583aade84caa271e5a52e8e3c9d76440",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5764568-p0005.pdf",
+   "document": "PMC5764568",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "233a253614f948b12dc8f094d6a97088e4b7a840e81ff92dd2a10a0d99f5168b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5787321-p0003.pdf",
+   "document": "PMC5787321",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "48d679dae6fb7869404b8648e05b77322102f64e57860db6d0e337230fd57748",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3567988-p0002.pdf",
+   "document": "PMC3567988",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "2481f52d9a905ea8c3e1dbf04257ded17ba54ab87fc89284381a7360c2e1f814",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3567988-p0005.pdf",
+   "document": "PMC3567988",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "473f5b01b840c1ae12d373748401dbd476750c35ded67bf14e34ee8992cfd948",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3155482-p0003.pdf",
+   "document": "PMC3155482",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "ab66072167ef7df70a9160d7c67e96bf89cbe2cf97e16a5a618506e76476b65c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3155482-p0004.pdf",
+   "document": "PMC3155482",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "a45115fee58a2cbf5ab04114e3ff9ac55688c46d6afc700cf4712312f936067f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3113322-p0006.pdf",
+   "document": "PMC3113322",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "49c9f35839a93a17a5b4936f1554f99b499911fc3af19fc8405c40497ae45c42",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3113322-p0007.pdf",
+   "document": "PMC3113322",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "cb8ff71b858941ace79e9280a1ce77cd6b95567d122566dc87eb683f1d85458c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5051932-p0012.pdf",
+   "document": "PMC5051932",
+   "page_no": 12,
+   "category": "scientific articles",
+   "sha256": "ec7b1a72b3310365aa273a7c1696cc646cb26e60c651a94ed4c090fb9dc95a63",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4666236-p0009.pdf",
+   "document": "PMC4666236",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "084d77e8c958f7334b0912bf7ca6ddf2abe75de2008292be617f7d4cf535f253",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4666236-p0011.pdf",
+   "document": "PMC4666236",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "ab49ad5535ba5ac9e035ff0cd3ab161ae6ca5f201299217d425f71cb5f96513c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4666236-p0013.pdf",
+   "document": "PMC4666236",
+   "page_no": 13,
+   "category": "scientific articles",
+   "sha256": "ca9c5d26c86a437d9a02274a164dbc0547c054251c43a5566fe311beaf800452",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4410991-p0010.pdf",
+   "document": "PMC4410991",
+   "page_no": 10,
+   "category": "scientific articles",
+   "sha256": "1bc837ae0eae054d4ce6d29a260cda4bbdc2835fd508b85329febd630757a458",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4981593-p0003.pdf",
+   "document": "PMC4981593",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "be09abf63a577fe191549c806744f9a65845a6cc2ba096a3ec16fe2c25a4909a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5871877-p0006.pdf",
+   "document": "PMC5871877",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "e766931cfdc36f94faa85edf79d7d730fdc26b1ebfbbb172d15fb3fddf41aa9d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5110576-p0004.pdf",
+   "document": "PMC5110576",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "d7597bedd9a2603439ba48d5cdd2d2d546d59b7c017417ce81c6d3aafb215cfc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5110576-p0005.pdf",
+   "document": "PMC5110576",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "fd4a10112e90926ae142467d78c281d3f776b47c4d3d99efef3861622a9b5e6f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5110576-p0006.pdf",
+   "document": "PMC5110576",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "8bff889a3d1b30dcd997e6f0cef3e54faf815f0cbe638f5a48028f6c6fca426f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5110576-p0007.pdf",
+   "document": "PMC5110576",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "57b465d8e3670287aa44350f59847599d980c16b39ec523ad62520a76ea1e1b2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6050406-p0003.pdf",
+   "document": "PMC6050406",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "d42e51e9f7c714daab4f5f1344969468bde209172f6f4a09354f44c4b871b822",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4591718-p0002.pdf",
+   "document": "PMC4591718",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "0ab854781a0f944192dc2554794782ea228622171c51ef4053e115f305413ac0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3505143-p0002.pdf",
+   "document": "PMC3505143",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "6575c0c76c1a424b6d986511f65c80d9a5e7d893f96d23ec3610df7eb66991fb",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3505143-p0004.pdf",
+   "document": "PMC3505143",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "4213c060325eead86e6379f948bdd3edeafe0d7a384e10ea09b8130e445b1edf",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5825897-p0007.pdf",
+   "document": "PMC5825897",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "dfbe983a80f21dfa003b9009159714e8d0c67e6eded5b7d93c97e4b421d140ed",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5825897-p0011.pdf",
+   "document": "PMC5825897",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "90ae4047ad6975ed2598c182e52e0c7a0f721298944557e8805b16dafa4210d3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3419415-p0004.pdf",
+   "document": "PMC3419415",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "f2f84aa2557a9f889a54c321e28c605cd4bbaad030d8d966fa9146c74fc54bf8",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3285672-p0002.pdf",
+   "document": "PMC3285672",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "643fa34668fe4aec24c31537531842407722dc5a09347f240328a33a9be6d4c4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3285672-p0004.pdf",
+   "document": "PMC3285672",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "b2d41500b09b7cd061eb8eff2ad667d17b14a413edfeee214332345274a1c8e3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4802581-p0006.pdf",
+   "document": "PMC4802581",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "91702359c0745495a6df0c85f999795177395bab0c66c51d0886907389d6f331",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6134522-p0004.pdf",
+   "document": "PMC6134522",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "26b48d2250a772cce41fb33275431c60b74ed1781a18e0a0bda680c4fbebb8a3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4984872-p0002.pdf",
+   "document": "PMC4984872",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "762b1de7b0bb3caae6e3b3a80c4386ce8fa29dcc984113d5b896a58e9b9d3c7a",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5055162-p0002.pdf",
+   "document": "PMC5055162",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "e06189b5d89854ae9b4364000fbf71d86e504f49780bf93ab77983442b6ad7df",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5055162-p0003.pdf",
+   "document": "PMC5055162",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "a4b12cce8050acbad7e5dfd5d95fb8750afa3c4d6ea686486c819810c1463a27",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4920591-p0005.pdf",
+   "document": "PMC4920591",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "9491908650c9af1586c61b446635838747ab43fd02517ba5505228b2404f6a50",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4920591-p0008.pdf",
+   "document": "PMC4920591",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "d6ff6706a3128ac75163476e6862e1587bfe7a527365877a0000ddc867ff75f4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3240630-p0003.pdf",
+   "document": "PMC3240630",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "4608a77d227e1938b44748f88f0919f141dfce647cee678ac187927e3502076b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3514315-p0003.pdf",
+   "document": "PMC3514315",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "a36955ba4b1deed0a8891a3a356c1889ea27ac4d44a59f81ff12fa4b9a13b2d9",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4464168-p0002.pdf",
+   "document": "PMC4464168",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "fde0ffde53a3c651b00c9609e2ee2347ccbccc951eb6a7984afc1a0015e5d9d7",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3537741-p0002.pdf",
+   "document": "PMC3537741",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "9812b5833cbdf12e55af83fa361045c40f118adca98a6820b5e03e776d021add",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3537741-p0005.pdf",
+   "document": "PMC3537741",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "63635ad277ec4aa220a922864e293f5a0733893999eac722091b884f7f4867f0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5762815-p0002.pdf",
+   "document": "PMC5762815",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "d6c685f1fc71d81e37288c19cfee25f87a573a8131519ff7aa566f11b0d128a7",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5762815-p0005.pdf",
+   "document": "PMC5762815",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "70ca4b9179f27a5827a6318260a3908da460039b05a551654070593ad27943a1",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5762815-p0006.pdf",
+   "document": "PMC5762815",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "2093c12ef5e7afc88720815b5bdf07ccd9fb14a40b02f2334d7a524e1140570d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5762815-p0007.pdf",
+   "document": "PMC5762815",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "7967631565e5ffba58418993bee8d160c618ea4f71fad9d6bd7ef389494e9833",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5762815-p0008.pdf",
+   "document": "PMC5762815",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "9429fcf2163312ded1e822e5a522d3da533133161d77333c2ab5c95c1fc76c14",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4728176-p0017.pdf",
+   "document": "PMC4728176",
+   "page_no": 17,
+   "category": "scientific articles",
+   "sha256": "37641b59afd0f6474e72e1971a995b80634b410314f378f44c14ba6b56e80fec",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5870890-p0016.pdf",
+   "document": "PMC5870890",
+   "page_no": 16,
+   "category": "scientific articles",
+   "sha256": "c33789bc3a08a679a21aef16afe6cb880c589758fe7874e6ce2e87ee4648d4c8",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5870890-p0017.pdf",
+   "document": "PMC5870890",
+   "page_no": 17,
+   "category": "scientific articles",
+   "sha256": "a024761a22115289d44021625123dee30208aeadc23a3d442c2ab84aff257a50",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6662879-p0005.pdf",
+   "document": "PMC6662879",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "cc5843995753cff0bcf1eb6d64080636b110a3b16dd2f4d579f13bdfdf27bb9f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5013074-p0003.pdf",
+   "document": "PMC5013074",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "e31aaebe3ae09e25f6a19023154c120b381f0f1de771a260d8b90ef9e9ef0716",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3091872-p0002.pdf",
+   "document": "PMC3091872",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "70b4cf1d2802fc9a2e9b89279cce12a0cf04d49c349643045e8d703729237c2f",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3091872-p0011.pdf",
+   "document": "PMC3091872",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "4a44171f15f4e6929a0903f3524ad565fe41d620ee076f91a19640077c2f36f3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3442981-p0003.pdf",
+   "document": "PMC3442981",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "c4033670ab5307d33fd71dd3cdd392b0bbf168522b8114ddfb514e85e02a70b0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3442981-p0004.pdf",
+   "document": "PMC3442981",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "2b83707fd0391a5ec4d472d7639705864c077f3fe6279b2bc0f9dff6c9a59ad7",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3442981-p0006.pdf",
+   "document": "PMC3442981",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "d4a2b5c6dacf24633c5f66873e1ee05a80c10917bfd0310f820e7aedbedb6015",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3442981-p0009.pdf",
+   "document": "PMC3442981",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "32ebfcefe11e361c80ae63a2ac42eb3e0f1ea34b22b8aef2b6ffe2908bacffc4",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5780447-p0002.pdf",
+   "document": "PMC5780447",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "a80b55383a67fef9cf479136e6c20e2df6487bb5d01feb68dc107c3feb4310f5",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5780447-p0005.pdf",
+   "document": "PMC5780447",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "e210e2e11df04a6fee867eb5e64b8a34cd9d101a19df0fa8ca40eacc36f57b90",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5800389-p0003.pdf",
+   "document": "PMC5800389",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "c1a4e0000564aa1acbaa093330e77226eefbf48bcdb3a1cc1a212cb59ba62374",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5800389-p0007.pdf",
+   "document": "PMC5800389",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "7f0472a077a53e9abf7acf0c3939eb4cbf559b494d4d5e970f8dac95a61b5ff5",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC5800389-p0008.pdf",
+   "document": "PMC5800389",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "adfda41e274399f34c0e342d242dc6e1629bd81b57c93066f32bc3745cd845cd",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4507635-p0003.pdf",
+   "document": "PMC4507635",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "eb0cda92a033c99827518a35c3d15bfeb17a1b6726d1c653ed07e504f02a240d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4507635-p0012.pdf",
+   "document": "PMC4507635",
+   "page_no": 12,
+   "category": "scientific articles",
+   "sha256": "020f731acba334fed822bc4bd15e092dbded7263c29c074da5977d4a6a3a3d52",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4507635-p0016.pdf",
+   "document": "PMC4507635",
+   "page_no": 16,
+   "category": "scientific articles",
+   "sha256": "0e10ecd72555b725ebbbbe827c9b2a47a7edc5de22dd02aedad15dac69662437",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3569834-p0008.pdf",
+   "document": "PMC3569834",
+   "page_no": 8,
+   "category": "scientific articles",
+   "sha256": "763a941723a7f147d56d66a16bc8e956544c8cfddee77123eb4d2c449b73a25d",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0002.pdf",
+   "document": "PMC3350453",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "c5ff91b43ebb33729766fdd27a7afa4359d5e228c518846a1271e78167a88226",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0003.pdf",
+   "document": "PMC3350453",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "39bfade3c7fd3028df769bb9487077dbd146560759ec3477f955a7ccbd4625a9",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0004.pdf",
+   "document": "PMC3350453",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "d947e3297da215149a0d8247ab4e721d5e82a16f9f0f27276fbfac5c7bfa8610",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0005.pdf",
+   "document": "PMC3350453",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "e20ffe84acffaefbd68f4544a66bc28b427f579e8d454fd83a6094891cd90cb0",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0011.pdf",
+   "document": "PMC3350453",
+   "page_no": 11,
+   "category": "scientific articles",
+   "sha256": "723f25c53c1233cfc20e6ec3c2de81c4b49867f0c09a2b70e5f6330c16325d99",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0013.pdf",
+   "document": "PMC3350453",
+   "page_no": 13,
+   "category": "scientific articles",
+   "sha256": "54ae4d2006724b771c5272a46569b544f0cfa738e2ee4cfe4f68f5712c6d7baa",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0014.pdf",
+   "document": "PMC3350453",
+   "page_no": 14,
+   "category": "scientific articles",
+   "sha256": "3e741d5840c9bbc5f99c7d93c21fc7012017355d6e6b5f93563962540c2bf90b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3350453-p0015.pdf",
+   "document": "PMC3350453",
+   "page_no": 15,
+   "category": "scientific articles",
+   "sha256": "e27998be32ac88b87a0968e49237df4c8182f1256941212d4e70dfe72b6eb121",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4752455-p0002.pdf",
+   "document": "PMC4752455",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "c01af9f35dd735b8b9f3da029e9ed50e7492f74e86d0067ec512617583698bf2",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4752455-p0007.pdf",
+   "document": "PMC4752455",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "b37334cc44df9ff942855f319fc1a12ec9823f73a2a08012cc8eec03237f6ec9",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4752455-p0009.pdf",
+   "document": "PMC4752455",
+   "page_no": 9,
+   "category": "scientific articles",
+   "sha256": "63533b867305bb413fb976c20315edfad904f575b664d6cc136e927338c4b36b",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4752455-p0012.pdf",
+   "document": "PMC4752455",
+   "page_no": 12,
+   "category": "scientific articles",
+   "sha256": "dd1cdaf4dd31df7adb097a7304804c578f5f716f90a732b5ff21bd887ad52048",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4752455-p0015.pdf",
+   "document": "PMC4752455",
+   "page_no": 15,
+   "category": "scientific articles",
+   "sha256": "b268374f38bd803bb25b66cffa3992ab96ef0b7fd462077223990752bc8c45ae",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6198439-p0003.pdf",
+   "document": "PMC6198439",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "17f97c1a35402678d81d4c99768dc54a8e9419fe3173216f3554a26891e146cc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6198439-p0004.pdf",
+   "document": "PMC6198439",
+   "page_no": 4,
+   "category": "scientific articles",
+   "sha256": "7dc78f64f83a48d611ccfb1fa131653411d3033433f9ebfce82ec98632b75a2e",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6198439-p0005.pdf",
+   "document": "PMC6198439",
+   "page_no": 5,
+   "category": "scientific articles",
+   "sha256": "537b953462e47c228796bba757fe45bde03cc3bc33547edcbb0b874181d8280c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6198439-p0006.pdf",
+   "document": "PMC6198439",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "c3d04bdc9499b933fb1cce5145080d7814e1ee56afd9e9b8f03b397c255ddb5c",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6052855-p0006.pdf",
+   "document": "PMC6052855",
+   "page_no": 6,
+   "category": "scientific articles",
+   "sha256": "c29504aa779820dd90598ce8b01ae025d4eb3a1df10c7a755168a6d5928e25bc",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC6052855-p0007.pdf",
+   "document": "PMC6052855",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "66e250cfb5ad2dc8a94db6969d3542613fed5289f19c98281c9eaa1e9e4a8823",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3006036-p0001.pdf",
+   "document": "PMC3006036",
+   "page_no": 1,
+   "category": "scientific articles",
+   "sha256": "a80f4cde19032aabb3713360712be74c1e65edec3bfd6d9cdb0e0e92f5505fb3",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3006036-p0003.pdf",
+   "document": "PMC3006036",
+   "page_no": 3,
+   "category": "scientific articles",
+   "sha256": "10c1ec7da3917ee02115c401811bc5f0358663770e4d15ddf3e5522382e0dc19",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC4370614-p0007.pdf",
+   "document": "PMC4370614",
+   "page_no": 7,
+   "category": "scientific articles",
+   "sha256": "2d30e59cfc8c4d4f75cb8d56f9d276b060db18c89dd8a52e15c1b94fa8965ba1",
+   "split": "tuning",
+   "licence": "CC BY"
+  },
+  {
+   "source": "pubtables-1m/pmc-open-access",
+   "name": "PMC3121772-p0002.pdf",
+   "document": "PMC3121772",
+   "page_no": 2,
+   "category": "scientific articles",
+   "sha256": "a39199178536fbbb667f25fffc05d8351f98f421482800b967df6dec68e1a7b6",
+   "split": "tuning",
+   "licence": "CC BY"
+  }
+ ]
+}

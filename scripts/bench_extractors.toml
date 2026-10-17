@@ -1,0 +1,115 @@
+# Rows added by pdfluent-bench (not in the engine register). Appended to the
+# reduced register by scripts/port_from_engine.py. Same fields, same rules:
+# a row without licence, clause, read_on and verdict is refused by the harness.
+
+[extractors.docling_minimal]
+name = "Docling (TableFormer off)"
+what = "Docling's PDF pipeline with do_table_structure = False and do_ocr = False. The layout model always runs: Docling has no PDF pipeline without it."
+vendor = "the Docling project (IBM Research / LF AI & Data)"
+licence = "MIT"
+licence_kind = "open"
+weights = "docling-project/docling-layout-heron (Apache-2.0); the table model is not loaded"
+recipe = ""
+version_command = "\"${DOCLING_MINIMAL_PYTHON:-/opt/ex/docling_minimal/bin/python}\" -c \"from importlib.metadata import version;print(version('docling'))\""
+publishable = true
+clause = "MIT, the grant; Apache-2.0 for the layout weights"
+quote = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software ... to deal in the Software without restriction."
+source = "https://raw.githubusercontent.com/docling-project/docling/main/LICENSE and https://huggingface.co/docling-project/docling-layout-heron"
+read_on = "2026-10-17"
+verdict = "The same software and terms as the `docling` row, run with one pipeline option switched off. Nothing new to weigh."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "a benchmark configuration of Docling, measured by pdfluent-bench only"
+on_the_structured_rig = true
+ocr = "off: do_ocr = False (bench_columns.py)"
+version_pin = "2.126.0"
+install = "docker/docling/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "bbox + page per item (provenance)"
+confidence = "page-level scores, none per block"
+model_cache = ["~/.cache/huggingface/hub/models--docling-project--docling-layout-heron"]
+
+[extractors.pdfluent_fast]
+name = "PDFluent fast"
+what = "the public `pdfluent` Python package, Document.extract_markdown(quality=\"fast\", ocr=\"never\")"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial"
+licence_kind = "open"
+recipe = ""
+version_command = "\"${PDFLUENT_FAST_PYTHON:-/opt/ex/pdfluent_fast/bin/python}\" -c \"from importlib.metadata import version;print(version('pdfluent'))\""
+publishable = true
+clause = "our own"
+quote = ""
+source = "https://pypi.org/project/pdfluent/"
+read_on = "2026-10-17"
+verdict = "Ourselves, measured through the published package rather than a source build, so that anybody can rerun the column."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured by pdfluent-bench"
+on_the_structured_rig = true
+ocr = "off: ocr=\"never\""
+version_pin = "1.1.0"
+install = "docker/pdfluent/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+
+[extractors.pdfluent_balanced]
+name = "PDFluent balanced"
+what = "the public `pdfluent` Python package, Document.extract_markdown(quality=\"balanced\", ocr=\"never\"): a layout model regions the page and the engine's own text fills the regions"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial (code); Apache-2.0 (layout weights, a fine-tune of docling-project/docling-layout-heron-101)"
+licence_kind = "open"
+weights = "the layout model installed by `pdfluent models install layout`, or PDFLUENT_MODEL_DIR"
+recipe = ""
+version_command = "\"${PDFLUENT_BALANCED_PYTHON:-/opt/ex/pdfluent_balanced/bin/python}\" -c \"from importlib.metadata import version;print(version('pdfluent'))\""
+publishable = false
+clause = "our own; Apache-2.0 section 4 for the weights"
+quote = "You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications"
+source = "https://pypi.org/project/pdfluent/ and https://huggingface.co/docling-project/docling-layout-heron-101"
+read_on = "2026-10-17"
+verdict = "Ourselves. `publishable` stays false until the owner decides it, as in the engine register's `balanced` row."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured by pdfluent-bench"
+on_the_structured_rig = true
+ocr = "off: ocr=\"never\"; the detector reads the rendered page for boxes, never for text"
+version_pin = "1.1.0"
+install = "docker/pdfluent/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
+
+[extractors.pdfluent_balanced_tatr]
+name = "PDFluent balanced + TATR"
+what = "pdfluent_balanced with table_model_dir: each kept table region is structured by the Table Transformer v1.1-all first"
+vendor = "Innovation Trigger B.V."
+licence = "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial (code); Apache-2.0 (layout weights); MIT (Table Transformer weights)"
+licence_kind = "open"
+weights = "layout as pdfluent_balanced; tatr-v1.1-all.onnx from PDFLUENT_TABLE_MODEL_DIR"
+recipe = ""
+version_command = "\"${PDFLUENT_BALANCED_TATR_PYTHON:-/opt/ex/pdfluent_balanced_tatr/bin/python}\" -c \"from importlib.metadata import version;print(version('pdfluent'))\""
+publishable = false
+clause = "our own; Apache-2.0 section 4; MIT"
+quote = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction"
+source = "https://pypi.org/project/pdfluent/, https://huggingface.co/microsoft/table-transformer-structure-recognition-v1.1-all"
+read_on = "2026-10-17"
+verdict = "Ourselves. `publishable` stays false until the owner decides it, as in the engine register's `balanced_tatr` row."
+is_an_extractor = true
+is_an_oracle = false
+on_the_rig = false
+why_not = "measured by pdfluent-bench"
+on_the_structured_rig = true
+ocr = "off: ocr=\"never\"; the detectors read the rendered page for boxes, never for text"
+version_pin = "1.1.0"
+install = "docker/pdfluent/Dockerfile"
+outputs = "markdown"
+offline = true
+grounding = "none in the markdown"
+confidence = "none in the markdown"
