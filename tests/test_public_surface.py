@@ -21,9 +21,16 @@ def test_the_tree_and_the_history_are_clean():
     assert cps.scan_history(None) == []
 
 
+# The samples are built from pieces so this file does not trip the check itself.
+HOME_MAC = "/Us" + "ers/someone/work/run.json"
+HOME_LINUX = "/ho" + "me/someone/run.json"
+PRIVATE_IP = "192." + "168.1.20"
+KEY = "-----BEGIN OPENSSH " + "PRIVATE KEY-----"
+
+
 def test_a_home_directory_path_is_caught():
-    assert cps.scan_text("f", "see /Users/someone/work/run.json")
-    assert cps.scan_text("f", "see /home/someone/run.json")
+    assert cps.scan_text("f", "see " + HOME_MAC)
+    assert cps.scan_text("f", "see " + HOME_LINUX)
     assert not cps.scan_text("f", "see /opt/bench/bin/python and /home/runner/work")
 
 
@@ -35,6 +42,6 @@ def test_a_tool_name_and_an_attribution_trailer_are_caught():
 
 
 def test_a_private_address_and_a_key_are_caught_but_a_version_is_not():
-    assert cps.scan_text("f", "host 192.168.1.20")
-    assert cps.scan_text("f", "-----BEGIN OPENSSH PRIVATE KEY-----")
+    assert cps.scan_text("f", "host " + PRIVATE_IP)
+    assert cps.scan_text("f", KEY)
     assert not cps.scan_text("f", "nvidia-curand==10.4.0.35")
