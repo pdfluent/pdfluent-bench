@@ -42,7 +42,7 @@ WHAT IT MEASURES
 INVOCATION (in the venv that has parse-bench, with hash seed fixed so the
 scorer's row order is stable -- the join is on test_id regardless):
 
-    PYTHONHASHSEED=0 ~/.local/share/pdfluent/pb-venv/bin/python \\
+    PYTHONHASHSEED=0 <venv>/bin/python \\
         scripts/extraction/learned/subset_scorer.py \\
         --base <binary-or-md-dir> --arm <binary-or-md-dir> \\
         [--subset header_band_subset.txt] [--out subset_out]
@@ -54,7 +54,7 @@ fail verification.)
 
 A binary is run as `structured_markdown` (`[<binary> <pdf>]` with
 `PDF_RENDER_THREADS=0`) on each subset page: ParseBench pages from
-`~/.local/share/pdfluent/pb-tuning/data/docs/table/`, FinTabNet pages
+`<parsebench-docs>/table/`, FinTabNet pages
 fetched by HTTP range from the pinned archive exactly as the CI harness
 fetches them (same register revisions, CRC32 + provenance + alignment
 checks; the 8 subset companies are all train side, and an eval-side page
@@ -430,7 +430,7 @@ def patch_pools_inline() -> None:
         raise SystemExit(
             "[subset] FATAL: parse-bench is not installed for this interpreter "
             f"({exc}). Run with the pb-venv python, e.g. "
-            "`arch -arm64 ~/.local/share/pdfluent/pb-venv/bin/python`.") from None
+            "`arch -arm64 <venv>/bin/python`.") from None
     runner.ProcessPoolExecutor = InlinePool
     parsers.ProcessPoolExecutor = InlinePool
     grits.ProcessPoolExecutor = InlinePool

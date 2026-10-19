@@ -19,7 +19,7 @@ configuration, and it is the one the other two sets use: the same register,
 the same adapters, the batch per tool (`structured_bench.measure_batch`), and
 OCR off wherever a tool lets it be switched off. Where it does not -- Unstructured's
 hi_res runs Tesseract inside its own pipeline -- the run file and the table carry
-the register's `ocr` beside the column (codex, #1975), because on ParseBench's
+the register's `ocr` beside the column (#1975), because on ParseBench's
 scanned and OCR-leaning pages that difference is most of the score.
 
 WHAT IS MEASURED AND WHAT IS NOT
@@ -385,7 +385,7 @@ def measure(args: argparse.Namespace) -> int:
     tools = {}
     guard_refusals: list[dict] = []
     scorer = scorer_version()
-    # The rules the scores were computed against, by content (codex, #1982).
+    # The rules the scores were computed against, by content (#1982).
     rules_digest = hashlib.sha256(b"".join(
         (cases / f"{group}.jsonl").read_bytes() for group in GROUPS)).hexdigest()
     for tool, tool_entry in allowed.items():

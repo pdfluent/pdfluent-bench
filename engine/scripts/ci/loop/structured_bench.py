@@ -131,7 +131,7 @@ ORT_ARCHIVE_SHA256 = "1fa4dcaef22f6f7d5cd81b28c2800414350c10116f5fdd46a216008255
 
 # THE OWNER'S RULE OF 22-09-2026, which replaces the two-runs-a-day rule of
 # #574 and is enforced rather than remembered: ONE RUN PER VALIDATED BUNDLE,
-# one machine at a time, and the Hetzner ceiling is the hard limit.
+# one machine at a time, and the cloud ceiling is the hard limit.
 #
 # WHY THE COUNT HAD TO GO. A calendar day is not the unit the rule was ever
 # about -- what #574 wanted to stop was a round per fix, and it said so ("a run
@@ -179,7 +179,7 @@ def load_register(path: pathlib.Path, section: str) -> tuple[dict, dict]:
     two registers each declared that a verdict older than 180 days is absent
     permission, and nothing read it. A register whose expiry is not enforced is
     a register that says the terms were read once, which is the claim it exists
-    to stop anybody making. (codex, #1922)
+    to stop anybody making. (#1922)
     """
     if not path.is_file():
         raise SystemExit(f"[{PREFIX}] FATAL: {path.relative_to(REPO)} is not there, "
@@ -308,7 +308,7 @@ def fetch(entry: dict, work: pathlib.Path, limit: int | None) -> list[dict]:
     # THE REVISION, NOT THE BRANCH. `main` moves, and a seal over pages fetched
     # from "whatever main was that morning" seals a set nobody can get back: the
     # manifest would still say DocLayNet v1.2 while naming different pages. So
-    # the register pins a commit and the fetch asks for it. (codex, #1922)
+    # the register pins a commit and the fetch asks for it. (#1922)
     revision = entry.get("revision")
     if not revision:
         raise SystemExit(
@@ -649,7 +649,7 @@ def fetch_pubtables(entry: dict, work: pathlib.Path, limit: int | None) -> list[
                 # it is a property of the corpus, and an axis a set does not
                 # annotate is reported as unscored with the reason rather than
                 # as a zero that is a statement about the corpus. Keeping it on
-                # the page is what lets a rescore read it back. (codex, #1930)
+                # the page is what lets a rescore read it back. (#1930)
                 "annotates": list(entry.get("annotates") or ["table"]),
                 "blocks": blocks,
             })
@@ -671,7 +671,7 @@ def fetch_pubtables(entry: dict, work: pathlib.Path, limit: int | None) -> list[
     # next `--draw` would seal it under the same name, and a round would report
     # a number about a corpus the register does not describe. Widen
     # `walk_multiplier` on a ticket, or find out why the archive stopped
-    # answering -- but do not quietly measure something else. (codex, #1930)
+    # answering -- but do not quietly measure something else. (#1930)
     if len(rows) != ceiling:
         raise SystemExit(
             f"[{PREFIX}] FATAL: the walk kept {len(rows)} page(s) and the "
@@ -1757,7 +1757,7 @@ def set_in(payload: str | None) -> list[dict] | None:
             # hands the classifier -- it sorts one size per glyph and takes the
             # middle one -- and a table that says 8 point where the classifier
             # clusters on 10 is a table that cannot diagnose the classifier.
-            # (codex, #578)
+            # (#578)
             "size": weighted_median(weights),
             "face": max(faces.items(), key=lambda kv: kv[1])[0] if faces else None,
             "bold": total > 0 and bold * 2 > total,
@@ -1947,7 +1947,7 @@ def blocks_of(markdown: str) -> list[dict]:
     # markdown scored 0.714 against a ground truth whose header is `<th>`,
     # while the same table emitted as HTML scored 1.0. That is a bias according
     # to which format an adapter happens to emit, which is the one thing a
-    # comparison must not have. (codex, #1930)
+    # comparison must not have. (#1930)
     header_rows: list[int] = []
 
     def flush_paragraph() -> None:
@@ -1964,7 +1964,7 @@ def blocks_of(markdown: str) -> list[dict]:
             # and into the matching against a ground truth that reads `a b` --
             # so a tool that emitted the table CORRECTLY was charged for its
             # serialisation and could fall under MATCH_FLOOR for it. The rows
-            # are kept for the HTML, which is what TEDS reads. (codex, #1922)
+            # are kept for the HTML, which is what TEDS reads. (#1922)
             blocks.append({"kind": "table", "text": _pipe_to_text(table),
                            "html": _pipe_to_html(table, header_rows)})
             table.clear()
@@ -2029,7 +2029,7 @@ def _pipe_to_html(rows: list[str], header_rows: list[int] | None = None) -> str:
     is what the tag half of a TEDS cell comparison is about. Without that, a
     table read correctly out of markdown was charged for every header cell
     against a ground truth that marks them -- a penalty for the tool's choice
-    of serialisation rather than for its reading. (codex, #1930)
+    of serialisation rather than for its reading. (#1930)
     """
     header = header_rows[0] if header_rows else 0
     out = ["<table>"]
@@ -2079,7 +2079,7 @@ def words_row(page: dict, truth: list[dict], body: list[dict], produced: list[di
     if why:
         return _unscored(f"not a reference for words: {why} (DATASETS.toml `words_excluded`)")
     # A document read whole carries each block's page (`document_of`), and the
-    # overlap rule stays inside a page (codex, #1976).
+    # overlap rule stays inside a page (#1976).
     if whole_page:
         return axes.bag_of_words_score(
             [b["text"] for b in body], [b["text"] for b in produced],
@@ -2246,7 +2246,7 @@ def measure_batch(tool: str, pages: list[dict], binaries: dict,
     # EMPTY, EVERY TIME. The work directory is reused on purpose -- refetching
     # two and a half gigabytes is five minutes of a paid hour -- so a page that
     # failed on this attempt would otherwise be scored from the markdown of the
-    # last one, and counted as answered. (codex, #1922)
+    # last one, and counted as answered. (#1922)
     out = scratch / "out"
     if out.exists():
         shutil.rmtree(out)
@@ -2576,7 +2576,7 @@ def install_mb(tool: str, entry: dict, binaries: dict) -> float | None:
         folder = pathlib.Path(os.path.expanduser(cache))
         if folder.exists():
             size += tree_bytes(folder)
-    # AND THE SYSTEM PACKAGES THE COLUMN NEEDS (#623, codex on #1975):
+    # AND THE SYSTEM PACKAGES THE COLUMN NEEDS (#623, #1975):
     # Unstructured's hi_res cannot run without Tesseract, which lives under
     # /usr and not in its venv. Weighed from the package's own file list, so a
     # column is not lighter for having a dependency outside its directory.
@@ -2734,7 +2734,7 @@ def batch_clock(pages: list[dict], binaries: dict, per_page: dict[str, str],
         target = scratch / f"out-{label}"
         if target.exists():
             shutil.rmtree(target)
-        # THE PARENT'S CLOCK, around the whole process (codex, #1997): the
+        # THE PARENT'S CLOCK, around the whole process (#1997): the
         # competitors' batch is timed that way by `measure_batch`, start-up,
         # list parsing and the writing of every file included. The child's own
         # `wall_ms` starts after all that and is kept only beside it.
@@ -2806,7 +2806,7 @@ def adapter_digest() -> str:
 
 
 def cache_key(set_name: str, tool: str, tool_entry: dict, pages: list[dict]) -> dict:
-    # The pages BY CONTENT as well as by name (codex, #1982): a revision that
+    # The pages BY CONTENT as well as by name (#1982): a revision that
     # changes a PDF under the same name would otherwise score old Markdown
     # against new truth. The ground truth travels in the same digest, so a
     # changed annotation is a miss too.
@@ -3505,7 +3505,7 @@ def rescore(evidence: pathlib.Path, previous: dict, set_name: str,
     truth = json.loads((evidence / "ground-truth.json").read_text())
     # Evidence written before `annotates` was kept says nothing about what its
     # set drew, and the register does -- so an old round can still be rescored
-    # without reporting axes its corpus never annotated. (codex, #1930)
+    # without reporting axes its corpus never annotated. (#1930)
     drawn = entry.get("annotates")
     if drawn:
         for page in truth:
@@ -3523,7 +3523,7 @@ def rescore(evidence: pathlib.Path, previous: dict, set_name: str,
         # RECOMPUTED, NOT ADDED. A page the original round could not read has no
         # markdown to re-read either, so it is already inside `missing`: adding
         # the old count on top made a 200-page round report 199 answered and 2
-        # unanswered. The evidence is the whole population here. (codex, #1922)
+        # unanswered. The evidence is the whole population here. (#1922)
         tools[tool] = dict(
             before, pages=len(rows), did_not_answer=missing,
             summary=summarise_tool(rows), summary_v2=summarise_tool_v2(rows),
@@ -3568,7 +3568,7 @@ def may_i_run(tool: str) -> int:
     preflight before the harness starts, and a preflight that asks no register
     is a way to run software whose terms no longer permit it -- which is exactly
     what both registers are for. Prints one line and answers with its exit
-    status. (codex, #1922)
+    status. (#1922)
     """
     allowed, refused = tools_allowed([tool])
     if allowed:
@@ -3622,10 +3622,10 @@ def money_left() -> tuple[float, float] | None:
 
     THE LEDGER IS THE HARD LIMIT and the only one the owner's rule names, so a
     ledger that cannot be read does not refuse a round -- "I could not look" is
-    not "there is no money", which is the reading `hetzner_ledger.py` itself
+    not "there is no money", which is the reading `cost_ledger.py` itself
     insists on for a price it could not fetch.
     """
-    ledger = REPO / "scripts" / "cos" / "hetzner_ledger.py"
+    ledger = REPO / "scripts" / "cos" / "cost_ledger.py"
     if not ledger.is_file():
         return None
     out, _ = run_tool([sys.executable, str(ledger), "total"], timeout=60)
@@ -3658,7 +3658,7 @@ def check_budget(force: bool, set_name: str = "") -> None:
     spent = money_left()
     if spent is not None and spent[1] <= 0.0:
         raise SystemExit(
-            f"[{PREFIX}] REFUSED: the Hetzner ledger says EUR {spent[0]:.2f} is "
+            f"[{PREFIX}] REFUSED: the cloud ledger says EUR {spent[0]:.2f} is "
             "spent and nothing is left of the ceiling. That is the hard limit "
             "of the owner's rule of 22-09-2026; it takes a decision by the "
             "owner and not a flag -- --anyway does not pass it.")
@@ -4067,14 +4067,14 @@ def _self_test(committed_cache: pathlib.Path) -> int:
     # --- a column names its version -------------------------------------
     # A tool on the structured rig with no version command is recorded as
     # "unknown" in every run file, so its column cannot be attributed to the
-    # release the rig pinned -- pdfplumber went onto the rig that way. (codex, #1968)
+    # release the rig pinned -- pdfplumber went onto the rig that way. (#1968)
     extractors, _extractors_meta = load_register(EXTRACTORS, "extractors")
     check("every structured-rig tool names its version",
           sorted(k for k, row in extractors.items()
                  if row.get("on_the_structured_rig") and not str(row.get("version_command") or "").strip()),
           [], "tool_version() records 'unknown' for a row without one")
     # A column whose OCR runs in a system package answers for that package: its
-    # version joins the column's and its bytes the install size (codex, #1975).
+    # version joins the column's and its bytes the install size (#1975).
     for key, row in extractors.items():
         # A system OCR engine (Tesseract); MinerU's OCR models are in its own
         # model cache, which install MB already weighs.
@@ -4247,7 +4247,7 @@ def _self_test(committed_cache: pathlib.Path) -> int:
     check("a pipe table is a table", blocks[4]["kind"], "table", "")
     check("and its text is the cells, not the pipes", blocks[4]["text"], "a b c d",
           "a ground truth reads `a b`; charging a tool for its own serialisation "
-          "penalises the table it got right (codex, #1922)")
+          "penalises the table it got right (#1922)")
     check("and it becomes HTML TEDS can read",
           axes.teds(blocks[4]["html"], blocks[4]["html"]), 1.0, "")
     commented = blocks_of("# Title\n\n<!-- image -->\n\nA paragraph.\n")
@@ -4483,14 +4483,14 @@ def _self_test(committed_cache: pathlib.Path) -> int:
 
     # THE QUESTION A SHELL CALLER ASKS. The remote round's preflight ran Docling
     # before the harness had read a verdict; it asks this now, so a tool off the
-    # rig is not run once per round by the wrapper. (codex, #1922)
+    # rig is not run once per round by the wrapper. (#1922)
     check("a refused tool answers no", may_i_run("marker"), 1,
           "a check the harness performs and its wrapper walks past is not a check")
     check("and an allowed one answers yes", may_i_run("docling"), 0, "")
 
     # A rescore counts the pages it could not read, rather than adding them to a
     # count that already holds them: 199 answered and 2 unanswered of 200 is not
-    # a possible run. (codex, #1922)
+    # a possible run. (#1922)
     import tempfile
     with tempfile.TemporaryDirectory() as tmp:
         place = pathlib.Path(tmp)
@@ -5043,7 +5043,7 @@ def _self_test(committed_cache: pathlib.Path) -> int:
           sorted({line.strip().split()[0] for line in remote.splitlines()
                   if "scripts/ci/loop/structured_bench.py --set \"$SET\" --work" in line}),
           ['"$BENCH_PY"'],
-          "under the system python every column's tokens/page was null (codex, #1994)")
+          "under the system python every column's tokens/page was null (#1994)")
     check("the round keeps our column's feature dump beside its markdown",
           '|| echo "!!! dump_our_features rc=$? (informational, round continues)"'
           '\n  emit_evidence "$SET" "$SET"' in remote
@@ -5495,7 +5495,7 @@ def _self_test(committed_cache: pathlib.Path) -> int:
     # THREE SIZES, AND THE COMMONEST IS NOT THE MIDDLE ONE. `dominant_font_size`
     # sorts one size per glyph and takes the middle; a table that took the
     # commonest instead would say 8 point about a block the classifier clusters
-    # at 10, and then the table cannot diagnose the classifier. (codex, #578)
+    # at 10, and then the table cannot diagnose the classifier. (#578)
     three = json.dumps({"blocks": [{"kind": "paragraph", "text": "mixed", "spans": [
         {"text": "x" * 40, "fontSize": 8.0, "fontName": "F", "isBold": False,
          "isItalic": False},
@@ -5730,7 +5730,7 @@ def main() -> int:
 
     if args.self_test:
         return self_test()
-    # Before any fetch or build (codex, #1982): a cache fill measures named
+    # Before any fetch or build (#1982): a cache fill measures named
     # competitors, and the default `ours,docling` would be refused only after
     # the expensive part.
     if args.fill_cache:
@@ -5881,7 +5881,7 @@ def main() -> int:
             print(f"[{PREFIX}] {name}: {'cached ' + where if where else 'NOT cached (the batch did not finish)'}")
             # A cached column without a dimension is a hole in every table that
             # reads it: the fill of 25/26-09 ran without the tokenizer and every
-            # entry had to be counted offline (codex, #1994). Said, and failed.
+            # entry had to be counted offline (#1994). Said, and failed.
             missing = [n for n, _l, _s in DIMENSIONS
                        if (row.get("dimensions") or {}).get(n) is None]
             if missing:
@@ -5900,14 +5900,14 @@ def main() -> int:
     # can be answered by recomputing, but only if the annotations the axis reads
     # are still there. They live on the instance, which is deleted minutes
     # later, and the first round could not be re-scored after review found two
-    # defects in the reader -- that cost a second machine. (codex, #1922)
+    # defects in the reader -- that cost a second machine. (#1922)
     truth = work / "text" / "ground-truth.json"
     truth.parent.mkdir(parents=True, exist_ok=True)
     truth.write_text(json.dumps([
         # `annotates` TRAVELS WITH THE ANNOTATIONS. Without it a rescore --
         # which is the whole point of keeping them -- reads the pages as if
         # every set drew every class of block, and reports a text axis and a
-        # reading order for a corpus of tables. (codex, #1930)
+        # reading order for a corpus of tables. (#1930)
         {k: page[k] for k in ("source", "name", "document", "page_no",
                               "category", "sha256", "annotates", "blocks")
          if k in page}
@@ -5924,7 +5924,7 @@ def main() -> int:
     # revision, a redrawn manifest, a changed sampling rule -- and a ratchet
     # comparing their means would then be reporting the corpus. So a run says
     # what it measured, by digest over the names, and the gate refuses to
-    # ratchet two runs whose digests differ. (codex, #1930)
+    # ratchet two runs whose digests differ. (#1930)
     run["pages_digest"] = pages_digest(chosen)
     path = write_run(run)
     print(table_of(run))

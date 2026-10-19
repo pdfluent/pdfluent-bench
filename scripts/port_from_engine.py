@@ -23,6 +23,7 @@ import ast
 import hashlib
 import json
 import pathlib
+import re
 import subprocess
 import sys
 import tomllib
@@ -64,6 +65,29 @@ VERBATIM = [
 
 BENCH_NOTE = "pdfluent-bench:"
 
+# Comment-only scrub, applied to every ported .py file after the patches: the
+# engine's comments credit the tool that reviewed a change, name the cloud
+# provider behind its internal round policy and point into a home directory.
+# None of that belongs in a public repository. (The words are spelled in
+# pieces so this file does not carry them itself.) The scrub never touches
+# code: the scoring functions are still checked against the engine, after
+# applying the same scrub to the engine text.
+SCRUBS = [
+    (re.compile(r"\(" + "co" + "dex, (#\\d+)\\)"), r"(\1)"),
+    (re.compile(r"\((#\d+), " + "co" + "dex on (#\\d+)\\)"), r"(\1, \2)"),
+    (re.compile("het" + "zner_ledger"), "cost_ledger"),
+    (re.compile("Het" + "zner"), "cloud"),
+    (re.compile(r"~/\.local/share/pdfluent/pb-venv/bin/python"), "<venv>/bin/python"),
+    (re.compile(r"~/\.local/share/pdfluent/pb-tuning/data/docs/table/"), "<parsebench-docs>/table/"),
+]
+
+
+def scrub(text: str) -> str:
+    for rx, replacement in SCRUBS:
+        text = rx.sub(replacement, text)
+    return text
+
+
 # (path, [(old, new, expected_count), ...])
 PATCHED: list[tuple[str, list[tuple[str, str, int]]]] = [
     ("scripts/ci/loop/structured_bench.py", [
@@ -94,7 +118,7 @@ PATCHED: list[tuple[str, list[tuple[str, str, int]]]] = [
         ('            if key is not None and probe.get("outcome") == "ok":\n',
          '            if (key is not None and probe.get("outcome") == "ok"\n'
          '                    and os.environ.get("BENCH_COMPETITOR_CACHE")):  # ' + BENCH_NOTE + ' opt-in\n', 1),
-        # The Hetzner ledger and the one-run-per-head rule are the engine's
+        # The cost ledger and the one-run-per-head rule are the engine's
         # internal round policy. The bench's cost guard is infra/gcp.
         ('    spent = money_left()\n    if spent is not None and spent[1] <= 0.0:\n',
          '    return  # ' + BENCH_NOTE + ' cost guard lives in infra/gcp (BUDGET_EUR); PORTING.md\n'
@@ -163,7 +187,7 @@ PATCHED: list[tuple[str, list[tuple[str, str, int]]]] = [
 # Tests that exercise the engine's remote round script, which is not ported.
 NOT_PORTED = {
     "scripts/extraction/structured_bench_remote.sh":
-        "Hetzner remote-gate driver; replaced by docker/ images, bench/ and infra/gcp/",
+        "the engine's remote round driver; replaced by docker/ images, bench/ and infra/gcp/",
     "scripts/ci/loop/test_structured_bench_remote_sigpipe.py":
         "tests structured_bench_remote.sh, which is not ported",
     "scripts/extraction/adapters/test_best_render.py":
@@ -234,6 +258,11 @@ def apply(text: str, patches: list[tuple[str, str, int]], path: str) -> str:
     return text
 
 
+def apply_changed(text: str, original: bytes) -> bool:
+    """True when the patches changed the code, not merely the comments."""
+    return scrub(text) != scrub(original.decode("utf-8"))
+
+
 def toml_value(value) -> str:
     if isinstance(value, bool):
         return "true" if value else "false"
@@ -279,11 +308,19 @@ def main() -> int:
                         "scoring_functions": {}}
 
     def put(path: str, data: bytes, original: bytes, patched: bool) -> None:
+        # A .py file is scrubbed on the way in. `patched` means code changed;
+        # `scrubbed` means only comments did.
+        scrubbed = False
+        if path.endswith(".py"):
+            cleaned = scrub(data.decode("utf-8")).encode("utf-8")
+            scrubbed = cleaned != data
+            data = cleaned
         target = DEST / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
         provenance["files"][path] = {"engine_sha256": sha256(original),
-                                     "vendored_sha256": sha256(data), "patched": patched}
+                                     "vendored_sha256": sha256(data), "patched": patched,
+                                     "scrubbed": scrubbed}
 
     for path in VERBATIM:
         data = git_show(args.engine, ref, path)
@@ -299,18 +336,20 @@ def main() -> int:
         text = apply(text, patches, path)
         done[path] = (original, text)
     for path, (original, text) in done.items():
-        put(path, text.encode("utf-8"), original, text.encode("utf-8") != original)
+        put(path, text.encode("utf-8"), original, apply_changed(text, original))
 
     for path, names in SCORING.items():
         before = segments(git_show(args.engine, ref, path).decode("utf-8"))
+        scrubbed_before = segments(scrub(git_show(args.engine, ref, path).decode("utf-8")))
         after = segments((DEST / path).read_text(encoding="utf-8"))
         rows = {}
         for name in names:
             if name not in before:
                 raise SystemExit(f"[port] FATAL: {path}: no top-level `{name}` in the engine")
             rows[name] = {"engine_sha256": sha256(before[name].encode()),
-                          "vendored_sha256": sha256(after.get(name, "").encode())}
-            if rows[name]["engine_sha256"] != rows[name]["vendored_sha256"]:
+                          "vendored_sha256": sha256(after.get(name, "").encode()),
+                          "scrubbed": before[name] != scrubbed_before[name]}
+            if sha256(scrubbed_before[name].encode()) != rows[name]["vendored_sha256"]:
                 raise SystemExit(f"[port] FATAL: {path}: `{name}` differs from the engine; "
                                  "scoring code is never patched")
         provenance["scoring_functions"][path] = rows

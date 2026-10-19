@@ -66,7 +66,7 @@ def label_of(region: dict) -> str:
     DocLayNet's own annotation carries the category as an INTEGER, and a driver
     that passes it through unchanged is being faithful rather than lazy. A
     table keyed on a mix of `8` and `"section_header"` prints two rows for one
-    class and raises on the first `:s` besides. (codex, #1956)
+    class and raises on the first `:s` besides. (#1956)
     """
     label = region.get("label")
     if isinstance(label, bool):
@@ -248,7 +248,7 @@ def in_reading_order(pieces: list[list[dict]]) -> list[list[dict]]:
     cut in the part after it. Split by height alone, a two-column block comes
     out interleaved -- left row 1, right row 1, left row 2 -- so no index
     separates the left column from the right, and a cut meant for one column
-    takes half of the other with it (codex, #1992). Sorted into reading order,
+    takes half of the other with it (#1992). Sorted into reading order,
     a contiguous range of indices is a contiguous piece of the page again.
 
     COLUMNS ARE FOUND BY OVERLAP, not by a grid: a piece joins a column when it
@@ -334,7 +334,7 @@ def align_page(page: dict, labels: dict,
             # THE SAME TWO THIRDS A BLOCK IS HELD TO. A line split evenly over
             # two regions belongs to neither, and handing it to whichever is a
             # hair bigger -- or to the first, on a tie -- would put an `opens`
-            # on a line that opens nothing. (codex, #1956)
+            # on a line that opens nothing. (#1956)
             if owner is not None and owned / ink < CLAIM:
                 owner = None
             # ONE OPENING PER REGION, AND IT IS THE FIRST LINE IN ORDER. This
@@ -342,7 +342,7 @@ def align_page(page: dict, labels: dict,
             # region, which two fragments at the SAME height both answer yes --
             # so a line split by a wide gap inside one region produced two
             # openings and taught `list_opens` to cut inside a single item
-            # (codex, #1992). The lines are in reading order, so "first" is a
+            # (#1992). The lines are in reading order, so "first" is a
             # question about the order and not about the geometry.
             opens = owner is not None and at == next(
                 (k for k, other in enumerate(lines)
@@ -390,7 +390,7 @@ def align_page(page: dict, labels: dict,
                 continue
             # ONE PER REGION BURIED, not one per group: three items read as
             # one block lose two rows, and a count of one would say the same
-            # as a pair does. (codex, #1956)
+            # as a pair does. (#1956)
             loss[f"{label}: merged into one block with another of its class"] += count - 1
             merged.update(i for i in owned if label_of(regions[i]) == label)
     for index, region in enumerate(regions):
@@ -612,7 +612,7 @@ def self_test() -> int:
     # DocLayNet's own annotation carries the category as an integer, and a
     # driver that passes it through is being faithful. The table has to read
     # the same class either way, or it prints two rows for one class -- and
-    # formats an int with `:s` on the way. (codex, #1956)
+    # formats an int with `:s` on the way. (#1956)
     by_number = report([page], {"p1": {"regions": [
         {"label": 8, "bbox": [8, 88, 92, 102]},
         {"label": 10, "bbox": [8, 38, 92, 82]}]}})

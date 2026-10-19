@@ -4,167 +4,200 @@
   "benchmarks/extraction/comparison/EXTRACTORS.toml": {
    "engine_sha256": "6319eea9a1a32dd0a88085362884f3880b4ae2b9e3d9e4e3ebcde04b70047770",
    "patched": true,
+   "scrubbed": false,
    "vendored_sha256": "71550c0e019f373404e68b2b93573c625c53957f8cbf2656a5752764e0b39b91"
   },
   "benchmarks/structured/comparison/DATASETS.toml": {
    "engine_sha256": "e2055e2b8a32460ed907b5942d75d80971530096f86e5d93a730111b722ef6e8",
    "patched": true,
+   "scrubbed": false,
    "vendored_sha256": "2efe6c94b5af3c627deda0a14557ba52dcdf891337f39f9f7e3a8571b4a6fda6"
   },
   "corpus/structured/DOCLAYNET_TEST.json": {
    "engine_sha256": "ddf1892f7abd5b24fe3dfc90fe00dc864cf1a7e734a82029aeaba7b24bf7967e",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "ddf1892f7abd5b24fe3dfc90fe00dc864cf1a7e734a82029aeaba7b24bf7967e"
   },
   "corpus/structured/EXCLUDE_EVAL_OVERLAP.json": {
    "engine_sha256": "d051d173697d2625f84aa9b54efd95759c5a99dc73df02e4d61813ff0b4dbdae",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "d051d173697d2625f84aa9b54efd95759c5a99dc73df02e4d61813ff0b4dbdae"
   },
   "corpus/structured/FINTABNET_DRAW.json": {
    "engine_sha256": "5651af9525543a98e849e3d11be93cd808ec0774e32da2a4779c468045a1de28",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "5651af9525543a98e849e3d11be93cd808ec0774e32da2a4779c468045a1de28"
   },
   "corpus/structured/PARSEBENCH.json": {
    "engine_sha256": "cb5f07d919962b09b1cb4455cef56947c52a21073102372b877bda844a91cc3a",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "cb5f07d919962b09b1cb4455cef56947c52a21073102372b877bda844a91cc3a"
   },
   "corpus/structured/PUBTABLES1M.json": {
    "engine_sha256": "3d0650e1aad4a69b975a2cbb9c136420444b79b487235cff4d003aefdb66247a",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "3d0650e1aad4a69b975a2cbb9c136420444b79b487235cff4d003aefdb66247a"
   },
   "scripts/ci/loop/structured_bench.py": {
    "engine_sha256": "0d20c5ee710fefedc3b0a48285ba21bd30bf4fbaa8f40a9344ec91c87787defa",
    "patched": true,
-   "vendored_sha256": "76696974b8f4f5b7433b1bbb3f4529b4382c2f7f18d70d5b2ca8641a8cae5e8c"
+   "scrubbed": true,
+   "vendored_sha256": "d5801629209b2bb869aa8d4a86237808ba7fe03d13d8f48d6ea7e065a54f70f5"
   },
   "scripts/ci/loop/test_structured_bench_fintabnet_mirror.py": {
    "engine_sha256": "d6b410accba8db0ab4234bd03beeb0b356afd2bc8ee512e59eb3fa0df718e5da",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "d6b410accba8db0ab4234bd03beeb0b356afd2bc8ee512e59eb3fa0df718e5da"
   },
   "scripts/ci/loop/test_structured_bench_fintabnet_norealign.py": {
    "engine_sha256": "ef166aa41d2bdfdc35d960d3ed57a338d06c949808339614d6742a8190724456",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "ef166aa41d2bdfdc35d960d3ed57a338d06c949808339614d6742a8190724456"
   },
   "scripts/ci/loop/test_structured_bench_fintabnet_pinned.py": {
    "engine_sha256": "111735e5d60fa4c7dcd42d910e4f8129586b7d0f5f2dbb6e41c9d54dd5bd4fa4",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "111735e5d60fa4c7dcd42d910e4f8129586b7d0f5f2dbb6e41c9d54dd5bd4fa4"
   },
   "scripts/ci/loop/test_structured_bench_missing_tools.py": {
    "engine_sha256": "2940f705d5653304b2fdb27424121cbf0e80bedb4638c47cdd2f65c5b500067a",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "2940f705d5653304b2fdb27424121cbf0e80bedb4638c47cdd2f65c5b500067a"
   },
   "scripts/ci/loop/test_structured_bench_order_provenance.py": {
    "engine_sha256": "2dd0d9919f7b4db4f2e8855962361371d94eeb05fa23ddea46e33caeefcf2749",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "2dd0d9919f7b4db4f2e8855962361371d94eeb05fa23ddea46e33caeefcf2749"
   },
   "scripts/ci/structured_holdout_rule.py": {
    "engine_sha256": "fa737363a043ebcd358934630515c437d20aaa719dbe7bcfb10cb3bb3c8eb9c0",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "fa737363a043ebcd358934630515c437d20aaa719dbe7bcfb10cb3bb3c8eb9c0"
   },
   "scripts/ci/test_fintabnet_split.py": {
    "engine_sha256": "e238c9ec062b7d2bd54c20771efdc5a10c782d9efa68f0f2bfbc2f7d37da97ba",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "e238c9ec062b7d2bd54c20771efdc5a10c782d9efa68f0f2bfbc2f7d37da97ba"
   },
   "scripts/extraction/adapters/extract_structured.py": {
    "engine_sha256": "78656c60349425019e86c342e597d592f6fc44b56f6d7d8c0a3b24f1567fb4a7",
    "patched": true,
+   "scrubbed": false,
    "vendored_sha256": "f205434bdaf892484fae251e8be82cf17b804b0768af3c6679706e03ae92476d"
   },
   "scripts/extraction/adapters/extract_text.py": {
    "engine_sha256": "816b8d383a9c6ae96b8ec551b32c94cc298b70357fa4d730d5cb7881d7919b96",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "816b8d383a9c6ae96b8ec551b32c94cc298b70357fa4d730d5cb7881d7919b96"
   },
   "scripts/extraction/adapters/requirements-best.txt": {
    "engine_sha256": "feef29fb8d77146de0639f49ba07bc2cd69ecab299a784810685c27b04e32aee",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "feef29fb8d77146de0639f49ba07bc2cd69ecab299a784810685c27b04e32aee"
   },
   "scripts/extraction/adapters/teacher_page.py": {
    "engine_sha256": "7d5efdcc2e4b138849b577b9fbf56936fa2ebe526395a606f9b9d475df8548bc",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "7d5efdcc2e4b138849b577b9fbf56936fa2ebe526395a606f9b9d475df8548bc"
   },
   "scripts/extraction/fintabnet_archive.py": {
    "engine_sha256": "c08e890eba6ee40e7f83e635aa1eabd8ed1f55aad7d7e86c843f0d264317a571",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "c08e890eba6ee40e7f83e635aa1eabd8ed1f55aad7d7e86c843f0d264317a571"
   },
   "scripts/extraction/fintabnet_split.py": {
    "engine_sha256": "19a1081f084e858a54be49d4c17df2d1f5d0405068ee71a13bca9b1f601ef870",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "19a1081f084e858a54be49d4c17df2d1f5d0405068ee71a13bca9b1f601ef870"
   },
   "scripts/extraction/learned/align_labels.py": {
    "engine_sha256": "6e8c149bdefda799476f3c9c7059768bb19fc67e7cbcc263cf166a5e4b74a3c4",
    "patched": false,
-   "vendored_sha256": "6e8c149bdefda799476f3c9c7059768bb19fc67e7cbcc263cf166a5e4b74a3c4"
+   "scrubbed": true,
+   "vendored_sha256": "72ee3b3260718af62adc0afd0c973c21cce9a87c1399a5b07a6101ec8a868622"
   },
   "scripts/extraction/learned/header_band_subset.txt": {
    "engine_sha256": "f333c4cf84df2302b83b9cb0c732d987d84d17f509eb83edad740ab635570342",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "f333c4cf84df2302b83b9cb0c732d987d84d17f509eb83edad740ab635570342"
   },
   "scripts/extraction/learned/subset_scorer.py": {
    "engine_sha256": "158739cdc3054c6cb03abe9a1522b6eba0384d5eaee166956b597b4770a940ad",
    "patched": false,
-   "vendored_sha256": "158739cdc3054c6cb03abe9a1522b6eba0384d5eaee166956b597b4770a940ad"
+   "scrubbed": true,
+   "vendored_sha256": "a0e08f964393630ef209077cf07fe24cf1bfb8eb2d64291ff88ed2bc4545ecfc"
   },
   "scripts/extraction/lexicon/ATTRIBUTION": {
    "engine_sha256": "97bae4bb277be16008c4b42d9c48e592f100f5c69a401978fc092cd06f3d3538",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "97bae4bb277be16008c4b42d9c48e592f100f5c69a401978fc092cd06f3d3538"
   },
   "scripts/extraction/lexicon/LEXICON.json": {
    "engine_sha256": "68eaa98349fed9b0b3535186ebd0db56ee41d874253885591f24502fdf8097e9",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "68eaa98349fed9b0b3535186ebd0db56ee41d874253885591f24502fdf8097e9"
   },
   "scripts/extraction/lexicon/en_scowl60-rel-2026.02.25.txt": {
    "engine_sha256": "b923784f1ac4173338feaa329d3b73f2e7099ab5ef58114ee4e1672ae1b7aeca",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "b923784f1ac4173338feaa329d3b73f2e7099ab5ef58114ee4e1672ae1b7aeca"
   },
   "scripts/extraction/parsebench_harness.py": {
    "engine_sha256": "2b962742aee44082a1ead6d5121226d5304047917dfac64a54f9b930683ed414",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "2b962742aee44082a1ead6d5121226d5304047917dfac64a54f9b930683ed414"
   },
   "scripts/extraction/parsebench_manifest.py": {
    "engine_sha256": "0669e109e62207cda6c0b41f9cf23f278fe867706098902b1221f7fab06d02ea",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "0669e109e62207cda6c0b41f9cf23f278fe867706098902b1221f7fab06d02ea"
   },
   "scripts/extraction/parsebench_round.py": {
    "engine_sha256": "695ae730a82c64d38d111bedf0fca329bc06ef7d31b8ba56c904140fc5b3f65c",
    "patched": true,
-   "vendored_sha256": "063f3b92774a678e707f731f8bf5e947dcb1967f488bcdde4d2c9461c7bb816a"
+   "scrubbed": true,
+   "vendored_sha256": "cb71c6f53e8e2340378d6fb3540012f0bde8541bd947ed714fd3e58647ba690f"
   },
   "scripts/extraction/pb_summary.py": {
    "engine_sha256": "055f634d2b24282b069e6ba96d9f157cdf038692964c4b85805f55f763ad0b8b",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "055f634d2b24282b069e6ba96d9f157cdf038692964c4b85805f55f763ad0b8b"
   },
   "scripts/extraction/pubtables_cells.py": {
    "engine_sha256": "dae35c811cda9e606b0c6119d5e17a4397c04f4f3da5fa6143fe299d17698121",
    "patched": false,
+   "scrubbed": false,
    "vendored_sha256": "dae35c811cda9e606b0c6119d5e17a4397c04f4f3da5fa6143fe299d17698121"
   },
   "scripts/extraction/structured_axes.py": {
    "engine_sha256": "f0741c10039659aee87c4d07fa4d44f3f540dc9c5407ce91d392e312b73e7a6d",
    "patched": false,
-   "vendored_sha256": "f0741c10039659aee87c4d07fa4d44f3f540dc9c5407ce91d392e312b73e7a6d"
+   "scrubbed": true,
+   "vendored_sha256": "2066d9a52c20849942d458097d135287768b00ab2e45d5844be8954c0424364e"
   }
  },
  "not_ported": {
@@ -172,222 +205,275 @@
   "scripts/ci/rig_data_stays_on_the_rig.py": "internal training-data policy",
   "scripts/extraction/adapters/test_best_render.py": "needs the engine's render_page_png build; the best column takes it from env",
   "scripts/extraction/benchmark_page.py": "the engine's public page, built on structured_parity.py and PAGE.toml claim IDs; replaced by bench/report.py, which keeps its rules (numbers only from run files, denominators shown, draft while anything is missing)",
-  "scripts/extraction/structured_bench_remote.sh": "Hetzner remote-gate driver; replaced by docker/ images, bench/ and infra/gcp/"
+  "scripts/extraction/structured_bench_remote.sh": "the engine's remote round driver; replaced by docker/ images, bench/ and infra/gcp/"
  },
  "scoring_functions": {
   "scripts/ci/loop/structured_bench.py": {
    "AXES": {
     "engine_sha256": "d6be0595e91e37a0761c94f17a869023a2abb988aa1e988b3b3b631944fdfa37",
+    "scrubbed": false,
     "vendored_sha256": "d6be0595e91e37a0761c94f17a869023a2abb988aa1e988b3b3b631944fdfa37"
    },
    "BODY": {
     "engine_sha256": "bdc70cbd39554c9d124f17808a16bf06b3973af55936eccde3e06ac018e6cbc1",
+    "scrubbed": false,
     "vendored_sha256": "bdc70cbd39554c9d124f17808a16bf06b3973af55936eccde3e06ac018e6cbc1"
    },
    "BULLET": {
     "engine_sha256": "f65403ccc200b5ccd1bf0c0edb72442514eaf8d5b9a218e41c50ab8e77516147",
+    "scrubbed": false,
     "vendored_sha256": "f65403ccc200b5ccd1bf0c0edb72442514eaf8d5b9a218e41c50ab8e77516147"
    },
    "COMMENT": {
     "engine_sha256": "26d87e7468fa0290f01f86083165171f9e561197513e02dedb34413ffdae4179",
+    "scrubbed": false,
     "vendored_sha256": "26d87e7468fa0290f01f86083165171f9e561197513e02dedb34413ffdae4179"
    },
    "DOCLAYNET_CLASS": {
     "engine_sha256": "17dc26d2f3f1db80d14bfb29dc16f2017b377616e59babcb8834daf1af0aab60",
+    "scrubbed": false,
     "vendored_sha256": "17dc26d2f3f1db80d14bfb29dc16f2017b377616e59babcb8834daf1af0aab60"
    },
    "EVERYTHING": {
     "engine_sha256": "bc29a671d1d133b758546e37e9f67dad29208657ea2d8cced997f8d33bbd6abc",
+    "scrubbed": false,
     "vendored_sha256": "bc29a671d1d133b758546e37e9f67dad29208657ea2d8cced997f8d33bbd6abc"
    },
    "FENCE": {
     "engine_sha256": "78162b58d7cb4c86ce461720d397da4ae045fc42674111a55e872d0275963223",
+    "scrubbed": false,
     "vendored_sha256": "78162b58d7cb4c86ce461720d397da4ae045fc42674111a55e872d0275963223"
    },
    "HEADING": {
     "engine_sha256": "c4cb11ed16579665b30ea7108ee62de68855051b94f6a01dbb344ef69c3033a2",
+    "scrubbed": false,
     "vendored_sha256": "c4cb11ed16579665b30ea7108ee62de68855051b94f6a01dbb344ef69c3033a2"
    },
    "IMAGE": {
     "engine_sha256": "46c6d37b9a13f6cf6ccb37afc36da147e39cf934cc2fe3da9f17179c9bd8d2ae",
+    "scrubbed": false,
     "vendored_sha256": "46c6d37b9a13f6cf6ccb37afc36da147e39cf934cc2fe3da9f17179c9bd8d2ae"
    },
    "INLINE_EM": {
     "engine_sha256": "b500420a06c838266faaec5f8ccfac635241cdd8475cb40881da9f743fbf4994",
+    "scrubbed": false,
     "vendored_sha256": "b500420a06c838266faaec5f8ccfac635241cdd8475cb40881da9f743fbf4994"
    },
    "INLINE_STRIKE": {
     "engine_sha256": "1f961299f21b5860a93013813773d1a7cdc18c86eeec7838c3b78cc92b43fe90",
+    "scrubbed": false,
     "vendored_sha256": "1f961299f21b5860a93013813773d1a7cdc18c86eeec7838c3b78cc92b43fe90"
    },
    "INLINE_STRONG": {
     "engine_sha256": "34341dfbed03b89579b00baea37ee3396d0489257771549c3c46bf8cf2771ade",
+    "scrubbed": false,
     "vendored_sha256": "34341dfbed03b89579b00baea37ee3396d0489257771549c3c46bf8cf2771ade"
    },
    "INLINE_TAG": {
     "engine_sha256": "121d950b345cff54d258782011be262af28fc2fd598a809babe0f4211f2107f3",
+    "scrubbed": false,
     "vendored_sha256": "121d950b345cff54d258782011be262af28fc2fd598a809babe0f4211f2107f3"
    },
    "LAUNCHER": {
     "engine_sha256": "ee9bcea1226d4a2ae3e2b7a72eaee135a478f1073fb7ee392f983a49d0447e90",
+    "scrubbed": false,
     "vendored_sha256": "ee9bcea1226d4a2ae3e2b7a72eaee135a478f1073fb7ee392f983a49d0447e90"
    },
    "TABLE_ROW": {
     "engine_sha256": "638ef2ebbd4e856f5fdca4cea17f354913bfe860f76c9c9b6b625a9f4d949ceb",
+    "scrubbed": false,
     "vendored_sha256": "638ef2ebbd4e856f5fdca4cea17f354913bfe860f76c9c9b6b625a9f4d949ceb"
    },
    "TABLE_RULE": {
     "engine_sha256": "fdce19e12f88fb1a9bb82a5c1b8bee24deb0ce9b80d90b41cde9217ab45e493d",
+    "scrubbed": false,
     "vendored_sha256": "fdce19e12f88fb1a9bb82a5c1b8bee24deb0ce9b80d90b41cde9217ab45e493d"
    },
    "TIMEOUT_S": {
     "engine_sha256": "c939632502eb977118d585209e227fc254158f4228df08fb5a0b02a6db2b0ed6",
+    "scrubbed": false,
     "vendored_sha256": "c939632502eb977118d585209e227fc254158f4228df08fb5a0b02a6db2b0ed6"
    },
    "V2_AXES": {
     "engine_sha256": "4acb8df9345978ac4824a22883d2f6d7c1fe36fcf2d624785798cb746990048a",
+    "scrubbed": false,
     "vendored_sha256": "4acb8df9345978ac4824a22883d2f6d7c1fe36fcf2d624785798cb746990048a"
    },
    "_aligned": {
     "engine_sha256": "ad42ed0a19645e46a554ce86e38883a3edb178e9c92c2591a1a6cdece4180e9e",
+    "scrubbed": false,
     "vendored_sha256": "ad42ed0a19645e46a554ce86e38883a3edb178e9c92c2591a1a6cdece4180e9e"
    },
    "_page_of": {
     "engine_sha256": "8887096e3fbc6304df54065b0ef43a2595dc241f304fbc9c5b5d37b2ca87e8f3",
+    "scrubbed": false,
     "vendored_sha256": "8887096e3fbc6304df54065b0ef43a2595dc241f304fbc9c5b5d37b2ca87e8f3"
    },
    "_pipe_to_html": {
     "engine_sha256": "cc244978bd5243ecbb6ec97c4414ba10742d6342f2d0d4d013177327ae997cb9",
-    "vendored_sha256": "cc244978bd5243ecbb6ec97c4414ba10742d6342f2d0d4d013177327ae997cb9"
+    "scrubbed": true,
+    "vendored_sha256": "253cb93bcb5d3947b3d0049d2cf52327ce1053c10f8b21379b1d6c06ccd73459"
    },
    "_pipe_to_text": {
     "engine_sha256": "a7c5d5382449602b328b576b1d5ac72476105238021ed3d986ed0dc7715415eb",
+    "scrubbed": false,
     "vendored_sha256": "a7c5d5382449602b328b576b1d5ac72476105238021ed3d986ed0dc7715415eb"
    },
    "_unscored": {
     "engine_sha256": "4596dcca49e726e7c5287105ec1133c2f5035799ff7c156225559f54ef934515",
+    "scrubbed": false,
     "vendored_sha256": "4596dcca49e726e7c5287105ec1133c2f5035799ff7c156225559f54ef934515"
    },
    "_v2_lexicon": {
     "engine_sha256": "84dd453bff45672f0b329f13fbbdb9b4e77f1a208d95d494e4f87c76788b510b",
+    "scrubbed": false,
     "vendored_sha256": "84dd453bff45672f0b329f13fbbdb9b4e77f1a208d95d494e4f87c76788b510b"
    },
    "blocks_of": {
     "engine_sha256": "fa2ca04e3e9826d1907488aa9d00bd006f97d98ade941971f642ab521485dd65",
-    "vendored_sha256": "fa2ca04e3e9826d1907488aa9d00bd006f97d98ade941971f642ab521485dd65"
+    "scrubbed": true,
+    "vendored_sha256": "87efdbf8205b86b91f739fb9a4dc1d0245b21a997ef8d06a4ccb83b45184311d"
    },
    "cold_start": {
     "engine_sha256": "9ae8d55e7e18adf0ccaac485f5d1fc7a27bd026c3f3b2b3984a9a261c940d323",
+    "scrubbed": false,
     "vendored_sha256": "9ae8d55e7e18adf0ccaac485f5d1fc7a27bd026c3f3b2b3984a9a261c940d323"
    },
    "dimensions_of": {
     "engine_sha256": "fb46f8b1273e802d636c426dd5b30c1b05f0e38fd512932f5d4c5316233cba52",
+    "scrubbed": false,
     "vendored_sha256": "fb46f8b1273e802d636c426dd5b30c1b05f0e38fd512932f5d4c5316233cba52"
    },
    "draw": {
     "engine_sha256": "0d511c564b0f2bb747f7ce0e4daf0913646591ed0e36449a3508da53a0da4287",
+    "scrubbed": false,
     "vendored_sha256": "0d511c564b0f2bb747f7ce0e4daf0913646591ed0e36449a3508da53a0da4287"
    },
    "geometric": {
     "engine_sha256": "bde068dfca3a75414103de0454472b4ce7e5dd86ece4e69f8241ee29f22e5c9d",
+    "scrubbed": false,
     "vendored_sha256": "bde068dfca3a75414103de0454472b4ce7e5dd86ece4e69f8241ee29f22e5c9d"
    },
    "macro_by_document": {
     "engine_sha256": "3af3c604872f33d21cbf2d1a02c57948f5c150134fc0b6239f809245fa5643e1",
+    "scrubbed": false,
     "vendored_sha256": "3af3c604872f33d21cbf2d1a02c57948f5c150134fc0b6239f809245fa5643e1"
    },
    "markdown_of": {
     "engine_sha256": "02d94174c2f1792e1bf17751216900b9886df52acec3b23b9a17a436a57ba877",
+    "scrubbed": false,
     "vendored_sha256": "02d94174c2f1792e1bf17751216900b9886df52acec3b23b9a17a436a57ba877"
    },
    "measure_batch": {
     "engine_sha256": "35b9ce8afc4ec23237122cc3bbd21eeb628a8e45af593d6c2f3fab2c06856226",
-    "vendored_sha256": "35b9ce8afc4ec23237122cc3bbd21eeb628a8e45af593d6c2f3fab2c06856226"
+    "scrubbed": true,
+    "vendored_sha256": "16af21ebd6544603ace3c76d1578bc2c3dea9c7118f1e3d0306859b007909a4f"
    },
    "order_provenance": {
     "engine_sha256": "c751b1d83700d821e209ab1070cc094aa9587a02be327a9f240c0542c1b0e725",
+    "scrubbed": false,
     "vendored_sha256": "c751b1d83700d821e209ab1070cc094aa9587a02be327a9f240c0542c1b0e725"
    },
    "pages_digest": {
     "engine_sha256": "235f09a4495012096ce5dd2448a3cce0e959ed74ee12acb6e63ffadc107d93a1",
+    "scrubbed": false,
     "vendored_sha256": "235f09a4495012096ce5dd2448a3cce0e959ed74ee12acb6e63ffadc107d93a1"
    },
    "run_tool": {
     "engine_sha256": "1223345e9cba7f26b78e5f9d32878535cfebe075367b9333ba0a0fa411220818",
+    "scrubbed": false,
     "vendored_sha256": "1223345e9cba7f26b78e5f9d32878535cfebe075367b9333ba0a0fa411220818"
    },
    "sample": {
     "engine_sha256": "51701d1143d2c37e3739ec588af1556fe0c36e13e1d5b42e1ef5158b6b53fcf1",
+    "scrubbed": false,
     "vendored_sha256": "51701d1143d2c37e3739ec588af1556fe0c36e13e1d5b42e1ef5158b6b53fcf1"
    },
    "score_page": {
     "engine_sha256": "aff98e0b0458b88bc3908501f56726e971883d719bab2cdd62eca61915e6641c",
+    "scrubbed": false,
     "vendored_sha256": "aff98e0b0458b88bc3908501f56726e971883d719bab2cdd62eca61915e6641c"
    },
    "summarise_tool": {
     "engine_sha256": "09f096c668e570c1923159aaf64b4ea8653760586629da9fd1894b082b861429",
+    "scrubbed": false,
     "vendored_sha256": "09f096c668e570c1923159aaf64b4ea8653760586629da9fd1894b082b861429"
    },
    "summarise_tool_v2": {
     "engine_sha256": "647ca2a03e6eef06a21b6c62aa85b3ada96b52865b8c12c98d4deaa324070dcf",
+    "scrubbed": false,
     "vendored_sha256": "647ca2a03e6eef06a21b6c62aa85b3ada96b52865b8c12c98d4deaa324070dcf"
    },
    "tails": {
     "engine_sha256": "fbe5b52ecce8611b62b5ce8adbab9eb20ad871efcf43ad051f8fe123949753ca",
+    "scrubbed": false,
     "vendored_sha256": "fbe5b52ecce8611b62b5ce8adbab9eb20ad871efcf43ad051f8fe123949753ca"
    },
    "unmarked": {
     "engine_sha256": "312f39f920b5d26954c5648a9a707708987dbfbaf83e9b9d87144db271d511ca",
+    "scrubbed": false,
     "vendored_sha256": "312f39f920b5d26954c5648a9a707708987dbfbaf83e9b9d87144db271d511ca"
    },
    "words_excluded": {
     "engine_sha256": "3723641da55200716bba2e8044ae0eb8223e4176bb14a241217052866194bf9f",
+    "scrubbed": false,
     "vendored_sha256": "3723641da55200716bba2e8044ae0eb8223e4176bb14a241217052866194bf9f"
    },
    "words_row": {
     "engine_sha256": "349cc93fb7f4e0cef80b065db3f7dc44e62450bc6851ea21587ec31261639bb3",
-    "vendored_sha256": "349cc93fb7f4e0cef80b065db3f7dc44e62450bc6851ea21587ec31261639bb3"
+    "scrubbed": true,
+    "vendored_sha256": "b733623cb76c33617a988a13a0848299a3d6f5fd021ced35fe1c48e3e8857d11"
    }
   },
   "scripts/extraction/parsebench_round.py": {
    "CATEGORIES": {
     "engine_sha256": "c7fd65f174fa2cc323eccc3fe6c6ad8510115e2b35ece07122e7a302fef25134",
+    "scrubbed": false,
     "vendored_sha256": "c7fd65f174fa2cc323eccc3fe6c6ad8510115e2b35ece07122e7a302fef25134"
    },
    "GROUPS": {
     "engine_sha256": "4971acc0fbc4183468224b117603fc2b39c901e9f49125c31efd6fb0f02335f6",
+    "scrubbed": false,
     "vendored_sha256": "4971acc0fbc4183468224b117603fc2b39c901e9f49125c31efd6fb0f02335f6"
    },
    "HEADLINE": {
     "engine_sha256": "b094031d5a3918d9f1a1547dfc87da2047100cf6f3da56915df1ec5803f87608",
+    "scrubbed": false,
     "vendored_sha256": "b094031d5a3918d9f1a1547dfc87da2047100cf6f3da56915df1ec5803f87608"
    },
    "build_cases": {
     "engine_sha256": "342fcdd75ce30bdf1a354c5627fa6eba6b3ea4370b535c2d741cefdbdc741a78",
+    "scrubbed": false,
     "vendored_sha256": "342fcdd75ce30bdf1a354c5627fa6eba6b3ea4370b535c2d741cefdbdc741a78"
    },
    "check_pages": {
     "engine_sha256": "c0d9d63069b665de708ef3e7e38162a5ef13e81f0a1b1f67228894faa491a2ee",
+    "scrubbed": false,
     "vendored_sha256": "c0d9d63069b665de708ef3e7e38162a5ef13e81f0a1b1f67228894faa491a2ee"
    },
    "evaluation_of": {
     "engine_sha256": "2115c11a078d6534abf372ffef4f58dbd35f1bc912244777425ea7a4bd07e381",
+    "scrubbed": false,
     "vendored_sha256": "2115c11a078d6534abf372ffef4f58dbd35f1bc912244777425ea7a4bd07e381"
    },
    "headline_of": {
     "engine_sha256": "348ee491833237a14d3123c2d36353909506c9add91885080655aa544c9bb41c",
+    "scrubbed": false,
     "vendored_sha256": "348ee491833237a14d3123c2d36353909506c9add91885080655aa544c9bb41c"
    },
    "refusals_of": {
     "engine_sha256": "d76883f03f869563046dacf3b9d77a343923f23a3a2d4eccdcefbb0a66f5ad6c",
+    "scrubbed": false,
     "vendored_sha256": "d76883f03f869563046dacf3b9d77a343923f23a3a2d4eccdcefbb0a66f5ad6c"
    },
    "score": {
     "engine_sha256": "54f2451531f6cb9c78ac01956fdcc2151b80262e150c37df8513c569817a1571",
+    "scrubbed": false,
     "vendored_sha256": "54f2451531f6cb9c78ac01956fdcc2151b80262e150c37df8513c569817a1571"
    },
    "write_markdown": {
     "engine_sha256": "f3724d826e8708061e9ba1eb7b370f2af71ef905b850857af0800718e8e0043b",
+    "scrubbed": false,
     "vendored_sha256": "f3724d826e8708061e9ba1eb7b370f2af71ef905b850857af0800718e8e0043b"
    }
   }

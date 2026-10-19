@@ -635,7 +635,7 @@ def without_overlap(blocks: list[list[str]],
     ONLY ON ONE PAGE. `pages`, where given, is each block's page: a document
     read whole is its pages' blocks in order, and the last block of one page
     and the first of the next are two drawings, so words they share are two
-    words (codex, #1976).
+    words (#1976).
     """
     out: list[list[str]] = []
     for at, words in enumerate(blocks):
@@ -851,7 +851,7 @@ def _cell_cost(left: _Node, right: _Node) -> float:
     GRADED ON THE TEXT, which is what TEDS means and what the first spelling of
     this got wrong: a one-character typo in a long cell cost exactly as much as
     a cell holding something else entirely, so a table read almost perfectly and
-    a table read wrongly scored the same. (codex, #1922)
+    a table read wrongly scored the same. (#1922)
 
     The structure comes first and is not graded: a different tag or a different
     span is a cell the grid puts somewhere else, and no amount of matching text
