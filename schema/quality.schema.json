@@ -1,0 +1,119 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "quality.schema.json",
+ "title": "one configuration on one half of one set",
+ "type": "object",
+ "required": [
+  "run_id",
+  "set",
+  "set_version",
+  "set_licence",
+  "pages_measured",
+  "half",
+  "machine",
+  "refused",
+  "tools",
+  "bench"
+ ],
+ "properties": {
+  "run_id": {
+   "type": "string"
+  },
+  "set": {
+   "type": "string"
+  },
+  "set_version": {
+   "type": "string"
+  },
+  "set_licence": {
+   "type": "string"
+  },
+  "pages_measured": {
+   "type": "integer"
+  },
+  "half": {
+   "type": "string"
+  },
+  "machine": {
+   "type": "object"
+  },
+  "refused": {
+   "type": "array"
+  },
+  "tools": {
+   "type": "object"
+  },
+  "bench": {
+   "type": "object",
+   "required": [
+    "config",
+    "tool",
+    "set",
+    "split",
+    "pages_requested",
+    "because",
+    "version",
+    "reproducible",
+    "vision"
+   ],
+   "properties": {
+    "config": {
+     "type": "string"
+    },
+    "tool": {
+     "type": "string"
+    },
+    "set": {
+     "type": "string"
+    },
+    "split": {
+     "enum": [
+      "tuning",
+      "holdout"
+     ]
+    },
+    "pages_requested": {
+     "type": "integer"
+    },
+    "because": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "version": {
+     "type": "object",
+     "required": [
+      "package",
+      "pinned",
+      "installed",
+      "matches_pin"
+     ],
+     "properties": {
+      "package": {
+       "type": "string"
+      },
+      "pinned": {
+       "type": "string"
+      },
+      "installed": {
+       "type": "string"
+      },
+      "matches_pin": {
+       "type": "boolean"
+      }
+     }
+    },
+    "reproducible": {
+     "enum": [
+      "public",
+      "internal"
+     ]
+    },
+    "vision": {
+     "type": "boolean"
+    }
+   }
+  }
+ }
+}

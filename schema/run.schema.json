@@ -1,0 +1,237 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "run.schema.json",
+ "title": "run.json: what a run ran on, with what, against which data",
+ "type": "object",
+ "required": [
+  "run_id",
+  "schema",
+  "started",
+  "finished",
+  "wall_clock_s",
+  "command",
+  "machine",
+  "images",
+  "harness",
+  "engine_ref",
+  "datasets",
+  "configs",
+  "steps",
+  "cost_eur_estimate",
+  "profile",
+  "splits",
+  "reps",
+  "runner",
+  "failures"
+ ],
+ "properties": {
+  "run_id": {
+   "type": "string",
+   "pattern": "^(bench|smoke|local)-"
+  },
+  "schema": {
+   "const": 1
+  },
+  "started": {
+   "type": "string"
+  },
+  "finished": {
+   "type": "string"
+  },
+  "wall_clock_s": {
+   "type": "number"
+  },
+  "command": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1
+  },
+  "machine": {
+   "type": "object",
+   "required": [
+    "type",
+    "cpu_model",
+    "cpus",
+    "memory_gb",
+    "gpus"
+   ],
+   "properties": {
+    "type": {
+     "type": "string"
+    },
+    "cpu_model": {
+     "type": "string"
+    },
+    "cpus": {
+     "type": "integer"
+    },
+    "memory_gb": {
+     "type": [
+      "number",
+      "null"
+     ]
+    },
+    "gpus": {
+     "type": "array"
+    }
+   }
+  },
+  "images": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "tag",
+     "image_id"
+    ],
+    "properties": {
+     "base": {
+      "type": "string"
+     },
+     "built": {
+      "type": "string"
+     },
+     "image_id": {
+      "type": "string"
+     },
+     "tag": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "harness": {
+   "type": "object",
+   "required": [
+    "commit",
+    "dirty"
+   ],
+   "properties": {
+    "commit": {
+     "type": "string"
+    },
+    "dirty": {
+     "type": "boolean"
+    }
+   }
+  },
+  "engine_ref": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{40}$"
+  },
+  "datasets": {
+   "type": "object",
+   "required": [
+    "sets",
+    "hash"
+   ],
+   "properties": {
+    "hash": {
+     "type": "string",
+     "pattern": "^[0-9a-f]{64}$"
+    },
+    "sets": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "object",
+      "required": [
+       "file",
+       "sha256"
+      ],
+      "properties": {
+       "file": {
+        "type": "string"
+       },
+       "sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+       }
+      }
+     }
+    }
+   }
+  },
+  "configs": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "tool"
+    ],
+    "properties": {
+     "tool": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "steps": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "kind",
+     "status"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string"
+     },
+     "config": {
+      "type": "string"
+     },
+     "set": {
+      "type": "string"
+     },
+     "split": {
+      "type": "string"
+     },
+     "pages": {
+      "type": "integer"
+     },
+     "started": {
+      "type": "string"
+     },
+     "status": {
+      "type": "string"
+     },
+     "seconds": {
+      "type": "number"
+     }
+    }
+   }
+  },
+  "cost_eur_estimate": {
+   "type": [
+    "object",
+    "null"
+   ]
+  },
+  "profile": {
+   "enum": [
+    "full",
+    "mini"
+   ]
+  },
+  "splits": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "reps": {
+   "type": "integer"
+  },
+  "runner": {
+   "enum": [
+    "native",
+    "docker"
+   ]
+  },
+  "failures": {
+   "type": "integer"
+  }
+ }
+}

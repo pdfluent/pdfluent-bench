@@ -28,6 +28,11 @@ MANIFEST_OF = {
 }
 
 
+def portable_command(argv: list[str]) -> list[str]:
+    """The command as a reader reruns it: no interpreter or checkout path."""
+    return ["python", "-m", "bench", *argv[1:]]
+
+
 def _out(command: list[str]) -> str:
     if not shutil.which(command[0]):
         return ""
@@ -122,7 +127,7 @@ def start(run: str, machine_type: str, work: pathlib.Path, sets: list[str],
     provenance = json.loads((ROOT / "engine" / "PROVENANCE.json").read_text())
     return {
         "run_id": run, "schema": 1, "started": now(), "finished": None, "wall_clock_s": None,
-        "command": argv, "machine": machine_record(machine_type), "images": images(work),
+        "command": portable_command(argv), "machine": machine_record(machine_type), "images": images(work),
         "harness": harness_commit(), "engine_ref": provenance["engine_ref"],
         "datasets": manifests(sets), "configs": {c["name"]: {"tool": c["tool"]} for c in chosen},
         "steps": [], "cost_eur_estimate": None,

@@ -1,0 +1,117 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "speed.schema.json",
+ "title": "speed and memory of one configuration on one machine",
+ "type": "object",
+ "required": [
+  "config",
+  "tool",
+  "pages",
+  "page_names",
+  "reps",
+  "version",
+  "threads",
+  "cold_start_ms",
+  "sets"
+ ],
+ "properties": {
+  "config": {
+   "type": "string"
+  },
+  "tool": {
+   "type": "string"
+  },
+  "pages": {
+   "type": "integer"
+  },
+  "page_names": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "reps": {
+   "type": "integer"
+  },
+  "version": {
+   "type": "object",
+   "required": [
+    "package",
+    "pinned",
+    "installed",
+    "matches_pin"
+   ]
+  },
+  "threads": {
+   "type": "object",
+   "minProperties": 1,
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "label",
+     "how",
+     "ms_p50",
+     "ms_p95",
+     "pages_per_s",
+     "peak_rss_mb",
+     "failed_pages",
+     "runs"
+    ],
+    "properties": {
+     "label": {
+      "type": "string"
+     },
+     "how": {
+      "type": "string"
+     },
+     "ms_p50": {
+      "type": "number"
+     },
+     "ms_p95": {
+      "type": "number"
+     },
+     "pages_per_s": {
+      "type": "number"
+     },
+     "peak_rss_mb": {
+      "type": "number"
+     },
+     "failed_pages": {
+      "type": "integer"
+     },
+     "runs": {
+      "type": "array"
+     }
+    }
+   }
+  },
+  "cold_start_ms": {
+   "type": "object",
+   "required": [
+    "values",
+    "median",
+    "what"
+   ],
+   "properties": {
+    "values": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "median": {
+     "type": "integer"
+    },
+    "what": {
+     "type": "string"
+    }
+   }
+  },
+  "sets": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

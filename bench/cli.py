@@ -20,7 +20,7 @@ import subprocess
 import sys
 import time
 
-from bench import compare, configs, cost, datasets, quality, report, runinfo, speed
+from bench import compare, configs, cost, datasets, quality, report, runinfo, speed, validate
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -352,6 +352,10 @@ def parser() -> argparse.ArgumentParser:
     cmp_.add_argument("runs", nargs="+")
     cmp_.add_argument("--out", default=None)
     cmp_.set_defaults(func=cmd_compare)
+
+    val = sub.add_parser("validate", help="check run directories against schema/*.json")
+    val.add_argument("runs", nargs="+")
+    val.set_defaults(func=lambda args: validate.main(args.runs))
 
     ds = sub.add_parser("datasets")
     ds.add_argument("action", choices=("plan", "fetch"))

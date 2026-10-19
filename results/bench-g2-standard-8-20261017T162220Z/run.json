@@ -5,7 +5,7 @@
  "finished": "2026-10-17T16:32:53+00:00",
  "wall_clock_s": 632.8,
  "command": [
-  "/home/jasperdewinter/pdfluent-bench/bench/__main__.py",
+  "bench/__main__.py",
   "run",
   "--machine",
   "g2-standard-8",

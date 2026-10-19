@@ -1,0 +1,64 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "report.schema.json",
+ "title": "report.json: the overview a reader gets",
+ "type": "object",
+ "required": [
+  "draft",
+  "missing",
+  "configs",
+  "splits",
+  "runs",
+  "rows"
+ ],
+ "properties": {
+  "draft": {
+   "type": "boolean"
+  },
+  "missing": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "configs": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "splits": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "runs": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "run_id",
+     "machine",
+     "cpu_model",
+     "harness",
+     "engine_ref",
+     "datasets_hash",
+     "started",
+     "wall_clock_s"
+    ]
+   }
+  },
+  "rows": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "kind",
+     "label",
+     "cells"
+    ]
+   }
+  }
+ }
+}
