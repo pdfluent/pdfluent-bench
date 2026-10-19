@@ -1,0 +1,162 @@
+{
+ "config": "pdfluent-balanced",
+ "tool": "pdfluent_balanced",
+ "pages": 30,
+ "page_names": [
+  "HSY_2015_page_21.pdf",
+  "EXPE_2009_page_78.pdf",
+  "HSY_2009_page_6.pdf",
+  "HSY_2009_page_98.pdf",
+  "BA_2004_page_96.pdf",
+  "HSY_2009_page_112.pdf",
+  "INTU_2018_page_43.pdf",
+  "INTU_2018_page_75.pdf",
+  "FDX_2007_page_51.pdf",
+  "BA_2004_page_83.pdf",
+  "808136b7da653a8fb3ef57db9440ae4569cde53193a5ef5a8b631f6879ce63b9.pdf",
+  "78501025603bc0d592fedd0fd9fc94e69830ccb92049a81c56a4c0c4f8499367.pdf",
+  "8ecf4e2c7a3efd5c22a9bd4328eb30c0bf27f0326e57c80bfe6b89ab8ea4ffc2.pdf",
+  "92330754d694921472fdbfc2bfe6def81d099e4d2d92d0d0c769a954d3b60096.pdf",
+  "6db76d0a7f8a485592f9836c705dc8efb6bac66c6184fd63d4b51238ac4b1548.pdf",
+  "7b782f1632aa485d2256080a19586f7f0e10f99ded330558a5f3e743153bacf1.pdf",
+  "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+  "dc5f96f61bed7ba0b18c719f30ffc520eac3aea84c6d0f83525dab0653d672d8.pdf",
+  "42ee9a7cb0535fb59006a8d30e44975203082d78adb137d95df9914952a9b107.pdf",
+  "8ba84c5085b7502b8a253d5ec429690884bfbc742a41f72a9462aec9511ffa09.pdf",
+  "PMC3141784-p0004.pdf",
+  "PMC3141784-p0006.pdf",
+  "PMC4826663-p0004.pdf",
+  "PMC4826663-p0005.pdf",
+  "PMC4826663-p0006.pdf",
+  "PMC6222413-p0004.pdf",
+  "PMC6222413-p0005.pdf",
+  "PMC6019521-p0002.pdf",
+  "PMC6019521-p0003.pdf",
+  "PMC6019521-p0007.pdf"
+ ],
+ "reps": 1,
+ "version": {
+  "package": "pdfluent",
+  "pinned": "1.1.0",
+  "installed": "1.1.0",
+  "matches_pin": true,
+  "python": "/opt/ex/pdfluent_balanced/bin/python"
+ },
+ "threads": {
+  "1": {
+   "label": "1",
+   "how": "taskset -c 0 and thread variables = 1",
+   "ms_p50": 5907.0,
+   "ms_p95": 5992.05,
+   "pages_per_s": 0.169,
+   "peak_rss_mb": 871.5,
+   "failed_pages": 0,
+   "runs": [
+    {
+     "outcome": "ok",
+     "wall_ms": 184472,
+     "peak_rss_mb": 871.5,
+     "laps_ms": [
+      5872,
+      5914,
+      5902,
+      5952,
+      5997,
+      5841,
+      5982,
+      5886,
+      5880,
+      5897,
+      5814,
+      5954,
+      5913,
+      6049,
+      5935,
+      5973,
+      5865,
+      5941,
+      5821,
+      5865,
+      5886,
+      5867,
+      5980,
+      5902,
+      5843,
+      5930,
+      5912,
+      5986,
+      5885,
+      5958
+     ],
+     "answered": 30,
+     "failed": 0,
+     "pages_per_s": 0.169
+    }
+   ]
+  },
+  "8": {
+   "label": "all (8)",
+   "how": "thread variables = 8",
+   "ms_p50": 702.5,
+   "ms_p95": 759.45,
+   "pages_per_s": 1.409,
+   "peak_rss_mb": 875.8,
+   "failed_pages": 0,
+   "runs": [
+    {
+     "outcome": "ok",
+     "wall_ms": 23164,
+     "peak_rss_mb": 875.8,
+     "laps_ms": [
+      681,
+      749,
+      768,
+      671,
+      727,
+      660,
+      701,
+      701,
+      718,
+      748,
+      663,
+      717,
+      715,
+      813,
+      726,
+      686,
+      686,
+      675,
+      678,
+      690,
+      701,
+      711,
+      717,
+      700,
+      704,
+      699,
+      684,
+      734,
+      728,
+      742
+     ],
+     "answered": 30,
+     "failed": 0,
+     "pages_per_s": 1.409
+    }
+   ]
+  }
+ },
+ "cold_start_ms": {
+  "values": [
+   1816
+  ],
+  "median": 1816,
+  "what": "one fresh process, one page, start-up and model load included"
+ },
+ "sets": [
+  "fintabnet",
+  "doclaynet",
+  "pubtables-1m",
+  "parsebench"
+ ]
+}

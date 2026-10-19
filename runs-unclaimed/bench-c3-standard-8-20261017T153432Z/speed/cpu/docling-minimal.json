@@ -1,0 +1,162 @@
+{
+ "config": "docling-minimal",
+ "tool": "docling_minimal",
+ "pages": 30,
+ "page_names": [
+  "HSY_2015_page_21.pdf",
+  "EXPE_2009_page_78.pdf",
+  "HSY_2009_page_6.pdf",
+  "HSY_2009_page_98.pdf",
+  "BA_2004_page_96.pdf",
+  "HSY_2009_page_112.pdf",
+  "INTU_2018_page_43.pdf",
+  "INTU_2018_page_75.pdf",
+  "FDX_2007_page_51.pdf",
+  "BA_2004_page_83.pdf",
+  "808136b7da653a8fb3ef57db9440ae4569cde53193a5ef5a8b631f6879ce63b9.pdf",
+  "78501025603bc0d592fedd0fd9fc94e69830ccb92049a81c56a4c0c4f8499367.pdf",
+  "8ecf4e2c7a3efd5c22a9bd4328eb30c0bf27f0326e57c80bfe6b89ab8ea4ffc2.pdf",
+  "92330754d694921472fdbfc2bfe6def81d099e4d2d92d0d0c769a954d3b60096.pdf",
+  "6db76d0a7f8a485592f9836c705dc8efb6bac66c6184fd63d4b51238ac4b1548.pdf",
+  "7b782f1632aa485d2256080a19586f7f0e10f99ded330558a5f3e743153bacf1.pdf",
+  "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+  "dc5f96f61bed7ba0b18c719f30ffc520eac3aea84c6d0f83525dab0653d672d8.pdf",
+  "42ee9a7cb0535fb59006a8d30e44975203082d78adb137d95df9914952a9b107.pdf",
+  "8ba84c5085b7502b8a253d5ec429690884bfbc742a41f72a9462aec9511ffa09.pdf",
+  "PMC3141784-p0004.pdf",
+  "PMC3141784-p0006.pdf",
+  "PMC4826663-p0004.pdf",
+  "PMC4826663-p0005.pdf",
+  "PMC4826663-p0006.pdf",
+  "PMC6222413-p0004.pdf",
+  "PMC6222413-p0005.pdf",
+  "PMC6019521-p0002.pdf",
+  "PMC6019521-p0003.pdf",
+  "PMC6019521-p0007.pdf"
+ ],
+ "reps": 1,
+ "version": {
+  "package": "docling",
+  "pinned": "2.126.0",
+  "installed": "2.126.0",
+  "matches_pin": true,
+  "python": "/opt/ex/docling_minimal/bin/python"
+ },
+ "threads": {
+  "1": {
+   "label": "1",
+   "how": "taskset -c 0 and thread variables = 1",
+   "ms_p50": 1518.5,
+   "ms_p95": 1641.1,
+   "pages_per_s": 0.655,
+   "peak_rss_mb": 1173.3,
+   "failed_pages": 0,
+   "runs": [
+    {
+     "outcome": "ok",
+     "wall_ms": 53742,
+     "peak_rss_mb": 1173.3,
+     "laps_ms": [
+      1529,
+      1738,
+      1484,
+      1475,
+      1526,
+      1476,
+      1531,
+      1510,
+      1540,
+      1551,
+      1482,
+      1519,
+      1524,
+      1538,
+      1505,
+      1483,
+      1475,
+      1509,
+      1497,
+      1492,
+      1535,
+      1512,
+      1514,
+      1532,
+      1714,
+      1498,
+      1518,
+      1521,
+      1531,
+      1552
+     ],
+     "answered": 30,
+     "failed": 0,
+     "pages_per_s": 0.655
+    }
+   ]
+  },
+  "8": {
+   "label": "all (8)",
+   "how": "thread variables = 8",
+   "ms_p50": 538.5,
+   "ms_p95": 655.6,
+   "pages_per_s": 1.82,
+   "peak_rss_mb": 1292.5,
+   "failed_pages": 0,
+   "runs": [
+    {
+     "outcome": "ok",
+     "wall_ms": 23608,
+     "peak_rss_mb": 1292.5,
+     "laps_ms": [
+      722,
+      562,
+      523,
+      527,
+      540,
+      505,
+      557,
+      572,
+      532,
+      547,
+      499,
+      564,
+      549,
+      583,
+      556,
+      519,
+      530,
+      537,
+      528,
+      501,
+      542,
+      547,
+      715,
+      524,
+      530,
+      530,
+      507,
+      531,
+      553,
+      554
+     ],
+     "answered": 30,
+     "failed": 0,
+     "pages_per_s": 1.82
+    }
+   ]
+  }
+ },
+ "cold_start_ms": {
+  "values": [
+   7074
+  ],
+  "median": 7074,
+  "what": "one fresh process, one page, start-up and model load included"
+ },
+ "sets": [
+  "fintabnet",
+  "doclaynet",
+  "pubtables-1m",
+  "parsebench"
+ ]
+}

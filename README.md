@@ -152,6 +152,13 @@ it exceeds `BUDGET_EUR` (default 20). Each VM is deleted when the script exits
 and, failing that, by GCP when its lifetime runs out. `make cost
 MACHINE=<type>` prints the time model behind the ceiling.
 
+## Runs that are not cited
+
+`runs-unclaimed/` holds two earlier rounds of 17-10 (`…T145209Z`, a partial
+tuning-half run, and `…T153432Z`, a tuning-half run with speed). No claim cites
+them; they are kept so the history of the measurements is complete. Only the
+run directories in `results/` back published figures.
+
 ## Published figures
 
 Figures from this harness are published only through the PDFluent claims
@@ -174,5 +181,10 @@ it.
 
 ## Licence
 
-Pending; see [LICENSE-TBD.md](LICENSE-TBD.md). The files under `engine/` carry
-the engine's own licence headers.
+PDFluent is available under two licences, at your option: the GNU AGPLv3
+([LICENSE](LICENSE)) or the PDFluent Commercial Licence
+([LICENSE-COMMERCIAL](LICENSE-COMMERCIAL)). [LICENSE-OFFER](LICENSE-OFFER)
+states the offer. This covers the files written for this repository and the
+files under `engine/`, which are copied from the PDFluent engine and carry the
+same header. The datasets are not part of this repository and keep their own
+licences, listed in [DATASETS.md](DATASETS.md).

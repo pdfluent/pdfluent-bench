@@ -1,0 +1,572 @@
+{
+ "run_id": "structured-parsebench-20261017T150022Z",
+ "set": "parsebench",
+ "set_version": "llamaindex/ParseBench, the PDF pages under docs/ (chart, layout, table, text); the 42 JPG/PNG layout pages are left out",
+ "set_licence": "Apache-2.0 (dataset card), over third-party documents it does not own",
+ "revision": "2805a1d940f95a203e0ae4b88be9934f7765b3fc",
+ "half": "tuning",
+ "harness_revision": "9737534",
+ "machine": {
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "machine": "x86_64",
+  "cpus": 8,
+  "load_at_start": 2.3623046875,
+  "instance": ""
+ },
+ "scorer": {
+  "package": "parse-bench",
+  "version": "1.0.4",
+  "headline": {
+   "table": "grits_trm_composite",
+   "chart": "rule_pass_rate",
+   "text_content": "content_faithfulness",
+   "text_formatting": "semantic_formatting"
+  },
+  "convention": "survivor-only means from _evaluation_report.json aggregate_metrics (n_scored/n_total per metric)"
+ },
+ "pages_measured": 21,
+ "pages_per_category": {
+  "table": 7,
+  "chart": 7,
+  "text": 7
+ },
+ "rules_per_group": {
+  "table": 7,
+  "chart": 66,
+  "text_content": 2085,
+  "text_formatting": 94
+ },
+ "pages_digest": "8315e74dece68be731a10f011004bab5372271787ce29db78ed3afff60e9a8b9",
+ "sample": {
+  "per_category": 7,
+  "seed": "pdfluent-structured-parsebench-holdout-2026-09-23",
+  "rule": "whole documents per category (structured_bench.sample)"
+ },
+ "not_measured": {
+  "layout": "ParseBench scores layout from boxes in its LayoutOutput; every column here hands it Markdown, so each would score nothing for a reason that is ours"
+ },
+ "conditions": "DATASETS.toml [datasets.parsebench]: scores and file names only; every column's output stayed on the machine",
+ "tools": {
+  "pdfluent_fast": {
+   "name": "PDFluent fast",
+   "version": "1.1.0",
+   "publishable": true,
+   "ocr": "off: ocr=\"never\"",
+   "markdown": {
+    "answered": 21,
+    "asked": 21
+   },
+   "groups": {
+    "table": {
+     "examples": 7,
+     "successful": 7,
+     "metrics": {
+      "grits_con": 0.6515090097973619,
+      "grits_con_predicted": 0.6515090097973619,
+      "grits_trm_composite": 0.5344963392607515,
+      "structural_consistency": 1.0,
+      "table_record_match": 0.3532038552552455,
+      "table_record_match_perfect": 0.047619047619047616,
+      "table_record_match_perfect_predicted": 0.047619047619047616,
+      "table_record_match_predicted": 0.3532038552552455,
+      "tables_actual": 1.8571428571428572,
+      "tables_expected": 1.8571428571428572,
+      "tables_paired": 1.7142857142857142,
+      "tables_unmatched_expected": 0.14285714285714285,
+      "tables_unmatched_pred": 0.14285714285714285,
+      "tables_unparseable_pred": 0.0
+     },
+     "coverage": {
+      "total": 7,
+      "scored": {
+       "grits_con": 7,
+       "grits_con_predicted": 0,
+       "grits_trm_composite": 7,
+       "structural_consistency": 7,
+       "table_record_match": 7,
+       "table_record_match_perfect": 7,
+       "table_record_match_perfect_predicted": 0,
+       "table_record_match_predicted": 0,
+       "tables_actual": 7,
+       "tables_expected": 7,
+       "tables_paired": 7,
+       "tables_unmatched_expected": 7,
+       "tables_unmatched_pred": 7,
+       "tables_unparseable_pred": 7
+      }
+     },
+     "per_page": {
+      "table/drought-tolerant-plant-list_page1": {
+       "success": true,
+       "grits_con": 0.28308080808080804,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.10000000000000002,
+       "table_record_match_perfect": 0.0,
+       "grits_trm_composite": 0.19154040404040404,
+       "tables_expected": 2.0,
+       "tables_actual": 2.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 2.0,
+       "tables_unmatched_expected": 0.0,
+       "tables_unmatched_pred": 0.0
+      },
+      "table/blackrock-funds-i-icav-annual-report-2022_page25": {
+       "success": true,
+       "grits_con": 0.9465811965811964,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.7361111111111112,
+       "table_record_match_perfect": 0.3333333333333333,
+       "grits_trm_composite": 0.8413461538461537,
+       "tables_expected": 3.0,
+       "tables_actual": 3.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 3.0,
+       "tables_unmatched_expected": 0.0,
+       "tables_unmatched_pred": 0.0
+      },
+      "table/blackrock-funds-i-icav-annual-report-2022_page42": {
+       "success": true,
+       "grits_con": 0.523698457055304,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.0,
+       "table_record_match_perfect": 0.0,
+       "grits_trm_composite": 0.261849228527652,
+       "tables_expected": 1.0,
+       "tables_actual": 2.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 1.0,
+       "tables_unmatched_expected": 0.0,
+       "tables_unmatched_pred": 1.0
+      },
+      "table/blackrock-funds-i-icav-annual-report-2022_page13": {
+       "success": true,
+       "grits_con": 0.5813762613356497,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.3333333333333333,
+       "table_record_match_perfect": 0.0,
+       "grits_trm_composite": 0.45735479733449147,
+       "tables_expected": 4.0,
+       "tables_actual": 3.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 3.0,
+       "tables_unmatched_expected": 1.0,
+       "tables_unmatched_pred": 0.0
+      },
+      "table/drought-tolerant-plant-list_page3": {
+       "success": true,
+       "grits_con": 0.7395517755706993,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.2666666666666667,
+       "table_record_match_perfect": 0.0,
+       "grits_trm_composite": 0.503109221118683,
+       "tables_expected": 1.0,
+       "tables_actual": 1.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 1.0,
+       "tables_unmatched_expected": 0.0,
+       "tables_unmatched_pred": 0.0
+      },
+      "table/synthetic_invoice_page2": {
+       "success": true,
+       "grits_con": 0.9853168653768355,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.9959432048681541,
+       "table_record_match_perfect": 0.0,
+       "grits_trm_composite": 0.9853168653768355,
+       "tables_expected": 1.0,
+       "tables_actual": 1.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 1.0,
+       "tables_unmatched_expected": 0.0,
+       "tables_unmatched_pred": 0.0
+      },
+      "table/synthetic_invoice_page1": {
+       "success": true,
+       "grits_con": 0.5009577045810407,
+       "structural_consistency": 1.0,
+       "table_record_match": 0.0403726708074534,
+       "table_record_match_perfect": 0.0,
+       "grits_trm_composite": 0.5009577045810407,
+       "tables_expected": 1.0,
+       "tables_actual": 1.0,
+       "tables_unparseable_pred": 0.0,
+       "tables_paired": 1.0,
+       "tables_unmatched_expected": 0.0,
+       "tables_unmatched_pred": 0.0
+      }
+     }
+    },
+    "chart": {
+     "examples": 7,
+     "successful": 7,
+     "metrics": {
+      "rule_chart_data_point_pass_rate": 0.09999999999999999,
+      "rule_pass_rate": 0.09999999999999999
+     },
+     "coverage": {
+      "total": 7,
+      "scored": {
+       "rule_chart_data_point_pass_rate": 7,
+       "rule_pass_rate": 7
+      }
+     },
+     "per_page": {
+      "chart/state-of-the-semiconductor-industry-report_p28": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_chart_data_point_pass_rate": 0.0
+      },
+      "chart/Earnings_Presentation_(FY26_Q1)_1_p19": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_chart_data_point_pass_rate": 0.0
+      },
+      "chart/andritz-financial-report-2024-e-data_p15": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_chart_data_point_pass_rate": 0.0
+      },
+      "chart/Visa-Fiscal-2025-Annual-Report_p10": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_chart_data_point_pass_rate": 0.0
+      },
+      "chart/Taking-Stock-2025_p20": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_chart_data_point_pass_rate": 0.0
+      },
+      "chart/pdf_bae2c1684672_p26": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_chart_data_point_pass_rate": 0.0
+      },
+      "chart/Earnings_Presentation_(FY26_Q1)_1_p9": {
+       "success": true,
+       "rule_pass_rate": 0.7,
+       "rule_chart_data_point_pass_rate": 0.7
+      }
+     }
+    },
+    "text_content": {
+     "examples": 7,
+     "successful": 7,
+     "metrics": {
+      "content_faithfulness": 0.6366162164203951,
+      "normalized_order": 0.4464144855849925,
+      "normalized_text_correctness": 0.7317170818380964,
+      "normalized_text_score": 0.5890657837115444,
+      "rule_bag_of_digit_percent_pass_rate": 0.7557034472169718,
+      "rule_is_footer_pass_rate": 0.0,
+      "rule_is_header_pass_rate": 0.0,
+      "rule_missing_sentence_percent_pass_rate": 0.3999381570810142,
+      "rule_missing_specific_sentence_pass_rate": 0.3999381570810142,
+      "rule_missing_specific_word_pass_rate": 0.6048650738198263,
+      "rule_missing_word_percent_pass_rate": 0.6121958002818361,
+      "rule_order_pass_rate": 0.4464144855849925,
+      "rule_pass_rate": 0.573536477816593,
+      "rule_too_many_sentence_occurence_percent_pass_rate": 0.9910714285714286,
+      "rule_too_many_word_occurence_percent_pass_rate": 0.9973218700491427,
+      "rule_unexpected_sentence_percent_pass_rate": 0.5967532467532468,
+      "rule_unexpected_word_percent_pass_rate": 0.7690356229130341
+     },
+     "coverage": {
+      "total": 7,
+      "scored": {
+       "content_faithfulness": 7,
+       "normalized_order": 7,
+       "normalized_text_correctness": 7,
+       "normalized_text_score": 7,
+       "rule_bag_of_digit_percent_pass_rate": 7,
+       "rule_is_footer_pass_rate": 4,
+       "rule_is_header_pass_rate": 4,
+       "rule_missing_sentence_percent_pass_rate": 7,
+       "rule_missing_specific_sentence_pass_rate": 7,
+       "rule_missing_specific_word_pass_rate": 7,
+       "rule_missing_word_percent_pass_rate": 7,
+       "rule_order_pass_rate": 7,
+       "rule_pass_rate": 7,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 7,
+       "rule_too_many_word_occurence_percent_pass_rate": 7,
+       "rule_unexpected_sentence_percent_pass_rate": 7,
+       "rule_unexpected_word_percent_pass_rate": 7
+      }
+     },
+     "per_page": {
+      "text/text_simple__mission": {
+       "success": true,
+       "rule_pass_rate": 0.9677580916633153,
+       "rule_missing_sentence_percent_pass_rate": 0.8571428571428571,
+       "rule_unexpected_sentence_percent_pass_rate": 1.0,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 1.0,
+       "rule_unexpected_word_percent_pass_rate": 1.0,
+       "rule_too_many_word_occurence_percent_pass_rate": 1.0,
+       "rule_missing_word_percent_pass_rate": 0.9945652173913043,
+       "rule_bag_of_digit_percent_pass_rate": 0.6666666666666666,
+       "rule_missing_specific_word_pass_rate": 0.9915254237288136,
+       "rule_missing_specific_sentence_pass_rate": 0.8571428571428571,
+       "rule_order_pass_rate": 1.0,
+       "rule_is_header_pass_rate": 0.0,
+       "rule_is_footer_pass_rate": 0.0,
+       "normalized_text_correctness": 0.9311963916001184,
+       "normalized_order": 1.0,
+       "normalized_text_score": 0.9655981958000592,
+       "content_faithfulness": 0.9541309277334123
+      },
+      "text/text_multilang__farsi": {
+       "success": true,
+       "rule_pass_rate": 0.31308114149120114,
+       "rule_missing_sentence_percent_pass_rate": 0.125,
+       "rule_unexpected_sentence_percent_pass_rate": 0.06666666666666667,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 1.0,
+       "rule_unexpected_word_percent_pass_rate": 0.4117647058823529,
+       "rule_too_many_word_occurence_percent_pass_rate": 0.9829059829059829,
+       "rule_missing_word_percent_pass_rate": 0.40869565217391307,
+       "rule_bag_of_digit_percent_pass_rate": 1.0,
+       "rule_missing_specific_word_pass_rate": 0.3333333333333333,
+       "rule_missing_specific_sentence_pass_rate": 0.125,
+       "rule_order_pass_rate": 0.0,
+       "rule_is_footer_pass_rate": 0.0,
+       "normalized_text_correctness": 0.5707190010898451,
+       "normalized_order": 0.0,
+       "normalized_text_score": 0.28535950054492254,
+       "content_faithfulness": 0.3804793340598967
+      },
+      "text/text_ocr__012-25": {
+       "success": true,
+       "rule_pass_rate": 0.014428769579485096,
+       "rule_missing_sentence_percent_pass_rate": 0.0,
+       "rule_unexpected_sentence_percent_pass_rate": 1.0,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 1.0,
+       "rule_unexpected_word_percent_pass_rate": 1.0,
+       "rule_too_many_word_occurence_percent_pass_rate": 1.0,
+       "rule_missing_word_percent_pass_rate": 0.0,
+       "rule_bag_of_digit_percent_pass_rate": 0.10778443113772455,
+       "rule_missing_specific_word_pass_rate": 0.0036363636363636364,
+       "rule_missing_specific_sentence_pass_rate": 0.0,
+       "rule_order_pass_rate": 0.0,
+       "rule_is_header_pass_rate": 0.0,
+       "normalized_text_correctness": 0.5868263473053892,
+       "normalized_order": 0.0,
+       "normalized_text_score": 0.2934131736526946,
+       "content_faithfulness": 0.39121756487025944
+      },
+      "text/text_multilang__khmer": {
+       "success": true,
+       "rule_pass_rate": 0.06296085817583512,
+       "rule_missing_sentence_percent_pass_rate": 0.0,
+       "rule_unexpected_sentence_percent_pass_rate": 0.0,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 1.0,
+       "rule_unexpected_word_percent_pass_rate": 0.07303370786516854,
+       "rule_too_many_word_occurence_percent_pass_rate": 1.0,
+       "rule_missing_word_percent_pass_rate": 0.03757225433526012,
+       "rule_bag_of_digit_percent_pass_rate": 1.0,
+       "rule_missing_specific_word_pass_rate": 0.06217616580310881,
+       "rule_missing_specific_sentence_pass_rate": 0.0,
+       "rule_order_pass_rate": 0.0,
+       "normalized_text_correctness": 0.44437228031434695,
+       "normalized_order": 0.0,
+       "normalized_text_score": 0.22218614015717347,
+       "content_faithfulness": 0.2962481868762313
+      },
+      "text/text_multicolumns__elpais": {
+       "success": true,
+       "rule_pass_rate": 0.7573144153768313,
+       "rule_missing_sentence_percent_pass_rate": 0.375,
+       "rule_unexpected_sentence_percent_pass_rate": 0.4666666666666667,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 1.0,
+       "rule_unexpected_word_percent_pass_rate": 0.8984509466437177,
+       "rule_too_many_word_occurence_percent_pass_rate": 0.9983471074380166,
+       "rule_missing_word_percent_pass_rate": 0.8625827814569537,
+       "rule_bag_of_digit_percent_pass_rate": 0.9770114942528736,
+       "rule_missing_specific_word_pass_rate": 0.8624641833810889,
+       "rule_missing_specific_sentence_pass_rate": 0.375,
+       "rule_order_pass_rate": 0.40476190476190477,
+       "rule_is_header_pass_rate": 0.0,
+       "normalized_text_correctness": 0.796865570922604,
+       "normalized_order": 0.40476190476190477,
+       "normalized_text_score": 0.6008137378422544,
+       "content_faithfulness": 0.6661643488690375
+      },
+      "text/text_multicolumns__vidsa2": {
+       "success": true,
+       "rule_pass_rate": 0.9285320184348298,
+       "rule_missing_sentence_percent_pass_rate": 0.5757575757575758,
+       "rule_unexpected_sentence_percent_pass_rate": 0.6666666666666666,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 1.0,
+       "rule_unexpected_word_percent_pass_rate": 1.0,
+       "rule_too_many_word_occurence_percent_pass_rate": 1.0,
+       "rule_missing_word_percent_pass_rate": 0.9898132427843803,
+       "rule_bag_of_digit_percent_pass_rate": 0.5384615384615384,
+       "rule_missing_specific_word_pass_rate": 0.9870550161812298,
+       "rule_missing_specific_sentence_pass_rate": 0.5757575757575758,
+       "rule_order_pass_rate": 0.7741935483870968,
+       "rule_is_footer_pass_rate": 0.0,
+       "normalized_text_correctness": 0.8243855748100231,
+       "normalized_order": 0.7741935483870968,
+       "normalized_text_score": 0.7992895615985599,
+       "content_faithfulness": 0.8076548993357143
+      },
+      "text/text_multilang__russian": {
+       "success": true,
+       "rule_pass_rate": 0.9706800499946533,
+       "rule_missing_sentence_percent_pass_rate": 0.8666666666666667,
+       "rule_unexpected_sentence_percent_pass_rate": 0.9772727272727273,
+       "rule_too_many_sentence_occurence_percent_pass_rate": 0.9375,
+       "rule_unexpected_word_percent_pass_rate": 1.0,
+       "rule_too_many_word_occurence_percent_pass_rate": 1.0,
+       "rule_missing_word_percent_pass_rate": 0.9921414538310412,
+       "rule_bag_of_digit_percent_pass_rate": 1.0,
+       "rule_missing_specific_word_pass_rate": 0.9938650306748467,
+       "rule_missing_specific_sentence_pass_rate": 0.8666666666666667,
+       "rule_order_pass_rate": 0.9459459459459459,
+       "rule_is_header_pass_rate": 0.0,
+       "rule_is_footer_pass_rate": 0.0,
+       "normalized_text_correctness": 0.9676544068243479,
+       "normalized_order": 0.9459459459459459,
+       "normalized_text_score": 0.9568001763851469,
+       "content_faithfulness": 0.9604182531982138
+      }
+     }
+    },
+    "text_formatting": {
+     "examples": 7,
+     "successful": 7,
+     "metrics": {
+      "normalized_text_score": 0.3263092871557225,
+      "normalized_text_styling": 0.3611111111111111,
+      "normalized_title_accuracy": 0.3351582568511275,
+      "rule_is_bold_pass_rate": 0.275,
+      "rule_is_italic_pass_rate": 0.4444444444444444,
+      "rule_is_title_pass_rate": 0.3585434173669468,
+      "rule_is_underline_pass_rate": 0.0,
+      "rule_pass_rate": 0.28233981090329413,
+      "rule_title_hierarchy_percent_pass_rate": 0.3117730963353083,
+      "semantic_formatting": 0.3263092871557225
+     },
+     "coverage": {
+      "total": 7,
+      "scored": {
+       "normalized_text_score": 7,
+       "normalized_text_styling": 5,
+       "normalized_title_accuracy": 7,
+       "rule_is_bold_pass_rate": 5,
+       "rule_is_italic_pass_rate": 3,
+       "rule_is_title_pass_rate": 7,
+       "rule_is_underline_pass_rate": 1,
+       "rule_pass_rate": 7,
+       "rule_title_hierarchy_percent_pass_rate": 7,
+       "semantic_formatting": 7
+      }
+     },
+     "per_page": {
+      "text/text_multicolumns__vidsa2": {
+       "success": true,
+       "rule_pass_rate": 0.4444444444444444,
+       "rule_is_title_pass_rate": 0.5,
+       "rule_title_hierarchy_percent_pass_rate": 0.3333333333333333,
+       "normalized_title_accuracy": 0.41666666666666663,
+       "normalized_text_score": 0.41666666666666663,
+       "semantic_formatting": 0.41666666666666663
+      },
+      "text/text_multilang__farsi": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_is_title_pass_rate": 0.0,
+       "rule_title_hierarchy_percent_pass_rate": 0.0,
+       "normalized_title_accuracy": 0.0,
+       "normalized_text_score": 0.0,
+       "semantic_formatting": 0.0
+      },
+      "text/text_multilang__khmer": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_is_title_pass_rate": 0.0,
+       "rule_title_hierarchy_percent_pass_rate": 0.0,
+       "rule_is_bold_pass_rate": 0.0,
+       "rule_is_underline_pass_rate": 0.0,
+       "normalized_text_styling": 0.0,
+       "normalized_title_accuracy": 0.0,
+       "normalized_text_score": 0.0,
+       "semantic_formatting": 0.0
+      },
+      "text/text_multilang__russian": {
+       "success": true,
+       "rule_pass_rate": 0.8448540706605223,
+       "rule_is_title_pass_rate": 0.8333333333333334,
+       "rule_title_hierarchy_percent_pass_rate": 0.7419354838709677,
+       "rule_is_bold_pass_rate": 0.875,
+       "normalized_text_styling": 0.9722222222222222,
+       "normalized_title_accuracy": 0.7876344086021505,
+       "normalized_text_score": 0.8799283154121864,
+       "semantic_formatting": 0.8799283154121864
+      },
+      "text/text_ocr__012-25": {
+       "success": true,
+       "rule_pass_rate": 0.0,
+       "rule_is_title_pass_rate": 0.0,
+       "rule_title_hierarchy_percent_pass_rate": 0.0,
+       "rule_is_bold_pass_rate": 0.0,
+       "rule_is_italic_pass_rate": 0.0,
+       "normalized_text_styling": 0.0,
+       "normalized_title_accuracy": 0.0,
+       "normalized_text_score": 0.0,
+       "semantic_formatting": 0.0
+      },
+      "text/text_multicolumns__elpais": {
+       "success": true,
+       "rule_pass_rate": 0.14162561576354682,
+       "rule_is_title_pass_rate": 0.17647058823529413,
+       "rule_title_hierarchy_percent_pass_rate": 0.10714285714285714,
+       "rule_is_bold_pass_rate": 0.0,
+       "rule_is_italic_pass_rate": 1.0,
+       "normalized_text_styling": 0.0,
+       "normalized_title_accuracy": 0.14180672268907563,
+       "normalized_text_score": 0.07090336134453781,
+       "semantic_formatting": 0.07090336134453781
+      },
+      "text/text_simple__mission": {
+       "success": true,
+       "rule_pass_rate": 0.5454545454545454,
+       "rule_is_title_pass_rate": 1.0,
+       "rule_title_hierarchy_percent_pass_rate": 1.0,
+       "rule_is_bold_pass_rate": 0.5,
+       "rule_is_italic_pass_rate": 0.3333333333333333,
+       "normalized_text_styling": 0.8333333333333334,
+       "normalized_title_accuracy": 1.0,
+       "normalized_text_score": 0.9166666666666667,
+       "semantic_formatting": 0.9166666666666667
+      }
+     }
+    }
+   },
+   "guards": {
+    "rule_timeouts": 0,
+    "skipped_over_budget": 0,
+    "normalize_timeouts": 0,
+    "failed_docs": [],
+    "skipped": 0
+   }
+  }
+ },
+ "refused": [],
+ "scorer_failed": [],
+ "guard_refusals": [],
+ "bench": {
+  "config": "pdfluent-fast",
+  "tool": "pdfluent_fast",
+  "set": "parsebench",
+  "split": "tuning",
+  "pages_requested": 7,
+  "because": null,
+  "version": {
+   "package": "pdfluent",
+   "pinned": "1.1.0",
+   "installed": "1.1.0",
+   "matches_pin": true,
+   "python": "/opt/ex/pdfluent_fast/bin/python"
+  },
+  "reproducible": "public",
+  "vision": false
+ }
+}

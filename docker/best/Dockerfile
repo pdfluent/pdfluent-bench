@@ -1,6 +1,9 @@
 # syntax=docker/dockerfile:1.7
-# Copyright (c) 2026 Innovation Trigger B.V. All rights reserved.
-# Licence pending owner decision: see LICENSE-TBD.md.
+# Copyright (c) 2026 Innovation Trigger B.V.
+#
+# PDFluent is available under two licences, at your option: the GNU AGPLv3, or
+# the PDFluent Commercial Licence. See the LICENSE file in this repository --
+# that file travels with the copy you received, which a URL does not.
 #
 # Build from the repository root: docker/build.sh (records the image digest).
 # Ubuntu 24.04 (noble-20260930.1): its mupdf-tools is 1.23.10, the only

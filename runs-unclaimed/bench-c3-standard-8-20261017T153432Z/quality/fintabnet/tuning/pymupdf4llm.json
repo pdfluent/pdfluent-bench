@@ -1,0 +1,2763 @@
+{
+ "run_id": "bench-c3-standard-8-20261017T153432Z-fintabnet-tuning-pymupdf4llm",
+ "dimensions_schema": 1,
+ "when": "2026-10-17T16:00:10+00:00",
+ "set": "fintabnet",
+ "set_version": "IBM FinTabNet 1.0.0 (November 2020), via the mirror below; FinTabNet.c (2023)",
+ "set_licence": "CDLA-Permissive-1.0 (FinTabNet 1.0.0); CDLA-Permissive-2.0 (FinTabNet.c)",
+ "publishable": true,
+ "pages_measured": 20,
+ "half": "tuning",
+ "machine": {
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cpus": 8,
+  "load_at_start": 2.95166015625,
+  "instance": ""
+ },
+ "harness": "946f4f8",
+ "line": {},
+ "refused": [],
+ "one_page_per_file": {
+  "checked": 20,
+  "pages_per_file": {
+   "1": 20
+  }
+ },
+ "regrouped": {
+  "documents": 11,
+  "pages": 20,
+  "multi_page_documents": 6,
+  "half": "tuning"
+ },
+ "order_provenance": {
+  "pages": 0,
+  "why": "this set does not annotate the running text of a page, so it has no reading order to compare with geometry",
+  "per_page": []
+ },
+ "tools": {
+  "pymupdf4llm": {
+   "name": "pymupdf4llm",
+   "version": "1.28.2",
+   "publishable": true,
+   "pages": 20,
+   "did_not_answer": 0,
+   "ms_per_page": 305.1,
+   "start_up_amortised": true,
+   "dimensions": {
+    "ms_p50": 216.5,
+    "ms_p95": 487.15,
+    "cold_start_ms": 915,
+    "peak_rss_mb": 376.6,
+    "install_mb": 296.2,
+    "tokens_per_page": 927.0,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "crash_share": 0.0,
+    "timeout_share": 0.0,
+    "empty_share": 0.0,
+    "grounding": "bbox + page per layout box (to_json)",
+    "confidence": "none",
+    "licence": "AGPL-3.0-only OR LicenseRef-Artifex-Commercial",
+    "offline": true,
+    "ocr": "off: OCRMode.NEVER in the adapter, although a Tesseract is on the rig for Unstructured",
+    "cost_per_1000_pages": "free"
+   },
+   "summary": {
+    "text": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "text_geometric": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "words": {
+     "pages": 20,
+     "mean": 0.826692,
+     "median": 0.896112,
+     "p5": 0.382268,
+     "p95": 1.0,
+     "worst": 0.286282,
+     "unscored": 0
+    },
+    "headings": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "lists": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "tables": {
+     "pages": 20,
+     "mean": 0.766667,
+     "median": 1.0,
+     "p5": 0.0,
+     "p95": 1.0,
+     "worst": 0.0,
+     "unscored": 0
+    },
+    "teds": {
+     "pages": 20,
+     "mean": 0.79413,
+     "median": 0.85221,
+     "p5": 0.412522,
+     "p95": 0.984747,
+     "worst": 0.214356,
+     "unscored": 0
+    },
+    "order": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "order_geometric": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "furniture_in_the_body": 0,
+    "headings_where_none_annotated": 0,
+    "lists_where_none_annotated": 0,
+    "tables_where_none_annotated": 0
+   },
+   "summary_v2": {
+    "text_v2": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "words_v2": {
+     "pages": 20,
+     "mean": 0.831006,
+     "median": 0.89791,
+     "p5": 0.382268,
+     "p95": 1.0,
+     "worst": 0.286282,
+     "unscored": 0
+    },
+    "headings_v2": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "lists_v2": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "v2_applied": 20,
+    "pages": 20
+   },
+   "tail": {
+    "text": [],
+    "text_geometric": [],
+    "words": [
+     {
+      "v": 0.286282,
+      "name": "ETR_2004_page_359.pdf",
+      "document": "ETR_2004"
+     }
+    ],
+    "headings": [],
+    "lists": [],
+    "tables": [
+     {
+      "v": 0.0,
+      "name": "EXPE_2009_page_78.pdf",
+      "document": "EXPE_2009"
+     }
+    ],
+    "teds": [
+     {
+      "v": 0.214356,
+      "name": "HSY_2009_page_98.pdf",
+      "document": "HSY_2009"
+     }
+    ],
+    "order": [],
+    "order_geometric": []
+   },
+   "documents": [
+    {
+     "name": "ETR_2004_page_298.pdf",
+     "document": "ETR_2004",
+     "category": "financial reports",
+     "produced_chars": 2510,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.873513
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.76771,
+      "teds_struct": 0.795659,
+      "per_table": [
+       0.958905,
+       0.576514
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 124,
+      "produced": 112,
+      "matched": 92,
+      "precision": 0.821429,
+      "recall": 0.870968,
+      "f1": 0.845473,
+      "duplication": 0.0,
+      "invented": 0.178571,
+      "furniture": 0.0,
+      "missing": 0.129032
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 124,
+      "produced": 112,
+      "matched": 92,
+      "precision": 0.821429,
+      "recall": 0.870968,
+      "f1": 0.845473,
+      "duplication": 0.0,
+      "invented": 0.178571,
+      "furniture": 0.0,
+      "missing": 0.129032
+     }
+    },
+    {
+     "name": "HSY_2015_page_21.pdf",
+     "document": "HSY_2015",
+     "category": "financial reports",
+     "produced_chars": 3255,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.991254
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.846154,
+      "teds_struct": 0.846154,
+      "per_table": [
+       0.846154
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 55,
+      "produced": 56,
+      "matched": 52,
+      "precision": 0.928571,
+      "recall": 1.0,
+      "f1": 0.962963,
+      "duplication": 0.0,
+      "invented": 0.071429,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 55,
+      "produced": 55,
+      "matched": 53,
+      "precision": 0.963636,
+      "recall": 1.0,
+      "f1": 0.981481,
+      "duplication": 0.0,
+      "invented": 0.036364,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "BA_2018_page_34.pdf",
+     "document": "BA_2018",
+     "category": "financial reports",
+     "produced_chars": 2532,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.887949
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.858212,
+      "teds_struct": 0.859649,
+      "per_table": [
+       0.858212
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 63,
+      "produced": 67,
+      "matched": 58,
+      "precision": 0.865672,
+      "recall": 0.952381,
+      "f1": 0.906959,
+      "duplication": 0.014925,
+      "invented": 0.119403,
+      "furniture": 0.0,
+      "missing": 0.047619
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 63,
+      "produced": 67,
+      "matched": 58,
+      "precision": 0.865672,
+      "recall": 0.952381,
+      "f1": 0.906959,
+      "duplication": 0.014925,
+      "invented": 0.119403,
+      "furniture": 0.0,
+      "missing": 0.047619
+     }
+    },
+    {
+     "name": "FCX_2017_page_86.pdf",
+     "document": "FCX_2017",
+     "category": "financial reports",
+     "produced_chars": 4052,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 3,
+      "matched": 1,
+      "precision": 0.333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "text_of_matched": 0.918129
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 3,
+      "matched": 1,
+      "teds": 0.937787,
+      "teds_struct": 0.944444,
+      "per_table": [
+       0.937787
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 56,
+      "produced": 193,
+      "matched": 48,
+      "precision": 0.248705,
+      "recall": 0.875,
+      "f1": 0.38732,
+      "duplication": 0.279793,
+      "invented": 0.471503,
+      "furniture": 0.0,
+      "missing": 0.125
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 56,
+      "produced": 193,
+      "matched": 48,
+      "precision": 0.248705,
+      "recall": 0.875,
+      "f1": 0.38732,
+      "duplication": 0.279793,
+      "invented": 0.471503,
+      "furniture": 0.0,
+      "missing": 0.125
+     }
+    },
+    {
+     "name": "EXPE_2009_page_78.pdf",
+     "document": "EXPE_2009",
+     "category": "financial reports",
+     "produced_chars": 4339,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "text_of_matched": 0.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.834849,
+      "teds_struct": 0.945378,
+      "per_table": [
+       0.834849
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 399,
+      "produced": 409,
+      "matched": 364,
+      "precision": 0.889976,
+      "recall": 0.912281,
+      "f1": 0.90099,
+      "duplication": 0.0,
+      "invented": 0.110024,
+      "furniture": 0.0,
+      "missing": 0.087719
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 399,
+      "produced": 408,
+      "matched": 365,
+      "precision": 0.894608,
+      "recall": 0.914787,
+      "f1": 0.904585,
+      "duplication": 0.0,
+      "invented": 0.105392,
+      "furniture": 0.0,
+      "missing": 0.085213
+     }
+    },
+    {
+     "name": "ETR_2004_page_273.pdf",
+     "document": "ETR_2004",
+     "category": "financial reports",
+     "produced_chars": 1202,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.992308
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.903448,
+      "teds_struct": 0.903448,
+      "per_table": [
+       0.903448
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 181,
+      "produced": 183,
+      "matched": 177,
+      "precision": 0.967213,
+      "recall": 0.977901,
+      "f1": 0.972527,
+      "duplication": 0.0,
+      "invented": 0.032787,
+      "furniture": 0.0,
+      "missing": 0.022099
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 181,
+      "produced": 181,
+      "matched": 176,
+      "precision": 0.972376,
+      "recall": 0.972376,
+      "f1": 0.972376,
+      "duplication": 0.0,
+      "invented": 0.027624,
+      "furniture": 0.0,
+      "missing": 0.027624
+     }
+    },
+    {
+     "name": "ETR_2004_page_359.pdf",
+     "document": "ETR_2004",
+     "category": "financial reports",
+     "produced_chars": 2088,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 3,
+      "matched": 1,
+      "precision": 0.333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "text_of_matched": 0.720149
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 3,
+      "matched": 1,
+      "teds": 0.889241,
+      "teds_struct": 0.914286,
+      "per_table": [
+       0.889241
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 37,
+      "produced": 143,
+      "matched": 24,
+      "precision": 0.167832,
+      "recall": 0.972973,
+      "f1": 0.286282,
+      "duplication": 0.048951,
+      "invented": 0.783217,
+      "furniture": 0.0,
+      "missing": 0.027027
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 37,
+      "produced": 143,
+      "matched": 24,
+      "precision": 0.167832,
+      "recall": 0.972973,
+      "f1": 0.286282,
+      "duplication": 0.048951,
+      "invented": 0.783217,
+      "furniture": 0.0,
+      "missing": 0.027027
+     }
+    },
+    {
+     "name": "HSY_2009_page_6.pdf",
+     "document": "HSY_2009",
+     "category": "financial reports",
+     "produced_chars": 3380,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "text_of_matched": 0.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.546431,
+      "teds_struct": 0.735294,
+      "per_table": [
+       0.546431
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 31,
+      "produced": 33,
+      "matched": 21,
+      "precision": 0.636364,
+      "recall": 0.870968,
+      "f1": 0.735409,
+      "duplication": 0.0,
+      "invented": 0.363636,
+      "furniture": 0.0,
+      "missing": 0.129032
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 31,
+      "produced": 32,
+      "matched": 22,
+      "precision": 0.6875,
+      "recall": 0.870968,
+      "f1": 0.768435,
+      "duplication": 0.0,
+      "invented": 0.3125,
+      "furniture": 0.0,
+      "missing": 0.129032
+     }
+    },
+    {
+     "name": "ETR_2004_page_69.pdf",
+     "document": "ETR_2004",
+     "category": "financial reports",
+     "produced_chars": 2765,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.952782
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.996845,
+      "teds_struct": 1.0,
+      "per_table": [
+       0.996845
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 182,
+      "produced": 168,
+      "matched": 154,
+      "precision": 0.916667,
+      "recall": 0.928571,
+      "f1": 0.922581,
+      "duplication": 0.0,
+      "invented": 0.083333,
+      "furniture": 0.0,
+      "missing": 0.071429
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 182,
+      "produced": 168,
+      "matched": 154,
+      "precision": 0.916667,
+      "recall": 0.928571,
+      "f1": 0.922581,
+      "duplication": 0.0,
+      "invented": 0.083333,
+      "furniture": 0.0,
+      "missing": 0.071429
+     }
+    },
+    {
+     "name": "HSY_2009_page_98.pdf",
+     "document": "HSY_2009",
+     "category": "financial reports",
+     "produced_chars": 1344,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 1,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "text_of_matched": 0.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.214356,
+      "teds_struct": 0.247525,
+      "per_table": [
+       0.428711,
+       0.0
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 128,
+      "produced": 128,
+      "matched": 114,
+      "precision": 0.890625,
+      "recall": 0.890625,
+      "f1": 0.890625,
+      "duplication": 0.0,
+      "invented": 0.109375,
+      "furniture": 0.0,
+      "missing": 0.109375
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 128,
+      "produced": 128,
+      "matched": 114,
+      "precision": 0.890625,
+      "recall": 0.890625,
+      "f1": 0.890625,
+      "duplication": 0.0,
+      "invented": 0.109375,
+      "furniture": 0.0,
+      "missing": 0.109375
+     }
+    },
+    {
+     "name": "BA_2004_page_96.pdf",
+     "document": "BA_2004",
+     "category": "financial reports",
+     "produced_chars": 2820,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.959391
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.826524,
+      "teds_struct": 0.846535,
+      "per_table": [
+       0.826524
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 258,
+      "produced": 248,
+      "matched": 234,
+      "precision": 0.943548,
+      "recall": 0.914729,
+      "f1": 0.928915,
+      "duplication": 0.0,
+      "invented": 0.056452,
+      "furniture": 0.0,
+      "missing": 0.085271
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 258,
+      "produced": 248,
+      "matched": 234,
+      "precision": 0.943548,
+      "recall": 0.914729,
+      "f1": 0.928915,
+      "duplication": 0.0,
+      "invented": 0.056452,
+      "furniture": 0.0,
+      "missing": 0.085271
+     }
+    },
+    {
+     "name": "HSY_2009_page_112.pdf",
+     "document": "HSY_2009",
+     "category": "financial reports",
+     "produced_chars": 964,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.702611
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.516068,
+      "teds_struct": 0.589744,
+      "per_table": [
+       0.516068
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 104,
+      "produced": 88,
+      "matched": 68,
+      "precision": 0.772727,
+      "recall": 0.692308,
+      "f1": 0.73031,
+      "duplication": 0.0,
+      "invented": 0.227273,
+      "furniture": 0.0,
+      "missing": 0.307692
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 104,
+      "produced": 87,
+      "matched": 69,
+      "precision": 0.793103,
+      "recall": 0.701923,
+      "f1": 0.744733,
+      "duplication": 0.0,
+      "invented": 0.206897,
+      "furniture": 0.0,
+      "missing": 0.298077
+     }
+    },
+    {
+     "name": "DVN_2014_page_112.pdf",
+     "document": "DVN_2014",
+     "category": "financial reports",
+     "produced_chars": 2661,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.97561,
+      "teds_struct": 0.97561,
+      "per_table": [
+       0.97561
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 59,
+      "produced": 59,
+      "matched": 59,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 59,
+      "produced": 59,
+      "matched": 59,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "MNST_2012_page_107.pdf",
+     "document": "MNST_2012",
+     "category": "financial reports",
+     "produced_chars": 2835,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.916667
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.803479,
+      "teds_struct": 0.852941,
+      "per_table": [
+       0.803479
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 32,
+      "produced": 32,
+      "matched": 26,
+      "precision": 0.8125,
+      "recall": 0.8125,
+      "f1": 0.8125,
+      "duplication": 0.0,
+      "invented": 0.1875,
+      "furniture": 0.0,
+      "missing": 0.1875
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 32,
+      "produced": 32,
+      "matched": 26,
+      "precision": 0.8125,
+      "recall": 0.8125,
+      "f1": 0.8125,
+      "duplication": 0.0,
+      "invented": 0.1875,
+      "furniture": 0.0,
+      "missing": 0.1875
+     }
+    },
+    {
+     "name": "INTU_2018_page_43.pdf",
+     "document": "INTU_2018",
+     "category": "financial reports",
+     "produced_chars": 3125,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.892814
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.98411,
+      "teds_struct": 1.0,
+      "per_table": [
+       0.98391,
+       0.984311
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 126,
+      "produced": 105,
+      "matched": 93,
+      "precision": 0.885714,
+      "recall": 0.896825,
+      "f1": 0.891235,
+      "duplication": 0.0,
+      "invented": 0.114286,
+      "furniture": 0.0,
+      "missing": 0.103175
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 126,
+      "produced": 105,
+      "matched": 93,
+      "precision": 0.885714,
+      "recall": 0.896825,
+      "f1": 0.891235,
+      "duplication": 0.0,
+      "invented": 0.114286,
+      "furniture": 0.0,
+      "missing": 0.103175
+     }
+    },
+    {
+     "name": "INTU_2018_page_75.pdf",
+     "document": "INTU_2018",
+     "category": "financial reports",
+     "produced_chars": 3505,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.946629
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.875,
+      "teds_struct": 0.875,
+      "per_table": [
+       0.875
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 58,
+      "produced": 58,
+      "matched": 58,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 58,
+      "produced": 58,
+      "matched": 58,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "DVN_2014_page_51.pdf",
+     "document": "DVN_2014",
+     "category": "financial reports",
+     "produced_chars": 2991,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.965764
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.905983,
+      "teds_struct": 0.905983,
+      "per_table": [
+       0.905983
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 174,
+      "produced": 177,
+      "matched": 163,
+      "precision": 0.920904,
+      "recall": 0.954023,
+      "f1": 0.937171,
+      "duplication": 0.0,
+      "invented": 0.079096,
+      "furniture": 0.0,
+      "missing": 0.045977
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 174,
+      "produced": 175,
+      "matched": 165,
+      "precision": 0.942857,
+      "recall": 0.965517,
+      "f1": 0.954053,
+      "duplication": 0.0,
+      "invented": 0.057143,
+      "furniture": 0.0,
+      "missing": 0.034483
+     }
+    },
+    {
+     "name": "FDX_2007_page_51.pdf",
+     "document": "FDX_2007",
+     "category": "financial reports",
+     "produced_chars": 4767,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "text_of_matched": 0.994652
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "teds": 0.846207,
+      "teds_struct": 0.870968,
+      "per_table": [
+       0.846207
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 32,
+      "produced": 67,
+      "matched": 32,
+      "precision": 0.477612,
+      "recall": 1.0,
+      "f1": 0.646465,
+      "duplication": 0.044776,
+      "invented": 0.477612,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 32,
+      "produced": 67,
+      "matched": 32,
+      "precision": 0.477612,
+      "recall": 1.0,
+      "f1": 0.646465,
+      "duplication": 0.044776,
+      "invented": 0.477612,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "BA_2004_page_83.pdf",
+     "document": "BA_2004",
+     "category": "financial reports",
+     "produced_chars": 4950,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 4,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.666667,
+      "text_of_matched": 0.86997
+     },
+     "teds": {
+      "scored": true,
+      "truth": 4,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.422952,
+      "teds_struct": 0.432927,
+      "per_table": [
+       0.8581,
+       0.0,
+       0.83371,
+       0.0
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 115,
+      "produced": 95,
+      "matched": 83,
+      "precision": 0.873684,
+      "recall": 0.817391,
+      "f1": 0.844601,
+      "duplication": 0.0,
+      "invented": 0.126316,
+      "furniture": 0.0,
+      "missing": 0.182609
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 115,
+      "produced": 95,
+      "matched": 83,
+      "precision": 0.873684,
+      "recall": 0.817391,
+      "f1": 0.844601,
+      "duplication": 0.0,
+      "invented": 0.126316,
+      "furniture": 0.0,
+      "missing": 0.182609
+     }
+    },
+    {
+     "name": "MNST_2012_page_71.pdf",
+     "document": "MNST_2012",
+     "category": "financial reports",
+     "produced_chars": 711,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.973262
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.931624,
+      "teds_struct": 0.933333,
+      "per_table": [
+       0.931624
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 112,
+      "produced": 107,
+      "matched": 102,
+      "precision": 0.953271,
+      "recall": 0.910714,
+      "f1": 0.931507,
+      "duplication": 0.0,
+      "invented": 0.046729,
+      "furniture": 0.0,
+      "missing": 0.089286
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 112,
+      "produced": 107,
+      "matched": 102,
+      "precision": 0.953271,
+      "recall": 0.910714,
+      "f1": 0.931507,
+      "duplication": 0.0,
+      "invented": 0.046729,
+      "furniture": 0.0,
+      "missing": 0.089286
+     }
+    }
+   ],
+   "furniture_in_the_document": {
+    "annotated_by_the_set": false,
+    "why": "this set does not annotate running headers and footers, so there is no furniture to count in or out of the body"
+   },
+   "in_documents": {
+    "documents": 6,
+    "pages": 15,
+    "of_documents": 6,
+    "read_as": "the tool's pages, strung together in page order",
+    "documents_that_did_not_answer": [],
+    "summary": {
+     "text": {
+      "pages": 0,
+      "unscored": 6
+     },
+     "text_geometric": {
+      "pages": 0,
+      "unscored": 6
+     },
+     "words": {
+      "pages": 6,
+      "mean": 0.897213,
+      "median": 0.917296,
+      "p5": 0.825535,
+      "p95": 0.951126,
+      "worst": 0.823888,
+      "unscored": 0
+     },
+     "headings": {
+      "pages": 0,
+      "unscored": 6
+     },
+     "lists": {
+      "pages": 0,
+      "unscored": 6
+     },
+     "tables": {
+      "pages": 6,
+      "mean": 0.811508,
+      "median": 0.916667,
+      "p5": 0.401786,
+      "p95": 1.0,
+      "worst": 0.285714,
+      "unscored": 0
+     },
+     "teds": {
+      "pages": 6,
+      "mean": 0.749591,
+      "median": 0.866271,
+      "p5": 0.405519,
+      "p95": 0.946004,
+      "worst": 0.372803,
+      "unscored": 0
+     },
+     "order": {
+      "pages": 0,
+      "unscored": 6
+     },
+     "order_geometric": {
+      "pages": 0,
+      "unscored": 6
+     },
+     "furniture_in_the_body": 0,
+     "headings_where_none_annotated": 0,
+     "lists_where_none_annotated": 0,
+     "tables_where_none_annotated": 0
+    },
+    "tail": {
+     "text": [],
+     "text_geometric": [],
+     "words": [
+      {
+       "v": 0.823888,
+       "name": "HSY_2009",
+       "document": "HSY_2009"
+      }
+     ],
+     "headings": [],
+     "lists": [],
+     "tables": [
+      {
+       "v": 0.285714,
+       "name": "HSY_2009",
+       "document": "HSY_2009"
+      }
+     ],
+     "teds": [
+      {
+       "v": 0.372803,
+       "name": "HSY_2009",
+       "document": "HSY_2009"
+      }
+     ],
+     "order": [],
+     "order_geometric": []
+    },
+    "documents_measured": [
+     {
+      "name": "ETR_2004",
+      "document": "ETR_2004",
+      "category": "financial reports",
+      "produced_chars": 8565,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 5,
+       "produced": 7,
+       "matched": 5,
+       "precision": 0.714286,
+       "recall": 1.0,
+       "f1": 0.833333,
+       "text_of_matched": 0.882453
+      },
+      "teds": {
+       "scored": true,
+       "truth": 5,
+       "produced": 7,
+       "matched": 5,
+       "teds": 0.864991,
+       "teds_struct": 0.881811,
+       "per_table": [
+        0.903448,
+        0.958905,
+        0.576514,
+        0.889241,
+        0.996845
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 524,
+       "produced": 606,
+       "matched": 449,
+       "precision": 0.740924,
+       "recall": 0.944656,
+       "f1": 0.830478,
+       "duplication": 0.013201,
+       "invented": 0.245875,
+       "furniture": 0.0,
+       "missing": 0.055344
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 524,
+       "produced": 604,
+       "matched": 448,
+       "precision": 0.741722,
+       "recall": 0.942748,
+       "f1": 0.83024,
+       "duplication": 0.013245,
+       "invented": 0.245033,
+       "furniture": 0.0,
+       "missing": 0.057252
+      }
+     },
+     {
+      "name": "HSY_2009",
+      "document": "HSY_2009",
+      "category": "financial reports",
+      "produced_chars": 5688,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 4,
+       "produced": 3,
+       "matched": 1,
+       "precision": 0.333333,
+       "recall": 0.25,
+       "f1": 0.285714,
+       "text_of_matched": 0.702611
+      },
+      "teds": {
+       "scored": true,
+       "truth": 4,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.372803,
+       "teds_struct": 0.455022,
+       "per_table": [
+        0.516068,
+        0.546431,
+        0.428711,
+        0.0
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 263,
+       "produced": 249,
+       "matched": 203,
+       "precision": 0.815261,
+       "recall": 0.8327,
+       "f1": 0.823888,
+       "duplication": 0.0,
+       "invented": 0.184739,
+       "furniture": 0.0,
+       "missing": 0.1673
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 263,
+       "produced": 247,
+       "matched": 205,
+       "precision": 0.82996,
+       "recall": 0.836502,
+       "f1": 0.833218,
+       "duplication": 0.0,
+       "invented": 0.17004,
+       "furniture": 0.0,
+       "missing": 0.163498
+      }
+     },
+     {
+      "name": "BA_2004",
+      "document": "BA_2004",
+      "category": "financial reports",
+      "produced_chars": 7770,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 5,
+       "produced": 3,
+       "matched": 3,
+       "precision": 1.0,
+       "recall": 0.6,
+       "f1": 0.75,
+       "text_of_matched": 0.899777
+      },
+      "teds": {
+       "scored": true,
+       "truth": 5,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.503667,
+       "teds_struct": 0.515648,
+       "per_table": [
+        0.8581,
+        0.0,
+        0.83371,
+        0.0,
+        0.826524
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 373,
+       "produced": 343,
+       "matched": 317,
+       "precision": 0.924198,
+       "recall": 0.884718,
+       "f1": 0.904028,
+       "duplication": 0.0,
+       "invented": 0.075802,
+       "furniture": 0.0,
+       "missing": 0.115282
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 373,
+       "produced": 343,
+       "matched": 317,
+       "precision": 0.924198,
+       "recall": 0.884718,
+       "f1": 0.904028,
+       "duplication": 0.0,
+       "invented": 0.075802,
+       "furniture": 0.0,
+       "missing": 0.115282
+      }
+     },
+     {
+      "name": "DVN_2014",
+      "document": "DVN_2014",
+      "category": "financial reports",
+      "produced_chars": 5652,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 2,
+       "produced": 2,
+       "matched": 2,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.982882
+      },
+      "teds": {
+       "scored": true,
+       "truth": 2,
+       "produced": 2,
+       "matched": 2,
+       "teds": 0.940796,
+       "teds_struct": 0.940796,
+       "per_table": [
+        0.97561,
+        0.905983
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 233,
+       "produced": 236,
+       "matched": 222,
+       "precision": 0.940678,
+       "recall": 0.969957,
+       "f1": 0.955093,
+       "duplication": 0.0,
+       "invented": 0.059322,
+       "furniture": 0.0,
+       "missing": 0.030043
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 233,
+       "produced": 234,
+       "matched": 224,
+       "precision": 0.957265,
+       "recall": 0.974249,
+       "f1": 0.965682,
+       "duplication": 0.0,
+       "invented": 0.042735,
+       "furniture": 0.0,
+       "missing": 0.025751
+      }
+     },
+     {
+      "name": "MNST_2012",
+      "document": "MNST_2012",
+      "category": "financial reports",
+      "produced_chars": 3546,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 2,
+       "produced": 2,
+       "matched": 2,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.944964
+      },
+      "teds": {
+       "scored": true,
+       "truth": 2,
+       "produced": 2,
+       "matched": 2,
+       "teds": 0.867551,
+       "teds_struct": 0.893137,
+       "per_table": [
+        0.803479,
+        0.931624
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 144,
+       "produced": 139,
+       "matched": 128,
+       "precision": 0.920863,
+       "recall": 0.958333,
+       "f1": 0.939225,
+       "duplication": 0.0,
+       "invented": 0.079137,
+       "furniture": 0.0,
+       "missing": 0.041667
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 144,
+       "produced": 139,
+       "matched": 128,
+       "precision": 0.920863,
+       "recall": 0.958333,
+       "f1": 0.939225,
+       "duplication": 0.0,
+       "invented": 0.079137,
+       "furniture": 0.0,
+       "missing": 0.041667
+      }
+     },
+     {
+      "name": "INTU_2018",
+      "document": "INTU_2018",
+      "category": "financial reports",
+      "produced_chars": 6630,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.910752
+      },
+      "teds": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.94774,
+       "teds_struct": 0.958333,
+       "per_table": [
+        0.98391,
+        0.984311,
+        0.875
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 184,
+       "produced": 163,
+       "matched": 151,
+       "precision": 0.92638,
+       "recall": 0.934783,
+       "f1": 0.930563,
+       "duplication": 0.0,
+       "invented": 0.07362,
+       "furniture": 0.0,
+       "missing": 0.065217
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 184,
+       "produced": 163,
+       "matched": 151,
+       "precision": 0.92638,
+       "recall": 0.934783,
+       "f1": 0.930563,
+       "duplication": 0.0,
+       "invented": 0.07362,
+       "furniture": 0.0,
+       "missing": 0.065217
+      }
+     }
+    ]
+   }
+  }
+ },
+ "bench": {
+  "config": "pymupdf4llm",
+  "tool": "pymupdf4llm",
+  "set": "fintabnet",
+  "split": "tuning",
+  "pages_requested": 20,
+  "because": null,
+  "version": {
+   "package": "pymupdf4llm",
+   "pinned": "1.28.2",
+   "installed": "1.28.2",
+   "matches_pin": true,
+   "python": "/opt/ex/pymupdf4llm/bin/python"
+  },
+  "reproducible": "public",
+  "vision": false,
+  "seed": "pdfluent-structured-fintabnet-holdout-2026-09-30",
+  "pages_digest": "afad67db8293224513a6a25d1f7903250b8da360c5aa04bddba07ef7339df9b3"
+ }
+}

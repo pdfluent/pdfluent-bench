@@ -1,0 +1,2954 @@
+{
+ "run_id": "bench-c3-standard-8-20261017T153432Z-pubtables-1m-tuning-pdfluent-fast",
+ "dimensions_schema": 1,
+ "when": "2026-10-17T15:59:48+00:00",
+ "set": "pubtables-1m",
+ "set_version": "bsmock/pubtables-1m, PubTables-1M-PDF_Annotations.tar.gz",
+ "set_licence": "CDLA-Permissive-2.0 (annotations); per article, CC0 or CC BY only (documents)",
+ "publishable": true,
+ "pages_measured": 20,
+ "half": "tuning",
+ "machine": {
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cpus": 8,
+  "load_at_start": 2.74609375,
+  "instance": ""
+ },
+ "harness": "946f4f8",
+ "line": {},
+ "refused": [],
+ "one_page_per_file": {
+  "checked": 20,
+  "pages_per_file": {
+   "1": 20
+  }
+ },
+ "regrouped": {
+  "documents": 8,
+  "pages": 20,
+  "multi_page_documents": 8,
+  "half": "tuning"
+ },
+ "order_provenance": {
+  "pages": 0,
+  "why": "this set does not annotate the running text of a page, so it has no reading order to compare with geometry",
+  "per_page": []
+ },
+ "tools": {
+  "pdfluent_fast": {
+   "name": "PDFluent fast",
+   "version": "1.1.0",
+   "publishable": true,
+   "pages": 20,
+   "did_not_answer": 0,
+   "ms_per_page": 44.5,
+   "start_up_amortised": true,
+   "dimensions": {
+    "ms_p50": 35.5,
+    "ms_p95": 82.0,
+    "cold_start_ms": 163,
+    "peak_rss_mb": 41.4,
+    "install_mb": 59.5,
+    "tokens_per_page": 1352.5,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "crash_share": 0.0,
+    "timeout_share": 0.0,
+    "empty_share": 0.0,
+    "grounding": "none in the markdown",
+    "confidence": "none in the markdown",
+    "licence": "AGPL-3.0-only OR LicenseRef-PDFluent-Commercial",
+    "offline": true,
+    "ocr": "off: ocr=\"never\"",
+    "cost_per_1000_pages": "free"
+   },
+   "summary": {
+    "text": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "text_geometric": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "words": {
+     "pages": 20,
+     "mean": 0.922362,
+     "median": 0.991986,
+     "p5": 0.63153,
+     "p95": 1.0,
+     "worst": 0.564241,
+     "unscored": 0
+    },
+    "headings": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "lists": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "tables": {
+     "pages": 20,
+     "mean": 0.891667,
+     "median": 1.0,
+     "p5": 0.5,
+     "p95": 1.0,
+     "worst": 0.5,
+     "unscored": 0
+    },
+    "teds": {
+     "pages": 20,
+     "mean": 0.701611,
+     "median": 0.774603,
+     "p5": 0.307112,
+     "p95": 1.0,
+     "worst": 0.193165,
+     "unscored": 0
+    },
+    "order": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "order_geometric": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "furniture_in_the_body": 0,
+    "headings_where_none_annotated": 0,
+    "lists_where_none_annotated": 0,
+    "tables_where_none_annotated": 0
+   },
+   "summary_v2": {
+    "text_v2": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "words_v2": {
+     "pages": 20,
+     "mean": 0.923392,
+     "median": 0.991679,
+     "p5": 0.634402,
+     "p95": 1.0,
+     "worst": 0.564241,
+     "unscored": 0
+    },
+    "headings_v2": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "lists_v2": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "v2_applied": 20,
+    "pages": 20
+   },
+   "tail": {
+    "text": [],
+    "text_geometric": [],
+    "words": [
+     {
+      "v": 0.564241,
+      "name": "PMC4826663-p0004.pdf",
+      "document": "PMC4826663"
+     }
+    ],
+    "headings": [],
+    "lists": [],
+    "tables": [
+     {
+      "v": 0.5,
+      "name": "PMC4826663-p0004.pdf",
+      "document": "PMC4826663"
+     }
+    ],
+    "teds": [
+     {
+      "v": 0.193165,
+      "name": "PMC4817120-p0001.pdf",
+      "document": "PMC4817120"
+     }
+    ],
+    "order": [],
+    "order_geometric": []
+   },
+   "documents": [
+    {
+     "name": "PMC3141784-p0004.pdf",
+     "document": "PMC3141784",
+     "category": "scientific articles",
+     "produced_chars": 2532,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.745835
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.64038,
+      "teds_struct": 0.814483,
+      "per_table": [
+       0.434606,
+       0.846154
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 230,
+      "produced": 262,
+      "matched": 228,
+      "precision": 0.870229,
+      "recall": 0.991304,
+      "f1": 0.926829,
+      "duplication": 0.022901,
+      "invented": 0.10687,
+      "furniture": 0.0,
+      "missing": 0.008696
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 228,
+      "produced": 258,
+      "matched": 226,
+      "precision": 0.875969,
+      "recall": 0.991228,
+      "f1": 0.930041,
+      "duplication": 0.011628,
+      "invented": 0.112403,
+      "furniture": 0.0,
+      "missing": 0.008772
+     }
+    },
+    {
+     "name": "PMC3141784-p0006.pdf",
+     "document": "PMC3141784",
+     "category": "scientific articles",
+     "produced_chars": 4064,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.824524
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.803468,
+      "teds_struct": 0.831858,
+      "per_table": [
+       0.803468
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 113,
+      "produced": 113,
+      "matched": 110,
+      "precision": 0.973451,
+      "recall": 0.982301,
+      "f1": 0.977856,
+      "duplication": 0.0,
+      "invented": 0.026549,
+      "furniture": 0.0,
+      "missing": 0.017699
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 112,
+      "produced": 113,
+      "matched": 108,
+      "precision": 0.955752,
+      "recall": 0.964286,
+      "f1": 0.96,
+      "duplication": 0.00885,
+      "invented": 0.035398,
+      "furniture": 0.0,
+      "missing": 0.035714
+     }
+    },
+    {
+     "name": "PMC4826663-p0004.pdf",
+     "document": "PMC4826663",
+     "category": "scientific articles",
+     "produced_chars": 2963,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "text_of_matched": 0.845324
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.418121,
+      "teds_struct": 0.532773,
+      "per_table": [
+       0.122254,
+       0.713988
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 118,
+      "produced": 227,
+      "matched": 96,
+      "precision": 0.422907,
+      "recall": 0.847458,
+      "f1": 0.564241,
+      "duplication": 0.211454,
+      "invented": 0.365639,
+      "furniture": 0.0,
+      "missing": 0.152542
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 118,
+      "produced": 227,
+      "matched": 96,
+      "precision": 0.422907,
+      "recall": 0.847458,
+      "f1": 0.564241,
+      "duplication": 0.211454,
+      "invented": 0.365639,
+      "furniture": 0.0,
+      "missing": 0.152542
+     }
+    },
+    {
+     "name": "PMC4826663-p0005.pdf",
+     "document": "PMC4826663",
+     "category": "scientific articles",
+     "produced_chars": 2685,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "text_of_matched": 0.6
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.313109,
+      "teds_struct": 0.473684,
+      "per_table": [
+       0.198463,
+       0.427754
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 123,
+      "produced": 132,
+      "matched": 95,
+      "precision": 0.719697,
+      "recall": 0.861789,
+      "f1": 0.78436,
+      "duplication": 0.015152,
+      "invented": 0.265152,
+      "furniture": 0.0,
+      "missing": 0.138211
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 123,
+      "produced": 132,
+      "matched": 95,
+      "precision": 0.719697,
+      "recall": 0.861789,
+      "f1": 0.78436,
+      "duplication": 0.015152,
+      "invented": 0.265152,
+      "furniture": 0.0,
+      "missing": 0.138211
+     }
+    },
+    {
+     "name": "PMC4826663-p0006.pdf",
+     "document": "PMC4826663",
+     "category": "scientific articles",
+     "produced_chars": 3427,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.806632
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.753005,
+      "teds_struct": 0.772267,
+      "per_table": [
+       0.715339,
+       0.790672
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 140,
+      "produced": 136,
+      "matched": 125,
+      "precision": 0.919118,
+      "recall": 0.964286,
+      "f1": 0.94116,
+      "duplication": 0.014706,
+      "invented": 0.066176,
+      "furniture": 0.0,
+      "missing": 0.035714
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 140,
+      "produced": 131,
+      "matched": 127,
+      "precision": 0.969466,
+      "recall": 0.978571,
+      "f1": 0.973997,
+      "duplication": 0.007634,
+      "invented": 0.022901,
+      "furniture": 0.0,
+      "missing": 0.021429
+     }
+    },
+    {
+     "name": "PMC6222413-p0004.pdf",
+     "document": "PMC6222413",
+     "category": "scientific articles",
+     "produced_chars": 3061,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "text_of_matched": 0.9202
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "teds": 0.898551,
+      "teds_struct": 0.898551,
+      "per_table": [
+       0.898551
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 67,
+      "produced": 144,
+      "matched": 67,
+      "precision": 0.465278,
+      "recall": 1.0,
+      "f1": 0.635071,
+      "duplication": 0.069444,
+      "invented": 0.465278,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 67,
+      "produced": 143,
+      "matched": 67,
+      "precision": 0.468531,
+      "recall": 1.0,
+      "f1": 0.638095,
+      "duplication": 0.062937,
+      "invented": 0.468531,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC6222413-p0005.pdf",
+     "document": "PMC6222413",
+     "category": "scientific articles",
+     "produced_chars": 2288,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "text_of_matched": 1.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "teds": 1.0,
+      "teds_struct": 1.0,
+      "per_table": [
+       1.0
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 40,
+      "produced": 77,
+      "matched": 40,
+      "precision": 0.519481,
+      "recall": 1.0,
+      "f1": 0.683761,
+      "duplication": 0.0,
+      "invented": 0.480519,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 40,
+      "produced": 77,
+      "matched": 40,
+      "precision": 0.519481,
+      "recall": 1.0,
+      "f1": 0.683761,
+      "duplication": 0.0,
+      "invented": 0.480519,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC6019521-p0002.pdf",
+     "document": "PMC6019521",
+     "category": "scientific articles",
+     "produced_chars": 4519,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.844468
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.86148,
+      "teds_struct": 0.862069,
+      "per_table": [
+       0.86148
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 373,
+      "produced": 372,
+      "matched": 371,
+      "precision": 0.997312,
+      "recall": 0.994638,
+      "f1": 0.995973,
+      "duplication": 0.0,
+      "invented": 0.002688,
+      "furniture": 0.0,
+      "missing": 0.005362
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 372,
+      "produced": 371,
+      "matched": 370,
+      "precision": 0.997305,
+      "recall": 0.994624,
+      "f1": 0.995962,
+      "duplication": 0.0,
+      "invented": 0.002695,
+      "furniture": 0.0,
+      "missing": 0.005376
+     }
+    },
+    {
+     "name": "PMC6019521-p0003.pdf",
+     "document": "PMC6019521",
+     "category": "scientific articles",
+     "produced_chars": 4239,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 1.0,
+      "teds_struct": 1.0,
+      "per_table": [
+       1.0
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 185,
+      "produced": 185,
+      "matched": 185,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 185,
+      "produced": 185,
+      "matched": 185,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC6019521-p0007.pdf",
+     "document": "PMC6019521",
+     "category": "scientific articles",
+     "produced_chars": 4326,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.766467
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.541075,
+      "teds_struct": 0.634146,
+      "per_table": [
+       0.541075
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 86,
+      "produced": 86,
+      "matched": 86,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 86,
+      "produced": 86,
+      "matched": 86,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC6212588-p0002.pdf",
+     "document": "PMC6212588",
+     "category": "scientific articles",
+     "produced_chars": 3454,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.986034
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.781087,
+      "teds_struct": 0.793103,
+      "per_table": [
+       0.781087
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 68,
+      "produced": 68,
+      "matched": 68,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 68,
+      "produced": 68,
+      "matched": 68,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC6212588-p0005.pdf",
+     "document": "PMC6212588",
+     "category": "scientific articles",
+     "produced_chars": 1199,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.867102
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.768119,
+      "teds_struct": 0.818182,
+      "per_table": [
+       0.768119
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 50,
+      "produced": 50,
+      "matched": 50,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 50,
+      "produced": 50,
+      "matched": 50,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC6212588-p0008.pdf",
+     "document": "PMC6212588",
+     "category": "scientific articles",
+     "produced_chars": 4933,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.995434
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.998347,
+      "teds_struct": 1.0,
+      "per_table": [
+       0.998347
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 79,
+      "produced": 79,
+      "matched": 79,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 79,
+      "produced": 79,
+      "matched": 79,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC4817120-p0001.pdf",
+     "document": "PMC4817120",
+     "category": "scientific articles",
+     "produced_chars": 2477,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.998326
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.193165,
+      "teds_struct": 0.193676,
+      "per_table": [
+       0.193165
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 249,
+      "produced": 251,
+      "matched": 247,
+      "precision": 0.984064,
+      "recall": 0.991968,
+      "f1": 0.988,
+      "duplication": 0.0,
+      "invented": 0.015936,
+      "furniture": 0.0,
+      "missing": 0.008032
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 237,
+      "produced": 239,
+      "matched": 235,
+      "precision": 0.983264,
+      "recall": 0.991561,
+      "f1": 0.987395,
+      "duplication": 0.0,
+      "invented": 0.016736,
+      "furniture": 0.0,
+      "missing": 0.008439
+     }
+    },
+    {
+     "name": "PMC4817120-p0003.pdf",
+     "document": "PMC4817120",
+     "category": "scientific articles",
+     "produced_chars": 1946,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.932897
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.316762,
+      "teds_struct": 0.316762,
+      "per_table": [
+       0.126482,
+       0.507042
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 345,
+      "produced": 346,
+      "matched": 345,
+      "precision": 0.99711,
+      "recall": 1.0,
+      "f1": 0.998553,
+      "duplication": 0.0,
+      "invented": 0.00289,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 344,
+      "produced": 345,
+      "matched": 344,
+      "precision": 0.997101,
+      "recall": 1.0,
+      "f1": 0.998549,
+      "duplication": 0.0,
+      "invented": 0.002899,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC4352248-p0003.pdf",
+     "document": "PMC4352248",
+     "category": "scientific articles",
+     "produced_chars": 3101,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.949553
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.853173,
+      "teds_struct": 0.870588,
+      "per_table": [
+       0.853173
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 309,
+      "produced": 310,
+      "matched": 305,
+      "precision": 0.983871,
+      "recall": 0.987055,
+      "f1": 0.98546,
+      "duplication": 0.003226,
+      "invented": 0.012903,
+      "furniture": 0.0,
+      "missing": 0.012945
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 309,
+      "produced": 310,
+      "matched": 305,
+      "precision": 0.983871,
+      "recall": 0.987055,
+      "f1": 0.98546,
+      "duplication": 0.003226,
+      "invented": 0.012903,
+      "furniture": 0.0,
+      "missing": 0.012945
+     }
+    },
+    {
+     "name": "PMC4352248-p0004.pdf",
+     "document": "PMC4352248",
+     "category": "scientific articles",
+     "produced_chars": 3562,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.947739
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.8906,
+      "teds_struct": 0.901316,
+      "per_table": [
+       0.8906
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 266,
+      "produced": 266,
+      "matched": 266,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 266,
+      "produced": 266,
+      "matched": 266,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC4352248-p0005.pdf",
+     "document": "PMC4352248",
+     "category": "scientific articles",
+     "produced_chars": 2589,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "text_of_matched": 0.90508
+     },
+     "teds": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "teds": 0.432373,
+      "teds_struct": 0.4875,
+      "per_table": [
+       0.823413,
+       0.041333
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 394,
+      "produced": 394,
+      "matched": 394,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 394,
+      "produced": 394,
+      "matched": 394,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC5724831-p0004.pdf",
+     "document": "PMC5724831",
+     "category": "scientific articles",
+     "produced_chars": 1798,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.918794
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.8125,
+      "teds_struct": 0.8125,
+      "per_table": [
+       0.8125
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 71,
+      "produced": 76,
+      "matched": 71,
+      "precision": 0.934211,
+      "recall": 1.0,
+      "f1": 0.965986,
+      "duplication": 0.026316,
+      "invented": 0.039474,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 71,
+      "produced": 76,
+      "matched": 71,
+      "precision": 0.934211,
+      "recall": 1.0,
+      "f1": 0.965986,
+      "duplication": 0.026316,
+      "invented": 0.039474,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    },
+    {
+     "name": "PMC5724831-p0005.pdf",
+     "document": "PMC5724831",
+     "category": "scientific articles",
+     "produced_chars": 862,
+     "text": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "teds": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "teds": 0.756902,
+      "teds_struct": 0.777778,
+      "per_table": [
+       0.756902
+      ]
+     },
+     "text_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "words": {
+      "scored": true,
+      "truth": 89,
+      "produced": 89,
+      "matched": 89,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     },
+     "order": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "order_geometric": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": false,
+      "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "this set does not annotate headings"
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "this set does not annotate lists"
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 89,
+      "produced": 89,
+      "matched": 89,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.0
+     }
+    }
+   ],
+   "furniture_in_the_document": {
+    "annotated_by_the_set": false,
+    "why": "this set does not annotate running headers and footers, so there is no furniture to count in or out of the body"
+   },
+   "in_documents": {
+    "documents": 8,
+    "pages": 20,
+    "of_documents": 8,
+    "read_as": "the tool's pages, strung together in page order",
+    "documents_that_did_not_answer": [],
+    "summary": {
+     "text": {
+      "pages": 0,
+      "unscored": 8
+     },
+     "text_geometric": {
+      "pages": 0,
+      "unscored": 8
+     },
+     "words": {
+      "pages": 8,
+      "mean": 0.91601,
+      "median": 0.989369,
+      "p5": 0.689395,
+      "p95": 0.999728,
+      "worst": 0.652439,
+      "unscored": 0
+     },
+     "headings": {
+      "pages": 0,
+      "unscored": 8
+     },
+     "lists": {
+      "pages": 0,
+      "unscored": 8
+     },
+     "tables": {
+      "pages": 8,
+      "mean": 0.885417,
+      "median": 1.0,
+      "p5": 0.666667,
+      "p95": 1.0,
+      "worst": 0.666667,
+      "unscored": 0
+     },
+     "teds": {
+      "pages": 8,
+      "mean": 0.689638,
+      "median": 0.739722,
+      "p5": 0.357846,
+      "p95": 0.914243,
+      "worst": 0.275563,
+      "unscored": 0
+     },
+     "order": {
+      "pages": 0,
+      "unscored": 8
+     },
+     "order_geometric": {
+      "pages": 0,
+      "unscored": 8
+     },
+     "furniture_in_the_body": 0,
+     "headings_where_none_annotated": 0,
+     "lists_where_none_annotated": 0,
+     "tables_where_none_annotated": 0
+    },
+    "tail": {
+     "text": [],
+     "text_geometric": [],
+     "words": [
+      {
+       "v": 0.652439,
+       "name": "PMC6222413",
+       "document": "PMC6222413"
+      }
+     ],
+     "headings": [],
+     "lists": [],
+     "tables": [
+      {
+       "v": 0.666667,
+       "name": "PMC4826663",
+       "document": "PMC4826663"
+      }
+     ],
+     "teds": [
+      {
+       "v": 0.275563,
+       "name": "PMC4817120",
+       "document": "PMC4817120"
+      }
+     ],
+     "order": [],
+     "order_geometric": []
+    },
+    "documents_measured": [
+     {
+      "name": "PMC3141784",
+      "document": "PMC3141784",
+      "category": "scientific articles",
+      "produced_chars": 6596,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.772065
+      },
+      "teds": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.694743,
+       "teds_struct": 0.820275,
+       "per_table": [
+        0.434606,
+        0.846154,
+        0.803468
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 343,
+       "produced": 375,
+       "matched": 339,
+       "precision": 0.904,
+       "recall": 0.988338,
+       "f1": 0.94429,
+       "duplication": 0.013333,
+       "invented": 0.082667,
+       "furniture": 0.0,
+       "missing": 0.011662
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 340,
+       "produced": 371,
+       "matched": 334,
+       "precision": 0.90027,
+       "recall": 0.982353,
+       "f1": 0.939522,
+       "duplication": 0.010782,
+       "invented": 0.088949,
+       "furniture": 0.0,
+       "missing": 0.017647
+      }
+     },
+     {
+      "name": "PMC4826663",
+      "document": "PMC4826663",
+      "category": "scientific articles",
+      "produced_chars": 9075,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 6,
+       "produced": 6,
+       "matched": 4,
+       "precision": 0.666667,
+       "recall": 0.666667,
+       "f1": 0.666667,
+       "text_of_matched": 0.764647
+      },
+      "teds": {
+       "scored": true,
+       "truth": 6,
+       "produced": 6,
+       "matched": 6,
+       "teds": 0.510656,
+       "teds_struct": 0.664407,
+       "per_table": [
+        0.20842,
+        0.713988,
+        0.207761,
+        0.427754,
+        0.715339,
+        0.790672
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 381,
+       "produced": 495,
+       "matched": 322,
+       "precision": 0.650505,
+       "recall": 0.908136,
+       "f1": 0.758029,
+       "duplication": 0.129293,
+       "invented": 0.220202,
+       "furniture": 0.0,
+       "missing": 0.091864
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 381,
+       "produced": 490,
+       "matched": 324,
+       "precision": 0.661224,
+       "recall": 0.908136,
+       "f1": 0.765257,
+       "duplication": 0.126531,
+       "invented": 0.212245,
+       "furniture": 0.0,
+       "missing": 0.091864
+      }
+     },
+     {
+      "name": "PMC6222413",
+      "document": "PMC6222413",
+      "category": "scientific articles",
+      "produced_chars": 5349,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 2,
+       "produced": 4,
+       "matched": 2,
+       "precision": 0.5,
+       "recall": 1.0,
+       "f1": 0.666667,
+       "text_of_matched": 0.9601
+      },
+      "teds": {
+       "scored": true,
+       "truth": 2,
+       "produced": 4,
+       "matched": 2,
+       "teds": 0.949275,
+       "teds_struct": 0.949275,
+       "per_table": [
+        0.898551,
+        1.0
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 107,
+       "produced": 221,
+       "matched": 107,
+       "precision": 0.484163,
+       "recall": 1.0,
+       "f1": 0.652439,
+       "duplication": 0.072398,
+       "invented": 0.443439,
+       "furniture": 0.0,
+       "missing": 0.0
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 107,
+       "produced": 220,
+       "matched": 107,
+       "precision": 0.486364,
+       "recall": 1.0,
+       "f1": 0.654434,
+       "duplication": 0.068182,
+       "invented": 0.445455,
+       "furniture": 0.0,
+       "missing": 0.0
+      }
+     },
+     {
+      "name": "PMC6019521",
+      "document": "PMC6019521",
+      "category": "scientific articles",
+      "produced_chars": 13084,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.870312
+      },
+      "teds": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.800852,
+       "teds_struct": 0.832072,
+       "per_table": [
+        0.86148,
+        1.0,
+        0.541075
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 644,
+       "produced": 643,
+       "matched": 642,
+       "precision": 0.998445,
+       "recall": 1.0,
+       "f1": 0.999222,
+       "duplication": 0.0,
+       "invented": 0.001555,
+       "furniture": 0.0,
+       "missing": 0.0
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 643,
+       "produced": 642,
+       "matched": 641,
+       "precision": 0.998442,
+       "recall": 1.0,
+       "f1": 0.999221,
+       "duplication": 0.0,
+       "invented": 0.001558,
+       "furniture": 0.0,
+       "missing": 0.0
+      }
+     },
+     {
+      "name": "PMC6212588",
+      "document": "PMC6212588",
+      "category": "scientific articles",
+      "produced_chars": 9586,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.949523
+      },
+      "teds": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.849184,
+       "teds_struct": 0.870428,
+       "per_table": [
+        0.781087,
+        0.768119,
+        0.998347
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 197,
+       "produced": 197,
+       "matched": 197,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "duplication": 0.0,
+       "invented": 0.0,
+       "furniture": 0.0,
+       "missing": 0.0
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 197,
+       "produced": 197,
+       "matched": 197,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "duplication": 0.0,
+       "invented": 0.0,
+       "furniture": 0.0,
+       "missing": 0.0
+      }
+     },
+     {
+      "name": "PMC4817120",
+      "document": "PMC4817120",
+      "category": "scientific articles",
+      "produced_chars": 4423,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.954707
+      },
+      "teds": {
+       "scored": true,
+       "truth": 3,
+       "produced": 3,
+       "matched": 3,
+       "teds": 0.275563,
+       "teds_struct": 0.275733,
+       "per_table": [
+        0.193165,
+        0.126482,
+        0.507042
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 594,
+       "produced": 597,
+       "matched": 592,
+       "precision": 0.991625,
+       "recall": 0.996633,
+       "f1": 0.994123,
+       "duplication": 0.001675,
+       "invented": 0.0067,
+       "furniture": 0.0,
+       "missing": 0.003367
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 581,
+       "produced": 584,
+       "matched": 579,
+       "precision": 0.991438,
+       "recall": 0.996558,
+       "f1": 0.993991,
+       "duplication": 0.001712,
+       "invented": 0.006849,
+       "furniture": 0.0,
+       "missing": 0.003442
+      }
+     },
+     {
+      "name": "PMC4352248",
+      "document": "PMC4352248",
+      "category": "scientific articles",
+      "produced_chars": 9252,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 4,
+       "produced": 4,
+       "matched": 3,
+       "precision": 0.75,
+       "recall": 0.75,
+       "f1": 0.75,
+       "text_of_matched": 0.934124
+      },
+      "teds": {
+       "scored": true,
+       "truth": 4,
+       "produced": 4,
+       "matched": 4,
+       "teds": 0.65213,
+       "teds_struct": 0.686726,
+       "per_table": [
+        0.853173,
+        0.8906,
+        0.823413,
+        0.041333
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 969,
+       "produced": 970,
+       "matched": 965,
+       "precision": 0.994845,
+       "recall": 0.995872,
+       "f1": 0.995358,
+       "duplication": 0.001031,
+       "invented": 0.004124,
+       "furniture": 0.0,
+       "missing": 0.004128
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 969,
+       "produced": 970,
+       "matched": 965,
+       "precision": 0.994845,
+       "recall": 0.995872,
+       "f1": 0.995358,
+       "duplication": 0.001031,
+       "invented": 0.004124,
+       "furniture": 0.0,
+       "missing": 0.004128
+      }
+     },
+     {
+      "name": "PMC5724831",
+      "document": "PMC5724831",
+      "category": "scientific articles",
+      "produced_chars": 2660,
+      "text": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "tables": {
+       "scored": true,
+       "truth": 2,
+       "produced": 2,
+       "matched": 2,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.959397
+      },
+      "teds": {
+       "scored": true,
+       "truth": 2,
+       "produced": 2,
+       "matched": 2,
+       "teds": 0.784701,
+       "teds_struct": 0.795139,
+       "per_table": [
+        0.8125,
+        0.756902
+       ]
+      },
+      "text_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "words": {
+       "scored": true,
+       "truth": 160,
+       "produced": 165,
+       "matched": 160,
+       "precision": 0.969697,
+       "recall": 1.0,
+       "f1": 0.984615,
+       "duplication": 0.012121,
+       "invented": 0.018182,
+       "furniture": 0.0,
+       "missing": 0.0
+      },
+      "order": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "order_geometric": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "furniture": {
+       "annotated": 0,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": false,
+       "why": "this set does not annotate the running text of a page, so there is nothing to compare a page of it with"
+      },
+      "headings_v2": {
+       "scored": false,
+       "why": "this set does not annotate headings"
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "this set does not annotate lists"
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 160,
+       "produced": 165,
+       "matched": 160,
+       "precision": 0.969697,
+       "recall": 1.0,
+       "f1": 0.984615,
+       "duplication": 0.012121,
+       "invented": 0.018182,
+       "furniture": 0.0,
+       "missing": 0.0
+      }
+     }
+    ]
+   }
+  }
+ },
+ "bench": {
+  "config": "pdfluent-fast",
+  "tool": "pdfluent_fast",
+  "set": "pubtables-1m",
+  "split": "tuning",
+  "pages_requested": 20,
+  "because": null,
+  "version": {
+   "package": "pdfluent",
+   "pinned": "1.1.0",
+   "installed": "1.1.0",
+   "matches_pin": true,
+   "python": "/opt/ex/pdfluent_fast/bin/python"
+  },
+  "reproducible": "public",
+  "vision": false,
+  "seed": "pdfluent-structured-tables-holdout-2026-09-20",
+  "pages_digest": "57b11caeb4056457954f4e7ba501c2a007b43a27d7591f812434b13c808f2e2d"
+ }
+}

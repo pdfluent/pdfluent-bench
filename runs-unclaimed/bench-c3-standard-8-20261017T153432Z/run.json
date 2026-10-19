@@ -1,0 +1,434 @@
+{
+ "run_id": "bench-c3-standard-8-20261017T153432Z",
+ "schema": 1,
+ "started": "2026-10-17T15:34:32+00:00",
+ "finished": "2026-10-17T16:01:17+00:00",
+ "wall_clock_s": 1605.3,
+ "command": [
+  "/home/jasperdewinter/pdfluent-bench/bench/__main__.py",
+  "run",
+  "--machine",
+  "c3-standard-8",
+  "--configs",
+  "all",
+  "--sets",
+  "all",
+  "--splits",
+  "tuning",
+  "--profile",
+  "mini",
+  "--reps",
+  "1",
+  "--runner",
+  "docker",
+  "--work",
+  "work",
+  "--optional",
+  "pdfluent-best"
+ ],
+ "machine": {
+  "type": "c3-standard-8",
+  "spec": {
+   "provider": "gcp",
+   "region": "europe-west4",
+   "zone": "europe-west4-a",
+   "vcpus": 8,
+   "memory_gb": 32,
+   "gpu": null,
+   "disk_gb": 100,
+   "eur_per_hour": {
+    "on_demand": 0.45,
+    "spot": 0.18
+   },
+   "name": "c3-standard-8"
+  },
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8481C CPU @ 2.70GHz",
+  "cpus": 8,
+  "memory_gb": 31.4,
+  "gpus": [],
+  "instance": "pdfluent-bench-c3-standard-8-20261017t151248z"
+ },
+ "images": {
+  "docling": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-17T15:17:43+00:00",
+   "image_id": "sha256:26e26e79d6bb8bdf9deb259427359169af34b40f6ea3b40cb782fc3f4e791a52",
+   "tag": "pdfluent-bench/docling:946f4f8"
+  },
+  "pdfluent": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-17T15:15:41+00:00",
+   "image_id": "sha256:4e8e7d4e8973bb75af1d7d66e9e593cc329d137b5636bea3c29e1aaf0dafdb43",
+   "tag": "pdfluent-bench/pdfluent:946f4f8"
+  },
+  "pymupdf4llm": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-17T15:17:59+00:00",
+   "image_id": "sha256:6f304e8abe6be208f313fcc83a8e5c46d57c18789a284532598c9898474e2c96",
+   "tag": "pdfluent-bench/pymupdf4llm:946f4f8"
+  }
+ },
+ "harness": {
+  "commit": "946f4f8a00a4f9dfa490211cdde61be47964bc8e",
+  "dirty": false
+ },
+ "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+ "datasets": {
+  "sets": {
+   "fintabnet": {
+    "file": "engine/corpus/structured/FINTABNET_DRAW.json",
+    "sha256": "5651af9525543a98e849e3d11be93cd808ec0774e32da2a4779c468045a1de28",
+    "drawn": {
+     "file": "engine/corpus/structured/FINTABNET.json",
+     "sha256": "ed7235431cd202a09b386014b14d3f1e4d42e6a13ab1d30514fafa436cb4036b"
+    }
+   },
+   "doclaynet": {
+    "file": "engine/corpus/structured/DOCLAYNET_TEST.json",
+    "sha256": "ddf1892f7abd5b24fe3dfc90fe00dc864cf1a7e734a82029aeaba7b24bf7967e"
+   },
+   "pubtables-1m": {
+    "file": "engine/corpus/structured/PUBTABLES1M.json",
+    "sha256": "3d0650e1aad4a69b975a2cbb9c136420444b79b487235cff4d003aefdb66247a"
+   },
+   "parsebench": {
+    "file": "engine/corpus/structured/PARSEBENCH.json",
+    "sha256": "cb5f07d919962b09b1cb4455cef56947c52a21073102372b877bda844a91cc3a"
+   }
+  },
+  "hash": "5fec3c16b54e2881b202f53b8e084577212902416009975dca813d43ee9b562d"
+ },
+ "configs": {
+  "docling-minimal": {
+   "tool": "docling_minimal"
+  },
+  "docling-standard": {
+   "tool": "docling"
+  },
+  "pdfluent-balanced": {
+   "tool": "pdfluent_balanced"
+  },
+  "pdfluent-balanced-tatr": {
+   "tool": "pdfluent_balanced_tatr"
+  },
+  "pdfluent-best": {
+   "tool": "teacher_ens"
+  },
+  "pdfluent-fast": {
+   "tool": "pdfluent_fast"
+  },
+  "pymupdf4llm": {
+   "tool": "pymupdf4llm"
+  }
+ },
+ "steps": [
+  {
+   "kind": "quality",
+   "config": "docling-minimal",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:34:32+00:00",
+   "status": "ok",
+   "seconds": 27.0
+  },
+  {
+   "kind": "quality",
+   "config": "docling-minimal",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:34:59+00:00",
+   "status": "ok",
+   "seconds": 67.8
+  },
+  {
+   "kind": "quality",
+   "config": "docling-minimal",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:36:07+00:00",
+   "status": "ok",
+   "seconds": 27.8
+  },
+  {
+   "kind": "quality",
+   "config": "docling-minimal",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 7,
+   "started": "2026-10-17T15:36:35+00:00",
+   "status": "ok",
+   "seconds": 37.7
+  },
+  {
+   "kind": "speed",
+   "config": "docling-minimal",
+   "reps": 1,
+   "started": "2026-10-17T15:37:12+00:00",
+   "status": "ok",
+   "seconds": 85.5
+  },
+  {
+   "kind": "quality",
+   "config": "docling-standard",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:38:38+00:00",
+   "status": "ok",
+   "seconds": 72.5
+  },
+  {
+   "kind": "quality",
+   "config": "docling-standard",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:39:50+00:00",
+   "status": "ok",
+   "seconds": 69.5
+  },
+  {
+   "kind": "quality",
+   "config": "docling-standard",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:41:00+00:00",
+   "status": "ok",
+   "seconds": 81.4
+  },
+  {
+   "kind": "quality",
+   "config": "docling-standard",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 7,
+   "started": "2026-10-17T15:42:21+00:00",
+   "status": "ok",
+   "seconds": 51.1
+  },
+  {
+   "kind": "speed",
+   "config": "docling-standard",
+   "reps": 1,
+   "started": "2026-10-17T15:43:12+00:00",
+   "status": "ok",
+   "seconds": 255.7
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:47:28+00:00",
+   "status": "ok",
+   "seconds": 21.4
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:47:50+00:00",
+   "status": "ok",
+   "seconds": 45.2
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:48:35+00:00",
+   "status": "ok",
+   "seconds": 23.1
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 7,
+   "started": "2026-10-17T15:48:58+00:00",
+   "status": "ok",
+   "seconds": 26.3
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-balanced",
+   "reps": 1,
+   "started": "2026-10-17T15:49:24+00:00",
+   "status": "ok",
+   "seconds": 210.5
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:52:55+00:00",
+   "status": "ok",
+   "seconds": 26.9
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:53:22+00:00",
+   "status": "ok",
+   "seconds": 47.4
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:54:09+00:00",
+   "status": "ok",
+   "seconds": 30.7
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 7,
+   "started": "2026-10-17T15:54:40+00:00",
+   "status": "ok",
+   "seconds": 28.7
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-balanced-tatr",
+   "reps": 1,
+   "started": "2026-10-17T15:55:08+00:00",
+   "status": "ok",
+   "seconds": 257.1
+  },
+  {
+   "kind": "config",
+   "config": "pdfluent-best",
+   "status": "skipped",
+   "why": "image `best` is not built (docker/build.sh best)",
+   "started": "2026-10-17T15:59:26+00:00"
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:59:26+00:00",
+   "status": "ok",
+   "seconds": 5.0
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:59:31+00:00",
+   "status": "ok",
+   "seconds": 12.1
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T15:59:43+00:00",
+   "status": "ok",
+   "seconds": 6.6
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 7,
+   "started": "2026-10-17T15:59:49+00:00",
+   "status": "ok",
+   "seconds": 7.4
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-fast",
+   "reps": 1,
+   "started": "2026-10-17T15:59:57+00:00",
+   "status": "ok",
+   "seconds": 3.0
+  },
+  {
+   "kind": "quality",
+   "config": "pymupdf4llm",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T16:00:00+00:00",
+   "status": "ok",
+   "seconds": 11.8
+  },
+  {
+   "kind": "quality",
+   "config": "pymupdf4llm",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T16:00:11+00:00",
+   "status": "ok",
+   "seconds": 17.2
+  },
+  {
+   "kind": "quality",
+   "config": "pymupdf4llm",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 20,
+   "started": "2026-10-17T16:00:29+00:00",
+   "status": "ok",
+   "seconds": 15.4
+  },
+  {
+   "kind": "quality",
+   "config": "pymupdf4llm",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 7,
+   "started": "2026-10-17T16:00:44+00:00",
+   "status": "ok",
+   "seconds": 14.3
+  },
+  {
+   "kind": "speed",
+   "config": "pymupdf4llm",
+   "reps": 1,
+   "started": "2026-10-17T16:00:58+00:00",
+   "status": "ok",
+   "seconds": 19.1
+  }
+ ],
+ "cost_eur_estimate": {
+  "spot": 0.08,
+  "on_demand": 0.2,
+  "basis": "wall clock x configs/machines.yaml price (an estimate; the bill is the record)"
+ },
+ "profile": "mini",
+ "splits": [
+  "tuning"
+ ],
+ "reps": 1,
+ "runner": "docker",
+ "failures": 0
+}

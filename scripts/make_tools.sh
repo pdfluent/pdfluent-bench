@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Copyright (c) 2026 Innovation Trigger B.V. All rights reserved.
-# Licence pending owner decision: see LICENSE-TBD.md.
+# Copyright (c) 2026 Innovation Trigger B.V.
+#
+# PDFluent is available under two licences, at your option: the GNU AGPLv3, or
+# the PDFluent Commercial Licence. See the LICENSE file in this repository --
+# that file travels with the copy you received, which a URL does not.
 #
 # Create the pinned tool interpreters a native run needs, one venv each:
 #   scripts/make_tools.sh [TOOLS_DIR] [PYTHON]    (Python 3.12 or newer: the ParseBench scorer needs it)

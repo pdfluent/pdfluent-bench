@@ -1,0 +1,3342 @@
+{
+ "run_id": "bench-c3-standard-8-20261017T153432Z-doclaynet-tuning-docling-minimal",
+ "dimensions_schema": 1,
+ "when": "2026-10-17T15:36:06+00:00",
+ "set": "doclaynet",
+ "set_version": "docling-project/DocLayNet-v1.2, split `test`",
+ "set_licence": "CDLA-Permissive-1.0",
+ "publishable": true,
+ "pages_measured": 20,
+ "half": "tuning",
+ "machine": {
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cpus": 8,
+  "load_at_start": 1.6923828125,
+  "instance": ""
+ },
+ "harness": "946f4f8",
+ "line": {},
+ "refused": [],
+ "one_page_per_file": {
+  "checked": 20,
+  "pages_per_file": {
+   "1": 20
+  }
+ },
+ "regrouped": {
+  "documents": 5,
+  "pages": 20,
+  "multi_page_documents": 4,
+  "half": "tuning"
+ },
+ "order_provenance": {
+  "pages": 20,
+  "mean_agreement_with_geometry": 0.769509,
+  "pages_below_0.9": 15,
+  "per_page": [
+   {
+    "name": "3636528977ad5c44b4d00a5efc3d4735086090e7224cf17ff31cb4a95cac4120.pdf",
+    "agreement_with_geometry": 0.711111
+   },
+   {
+    "name": "d19d3eb49082028d4c8c9d28dde645f1a7c14a659640c48204bb0705f51c3ef5.pdf",
+    "agreement_with_geometry": 1.0
+   },
+   {
+    "name": "b2b0a6c1e03eb55e7b119962920f12d96828ae255cd94d49c4dba0962ef5d3c3.pdf",
+    "agreement_with_geometry": 0.75641
+   },
+   {
+    "name": "d68d359b0289d7fa515d48e75ea8e4ee6a70bd6d4991b95e84bdf178c119909d.pdf",
+    "agreement_with_geometry": 0.833333
+   },
+   {
+    "name": "643941e0806596b2ed8834b5f22e4b336b6cf36a1d41543c34e50570e6255ec3.pdf",
+    "agreement_with_geometry": 0.666667
+   },
+   {
+    "name": "f016f98ebe9c7596425a53e23f79adf42017af0cb4b9fe58d2722fe89ddf9174.pdf",
+    "agreement_with_geometry": 0.836257
+   },
+   {
+    "name": "337b1ea1bfbf92dab50fecb838f6040a2041324fb6f772db69567c9bfe0ec3d8.pdf",
+    "agreement_with_geometry": 1.0
+   },
+   {
+    "name": "386dbb66a8666ae948f0dd405340ea1d3e3da315e89ea151281994a15ae41aa2.pdf",
+    "agreement_with_geometry": 0.755556
+   },
+   {
+    "name": "4811d723f69ff47cd01b676a74649aa61ad2a0b02f8f9d899299ae1a576b89ea.pdf",
+    "agreement_with_geometry": 0.809524
+   },
+   {
+    "name": "de943d48d85020628a2e70ac142d14647de76845e24c543dfc4e5053b3ad5299.pdf",
+    "agreement_with_geometry": 0.916667
+   },
+   {
+    "name": "714e0207d7237e4550fdf988cfa8bd3aeee06e560367cf0d6ba36c25c18a9f7e.pdf",
+    "agreement_with_geometry": 0.711111
+   },
+   {
+    "name": "8eecb197bee968839fd930396c407c9c24510bb6a415e180f4d4c9c5a108def7.pdf",
+    "agreement_with_geometry": 1.0
+   },
+   {
+    "name": "7272f2319fdabbd80dd0251d85dec8f3369fbc19ec6ccfd44909f3e35368d8e8.pdf",
+    "agreement_with_geometry": 0.730769
+   },
+   {
+    "name": "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+    "agreement_with_geometry": 0.641667
+   },
+   {
+    "name": "dc5f96f61bed7ba0b18c719f30ffc520eac3aea84c6d0f83525dab0653d672d8.pdf",
+    "agreement_with_geometry": 0.224868
+   },
+   {
+    "name": "76711d735dbdaeb3fb2d535e0bf5f4d53738f9dc2da6aa73d1d19a669f3fcd7c.pdf",
+    "agreement_with_geometry": 0.794118
+   },
+   {
+    "name": "42ee9a7cb0535fb59006a8d30e44975203082d78adb137d95df9914952a9b107.pdf",
+    "agreement_with_geometry": 0.546559
+   },
+   {
+    "name": "8ba84c5085b7502b8a253d5ec429690884bfbc742a41f72a9462aec9511ffa09.pdf",
+    "agreement_with_geometry": 0.66
+   },
+   {
+    "name": "c871d52ca79ee91d5ee3c9ebf2b7ab451a5f1e4bad9530f9a95a938949db9ac5.pdf",
+    "agreement_with_geometry": 0.955556
+   },
+   {
+    "name": "ff69aaffb9dcb6b8b682804fff48a54d96bf2d594ecae9749835dc048769213f.pdf",
+    "agreement_with_geometry": 0.84
+   }
+  ]
+ },
+ "tools": {
+  "docling_minimal": {
+   "name": "Docling (TableFormer off)",
+   "version": "2.126.0",
+   "publishable": true,
+   "pages": 20,
+   "did_not_answer": 0,
+   "ms_per_page": 821.2,
+   "start_up_amortised": true,
+   "dimensions": {
+    "ms_p50": 486.5,
+    "ms_p95": 775.05,
+    "cold_start_ms": 7024,
+    "peak_rss_mb": 1153.6,
+    "install_mb": 1688.2,
+    "tokens_per_page": 430.5,
+    "tokenizer": "tiktoken 0.14.0 o200k_base",
+    "crash_share": 0.0,
+    "timeout_share": 0.0,
+    "empty_share": 0.0,
+    "grounding": "bbox + page per item (provenance)",
+    "confidence": "page-level scores, none per block",
+    "licence": "MIT",
+    "offline": true,
+    "ocr": "off: do_ocr = False (bench_columns.py)",
+    "cost_per_1000_pages": "free"
+   },
+   "summary": {
+    "text": {
+     "pages": 20,
+     "mean": 0.620437,
+     "median": 0.617192,
+     "p5": 0.296775,
+     "p95": 0.970947,
+     "worst": 0.256875,
+     "unscored": 0
+    },
+    "text_geometric": {
+     "pages": 20,
+     "mean": 0.776677,
+     "median": 0.897051,
+     "p5": 0.333304,
+     "p95": 0.991768,
+     "worst": 0.32,
+     "unscored": 0
+    },
+    "words": {
+     "pages": 20,
+     "mean": 0.840833,
+     "median": 0.91911,
+     "p5": 0.410202,
+     "p95": 0.993543,
+     "worst": 0.320225,
+     "unscored": 0
+    },
+    "headings": {
+     "pages": 17,
+     "mean": 0.962159,
+     "median": 1.0,
+     "p5": 0.845714,
+     "p95": 1.0,
+     "worst": 0.8,
+     "unscored": 3
+    },
+    "lists": {
+     "pages": 7,
+     "mean": 0.918095,
+     "median": 1.0,
+     "p5": 0.706667,
+     "p95": 1.0,
+     "worst": 0.666667,
+     "unscored": 13
+    },
+    "tables": {
+     "pages": 2,
+     "mean": 0.5,
+     "median": 0.5,
+     "p5": 0.05,
+     "p95": 0.95,
+     "worst": 0.0,
+     "unscored": 18
+    },
+    "teds": {
+     "pages": 0,
+     "unscored": 20
+    },
+    "order": {
+     "pages": 20,
+     "mean": 0.774345,
+     "median": 0.80754,
+     "p5": 0.496799,
+     "p95": 1.0,
+     "worst": 0.224868,
+     "unscored": 0
+    },
+    "order_geometric": {
+     "pages": 20,
+     "mean": 0.964077,
+     "median": 1.0,
+     "p5": 0.810159,
+     "p95": 1.0,
+     "worst": 0.580952,
+     "unscored": 0
+    },
+    "furniture_in_the_body": 1,
+    "headings_where_none_annotated": 0,
+    "lists_where_none_annotated": 4,
+    "tables_where_none_annotated": 0
+   },
+   "summary_v2": {
+    "text_v2": {
+     "pages": 20,
+     "mean": 0.620122,
+     "median": 0.616821,
+     "p5": 0.297184,
+     "p95": 0.970906,
+     "worst": 0.256376,
+     "unscored": 0
+    },
+    "words_v2": {
+     "pages": 20,
+     "mean": 0.83961,
+     "median": 0.914819,
+     "p5": 0.409772,
+     "p95": 0.993543,
+     "worst": 0.311615,
+     "unscored": 0
+    },
+    "headings_v2": {
+     "pages": 17,
+     "mean": 0.962159,
+     "median": 1.0,
+     "p5": 0.845714,
+     "p95": 1.0,
+     "worst": 0.8,
+     "unscored": 3
+    },
+    "lists_v2": {
+     "pages": 7,
+     "mean": 0.918095,
+     "median": 1.0,
+     "p5": 0.706667,
+     "p95": 1.0,
+     "worst": 0.666667,
+     "unscored": 13
+    },
+    "v2_applied": 19,
+    "pages": 20
+   },
+   "tail": {
+    "text": [
+     {
+      "v": 0.256875,
+      "name": "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+      "document": "uksi_20200412_en.pdf"
+     }
+    ],
+    "text_geometric": [
+     {
+      "v": 0.32,
+      "name": "714e0207d7237e4550fdf988cfa8bd3aeee06e560367cf0d6ba36c25c18a9f7e.pdf",
+      "document": "1002.2525.pdf"
+     }
+    ],
+    "words": [
+     {
+      "v": 0.320225,
+      "name": "714e0207d7237e4550fdf988cfa8bd3aeee06e560367cf0d6ba36c25c18a9f7e.pdf",
+      "document": "1002.2525.pdf"
+     }
+    ],
+    "headings": [
+     {
+      "v": 0.8,
+      "name": "7272f2319fdabbd80dd0251d85dec8f3369fbc19ec6ccfd44909f3e35368d8e8.pdf",
+      "document": "uksi_20200433_en.pdf"
+     }
+    ],
+    "lists": [
+     {
+      "v": 0.666667,
+      "name": "7272f2319fdabbd80dd0251d85dec8f3369fbc19ec6ccfd44909f3e35368d8e8.pdf",
+      "document": "uksi_20200433_en.pdf"
+     }
+    ],
+    "tables": [
+     {
+      "v": 0.0,
+      "name": "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+      "document": "uksi_20200412_en.pdf"
+     }
+    ],
+    "teds": [],
+    "order": [
+     {
+      "v": 0.224868,
+      "name": "dc5f96f61bed7ba0b18c719f30ffc520eac3aea84c6d0f83525dab0653d672d8.pdf",
+      "document": "uksi_20200412_en.pdf"
+     }
+    ],
+    "order_geometric": [
+     {
+      "v": 0.580952,
+      "name": "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+      "document": "uksi_20200412_en.pdf"
+     }
+    ]
+   },
+   "documents": [
+    {
+     "name": "3636528977ad5c44b4d00a5efc3d4735086090e7224cf17ff31cb4a95cac4120.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 593,
+     "text": {
+      "scored": true,
+      "chars": 927,
+      "edit_distance": 0.294498,
+      "similarity": 0.705502
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 927,
+      "edit_distance": 0.218986,
+      "similarity": 0.781014
+     },
+     "words": {
+      "scored": true,
+      "truth": 184,
+      "produced": 131,
+      "matched": 128,
+      "precision": 0.977099,
+      "recall": 0.695652,
+      "f1": 0.812698,
+      "duplication": 0.0,
+      "invented": 0.022901,
+      "furniture": 0.0,
+      "missing": 0.304348
+     },
+     "order": {
+      "scored": true,
+      "matched": 7,
+      "truth": 10,
+      "produced": 7,
+      "pairs": 21,
+      "discordant": 4,
+      "score": 0.809524
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 7,
+      "truth": 10,
+      "produced": 7,
+      "pairs": 21,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 926,
+      "edit_distance": 0.294816,
+      "similarity": 0.705184
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 183,
+      "produced": 130,
+      "matched": 127,
+      "precision": 0.976923,
+      "recall": 0.693989,
+      "f1": 0.811502,
+      "duplication": 0.0,
+      "invented": 0.023077,
+      "furniture": 0.0,
+      "missing": 0.306011
+     }
+    },
+    {
+     "name": "d19d3eb49082028d4c8c9d28dde645f1a7c14a659640c48204bb0705f51c3ef5.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 2072,
+     "text": {
+      "scored": true,
+      "chars": 2516,
+      "edit_distance": 0.015898,
+      "similarity": 0.984102
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2516,
+      "edit_distance": 0.015898,
+      "similarity": 0.984102
+     },
+     "words": {
+      "scored": true,
+      "truth": 432,
+      "produced": 412,
+      "matched": 400,
+      "precision": 0.970874,
+      "recall": 0.925926,
+      "f1": 0.947867,
+      "duplication": 0.0,
+      "invented": 0.029126,
+      "furniture": 0.0,
+      "missing": 0.074074
+     },
+     "order": {
+      "scored": true,
+      "matched": 5,
+      "truth": 5,
+      "produced": 5,
+      "pairs": 10,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 5,
+      "truth": 5,
+      "produced": 5,
+      "pairs": 10,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 2510,
+      "edit_distance": 0.016733,
+      "similarity": 0.983267
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 426,
+      "produced": 407,
+      "matched": 393,
+      "precision": 0.965602,
+      "recall": 0.922535,
+      "f1": 0.943577,
+      "duplication": 0.004914,
+      "invented": 0.029484,
+      "furniture": 0.0,
+      "missing": 0.077465
+     }
+    },
+    {
+     "name": "b2b0a6c1e03eb55e7b119962920f12d96828ae255cd94d49c4dba0962ef5d3c3.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 1393,
+     "text": {
+      "scored": true,
+      "chars": 2029,
+      "edit_distance": 0.225234,
+      "similarity": 0.774766
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.943396
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2029,
+      "edit_distance": 0.17447,
+      "similarity": 0.82553
+     },
+     "words": {
+      "scored": true,
+      "truth": 387,
+      "produced": 290,
+      "matched": 278,
+      "precision": 0.958621,
+      "recall": 0.718346,
+      "f1": 0.82127,
+      "duplication": 0.0,
+      "invented": 0.041379,
+      "furniture": 0.0,
+      "missing": 0.281654
+     },
+     "order": {
+      "scored": true,
+      "matched": 9,
+      "truth": 13,
+      "produced": 9,
+      "pairs": 36,
+      "discordant": 7,
+      "score": 0.805556
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 9,
+      "truth": 13,
+      "produced": 9,
+      "pairs": 36,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 2027,
+      "edit_distance": 0.224963,
+      "similarity": 0.775037
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.943396
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 385,
+      "produced": 289,
+      "matched": 277,
+      "precision": 0.958478,
+      "recall": 0.719481,
+      "f1": 0.821958,
+      "duplication": 0.0,
+      "invented": 0.041522,
+      "furniture": 0.0,
+      "missing": 0.280519
+     }
+    },
+    {
+     "name": "d68d359b0289d7fa515d48e75ea8e4ee6a70bd6d4991b95e84bdf178c119909d.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 1111,
+     "text": {
+      "scored": true,
+      "chars": 1374,
+      "edit_distance": 0.037846,
+      "similarity": 0.962154
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1374,
+      "edit_distance": 0.020378,
+      "similarity": 0.979622
+     },
+     "words": {
+      "scored": true,
+      "truth": 248,
+      "produced": 234,
+      "matched": 222,
+      "precision": 0.948718,
+      "recall": 0.895161,
+      "f1": 0.921162,
+      "duplication": 0.0,
+      "invented": 0.051282,
+      "furniture": 0.0,
+      "missing": 0.104839
+     },
+     "order": {
+      "scored": true,
+      "matched": 4,
+      "truth": 4,
+      "produced": 4,
+      "pairs": 6,
+      "discordant": 1,
+      "score": 0.833333
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 4,
+      "truth": 4,
+      "produced": 4,
+      "pairs": 6,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1373,
+      "edit_distance": 0.037873,
+      "similarity": 0.962127
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 247,
+      "produced": 233,
+      "matched": 221,
+      "precision": 0.948498,
+      "recall": 0.894737,
+      "f1": 0.920833,
+      "duplication": 0.0,
+      "invented": 0.051502,
+      "furniture": 0.0,
+      "missing": 0.105263
+     }
+    },
+    {
+     "name": "643941e0806596b2ed8834b5f22e4b336b6cf36a1d41543c34e50570e6255ec3.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 914,
+     "text": {
+      "scored": true,
+      "chars": 1074,
+      "edit_distance": 0.1527,
+      "similarity": 0.8473
+     },
+     "headings": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.975806
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1074,
+      "edit_distance": 0.00838,
+      "similarity": 0.99162
+     },
+     "words": {
+      "scored": true,
+      "truth": 159,
+      "produced": 154,
+      "matched": 151,
+      "precision": 0.980519,
+      "recall": 0.949686,
+      "f1": 0.964856,
+      "duplication": 0.0,
+      "invented": 0.019481,
+      "furniture": 0.0,
+      "missing": 0.050314
+     },
+     "order": {
+      "scored": true,
+      "matched": 10,
+      "truth": 12,
+      "produced": 11,
+      "pairs": 45,
+      "discordant": 18,
+      "score": 0.6
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 10,
+      "truth": 12,
+      "produced": 11,
+      "pairs": 45,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 3,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1074,
+      "edit_distance": 0.1527,
+      "similarity": 0.8473
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 2,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.975806
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 159,
+      "produced": 154,
+      "matched": 151,
+      "precision": 0.980519,
+      "recall": 0.949686,
+      "f1": 0.964856,
+      "duplication": 0.0,
+      "invented": 0.019481,
+      "furniture": 0.0,
+      "missing": 0.050314
+     }
+    },
+    {
+     "name": "f016f98ebe9c7596425a53e23f79adf42017af0cb4b9fe58d2722fe89ddf9174.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 757,
+     "text": {
+      "scored": true,
+      "chars": 1371,
+      "edit_distance": 0.381473,
+      "similarity": 0.618527
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1371,
+      "edit_distance": 0.324581,
+      "similarity": 0.675419
+     },
+     "words": {
+      "scored": true,
+      "truth": 281,
+      "produced": 169,
+      "matched": 166,
+      "precision": 0.982249,
+      "recall": 0.590747,
+      "f1": 0.737778,
+      "duplication": 0.0,
+      "invented": 0.017751,
+      "furniture": 0.0,
+      "missing": 0.409253
+     },
+     "order": {
+      "scored": true,
+      "matched": 10,
+      "truth": 19,
+      "produced": 10,
+      "pairs": 45,
+      "discordant": 1,
+      "score": 0.977778
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 10,
+      "truth": 19,
+      "produced": 10,
+      "pairs": 45,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1369,
+      "edit_distance": 0.382031,
+      "similarity": 0.617969
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 279,
+      "produced": 167,
+      "matched": 164,
+      "precision": 0.982036,
+      "recall": 0.587814,
+      "f1": 0.735426,
+      "duplication": 0.0,
+      "invented": 0.017964,
+      "furniture": 0.0,
+      "missing": 0.412186
+     }
+    },
+    {
+     "name": "337b1ea1bfbf92dab50fecb838f6040a2041324fb6f772db69567c9bfe0ec3d8.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 1273,
+     "text": {
+      "scored": true,
+      "chars": 1704,
+      "edit_distance": 0.089789,
+      "similarity": 0.910211
+     },
+     "headings": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1704,
+      "edit_distance": 0.089789,
+      "similarity": 0.910211
+     },
+     "words": {
+      "scored": true,
+      "truth": 306,
+      "produced": 284,
+      "matched": 264,
+      "precision": 0.929577,
+      "recall": 0.862745,
+      "f1": 0.894915,
+      "duplication": 0.0,
+      "invented": 0.070423,
+      "furniture": 0.0,
+      "missing": 0.137255
+     },
+     "order": {
+      "scored": true,
+      "matched": 4,
+      "truth": 4,
+      "produced": 4,
+      "pairs": 6,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 4,
+      "truth": 4,
+      "produced": 4,
+      "pairs": 6,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1704,
+      "edit_distance": 0.089789,
+      "similarity": 0.910211
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 306,
+      "produced": 284,
+      "matched": 264,
+      "precision": 0.929577,
+      "recall": 0.862745,
+      "f1": 0.894915,
+      "duplication": 0.0,
+      "invented": 0.070423,
+      "furniture": 0.0,
+      "missing": 0.137255
+     }
+    },
+    {
+     "name": "386dbb66a8666ae948f0dd405340ea1d3e3da315e89ea151281994a15ae41aa2.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 1467,
+     "text": {
+      "scored": true,
+      "chars": 1947,
+      "edit_distance": 0.117617,
+      "similarity": 0.882383
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1947,
+      "edit_distance": 0.091936,
+      "similarity": 0.908064
+     },
+     "words": {
+      "scored": true,
+      "truth": 342,
+      "produced": 297,
+      "matched": 293,
+      "precision": 0.986532,
+      "recall": 0.856725,
+      "f1": 0.917058,
+      "duplication": 0.0,
+      "invented": 0.013468,
+      "furniture": 0.0,
+      "missing": 0.143275
+     },
+     "order": {
+      "scored": true,
+      "matched": 7,
+      "truth": 10,
+      "produced": 7,
+      "pairs": 21,
+      "discordant": 5,
+      "score": 0.761905
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 7,
+      "truth": 10,
+      "produced": 7,
+      "pairs": 21,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1944,
+      "edit_distance": 0.119856,
+      "similarity": 0.880144
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 339,
+      "produced": 297,
+      "matched": 289,
+      "precision": 0.973064,
+      "recall": 0.852507,
+      "f1": 0.908805,
+      "duplication": 0.013468,
+      "invented": 0.013468,
+      "furniture": 0.0,
+      "missing": 0.147493
+     }
+    },
+    {
+     "name": "4811d723f69ff47cd01b676a74649aa61ad2a0b02f8f9d899299ae1a576b89ea.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 473,
+     "text": {
+      "scored": true,
+      "chars": 1464,
+      "edit_distance": 0.678279,
+      "similarity": 0.321721
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.992565
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1464,
+      "edit_distance": 0.614071,
+      "similarity": 0.385929
+     },
+     "words": {
+      "scored": true,
+      "truth": 348,
+      "produced": 93,
+      "matched": 93,
+      "precision": 1.0,
+      "recall": 0.267241,
+      "f1": 0.421769,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.732759
+     },
+     "order": {
+      "scored": true,
+      "matched": 6,
+      "truth": 15,
+      "produced": 6,
+      "pairs": 15,
+      "discordant": 3,
+      "score": 0.8
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 6,
+      "truth": 15,
+      "produced": 6,
+      "pairs": 15,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1463,
+      "edit_distance": 0.678059,
+      "similarity": 0.321941
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.992565
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 347,
+      "produced": 93,
+      "matched": 93,
+      "precision": 1.0,
+      "recall": 0.268012,
+      "f1": 0.422727,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.731988
+     }
+    },
+    {
+     "name": "de943d48d85020628a2e70ac142d14647de76845e24c543dfc4e5053b3ad5299.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 299,
+     "text": {
+      "scored": true,
+      "chars": 847,
+      "edit_distance": 0.587957,
+      "similarity": 0.412043
+     },
+     "headings": {
+      "scored": true,
+      "truth": 4,
+      "produced": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.857143,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 1
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 847,
+      "edit_distance": 0.587957,
+      "similarity": 0.412043
+     },
+     "words": {
+      "scored": true,
+      "truth": 191,
+      "produced": 50,
+      "matched": 50,
+      "precision": 1.0,
+      "recall": 0.26178,
+      "f1": 0.414938,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.73822
+     },
+     "order": {
+      "scored": true,
+      "matched": 6,
+      "truth": 9,
+      "produced": 6,
+      "pairs": 15,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 6,
+      "truth": 9,
+      "produced": 6,
+      "pairs": 15,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 847,
+      "edit_distance": 0.587957,
+      "similarity": 0.412043
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 4,
+      "produced": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.857143,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 1
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 191,
+      "produced": 50,
+      "matched": 50,
+      "precision": 1.0,
+      "recall": 0.26178,
+      "f1": 0.414938,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.73822
+     }
+    },
+    {
+     "name": "714e0207d7237e4550fdf988cfa8bd3aeee06e560367cf0d6ba36c25c18a9f7e.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 307,
+     "text": {
+      "scored": true,
+      "chars": 1150,
+      "edit_distance": 0.690435,
+      "similarity": 0.309565
+     },
+     "headings": {
+      "scored": true,
+      "truth": 3,
+      "produced": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.857143,
+      "text_of_matched": 0.987654
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1150,
+      "edit_distance": 0.68,
+      "similarity": 0.32
+     },
+     "words": {
+      "scored": true,
+      "truth": 295,
+      "produced": 61,
+      "matched": 57,
+      "precision": 0.934426,
+      "recall": 0.19322,
+      "f1": 0.320225,
+      "duplication": 0.0,
+      "invented": 0.065574,
+      "furniture": 0.0,
+      "missing": 0.80678
+     },
+     "order": {
+      "scored": true,
+      "matched": 5,
+      "truth": 10,
+      "produced": 5,
+      "pairs": 10,
+      "discordant": 1,
+      "score": 0.9
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 5,
+      "truth": 10,
+      "produced": 5,
+      "pairs": 10,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1148,
+      "edit_distance": 0.692509,
+      "similarity": 0.307491
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 3,
+      "produced": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.857143,
+      "text_of_matched": 0.987654
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 293,
+      "produced": 60,
+      "matched": 55,
+      "precision": 0.916667,
+      "recall": 0.187713,
+      "f1": 0.311615,
+      "duplication": 0.016667,
+      "invented": 0.066667,
+      "furniture": 0.0,
+      "missing": 0.812287
+     }
+    },
+    {
+     "name": "8eecb197bee968839fd930396c407c9c24510bb6a415e180f4d4c9c5a108def7.pdf",
+     "document": "1002.2525.pdf",
+     "category": "scientific_articles",
+     "produced_chars": 1742,
+     "text": {
+      "scored": true,
+      "chars": 2109,
+      "edit_distance": 0.029745,
+      "similarity": 0.970255
+     },
+     "headings": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 25,
+      "produced": 25,
+      "matched": 24,
+      "precision": 0.96,
+      "recall": 0.96,
+      "f1": 0.96,
+      "text_of_matched": 0.986472
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2109,
+      "edit_distance": 0.029745,
+      "similarity": 0.970255
+     },
+     "words": {
+      "scored": true,
+      "truth": 378,
+      "produced": 377,
+      "matched": 375,
+      "precision": 0.994695,
+      "recall": 0.992063,
+      "f1": 0.993377,
+      "duplication": 0.0,
+      "invented": 0.005305,
+      "furniture": 0.0,
+      "missing": 0.007937
+     },
+     "order": {
+      "scored": true,
+      "matched": 25,
+      "truth": 26,
+      "produced": 26,
+      "pairs": 300,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 25,
+      "truth": 26,
+      "produced": 26,
+      "pairs": 300,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 2109,
+      "edit_distance": 0.029745,
+      "similarity": 0.970255
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 25,
+      "produced": 25,
+      "matched": 24,
+      "precision": 0.96,
+      "recall": 0.96,
+      "f1": 0.96,
+      "text_of_matched": 0.986472
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 378,
+      "produced": 377,
+      "matched": 375,
+      "precision": 0.994695,
+      "recall": 0.992063,
+      "f1": 0.993377,
+      "duplication": 0.0,
+      "invented": 0.005305,
+      "furniture": 0.0,
+      "missing": 0.007937
+     }
+    },
+    {
+     "name": "7272f2319fdabbd80dd0251d85dec8f3369fbc19ec6ccfd44909f3e35368d8e8.pdf",
+     "document": "uksi_20200433_en.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 1031,
+     "text": {
+      "scored": true,
+      "chars": 1325,
+      "edit_distance": 0.510189,
+      "similarity": 0.489811
+     },
+     "headings": {
+      "scored": true,
+      "truth": 3,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1": 0.8,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "text_of_matched": 1.0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1325,
+      "edit_distance": 0.113962,
+      "similarity": 0.886038
+     },
+     "words": {
+      "scored": true,
+      "truth": 216,
+      "produced": 211,
+      "matched": 208,
+      "precision": 0.985782,
+      "recall": 0.962963,
+      "f1": 0.974239,
+      "duplication": 0.0,
+      "invented": 0.014218,
+      "furniture": 0.0,
+      "missing": 0.037037
+     },
+     "order": {
+      "scored": true,
+      "matched": 10,
+      "truth": 13,
+      "produced": 11,
+      "pairs": 45,
+      "discordant": 22,
+      "score": 0.511111
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 10,
+      "truth": 13,
+      "produced": 11,
+      "pairs": 45,
+      "discordant": 1,
+      "score": 0.977778
+     },
+     "furniture": {
+      "annotated": 0,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1325,
+      "edit_distance": 0.510189,
+      "similarity": 0.489811
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 3,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1": 0.8,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "text_of_matched": 1.0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 216,
+      "produced": 211,
+      "matched": 208,
+      "precision": 0.985782,
+      "recall": 0.962963,
+      "f1": 0.974239,
+      "duplication": 0.0,
+      "invented": 0.014218,
+      "furniture": 0.0,
+      "missing": 0.037037
+     }
+    },
+    {
+     "name": "477a76933cd1bf277e0b316f6427269721a7aecc22296f81353468f3b0e7b103.pdf",
+     "document": "uksi_20200412_en.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 1236,
+     "text": {
+      "scored": true,
+      "chars": 1491,
+      "edit_distance": 0.743125,
+      "similarity": 0.256875
+     },
+     "headings": {
+      "scored": true,
+      "truth": 7,
+      "produced": 8,
+      "matched": 7,
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.933333,
+      "text_of_matched": 0.984127
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 3
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 0,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "text_of_matched": 0.0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1491,
+      "edit_distance": 0.665996,
+      "similarity": 0.334004
+     },
+     "words": {
+      "scored": true,
+      "truth": 238,
+      "produced": 233,
+      "matched": 231,
+      "precision": 0.991416,
+      "recall": 0.970588,
+      "f1": 0.980892,
+      "duplication": 0.0,
+      "invented": 0.008584,
+      "furniture": 0.0,
+      "missing": 0.029412
+     },
+     "order": {
+      "scored": true,
+      "matched": 15,
+      "truth": 16,
+      "produced": 26,
+      "pairs": 105,
+      "discordant": 41,
+      "score": 0.609524
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 15,
+      "truth": 16,
+      "produced": 26,
+      "pairs": 105,
+      "discordant": 44,
+      "score": 0.580952
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1490,
+      "edit_distance": 0.743624,
+      "similarity": 0.256376
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 7,
+      "produced": 8,
+      "matched": 7,
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.933333,
+      "text_of_matched": 0.984127
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 3
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 237,
+      "produced": 232,
+      "matched": 230,
+      "precision": 0.991379,
+      "recall": 0.970464,
+      "f1": 0.98081,
+      "duplication": 0.0,
+      "invented": 0.008621,
+      "furniture": 0.0,
+      "missing": 0.029536
+     }
+    },
+    {
+     "name": "dc5f96f61bed7ba0b18c719f30ffc520eac3aea84c6d0f83525dab0653d672d8.pdf",
+     "document": "uksi_20200412_en.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 2125,
+     "text": {
+      "scored": true,
+      "chars": 2582,
+      "edit_distance": 0.61464,
+      "similarity": 0.38536
+     },
+     "headings": {
+      "scored": true,
+      "truth": 3,
+      "produced": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 21,
+      "produced": 21,
+      "matched": 21,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.9969
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2582,
+      "edit_distance": 0.005422,
+      "similarity": 0.994578
+     },
+     "words": {
+      "scored": true,
+      "truth": 455,
+      "produced": 454,
+      "matched": 453,
+      "precision": 0.997797,
+      "recall": 0.995604,
+      "f1": 0.9967,
+      "duplication": 0.0,
+      "invented": 0.002203,
+      "furniture": 0.0,
+      "missing": 0.004396
+     },
+     "order": {
+      "scored": true,
+      "matched": 28,
+      "truth": 28,
+      "produced": 28,
+      "pairs": 378,
+      "discordant": 293,
+      "score": 0.224868
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 28,
+      "truth": 28,
+      "produced": 28,
+      "pairs": 378,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 2581,
+      "edit_distance": 0.614878,
+      "similarity": 0.385122
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 3,
+      "produced": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 21,
+      "produced": 21,
+      "matched": 21,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.9969
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 454,
+      "produced": 453,
+      "matched": 452,
+      "precision": 0.997792,
+      "recall": 0.995595,
+      "f1": 0.996692,
+      "duplication": 0.0,
+      "invented": 0.002208,
+      "furniture": 0.0,
+      "missing": 0.004405
+     }
+    },
+    {
+     "name": "76711d735dbdaeb3fb2d535e0bf5f4d53738f9dc2da6aa73d1d19a669f3fcd7c.pdf",
+     "document": "uksi_20200433_en.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 1248,
+     "text": {
+      "scored": true,
+      "chars": 1507,
+      "edit_distance": 0.420703,
+      "similarity": 0.579297
+     },
+     "headings": {
+      "scored": true,
+      "truth": 5,
+      "produced": 6,
+      "matched": 5,
+      "precision": 0.833333,
+      "recall": 1.0,
+      "f1": 0.909091,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 3,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1": 0.8,
+      "text_of_matched": 0.986111
+     },
+     "tables": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1507,
+      "edit_distance": 0.011944,
+      "similarity": 0.988056
+     },
+     "words": {
+      "scored": true,
+      "truth": 247,
+      "produced": 243,
+      "matched": 238,
+      "precision": 0.979424,
+      "recall": 0.963563,
+      "f1": 0.971429,
+      "duplication": 0.0,
+      "invented": 0.020576,
+      "furniture": 0.0,
+      "missing": 0.036437
+     },
+     "order": {
+      "scored": true,
+      "matched": 17,
+      "truth": 17,
+      "produced": 17,
+      "pairs": 136,
+      "discordant": 28,
+      "score": 0.794118
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 17,
+      "truth": 17,
+      "produced": 17,
+      "pairs": 136,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1506,
+      "edit_distance": 0.420983,
+      "similarity": 0.579017
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 5,
+      "produced": 6,
+      "matched": 5,
+      "precision": 0.833333,
+      "recall": 1.0,
+      "f1": 0.909091,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 3,
+      "produced": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1": 0.8,
+      "text_of_matched": 0.986111
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 246,
+      "produced": 242,
+      "matched": 237,
+      "precision": 0.979339,
+      "recall": 0.963415,
+      "f1": 0.971311,
+      "duplication": 0.0,
+      "invented": 0.020661,
+      "furniture": 0.0,
+      "missing": 0.036585
+     }
+    },
+    {
+     "name": "42ee9a7cb0535fb59006a8d30e44975203082d78adb137d95df9914952a9b107.pdf",
+     "document": "uksi_20200412_en.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 2326,
+     "text": {
+      "scored": true,
+      "chars": 2844,
+      "edit_distance": 0.701125,
+      "similarity": 0.298875
+     },
+     "headings": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 22,
+      "produced": 22,
+      "matched": 22,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.976055
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2844,
+      "edit_distance": 0.020745,
+      "similarity": 0.979255
+     },
+     "words": {
+      "scored": true,
+      "truth": 483,
+      "produced": 470,
+      "matched": 457,
+      "precision": 0.97234,
+      "recall": 0.94617,
+      "f1": 0.959077,
+      "duplication": 0.0,
+      "invented": 0.02766,
+      "furniture": 0.0,
+      "missing": 0.05383
+     },
+     "order": {
+      "scored": true,
+      "matched": 39,
+      "truth": 39,
+      "produced": 39,
+      "pairs": 741,
+      "discordant": 336,
+      "score": 0.546559
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 39,
+      "truth": 39,
+      "produced": 39,
+      "pairs": 741,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 1,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 2843,
+      "edit_distance": 0.700668,
+      "similarity": 0.299332
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 1,
+      "produced": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 22,
+      "produced": 22,
+      "matched": 22,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.976055
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 482,
+      "produced": 469,
+      "matched": 456,
+      "precision": 0.972281,
+      "recall": 0.946058,
+      "f1": 0.958991,
+      "duplication": 0.0,
+      "invented": 0.027719,
+      "furniture": 0.0,
+      "missing": 0.053942
+     }
+    },
+    {
+     "name": "8ba84c5085b7502b8a253d5ec429690884bfbc742a41f72a9462aec9511ffa09.pdf",
+     "document": "FStrKrV.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 2059,
+     "text": {
+      "scored": true,
+      "chars": 2383,
+      "edit_distance": 0.54637,
+      "similarity": 0.45363
+     },
+     "headings": {
+      "scored": true,
+      "truth": 5,
+      "produced": 5,
+      "matched": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists": {
+      "scored": true,
+      "truth": 9,
+      "produced": 9,
+      "matched": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.947091
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2383,
+      "edit_distance": 0.009652,
+      "similarity": 0.990348
+     },
+     "words": {
+      "scored": true,
+      "truth": 299,
+      "produced": 294,
+      "matched": 294,
+      "precision": 1.0,
+      "recall": 0.983278,
+      "f1": 0.991568,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.016722
+     },
+     "order": {
+      "scored": true,
+      "matched": 25,
+      "truth": 25,
+      "produced": 25,
+      "pairs": 300,
+      "discordant": 102,
+      "score": 0.66
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 25,
+      "truth": 25,
+      "produced": 25,
+      "pairs": 300,
+      "discordant": 0,
+      "score": 1.0
+     },
+     "furniture": {
+      "annotated": 2,
+      "in_the_body": 0
+     },
+     "v2_applied": false,
+     "text_v2": {
+      "scored": true,
+      "chars": 2383,
+      "edit_distance": 0.54637,
+      "similarity": 0.45363
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 5,
+      "produced": 5,
+      "matched": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 1.0
+     },
+     "lists_v2": {
+      "scored": true,
+      "truth": 9,
+      "produced": 9,
+      "matched": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.947091
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 299,
+      "produced": 294,
+      "matched": 294,
+      "precision": 1.0,
+      "recall": 0.983278,
+      "f1": 0.991568,
+      "duplication": 0.0,
+      "invented": 0.0,
+      "furniture": 0.0,
+      "missing": 0.016722
+     }
+    },
+    {
+     "name": "c871d52ca79ee91d5ee3c9ebf2b7ab451a5f1e4bad9530f9a95a938949db9ac5.pdf",
+     "document": "PLAW-116publ30.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 914,
+     "text": {
+      "scored": true,
+      "chars": 1087,
+      "edit_distance": 0.369485,
+      "similarity": 0.630515
+     },
+     "headings": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 1087,
+      "edit_distance": 0.369485,
+      "similarity": 0.630515
+     },
+     "words": {
+      "scored": true,
+      "truth": 152,
+      "produced": 175,
+      "matched": 142,
+      "precision": 0.811429,
+      "recall": 0.934211,
+      "f1": 0.868502,
+      "duplication": 0.011429,
+      "invented": 0.171429,
+      "furniture": 0.005714,
+      "missing": 0.065789
+     },
+     "order": {
+      "scored": true,
+      "matched": 10,
+      "truth": 10,
+      "produced": 14,
+      "pairs": 45,
+      "discordant": 8,
+      "score": 0.822222
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 10,
+      "truth": 10,
+      "produced": 14,
+      "pairs": 45,
+      "discordant": 8,
+      "score": 0.822222
+     },
+     "furniture": {
+      "annotated": 3,
+      "in_the_body": 1
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 1087,
+      "edit_distance": 0.369485,
+      "similarity": 0.630515
+     },
+     "headings_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 152,
+      "produced": 175,
+      "matched": 142,
+      "precision": 0.811429,
+      "recall": 0.934211,
+      "f1": 0.868502,
+      "duplication": 0.011429,
+      "invented": 0.171429,
+      "furniture": 0.005714,
+      "missing": 0.065789
+     }
+    },
+    {
+     "name": "ff69aaffb9dcb6b8b682804fff48a54d96bf2d594ecae9749835dc048769213f.pdf",
+     "document": "PLAW-116publ30.pdf",
+     "category": "laws_and_regulations",
+     "produced_chars": 1892,
+     "text": {
+      "scored": true,
+      "chars": 2939,
+      "edit_distance": 0.384144,
+      "similarity": 0.615856
+     },
+     "headings": {
+      "scored": true,
+      "truth": 5,
+      "produced": 5,
+      "matched": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.980114
+     },
+     "lists": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "tables": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "teds": {
+      "scored": false,
+      "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+     },
+     "text_geometric": {
+      "scored": true,
+      "chars": 2939,
+      "edit_distance": 0.413066,
+      "similarity": 0.586934
+     },
+     "words": {
+      "scored": true,
+      "truth": 363,
+      "produced": 363,
+      "matched": 329,
+      "precision": 0.906336,
+      "recall": 0.906336,
+      "f1": 0.906336,
+      "duplication": 0.008264,
+      "invented": 0.085399,
+      "furniture": 0.0,
+      "missing": 0.093664
+     },
+     "order": {
+      "scored": true,
+      "matched": 19,
+      "truth": 25,
+      "produced": 27,
+      "pairs": 171,
+      "discordant": 29,
+      "score": 0.830409
+     },
+     "order_geometric": {
+      "scored": true,
+      "matched": 19,
+      "truth": 25,
+      "produced": 27,
+      "pairs": 171,
+      "discordant": 17,
+      "score": 0.900585
+     },
+     "furniture": {
+      "annotated": 2,
+      "in_the_body": 0
+     },
+     "v2_applied": true,
+     "text_v2": {
+      "scored": true,
+      "chars": 2935,
+      "edit_distance": 0.384327,
+      "similarity": 0.615673
+     },
+     "headings_v2": {
+      "scored": true,
+      "truth": 5,
+      "produced": 5,
+      "matched": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_of_matched": 0.980114
+     },
+     "lists_v2": {
+      "scored": false,
+      "why": "fewer ground-truth items than the floor",
+      "truth": 0,
+      "produced": 0
+     },
+     "words_v2": {
+      "scored": true,
+      "truth": 360,
+      "produced": 360,
+      "matched": 326,
+      "precision": 0.905556,
+      "recall": 0.905556,
+      "f1": 0.905556,
+      "duplication": 0.008333,
+      "invented": 0.086111,
+      "furniture": 0.0,
+      "missing": 0.094444
+     }
+    }
+   ],
+   "furniture_in_the_document": {
+    "documents": 4,
+    "pages": 19,
+    "annotated": 23,
+    "in_the_body": 1,
+    "documents_that_did_not_answer": [],
+    "of_documents": 4,
+    "single_page_in_the_body": 1
+   },
+   "in_documents": {
+    "documents": 4,
+    "pages": 19,
+    "of_documents": 4,
+    "read_as": "the tool's pages, strung together in page order",
+    "documents_that_did_not_answer": [],
+    "summary": {
+     "text": {
+      "pages": 4,
+      "mean": 0.591677,
+      "median": 0.633089,
+      "p5": 0.373432,
+      "p95": 0.751947,
+      "worst": 0.329383,
+      "unscored": 0
+     },
+     "text_geometric": {
+      "pages": 4,
+      "mean": 0.798061,
+      "median": 0.824358,
+      "p5": 0.63312,
+      "p95": 0.926184,
+      "worst": 0.603179,
+      "unscored": 0
+     },
+     "words": {
+      "pages": 4,
+      "mean": 0.915319,
+      "median": 0.935702,
+      "p5": 0.824445,
+      "p95": 0.977657,
+      "worst": 0.811732,
+      "unscored": 0
+     },
+     "headings": {
+      "pages": 4,
+      "mean": 0.957881,
+      "median": 0.978261,
+      "p5": 0.887228,
+      "p95": 1.0,
+      "worst": 0.875,
+      "unscored": 0
+     },
+     "lists": {
+      "pages": 3,
+      "mean": 0.886563,
+      "median": 0.943396,
+      "p5": 0.76934,
+      "p95": 0.964002,
+      "worst": 0.75,
+      "unscored": 1
+     },
+     "tables": {
+      "pages": 2,
+      "mean": 0.5,
+      "median": 0.5,
+      "p5": 0.05,
+      "p95": 0.95,
+      "worst": 0.0,
+      "unscored": 2
+     },
+     "teds": {
+      "pages": 0,
+      "unscored": 4
+     },
+     "order": {
+      "pages": 4,
+      "mean": 0.889064,
+      "median": 0.883209,
+      "p5": 0.807148,
+      "p95": 0.979176,
+      "worst": 0.798254,
+      "unscored": 0
+     },
+     "order_geometric": {
+      "pages": 4,
+      "mean": 0.980581,
+      "median": 0.991951,
+      "p5": 0.945673,
+      "p95": 0.999573,
+      "worst": 0.938424,
+      "unscored": 0
+     },
+     "furniture_in_the_body": 1,
+     "headings_where_none_annotated": 0,
+     "lists_where_none_annotated": 0,
+     "tables_where_none_annotated": 0
+    },
+    "tail": {
+     "text": [
+      {
+       "v": 0.329383,
+       "name": "uksi_20200412_en.pdf",
+       "document": "uksi_20200412_en.pdf"
+      }
+     ],
+     "text_geometric": [
+      {
+       "v": 0.603179,
+       "name": "PLAW-116publ30.pdf",
+       "document": "PLAW-116publ30.pdf"
+      }
+     ],
+     "words": [
+      {
+       "v": 0.811732,
+       "name": "1002.2525.pdf",
+       "document": "1002.2525.pdf"
+      }
+     ],
+     "headings": [
+      {
+       "v": 0.875,
+       "name": "uksi_20200433_en.pdf",
+       "document": "uksi_20200433_en.pdf"
+      }
+     ],
+     "lists": [
+      {
+       "v": 0.75,
+       "name": "uksi_20200433_en.pdf",
+       "document": "uksi_20200433_en.pdf"
+      }
+     ],
+     "tables": [
+      {
+       "v": 0.0,
+       "name": "uksi_20200412_en.pdf",
+       "document": "uksi_20200412_en.pdf"
+      }
+     ],
+     "teds": [],
+     "order": [
+      {
+       "v": 0.798254,
+       "name": "uksi_20200412_en.pdf",
+       "document": "uksi_20200412_en.pdf"
+      }
+     ],
+     "order_geometric": [
+      {
+       "v": 0.938424,
+       "name": "PLAW-116publ30.pdf",
+       "document": "PLAW-116publ30.pdf"
+      }
+     ]
+    },
+    "documents_measured": [
+     {
+      "name": "1002.2525.pdf",
+      "document": "1002.2525.pdf",
+      "category": "scientific_articles",
+      "produced_chars": 12401,
+      "text": {
+       "scored": true,
+       "chars": 18523,
+       "edit_distance": 0.228851,
+       "similarity": 0.771149
+      },
+      "headings": {
+       "scored": true,
+       "truth": 16,
+       "produced": 16,
+       "matched": 16,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.977115
+      },
+      "lists": {
+       "scored": true,
+       "truth": 26,
+       "produced": 27,
+       "matched": 25,
+       "precision": 0.925926,
+       "recall": 0.961538,
+       "f1": 0.943396,
+       "text_of_matched": 0.986715
+      },
+      "tables": {
+       "scored": false,
+       "why": "fewer ground-truth items than the floor",
+       "truth": 0,
+       "produced": 0
+      },
+      "teds": {
+       "scored": false,
+       "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+      },
+      "text_geometric": {
+       "scored": true,
+       "chars": 18523,
+       "edit_distance": 0.197214,
+       "similarity": 0.802786
+      },
+      "words": {
+       "scored": true,
+       "truth": 3551,
+       "produced": 2552,
+       "matched": 2477,
+       "precision": 0.970611,
+       "recall": 0.69755,
+       "f1": 0.811732,
+       "duplication": 0.0,
+       "invented": 0.029389,
+       "furniture": 0.0,
+       "missing": 0.30245
+      },
+      "order": {
+       "scored": true,
+       "matched": 98,
+       "truth": 137,
+       "produced": 100,
+       "pairs": 4753,
+       "discordant": 40,
+       "score": 0.991584
+      },
+      "order_geometric": {
+       "scored": true,
+       "matched": 98,
+       "truth": 137,
+       "produced": 100,
+       "pairs": 4753,
+       "discordant": 0,
+       "score": 1.0
+      },
+      "furniture": {
+       "annotated": 14,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": true,
+       "chars": 18505,
+       "edit_distance": 0.229343,
+       "similarity": 0.770657
+      },
+      "headings_v2": {
+       "scored": true,
+       "truth": 16,
+       "produced": 16,
+       "matched": 16,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.977115
+      },
+      "lists_v2": {
+       "scored": true,
+       "truth": 26,
+       "produced": 27,
+       "matched": 25,
+       "precision": 0.925926,
+       "recall": 0.961538,
+       "f1": 0.943396,
+       "text_of_matched": 0.986715
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 3533,
+       "produced": 2541,
+       "matched": 2462,
+       "precision": 0.96891,
+       "recall": 0.696858,
+       "f1": 0.810668,
+       "duplication": 0.001574,
+       "invented": 0.029516,
+       "furniture": 0.0,
+       "missing": 0.303142
+      }
+     },
+     {
+      "name": "uksi_20200433_en.pdf",
+      "document": "uksi_20200433_en.pdf",
+      "category": "laws_and_regulations",
+      "produced_chars": 2279,
+      "text": {
+       "scored": true,
+       "chars": 2833,
+       "edit_distance": 0.356866,
+       "similarity": 0.643134
+      },
+      "headings": {
+       "scored": true,
+       "truth": 8,
+       "produced": 8,
+       "matched": 7,
+       "precision": 0.875,
+       "recall": 0.875,
+       "f1": 0.875,
+       "text_of_matched": 1.0
+      },
+      "lists": {
+       "scored": true,
+       "truth": 4,
+       "produced": 4,
+       "matched": 3,
+       "precision": 0.75,
+       "recall": 0.75,
+       "f1": 0.75,
+       "text_of_matched": 0.990741
+      },
+      "tables": {
+       "scored": true,
+       "truth": 1,
+       "produced": 1,
+       "matched": 1,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 1.0
+      },
+      "teds": {
+       "scored": false,
+       "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+      },
+      "text_geometric": {
+       "scored": true,
+       "chars": 2833,
+       "edit_distance": 0.059654,
+       "similarity": 0.940346
+      },
+      "words": {
+       "scored": true,
+       "truth": 463,
+       "produced": 454,
+       "matched": 447,
+       "precision": 0.984581,
+       "recall": 0.965443,
+       "f1": 0.974918,
+       "duplication": 0.0,
+       "invented": 0.015419,
+       "furniture": 0.0,
+       "missing": 0.034557
+      },
+      "order": {
+       "scored": true,
+       "matched": 27,
+       "truth": 30,
+       "produced": 28,
+       "pairs": 351,
+       "discordant": 50,
+       "score": 0.85755
+      },
+      "order_geometric": {
+       "scored": true,
+       "matched": 27,
+       "truth": 30,
+       "produced": 28,
+       "pairs": 351,
+       "discordant": 1,
+       "score": 0.997151
+      },
+      "furniture": {
+       "annotated": 1,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": true,
+       "chars": 2832,
+       "edit_distance": 0.356992,
+       "similarity": 0.643008
+      },
+      "headings_v2": {
+       "scored": true,
+       "truth": 8,
+       "produced": 8,
+       "matched": 7,
+       "precision": 0.875,
+       "recall": 0.875,
+       "f1": 0.875,
+       "text_of_matched": 1.0
+      },
+      "lists_v2": {
+       "scored": true,
+       "truth": 4,
+       "produced": 4,
+       "matched": 3,
+       "precision": 0.75,
+       "recall": 0.75,
+       "f1": 0.75,
+       "text_of_matched": 0.990741
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 462,
+       "produced": 453,
+       "matched": 446,
+       "precision": 0.984547,
+       "recall": 0.965368,
+       "f1": 0.974863,
+       "duplication": 0.0,
+       "invented": 0.015453,
+       "furniture": 0.0,
+       "missing": 0.034632
+      }
+     },
+     {
+      "name": "uksi_20200412_en.pdf",
+      "document": "uksi_20200412_en.pdf",
+      "category": "laws_and_regulations",
+      "produced_chars": 5687,
+      "text": {
+       "scored": true,
+       "chars": 6919,
+       "edit_distance": 0.670617,
+       "similarity": 0.329383
+      },
+      "headings": {
+       "scored": true,
+       "truth": 11,
+       "produced": 12,
+       "matched": 11,
+       "precision": 0.916667,
+       "recall": 1.0,
+       "f1": 0.956522,
+       "text_of_matched": 0.989899
+      },
+      "lists": {
+       "scored": true,
+       "truth": 43,
+       "produced": 46,
+       "matched": 43,
+       "precision": 0.934783,
+       "recall": 1.0,
+       "f1": 0.966292,
+       "text_of_matched": 0.986235
+      },
+      "tables": {
+       "scored": true,
+       "truth": 1,
+       "produced": 0,
+       "matched": 0,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0,
+       "text_of_matched": 0.0
+      },
+      "teds": {
+       "scored": false,
+       "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+      },
+      "text_geometric": {
+       "scored": true,
+       "chars": 6919,
+       "edit_distance": 0.154069,
+       "similarity": 0.845931
+      },
+      "words": {
+       "scored": true,
+       "truth": 1176,
+       "produced": 1157,
+       "matched": 1141,
+       "precision": 0.986171,
+       "recall": 0.970238,
+       "f1": 0.97814,
+       "duplication": 0.0,
+       "invented": 0.013829,
+       "furniture": 0.0,
+       "missing": 0.029762
+      },
+      "order": {
+       "scored": true,
+       "matched": 82,
+       "truth": 83,
+       "produced": 93,
+       "pairs": 3321,
+       "discordant": 670,
+       "score": 0.798254
+      },
+      "order_geometric": {
+       "scored": true,
+       "matched": 82,
+       "truth": 83,
+       "produced": 93,
+       "pairs": 3321,
+       "discordant": 44,
+       "score": 0.986751
+      },
+      "furniture": {
+       "annotated": 3,
+       "in_the_body": 0
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": true,
+       "chars": 6916,
+       "edit_distance": 0.670474,
+       "similarity": 0.329526
+      },
+      "headings_v2": {
+       "scored": true,
+       "truth": 11,
+       "produced": 12,
+       "matched": 11,
+       "precision": 0.916667,
+       "recall": 1.0,
+       "f1": 0.956522,
+       "text_of_matched": 0.989899
+      },
+      "lists_v2": {
+       "scored": true,
+       "truth": 43,
+       "produced": 46,
+       "matched": 43,
+       "precision": 0.934783,
+       "recall": 1.0,
+       "f1": 0.966292,
+       "text_of_matched": 0.986235
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 1173,
+       "produced": 1154,
+       "matched": 1138,
+       "precision": 0.986135,
+       "recall": 0.970162,
+       "f1": 0.978083,
+       "duplication": 0.0,
+       "invented": 0.013865,
+       "furniture": 0.0,
+       "missing": 0.029838
+      }
+     },
+     {
+      "name": "PLAW-116publ30.pdf",
+      "document": "PLAW-116publ30.pdf",
+      "category": "laws_and_regulations",
+      "produced_chars": 2806,
+      "text": {
+       "scored": true,
+       "chars": 4027,
+       "edit_distance": 0.376956,
+       "similarity": 0.623044
+      },
+      "headings": {
+       "scored": true,
+       "truth": 5,
+       "produced": 5,
+       "matched": 5,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.980114
+      },
+      "lists": {
+       "scored": false,
+       "why": "fewer ground-truth items than the floor",
+       "truth": 0,
+       "produced": 0
+      },
+      "tables": {
+       "scored": false,
+       "why": "fewer ground-truth items than the floor",
+       "truth": 0,
+       "produced": 0
+      },
+      "teds": {
+       "scored": false,
+       "why": "the set annotates table regions, not cell structure (benchmarks/structured/comparison/DATASETS.toml)"
+      },
+      "text_geometric": {
+       "scored": true,
+       "chars": 4027,
+       "edit_distance": 0.396821,
+       "similarity": 0.603179
+      },
+      "words": {
+       "scored": true,
+       "truth": 515,
+       "produced": 538,
+       "matched": 472,
+       "precision": 0.877323,
+       "recall": 0.916505,
+       "f1": 0.896486,
+       "duplication": 0.011152,
+       "invented": 0.109665,
+       "furniture": 0.001859,
+       "missing": 0.083495
+      },
+      "order": {
+       "scored": true,
+       "matched": 29,
+       "truth": 35,
+       "produced": 41,
+       "pairs": 406,
+       "discordant": 37,
+       "score": 0.908867
+      },
+      "order_geometric": {
+       "scored": true,
+       "matched": 29,
+       "truth": 35,
+       "produced": 41,
+       "pairs": 406,
+       "discordant": 25,
+       "score": 0.938424
+      },
+      "furniture": {
+       "annotated": 5,
+       "in_the_body": 1
+      },
+      "v2_applied": true,
+      "text_v2": {
+       "scored": true,
+       "chars": 4023,
+       "edit_distance": 0.377082,
+       "similarity": 0.622918
+      },
+      "headings_v2": {
+       "scored": true,
+       "truth": 5,
+       "produced": 5,
+       "matched": 5,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0,
+       "text_of_matched": 0.980114
+      },
+      "lists_v2": {
+       "scored": false,
+       "why": "fewer ground-truth items than the floor",
+       "truth": 0,
+       "produced": 0
+      },
+      "words_v2": {
+       "scored": true,
+       "truth": 512,
+       "produced": 535,
+       "matched": 469,
+       "precision": 0.876636,
+       "recall": 0.916016,
+       "f1": 0.895893,
+       "duplication": 0.011215,
+       "invented": 0.11028,
+       "furniture": 0.001869,
+       "missing": 0.083984
+      }
+     }
+    ]
+   }
+  }
+ },
+ "bench": {
+  "config": "docling-minimal",
+  "tool": "docling_minimal",
+  "set": "doclaynet",
+  "split": "tuning",
+  "pages_requested": 20,
+  "because": null,
+  "version": {
+   "package": "docling",
+   "pinned": "2.126.0",
+   "installed": "2.126.0",
+   "matches_pin": true,
+   "python": "/opt/ex/docling_minimal/bin/python"
+  },
+  "reproducible": "public",
+  "vision": true,
+  "seed": "pdfluent-structured-holdout-2026-09-17",
+  "pages_digest": "cd95e4dbb56a21d048a1266fed800cff3623ab462db6af12224e930b92dbafb0"
+ }
+}

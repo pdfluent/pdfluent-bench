@@ -1,5 +1,8 @@
-# Copyright (c) 2026 Innovation Trigger B.V. All rights reserved.
-# Licence pending owner decision: see LICENSE-TBD.md.
+# Copyright (c) 2026 Innovation Trigger B.V.
+#
+# PDFluent is available under two licences, at your option: the GNU AGPLv3, or
+# the PDFluent Commercial Licence. See the LICENSE file in this repository --
+# that file travels with the copy you received, which a URL does not.
 """Hand-checked values for each scorer, independent of the golden file.
 
 The golden test proves the vendored scorers equal the engine's. These pin
