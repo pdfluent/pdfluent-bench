@@ -1,0 +1,2 @@
+# The ParseBench scorer, as in docker/pdfluent/Dockerfile.
+parse-bench==1.0.4

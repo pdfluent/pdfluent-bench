@@ -14,11 +14,20 @@ RUNS     ?=
 # Extra `bench run` flags, e.g. EXTRA=--no-speed for a quality-only shard.
 EXTRA    ?=
 FAMILIES ?= pdfluent docling pymupdf4llm
+TOOLS    ?= $(WORK)/tools
+# The public subset `make repro` and CI run: ParseBench, 7 pages per category,
+# two columns that install from PyPI alone.
+REPRO_CONFIGS ?= pymupdf4llm,pdfluent-fast
+REPRO_SETS    ?= parsebench
 
-.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port
+.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check
 
 help:
+	@echo "make repro                        the whole public subset from a clean checkout: pinned tools,"
+	@echo "                                  tests, real ParseBench pages, run, schema check, surface check"
 	@echo "make test                         unit tests: scorers, equivalence, harness"
+	@echo "make validate RUNS='results/<id>' check run directories against schema/"
+	@echo "make public-check                 no home paths, tool names or credentials in the tree or history"
 	@echo "make bench MACHINE=<type> CONFIGS=<list|all> SETS=<list|all> [SPLITS=tuning,holdout BECAUSE=...]"
 	@echo "                                  [PROFILE=full|mini] [REPS=3] [RUNNER=native|docker]"
 	@echo "make smoke                        fixture pages, pymupdf4llm and pdfluent-fast"
@@ -73,3 +82,27 @@ goldens:
 
 port:
 	$(PY) scripts/port_from_engine.py --engine $(ENGINE) --ref $(REF)
+
+tools:
+	scripts/make_tools.sh $(TOOLS) $(PY)
+
+validate:
+	$(PY) -m bench validate $(RUNS)
+
+public-check:
+	$(PY) scripts/check_public_surface.py
+
+# One command, nothing assumed but python3, pdftotext and mutool on the path:
+# pinned tool venvs, the tests, the mini subset of real ParseBench pages through
+# two columns, the schema check on what the run wrote, and the surface check.
+# The run lands in results/ci-<UTC> (ignored by git; commit a result by hand).
+repro: tools
+	set -e; . $(TOOLS)/env.sh; \
+	$$BENCH_PY -m pytest -q tests; \
+	$$BENCH_PY scripts/check_public_surface.py; \
+	$$BENCH_PY -m bench datasets fetch --sets $(REPRO_SETS) --profile mini --work $(WORK); \
+	out=results/ci-$$(date -u +%Y%m%dT%H%M%SZ); \
+	$$BENCH_PY -m bench run --machine local --configs $(REPRO_CONFIGS) --sets $(REPRO_SETS) \
+	  --splits tuning --profile mini --reps 1 --work $(WORK) --out $$out; \
+	$$BENCH_PY -m bench validate $$out; \
+	echo "[repro] ok: $$out"

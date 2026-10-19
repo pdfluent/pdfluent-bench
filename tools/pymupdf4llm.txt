@@ -1,0 +1,2 @@
+# Pinned to configs/pymupdf4llm.yaml (tests/test_tools_lock.py keeps them equal).
+pymupdf4llm==1.28.2

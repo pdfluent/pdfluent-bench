@@ -7,3 +7,4 @@ __pycache__/
 # Run results are committed deliberately, one directory per run, by hand.
 /results/local-*/
 /results/smoke-*/
+/results/ci-*/
