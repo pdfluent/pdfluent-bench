@@ -1,54 +1,90 @@
-# Unit tests for the scorers and the harness, then a smoke run on the fixture
-# pages. Nothing here downloads a dataset.
+# Tests and a real-data subset on every push, on the repository's own runner.
+#
+# Nothing here uses a hosted runner: the job runs on a machine labelled
+# `pdfluent-bench`, so a push costs no hosted minutes. The workflow reacts to
+# `push` and `workflow_dispatch` only, never to `pull_request`: a self-hosted
+# runner executes whatever the triggering ref contains, so code from a fork must
+# not reach it. tests/test_workflows.py enforces all of this.
+#
+# The runner needs: Linux, python3.12, poppler-utils (pdftotext), mupdf-tools
+# (mutool), git and network access to PyPI and Hugging Face. For the full run
+# it also needs docker.
 name: ci
 on:
   push:
-  pull_request:
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Run the full round (hours). Leave off for the same subset a push runs."
+        type: boolean
+        default: false
+      configs:
+        description: "Configurations for a full round (comma list, or all)"
+        default: "all"
+      sets:
+        description: "Sets for a full round (comma list, or all)"
+        default: "all"
+      splits:
+        description: "tuning, holdout or tuning,holdout"
+        default: "tuning,holdout"
+      because:
+        description: "Why the holdout half is measured (written into every run file; required for holdout)"
+        default: ""
 
 permissions:
   contents: read
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: System tools the harness calls (pdftotext, mutool)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils mupdf-tools
-      - run: python -m pip install -r requirements-dev.txt
-      - name: Scorers, engine equivalence, provenance, harness
-        run: python -m pytest -q tests
+concurrency:
+  group: bench-runner
+  cancel-in-progress: false
 
-  smoke:
-    needs: test
-    runs-on: ubuntu-latest
+jobs:
+  subset:
+    name: tests and the public subset on real pages
+    runs-on: [self-hosted, linux, pdfluent-bench]
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils mupdf-tools
-      - run: python -m pip install -r requirements-dev.txt
-      - name: pymupdf4llm column (mandatory)
+      - name: Tools the harness calls
         run: |
-          python -m venv "$RUNNER_TEMP/pymupdf4llm"
-          "$RUNNER_TEMP/pymupdf4llm/bin/pip" install -q pymupdf4llm==1.28.2
-      - name: pdfluent-fast column (optional until pdfluent 1.1.0 is on PyPI)
-        run: |
-          python -m venv "$RUNNER_TEMP/pdfluent"
-          if ! "$RUNNER_TEMP/pdfluent/bin/pip" install -q pdfluent==1.1.0; then
-            echo "SKIPPED (not a pass): pdfluent==1.1.0 is not installable from PyPI" >&2
-          fi
-      - name: Smoke run, both halves of the fixture set
-        env:
-          PYMUPDF4LLM_PYTHON: ${{ runner.temp }}/pymupdf4llm/bin/python
-          PDFLUENT_FAST_PYTHON: ${{ runner.temp }}/pdfluent/bin/python
-        run: make smoke PY=python WORK="$RUNNER_TEMP/work"
+          for tool in python3.12 pdftotext mutool git; do
+            command -v "$tool" >/dev/null || { echo "the runner has no $tool" >&2; exit 1; }
+          done
+      - name: Pinned tools, tests, surface check, ParseBench mini subset, schema check
+        run: make repro PY=python3.12 WORK="$RUNNER_TEMP/work"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: smoke-results
-          path: results/smoke-*
+          name: subset-results
+          path: results/ci-*
+
+  full:
+    name: full round (manual)
+    if: github.event_name == 'workflow_dispatch' && inputs.full
+    needs: subset
+    runs-on: [self-hosted, linux, pdfluent-bench]
+    timeout-minutes: 720
+    steps:
+      - uses: actions/checkout@v4
+      - run: scripts/make_tools.sh "$RUNNER_TEMP/tools" python3.12
+      - name: Images, then the round
+        env:
+          CONFIGS: ${{ inputs.configs }}
+          SETS: ${{ inputs.sets }}
+          SPLITS: ${{ inputs.splits }}
+          BECAUSE: ${{ inputs.because }}
+        run: |
+          set -euo pipefail
+          . "$RUNNER_TEMP/tools/env.sh"
+          make images
+          make bench MACHINE=local CONFIGS="$CONFIGS" SETS="$SETS" SPLITS="$SPLITS" \
+            BECAUSE="$BECAUSE" RUNNER=docker WORK="$RUNNER_TEMP/work" PY="$BENCH_PY" \
+            EXTRA="--out results/full-$(date -u +%Y%m%dT%H%M%SZ)"
+      - run: |
+          . "$RUNNER_TEMP/tools/env.sh"
+          for run in results/full-*; do "$BENCH_PY" -m bench validate "$run"; done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-results
+          path: results/full-*
