@@ -12,7 +12,7 @@ set -euo pipefail
 kind="${1:-cpu}"
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq
-apt-get install -y -qq git make python3 python3-yaml python3-venv ca-certificates curl
+apt-get install -y -qq git make python3 python3-yaml python3-jsonschema python3-venv ca-certificates curl
 if ! command -v docker > /dev/null; then
   apt-get install -y -qq docker.io
 fi
