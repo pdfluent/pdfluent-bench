@@ -148,7 +148,14 @@ families="${FAMILIES:-pdfluent docling pymupdf4llm}"
 [ "${BUILD_BEST:-0}" = 1 ] && [ -z "$gpu" ] && families="\$families best"
 sudo docker/build.sh \$families
 # The datasets are fetched inside the first image: it has the fetch tools.
-sudo python3 -m bench datasets fetch --sets $SETS --profile $PROFILE --work work --in-image \${families%% *}
+# A ranged read of a remote archive can end early (IncompleteRead); a fetch is
+# repeated up to five times, and a fetch that never completes still fails the round.
+fetched=0
+for attempt in 1 2 3 4 5; do
+  if sudo python3 -m bench datasets fetch --sets $SETS --profile $PROFILE --work work --in-image \${families%% *}; then fetched=1; break; fi
+  echo "dataset fetch attempt \$attempt failed; retrying" >&2; sleep 30
+done
+[ "\$fetched" = 1 ] || exit 1
 sudo env BENCH_INSTANCE="\$(cat /tmp/instance)" make bench MACHINE=\$(cat /tmp/machine) CONFIGS=$CONFIGS SETS=$SETS SPLITS=$SPLITS \\
   PROFILE=$PROFILE REPS=$REPS RUNNER=docker BECAUSE="$BECAUSE" OPTIONAL=pdfluent-best PY=python3 \\
   EXTRA="$flags" || echo "make bench exited non-zero; run.json lists the failed steps"
