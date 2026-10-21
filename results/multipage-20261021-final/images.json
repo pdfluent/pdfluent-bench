@@ -1,0 +1,14 @@
+{
+ "pdfluent": {
+  "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "built": "2026-10-21T20:18:51+00:00",
+  "image_id": "sha256:0ccc146cfc7a037d6d94e48ffa99553768250ce106a85d18f25c66b7acd80c35",
+  "tag": "pdfluent-bench/pdfluent:66f6259"
+ },
+ "pdfluent-rc": {
+  "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "built": "2026-10-21T20:19:09+00:00",
+  "image_id": "sha256:443de01faadd35a8575fad61d44ec6ff436412fd37f0f8775a9b951a047343f1",
+  "tag": "pdfluent-bench/pdfluent-rc:66f6259"
+ }
+}

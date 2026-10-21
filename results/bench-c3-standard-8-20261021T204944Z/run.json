@@ -1,0 +1,183 @@
+{
+ "run_id": "bench-c3-standard-8-20261021T204944Z",
+ "schema": 1,
+ "started": "2026-10-21T20:49:44+00:00",
+ "finished": "2026-10-21T22:41:58+00:00",
+ "wall_clock_s": 6734.8,
+ "command": [
+  "python",
+  "-m",
+  "bench",
+  "run",
+  "--machine",
+  "c3-standard-8",
+  "--configs",
+  "pdfluent-fast,pdfluent-fast-1.2.0,pdfluent-balanced,pdfluent-balanced-1.2.0,pdfluent-balanced-tatr,pdfluent-balanced-tatr-1.2.0",
+  "--sets",
+  "all",
+  "--splits",
+  "tuning",
+  "--profile",
+  "full",
+  "--reps",
+  "3",
+  "--runner",
+  "docker",
+  "--work",
+  "work",
+  "--optional",
+  "pdfluent-best",
+  "--because",
+  "speed-only shard, no quality measured",
+  "--no-quality"
+ ],
+ "machine": {
+  "type": "c3-standard-8",
+  "spec": {
+   "provider": "gcp",
+   "region": "europe-west4",
+   "zone": "europe-west4-a",
+   "vcpus": 8,
+   "memory_gb": 32,
+   "gpu": null,
+   "disk_gb": 100,
+   "eur_per_hour": {
+    "on_demand": 0.45,
+    "spot": 0.18
+   },
+   "name": "c3-standard-8"
+  },
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8481C CPU @ 2.70GHz",
+  "cpus": 8,
+  "memory_gb": 31.4,
+  "gpus": [],
+  "instance": "pdfluent-bench-c3-standard-8-20261021t202852z"
+ },
+ "images": {
+  "pdfluent": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-21T20:31:30+00:00",
+   "image_id": "sha256:5925c2dc6c8789e173dab0866ab35015c2cdb56de4369ca54e72647087404bc8",
+   "tag": "pdfluent-bench/pdfluent:66f6259"
+  },
+  "pdfluent-rc": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-21T20:31:50+00:00",
+   "image_id": "sha256:9b50abd70d6862446a630ef148e38b972e07eba09c1cd63139568eb11a4d366d",
+   "tag": "pdfluent-bench/pdfluent-rc:66f6259"
+  }
+ },
+ "harness": {
+  "commit": "66f6259c9314494ac6a24cda0d49dcb4baee973f",
+  "dirty": false
+ },
+ "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+ "datasets": {
+  "sets": {
+   "fintabnet": {
+    "file": "engine/corpus/structured/FINTABNET_DRAW.json",
+    "sha256": "5651af9525543a98e849e3d11be93cd808ec0774e32da2a4779c468045a1de28",
+    "drawn": {
+     "file": "engine/corpus/structured/FINTABNET.json",
+     "sha256": "198d18737f5257628a7fdf4b50d64fe98253841a6d09c9fd999ff7a1dc9eb40e"
+    }
+   },
+   "doclaynet": {
+    "file": "engine/corpus/structured/DOCLAYNET_TEST.json",
+    "sha256": "ddf1892f7abd5b24fe3dfc90fe00dc864cf1a7e734a82029aeaba7b24bf7967e"
+   },
+   "pubtables-1m": {
+    "file": "engine/corpus/structured/PUBTABLES1M.json",
+    "sha256": "3d0650e1aad4a69b975a2cbb9c136420444b79b487235cff4d003aefdb66247a"
+   },
+   "parsebench": {
+    "file": "engine/corpus/structured/PARSEBENCH.json",
+    "sha256": "cb5f07d919962b09b1cb4455cef56947c52a21073102372b877bda844a91cc3a"
+   }
+  },
+  "hash": "5fec3c16b54e2881b202f53b8e084577212902416009975dca813d43ee9b562d"
+ },
+ "configs": {
+  "pdfluent-fast": {
+   "tool": "pdfluent_fast"
+  },
+  "pdfluent-fast-1.2.0": {
+   "tool": "pdfluent_fast"
+  },
+  "pdfluent-balanced": {
+   "tool": "pdfluent_balanced"
+  },
+  "pdfluent-balanced-1.2.0": {
+   "tool": "pdfluent_balanced"
+  },
+  "pdfluent-balanced-tatr": {
+   "tool": "pdfluent_balanced_tatr"
+  },
+  "pdfluent-balanced-tatr-1.2.0": {
+   "tool": "pdfluent_balanced_tatr"
+  }
+ },
+ "steps": [
+  {
+   "kind": "speed",
+   "config": "pdfluent-fast",
+   "reps": 3,
+   "started": "2026-10-21T20:49:44+00:00",
+   "status": "ok",
+   "seconds": 13.1
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-fast-1.2.0",
+   "reps": 3,
+   "started": "2026-10-21T20:49:57+00:00",
+   "status": "ok",
+   "seconds": 11.6
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-balanced",
+   "reps": 3,
+   "started": "2026-10-21T20:50:08+00:00",
+   "status": "ok",
+   "seconds": 1542.1
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-balanced-1.2.0",
+   "reps": 3,
+   "started": "2026-10-21T21:15:51+00:00",
+   "status": "ok",
+   "seconds": 1510.0
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-balanced-tatr",
+   "reps": 3,
+   "started": "2026-10-21T21:41:00+00:00",
+   "status": "ok",
+   "seconds": 1817.5
+  },
+  {
+   "kind": "speed",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "reps": 3,
+   "started": "2026-10-21T22:11:18+00:00",
+   "status": "ok",
+   "seconds": 1840.5
+  }
+ ],
+ "cost_eur_estimate": {
+  "spot": 0.34,
+  "on_demand": 0.84,
+  "basis": "wall clock x configs/machines.yaml price (an estimate; the bill is the record)"
+ },
+ "profile": "full",
+ "splits": [
+  "tuning"
+ ],
+ "reps": 3,
+ "runner": "docker",
+ "failures": 0
+}
