@@ -33,7 +33,7 @@ git clone -q ~/bench.bundle ~/pdfluent-bench
 cd ~/pdfluent-bench
 cp ~/rc-wheel/*.whl docker/pdfluent-rc/wheels/
 sudo docker/build.sh pdfluent pdfluent-rc
-python3 scripts/multipage_fetch.py work/multipage/pdfs
+sudo python3 scripts/multipage_fetch.py work/multipage/pdfs
 mkdir -p mpout
 { echo "== lscpu"; lscpu; echo "== nproc \$(nproc)"; echo "== docker"; docker --version; } > mpout/machine.txt
 cp work/images.json mpout/images.json
