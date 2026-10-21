@@ -1,0 +1,288 @@
+{
+ "about": "40 multi-page arXiv papers at pinned versions, for the multi-page speed run. The PDFs are not redistributed: the fetch downloads each from arxiv.org and refuses a file whose SHA256 differs. Page counts by mutool 1.23.10.",
+ "documents": [
+  {
+   "bytes": 2215244,
+   "id": "1706.03762v7",
+   "pages": 15,
+   "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+   "url": "https://arxiv.org/pdf/1706.03762v7"
+  },
+  {
+   "bytes": 819383,
+   "id": "1512.03385v1",
+   "pages": 12,
+   "sha256": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+   "url": "https://arxiv.org/pdf/1512.03385v1"
+  },
+  {
+   "bytes": 775166,
+   "id": "1810.04805v2",
+   "pages": 16,
+   "sha256": "5692a5514787a8c6727b4ff3b726a3385798bc68e12138d1d4af83947e2acf6e",
+   "url": "https://arxiv.org/pdf/1810.04805v2"
+  },
+  {
+   "bytes": 6768044,
+   "id": "2005.14165v4",
+   "pages": 75,
+   "sha256": "97fd272f1fdfc18677462d0292f5fbf26ca86b4d1b485c2dba03269b643a0e83",
+   "url": "https://arxiv.org/pdf/2005.14165v4"
+  },
+  {
+   "bytes": 584641,
+   "id": "1412.6980v9",
+   "pages": 15,
+   "sha256": "eab9c73ae2ceda884b94830bda99312254bac4806f6c9f045cbab90721ecda31",
+   "url": "https://arxiv.org/pdf/1412.6980v9"
+  },
+  {
+   "bytes": 3743814,
+   "id": "2010.11929v2",
+   "pages": 22,
+   "sha256": "8ce7b83971a14508ca711a27c875c9b6914c4f6767cf3150fb1ca6c07aa056d6",
+   "url": "https://arxiv.org/pdf/2010.11929v2"
+  },
+  {
+   "bytes": 200010,
+   "id": "1409.1556v6",
+   "pages": 14,
+   "sha256": "83728f9efc21081792902b4c17a4657022d1e4a92ec81655c2427f4ef0755e50",
+   "url": "https://arxiv.org/pdf/1409.1556v6"
+  },
+  {
+   "bytes": 228716,
+   "id": "1301.3781v3",
+   "pages": 12,
+   "sha256": "a44d7e22d2005752271c9cc1929c6462d4c8270916b063977992a883e3a54362",
+   "url": "https://arxiv.org/pdf/1301.3781v3"
+  },
+  {
+   "bytes": 530482,
+   "id": "1406.2661v1",
+   "pages": 9,
+   "sha256": "ff5819e3a7b713c3bd3107b7de3d51fe0a347aa5d8444f0efdcf2345ef0a8b63",
+   "url": "https://arxiv.org/pdf/1406.2661v1"
+  },
+  {
+   "bytes": 3926758,
+   "id": "1312.6114v11",
+   "pages": 14,
+   "sha256": "bdcb63b79ed88f64f8ee2d43a721930d01dde5441a4dba20ecaa2342b34e017c",
+   "url": "https://arxiv.org/pdf/1312.6114v11"
+  },
+  {
+   "bytes": 737631,
+   "id": "1207.7214v2",
+   "pages": 38,
+   "sha256": "e038215492b06a5f79bab24098c0004c75b0588f99724d8ea2345a6ece0bd53b",
+   "url": "https://arxiv.org/pdf/1207.7214v2"
+  },
+  {
+   "bytes": 935476,
+   "id": "1602.03837v1",
+   "pages": 16,
+   "sha256": "e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+   "url": "https://arxiv.org/pdf/1602.03837v1"
+  },
+  {
+   "bytes": 106630,
+   "id": "1503.02531v1",
+   "pages": 9,
+   "sha256": "74e6689115c539db499f9d6153edecb364059926fd45402454f8210442444c5a",
+   "url": "https://arxiv.org/pdf/1503.02531v1"
+  },
+  {
+   "bytes": 444482,
+   "id": "1409.0473v7",
+   "pages": 15,
+   "sha256": "84801c8410da51b449d379d2fa4939a416123f2c93991077a680f863026022a7",
+   "url": "https://arxiv.org/pdf/1409.0473v7"
+  },
+  {
+   "bytes": 173548,
+   "id": "1502.03167v3",
+   "pages": 11,
+   "sha256": "bdc69e0b568f41d8d3181cc9077a461f58fcdd1c70c9f49efe60a05ee6109655",
+   "url": "https://arxiv.org/pdf/1502.03167v3"
+  },
+  {
+   "bytes": 1142400,
+   "id": "1608.06993v5",
+   "pages": 9,
+   "sha256": "b55aa1adbdf07f731daa84b94d23103d1eb22d1821a556b80212debee69b096d",
+   "url": "https://arxiv.org/pdf/1608.06993v5"
+  },
+  {
+   "bytes": 6063896,
+   "id": "1711.05101v3",
+   "pages": 19,
+   "sha256": "9d5af48931e773d6983d167e15c06ef594475b751c1f263827f5ed3c7a00d0d8",
+   "url": "https://arxiv.org/pdf/1711.05101v3"
+  },
+  {
+   "bytes": 209675,
+   "id": "1907.11692v1",
+   "pages": 13,
+   "sha256": "76a3872d244793563a5b000b818cbaf0ca8972ab1145d32be474c05b2a8f3070",
+   "url": "https://arxiv.org/pdf/1907.11692v1"
+  },
+  {
+   "bytes": 1190021,
+   "id": "1910.10683v4",
+   "pages": 67,
+   "sha256": "ad07e47cedf437a4156419ce5d3076e08a3e59bbfd6dac7cc53df1009cdcbe7f",
+   "url": "https://arxiv.org/pdf/1910.10683v4"
+  },
+  {
+   "bytes": 6813639,
+   "id": "2103.00020v1",
+   "pages": 48,
+   "sha256": "6478b6e571a7d6fcd846d8ef77bfd60c285f1986abb8f475eedc43de403074f5",
+   "url": "https://arxiv.org/pdf/2103.00020v1"
+  },
+  {
+   "bytes": 891773,
+   "id": "2201.11903v6",
+   "pages": 43,
+   "sha256": "7d9f878c23b460e4566aa4ec9201b1abfb3b8faefb2b1356e411cb90fef72a12",
+   "url": "https://arxiv.org/pdf/2201.11903v6"
+  },
+  {
+   "bytes": 1797405,
+   "id": "2203.02155v1",
+   "pages": 68,
+   "sha256": "c1984bb50a5b90fddb895fdc3a0f72e5bc977148c9f63ef6040cbe7a3e1f0d98",
+   "url": "https://arxiv.org/pdf/2203.02155v1"
+  },
+  {
+   "bytes": 726566,
+   "id": "2302.13971v1",
+   "pages": 27,
+   "sha256": "2e663675ae36ad12adb2f5a05281bac2747ecf8d23d92bedd9f937a89fee7136",
+   "url": "https://arxiv.org/pdf/2302.13971v1"
+  },
+  {
+   "bytes": 13661300,
+   "id": "2307.09288v2",
+   "pages": 77,
+   "sha256": "1df284ce95f783002074bfe8f21d47c646b396ceb1736ea3ec0ea212fc070d91",
+   "url": "https://arxiv.org/pdf/2307.09288v2"
+  },
+  {
+   "bytes": 1214160,
+   "id": "1409.4842v1",
+   "pages": 12,
+   "sha256": "ba83bd105ffa669ccb2aa240d3176b8cb1c98355257ddee8e64aa486d5ade92a",
+   "url": "https://arxiv.org/pdf/1409.4842v1"
+  },
+  {
+   "bytes": 1648684,
+   "id": "1505.04597v1",
+   "pages": 8,
+   "sha256": "a3172b2124f38e260dc2c7ed968d87c31bc94dbc19a42a7ab3dcbd7534319c44",
+   "url": "https://arxiv.org/pdf/1505.04597v1"
+  },
+  {
+   "bytes": 6913803,
+   "id": "1506.01497v3",
+   "pages": 14,
+   "sha256": "f2630182ccfabd6fc89ac20270b4daf15a0ca849298a7db1e5d124ca443051f1",
+   "url": "https://arxiv.org/pdf/1506.01497v3"
+  },
+  {
+   "bytes": 733204,
+   "id": "1611.01578v2",
+   "pages": 16,
+   "sha256": "1a661851f7c735bcf6c080382ba58554ef0e983ca79fbe670644fee80aca7bc1",
+   "url": "https://arxiv.org/pdf/1611.01578v2"
+  },
+  {
+   "bytes": 1086007,
+   "id": "1706.02216v4",
+   "pages": 19,
+   "sha256": "e1f354eb12011cde24af1eb500d72463fc971b09d26b55688c7f918a86e31ce8",
+   "url": "https://arxiv.org/pdf/1706.02216v4"
+  },
+  {
+   "bytes": 425880,
+   "id": "1802.05365v2",
+   "pages": 15,
+   "sha256": "d3859b3adb02783a2b6cad951e5554b485cad1df53b737e08c93e8925e014632",
+   "url": "https://arxiv.org/pdf/1802.05365v2"
+  },
+  {
+   "bytes": 3850425,
+   "id": "1909.08053v4",
+   "pages": 15,
+   "sha256": "fa89e54e23c0cea5cbd9d24720db7647c61af299afdb9a170c7119160e6d207a",
+   "url": "https://arxiv.org/pdf/1909.08053v4"
+  },
+  {
+   "bytes": 2493004,
+   "id": "2001.08361v1",
+   "pages": 30,
+   "sha256": "a41bd7877fd1a6bcbba096b2619618bd2f90e02488f2365644903eb2f7c6a494",
+   "url": "https://arxiv.org/pdf/2001.08361v1"
+  },
+  {
+   "bytes": 40842586,
+   "id": "2112.10752v2",
+   "pages": 45,
+   "sha256": "46ede043a8dc07ca1f0f445620523fe1ad8b2436bd83856a3835612a47e9f79e",
+   "url": "https://arxiv.org/pdf/2112.10752v2"
+  },
+  {
+   "bytes": 2711295,
+   "id": "2204.02311v5",
+   "pages": 87,
+   "sha256": "1e88f1f3027cd1abecb1713c1c08a89137c7730582549ec7ca78ca329f3f975d",
+   "url": "https://arxiv.org/pdf/2204.02311v5"
+  },
+  {
+   "bytes": 7457198,
+   "id": "1511.06434v2",
+   "pages": 16,
+   "sha256": "01f7475f7cdad32c05aeaee6de61031702e7325097c82889d1c3537848642f11",
+   "url": "https://arxiv.org/pdf/1511.06434v2"
+  },
+  {
+   "bytes": 28525380,
+   "id": "1710.10196v3",
+   "pages": 26,
+   "sha256": "9157cece1194463b805a2e89ebf512dae996036cd9358bfaccba8eb31c3a6231",
+   "url": "https://arxiv.org/pdf/1710.10196v3"
+  },
+  {
+   "bytes": 3679983,
+   "id": "1803.03635v1",
+   "pages": 19,
+   "sha256": "80170a635fc2c222ca0745cfb217a1f17cea3f017a65525bb1a6261dc19bcf66",
+   "url": "https://arxiv.org/pdf/1803.03635v1"
+  },
+  {
+   "bytes": 933600,
+   "id": "1905.11946v5",
+   "pages": 11,
+   "sha256": "af6b1bd620f81bfaea81edf8227484588e1fcc2427d6b5020fa17454d7566c70",
+   "url": "https://arxiv.org/pdf/1905.11946v5"
+  },
+  {
+   "bytes": 10267274,
+   "id": "2006.11239v2",
+   "pages": 25,
+   "sha256": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+   "url": "https://arxiv.org/pdf/2006.11239v2"
+  },
+  {
+   "bytes": 1008644,
+   "id": "2212.04356v1",
+   "pages": 28,
+   "sha256": "6337bde031b2f237547a977b022f831169a7e05b4d9047f29501166d83594566",
+   "url": "https://arxiv.org/pdf/2212.04356v1"
+  }
+ ],
+ "fetched": "2026-10-21",
+ "name": "multipage-arxiv-40",
+ "total_pages": 1050
+}
