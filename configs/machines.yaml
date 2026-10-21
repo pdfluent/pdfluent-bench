@@ -16,6 +16,17 @@ machines:
     gpu: null
     disk_gb: 100
     eur_per_hour: {on_demand: 0.45, spot: 0.18}
+  # Quality-only shards when the project's C3 quota (11 vCPUs) is taken by the
+  # speed machine. Never used for speed figures.
+  n2-standard-8:
+    provider: gcp
+    region: europe-west4
+    zone: europe-west4-a
+    vcpus: 8
+    memory_gb: 32
+    gpu: null
+    disk_gb: 100
+    eur_per_hour: {on_demand: 0.40, spot: 0.10}
   g2-standard-8:
     provider: gcp
     region: europe-west4
