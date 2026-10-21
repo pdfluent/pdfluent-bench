@@ -1,0 +1,1457 @@
+{
+ "draft": true,
+ "missing": [
+  "CPU speed ms/page p50 (all threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed ms/page p50 (all threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed ms/page p50 (all threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed ms/page p95 (all threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed ms/page p95 (all threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed ms/page p95 (all threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed pages/s (all threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed pages/s (all threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed pages/s (all threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed peak RSS MB (all threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed peak RSS MB (all threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed peak RSS MB (all threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed ms/page p50 (1 threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed ms/page p50 (1 threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed ms/page p50 (1 threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed ms/page p95 (1 threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed ms/page p95 (1 threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed ms/page p95 (1 threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed pages/s (1 threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed pages/s (1 threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed pages/s (1 threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU speed peak RSS MB (1 threads): pdfluent-balanced-1.2.0 has no speed file",
+  "CPU speed peak RSS MB (1 threads): pdfluent-balanced-tatr-1.2.0 has no speed file",
+  "CPU speed peak RSS MB (1 threads): pdfluent-fast-1.2.0 has no speed file",
+  "CPU cold start: pdfluent-balanced-1.2.0 has no value",
+  "CPU cold start: pdfluent-balanced-tatr-1.2.0 has no value",
+  "CPU cold start: pdfluent-fast-1.2.0 has no value"
+ ],
+ "configs": [
+  "pdfluent-balanced-1.2.0",
+  "pdfluent-balanced-tatr-1.2.0",
+  "pdfluent-fast-1.2.0"
+ ],
+ "not_run": {},
+ "splits": [
+  "tuning",
+  "holdout"
+ ],
+ "internal": {},
+ "runs": [
+  {
+   "run_id": "bench-n2-standard-8-20261021T085113Z",
+   "machine": "n2-standard-8",
+   "cpu_model": "Intel(R) Xeon(R) CPU @ 2.80GHz",
+   "gpus": [],
+   "harness": {
+    "commit": "805ada92116039b4b14891c1c5b150132993e40e",
+    "dirty": false
+   },
+   "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+   "datasets_hash": "5fec3c16b54e2881b202f53b8e084577212902416009975dca813d43ee9b562d",
+   "started": "2026-10-21T08:51:13+00:00",
+   "wall_clock_s": 8140.0
+  }
+ ],
+ "rows": [
+  {
+   "kind": "quality",
+   "set": "fintabnet",
+   "axis": "teds",
+   "label": "FinTabNet TEDS",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.691855,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.691529,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.706912,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.704801,
+      "pages": 60
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.858943,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.851653,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.868415,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.861897,
+      "pages": 60
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.670405,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.667305,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.68801,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.688691,
+      "pages": 60
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "fintabnet",
+   "axis": "tables",
+   "label": "FinTabNet tables F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.704395,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.735278,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.69825,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.701429,
+      "pages": 60
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.819942,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.84,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.738055,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.733175,
+      "pages": 60
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.672554,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.696296,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.6651,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.671667,
+      "pages": 60
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "fintabnet",
+   "axis": "words",
+   "label": "FinTabNet words F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.809392,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.828864,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.824892,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.806761,
+      "pages": 60
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.829122,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.845488,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.837755,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.820613,
+      "pages": 60
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.81472,
+      "n": 67,
+      "unit": "documents",
+      "page_mean": 0.828982,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.795255,
+      "n": 39,
+      "unit": "documents",
+      "page_mean": 0.776468,
+      "pages": 60
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "pubtables-1m",
+   "axis": "teds",
+   "label": "PubTables-1M TEDS",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.719618,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.713942,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.778278,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.799476,
+      "pages": 80
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.911345,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.893724,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.955164,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.950379,
+      "pages": 80
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.700808,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.705865,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.762146,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.778047,
+      "pages": 80
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "pubtables-1m",
+   "axis": "tables",
+   "label": "PubTables-1M tables F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.848232,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.832222,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.876812,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.895833,
+      "pages": 80
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.923232,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.905833,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.951087,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.958333,
+      "pages": 80
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.80202,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.7975,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.85,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.859167,
+      "pages": 80
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "pubtables-1m",
+   "axis": "words",
+   "label": "PubTables-1M words F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.914305,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.900643,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.876383,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.891735,
+      "pages": 80
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.929775,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.917463,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.893945,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.909,
+      "pages": 80
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.89411,
+      "n": 55,
+      "unit": "documents",
+      "page_mean": 0.892714,
+      "pages": 120
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.874519,
+      "n": 46,
+      "unit": "documents",
+      "page_mean": 0.889718,
+      "pages": 80
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "headings",
+   "label": "DocLayNet headings F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.838153,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.819085,
+      "pages": 136
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.874072,
+      "n": 11,
+      "unit": "documents",
+      "page_mean": 0.655224,
+      "pages": 143
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.838153,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.819085,
+      "pages": 136
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.874072,
+      "n": 11,
+      "unit": "documents",
+      "page_mean": 0.655224,
+      "pages": 143
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.759913,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.724924,
+      "pages": 136
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.773799,
+      "n": 11,
+      "unit": "documents",
+      "page_mean": 0.609191,
+      "pages": 143
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "lists",
+   "label": "DocLayNet lists F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.720574,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.692419,
+      "pages": 40
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.803142,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.490965,
+      "pages": 78
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.721897,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.700752,
+      "pages": 40
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.803142,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.490965,
+      "pages": 78
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.673886,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.697348,
+      "pages": 40
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.781002,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.395509,
+      "pages": 78
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "tables",
+   "label": "DocLayNet tables F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.530922,
+      "n": 8,
+      "unit": "documents",
+      "page_mean": 0.602344,
+      "pages": 64
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.314286,
+      "n": 6,
+      "unit": "documents",
+      "page_mean": 0.741497,
+      "pages": 49
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.589152,
+      "n": 8,
+      "unit": "documents",
+      "page_mean": 0.727865,
+      "pages": 64
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.424206,
+      "n": 6,
+      "unit": "documents",
+      "page_mean": 0.797376,
+      "pages": 49
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.52174,
+      "n": 8,
+      "unit": "documents",
+      "page_mean": 0.569618,
+      "pages": 64
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.416825,
+      "n": 6,
+      "unit": "documents",
+      "page_mean": 0.623129,
+      "pages": 49
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "text",
+   "label": "DocLayNet text 1-NED",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.590196,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.630881,
+      "pages": 193
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.568118,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.618971,
+      "pages": 200
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.594241,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.646441,
+      "pages": 193
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.567175,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.618587,
+      "pages": 200
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.578158,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.626969,
+      "pages": 193
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.553545,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.613259,
+      "pages": 200
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "text_geometric",
+   "label": "DocLayNet text 1-NED (geometric)",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.706807,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.742926,
+      "pages": 193
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.634515,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.739834,
+      "pages": 200
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.712018,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.762574,
+      "pages": 193
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.635359,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.740794,
+      "pages": 200
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.68573,
+      "n": 13,
+      "unit": "documents",
+      "page_mean": 0.738075,
+      "pages": 193
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.606056,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.728664,
+      "pages": 200
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "words",
+   "label": "DocLayNet words F1",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.922781,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.930503,
+      "pages": 175
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.912931,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.914426,
+      "pages": 200
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.925328,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.931862,
+      "pages": 175
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.913733,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.914264,
+      "pages": 200
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.912706,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.925946,
+      "pages": 175
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.912504,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.912588,
+      "pages": 200
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "order",
+   "label": "DocLayNet order (annotated)",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.78129,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.795505,
+      "pages": 158
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.720265,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.755752,
+      "pages": 189
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.778379,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.794124,
+      "pages": 160
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.717621,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.753803,
+      "pages": 189
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.781007,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.799445,
+      "pages": 158
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.708392,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.753393,
+      "pages": 184
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "doclaynet",
+   "axis": "order_geometric",
+   "label": "DocLayNet order (geometric)",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.945672,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.973981,
+      "pages": 158
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.908322,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.96275,
+      "pages": 189
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.944917,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.974133,
+      "pages": 160
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.908324,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.962747,
+      "pages": 189
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.940934,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.968419,
+      "pages": 158
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.898424,
+      "n": 12,
+      "unit": "documents",
+      "page_mean": 0.95812,
+      "pages": 184
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "parsebench",
+   "axis": "table.table_record_match",
+   "label": "ParseBench record match",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.5558503979752581,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.3692380975570034,
+      "n": 38,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.686221652270907,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.66969232082261,
+      "n": 38,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.5649803582927184,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.3692380975570034,
+      "n": 38,
+      "unit": "examples"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "parsebench",
+   "axis": "table.grits_trm_composite",
+   "label": "ParseBench table GriTS",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.7102473931961081,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.5857084046018892,
+      "n": 38,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.7857200740647091,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.7573684258210028,
+      "n": 38,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.7126286809168259,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.5868425259613949,
+      "n": 38,
+      "unit": "examples"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "parsebench",
+   "axis": "text_content.content_faithfulness",
+   "label": "ParseBench text content",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.6757928118671477,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.6510886091121535,
+      "n": 40,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.6757928118671477,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.6510886091121535,
+      "n": 40,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.686333368734241,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.6865459045162051,
+      "n": 40,
+      "unit": "examples"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "parsebench",
+   "axis": "text_formatting.normalized_text_score",
+   "label": "ParseBench text formatting",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.4420031665367001,
+      "n": 37,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.49405359075198074,
+      "n": 36,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.4420031665367001,
+      "n": 37,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.49405359075198074,
+      "n": 36,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.4419146661521896,
+      "n": 37,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.48684038536608704,
+      "n": 36,
+      "unit": "examples"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "quality",
+   "set": "parsebench",
+   "axis": "chart.rule_pass_rate",
+   "label": "ParseBench chart",
+   "cells": {
+    "pdfluent-balanced-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.009166666666666667,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.0329059829059829,
+      "n": 39,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-balanced-tatr-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.009166666666666667,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.0329059829059829,
+      "n": 39,
+      "unit": "examples"
+     }
+    ],
+    "pdfluent-fast-1.2.0": [
+     {
+      "split": "tuning",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.029444444444444447,
+      "n": 40,
+      "unit": "examples"
+     },
+     {
+      "split": "holdout",
+      "run_id": "bench-n2-standard-8-20261021T085113Z",
+      "mean": 0.0329059829059829,
+      "n": 39,
+      "unit": "examples"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "ms_p50",
+   "label": "CPU ms/page p50, all cores",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "ms_p95",
+   "label": "CPU ms/page p95, all cores",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "pages_per_s",
+   "label": "CPU pages/s, all cores",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "peak_rss_mb",
+   "label": "CPU peak RSS MB, all cores",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "ms_p50",
+   "label": "CPU ms/page p50, 1 thread",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "ms_p95",
+   "label": "CPU ms/page p95, 1 thread",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "pages_per_s",
+   "label": "CPU pages/s, 1 thread",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "peak_rss_mb",
+   "label": "CPU peak RSS MB, 1 thread",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "field": "cold_start_ms",
+   "label": "CPU cold start ms (median)",
+   "cells": {
+    "pdfluent-balanced-1.2.0": {
+     "value": null,
+     "run_id": null
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": null,
+     "run_id": null
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": null,
+     "run_id": null
+    }
+   }
+  }
+ ]
+}

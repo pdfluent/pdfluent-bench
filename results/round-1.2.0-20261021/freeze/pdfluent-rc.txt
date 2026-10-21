@@ -1,0 +1,26 @@
+== /opt/ex/pdfluent/FREEZE.txt
+pdfluent @ file:///wheels/pdfluent-1.2.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=abc5ec36dc858acb7c3acb66d7e5ae646d5601a444f12bd3e3f29e4f95be0709
+== /opt/ex/pdfluent_balanced/FREEZE.txt
+pdfluent @ file:///wheels/pdfluent-1.2.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=abc5ec36dc858acb7c3acb66d7e5ae646d5601a444f12bd3e3f29e4f95be0709
+== /opt/ex/pdfluent_balanced_tatr/FREEZE.txt
+pdfluent @ file:///wheels/pdfluent-1.2.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=abc5ec36dc858acb7c3acb66d7e5ae646d5601a444f12bd3e3f29e4f95be0709
+== /opt/ex/pdfluent_fast/FREEZE.txt
+pdfluent @ file:///wheels/pdfluent-1.2.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=abc5ec36dc858acb7c3acb66d7e5ae646d5601a444f12bd3e3f29e4f95be0709
+== /opt/models.cli-version.txt
+pdfluent 1.1.0
+== /opt/models/STATUS.txt
+layout /opt/models/layout-heron-ep03/heron_ep03.onnx: sha256 ok (306654422 bytes)
+tables /opt/models/tatr-v1.1-all/tatr-v1.1-all.onnx: sha256 ok (118206817 bytes)
+onnxruntime /opt/models/onnxruntime-1.23.2/libonnxruntime.so: sha256 ok (22326072 bytes)
+todo pins: none
+== /opt/models/SHA256SUMS.installed
+0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0  ./LICENSE
+cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  ./LICENSE-Apache-2.0.txt
+ca54d9ab46d99e81d0dd2ea6ed112f3effa7f87cd3b65a876b1740c9efe599ed  ./LICENSE-COMMERCIAL
+5eb1f80e9689fedb88c3e1f6c415c8341283e0e37ead0e12f0862e6191ac4b8b  ./MODELS-NOTICE.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./SHA256SUMS.installed
+b7cc5d31f3223c74cc477a1386b894793618aeb398ca59cf5eb7264ec61d8afa  ./layout-heron-ep03/heron_ep03.onnx
+13ab8084954fa4a47c777880180b90810d6020f021441395712b48a75b74c68b  ./onnxruntime-1.23.2/libonnxruntime.so
+2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c  ./onnxruntime-1.23.2/onnxruntime-LICENSE.txt
+e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc  ./onnxruntime-1.23.2/onnxruntime-ThirdPartyNotices.txt
+8c28418690b896a845a53633736a62c22ef8c9a515a23c06e9976e61360f1fcf  ./tatr-v1.1-all/tatr-v1.1-all.onnx

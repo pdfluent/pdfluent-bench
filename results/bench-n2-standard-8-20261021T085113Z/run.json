@@ -1,0 +1,361 @@
+{
+ "run_id": "bench-n2-standard-8-20261021T085113Z",
+ "schema": 1,
+ "started": "2026-10-21T08:51:13+00:00",
+ "finished": "2026-10-21T11:06:53+00:00",
+ "wall_clock_s": 8140.0,
+ "command": [
+  "python",
+  "-m",
+  "bench",
+  "run",
+  "--machine",
+  "n2-standard-8",
+  "--configs",
+  "pdfluent-fast-1.2.0,pdfluent-balanced-1.2.0,pdfluent-balanced-tatr-1.2.0",
+  "--sets",
+  "all",
+  "--splits",
+  "tuning,holdout",
+  "--profile",
+  "full",
+  "--reps",
+  "3",
+  "--runner",
+  "docker",
+  "--work",
+  "work",
+  "--optional",
+  "pdfluent-best",
+  "--because",
+  "SDK 1.2.0 release-candidate round 21-10: holdout check against the 17-10 round (owner decision 21-10)",
+  "--no-speed"
+ ],
+ "machine": {
+  "type": "n2-standard-8",
+  "spec": {
+   "provider": "gcp",
+   "region": "europe-west4",
+   "zone": "europe-west4-a",
+   "vcpus": 8,
+   "memory_gb": 32,
+   "gpu": null,
+   "disk_gb": 100,
+   "eur_per_hour": {
+    "on_demand": 0.4,
+    "spot": 0.1
+   },
+   "name": "n2-standard-8"
+  },
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "cpu_model": "Intel(R) Xeon(R) CPU @ 2.80GHz",
+  "cpus": 8,
+  "memory_gb": 31.4,
+  "gpus": [],
+  "instance": "pdfluent-bench-n2-standard-8-20261021t082948z"
+ },
+ "images": {
+  "pdfluent-rc": {
+   "base": "ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+   "built": "2026-10-21T08:33:05+00:00",
+   "image_id": "sha256:0c92c5f820382d0cedb67cc721dd657a48cdbfb8eb6d2d69c07267cb376694bc",
+   "tag": "pdfluent-bench/pdfluent-rc:805ada9"
+  }
+ },
+ "harness": {
+  "commit": "805ada92116039b4b14891c1c5b150132993e40e",
+  "dirty": false
+ },
+ "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+ "datasets": {
+  "sets": {
+   "fintabnet": {
+    "file": "engine/corpus/structured/FINTABNET_DRAW.json",
+    "sha256": "5651af9525543a98e849e3d11be93cd808ec0774e32da2a4779c468045a1de28",
+    "drawn": {
+     "file": "engine/corpus/structured/FINTABNET.json",
+     "sha256": "198d18737f5257628a7fdf4b50d64fe98253841a6d09c9fd999ff7a1dc9eb40e"
+    }
+   },
+   "doclaynet": {
+    "file": "engine/corpus/structured/DOCLAYNET_TEST.json",
+    "sha256": "ddf1892f7abd5b24fe3dfc90fe00dc864cf1a7e734a82029aeaba7b24bf7967e"
+   },
+   "pubtables-1m": {
+    "file": "engine/corpus/structured/PUBTABLES1M.json",
+    "sha256": "3d0650e1aad4a69b975a2cbb9c136420444b79b487235cff4d003aefdb66247a"
+   },
+   "parsebench": {
+    "file": "engine/corpus/structured/PARSEBENCH.json",
+    "sha256": "cb5f07d919962b09b1cb4455cef56947c52a21073102372b877bda844a91cc3a"
+   }
+  },
+  "hash": "5fec3c16b54e2881b202f53b8e084577212902416009975dca813d43ee9b562d"
+ },
+ "configs": {
+  "pdfluent-fast-1.2.0": {
+   "tool": "pdfluent_fast"
+  },
+  "pdfluent-balanced-1.2.0": {
+   "tool": "pdfluent_balanced"
+  },
+  "pdfluent-balanced-tatr-1.2.0": {
+   "tool": "pdfluent_balanced_tatr"
+  }
+ },
+ "steps": [
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 120,
+   "started": "2026-10-21T08:51:13+00:00",
+   "status": "ok",
+   "seconds": 20.0
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "fintabnet",
+   "split": "holdout",
+   "pages": 120,
+   "started": "2026-10-21T08:51:33+00:00",
+   "status": "ok",
+   "seconds": 11.0
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 200,
+   "started": "2026-10-21T08:51:44+00:00",
+   "status": "ok",
+   "seconds": 427.9
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "doclaynet",
+   "split": "holdout",
+   "pages": 200,
+   "started": "2026-10-21T08:58:52+00:00",
+   "status": "ok",
+   "seconds": 1208.2
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 120,
+   "started": "2026-10-21T09:19:00+00:00",
+   "status": "ok",
+   "seconds": 41.2
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "pubtables-1m",
+   "split": "holdout",
+   "pages": 120,
+   "started": "2026-10-21T09:19:41+00:00",
+   "status": "ok",
+   "seconds": 16.8
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 40,
+   "started": "2026-10-21T09:19:58+00:00",
+   "status": "ok",
+   "seconds": 23.8
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-fast-1.2.0",
+   "set": "parsebench",
+   "split": "holdout",
+   "pages": 40,
+   "started": "2026-10-21T09:20:22+00:00",
+   "status": "ok",
+   "seconds": 46.4
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 120,
+   "started": "2026-10-21T09:21:08+00:00",
+   "status": "ok",
+   "seconds": 104.9
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "fintabnet",
+   "split": "holdout",
+   "pages": 120,
+   "started": "2026-10-21T09:22:53+00:00",
+   "status": "ok",
+   "seconds": 55.9
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 200,
+   "started": "2026-10-21T09:23:49+00:00",
+   "status": "ok",
+   "seconds": 915.3
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "doclaynet",
+   "split": "holdout",
+   "pages": 200,
+   "started": "2026-10-21T09:39:04+00:00",
+   "status": "ok",
+   "seconds": 1580.9
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 120,
+   "started": "2026-10-21T10:05:25+00:00",
+   "status": "ok",
+   "seconds": 126.7
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "pubtables-1m",
+   "split": "holdout",
+   "pages": 120,
+   "started": "2026-10-21T10:07:32+00:00",
+   "status": "ok",
+   "seconds": 75.0
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 40,
+   "started": "2026-10-21T10:08:47+00:00",
+   "status": "ok",
+   "seconds": 111.4
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-1.2.0",
+   "set": "parsebench",
+   "split": "holdout",
+   "pages": 40,
+   "started": "2026-10-21T10:10:38+00:00",
+   "status": "ok",
+   "seconds": 133.4
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "fintabnet",
+   "split": "tuning",
+   "pages": 120,
+   "started": "2026-10-21T10:12:52+00:00",
+   "status": "ok",
+   "seconds": 135.6
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "fintabnet",
+   "split": "holdout",
+   "pages": 120,
+   "started": "2026-10-21T10:15:07+00:00",
+   "status": "ok",
+   "seconds": 72.7
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "doclaynet",
+   "split": "tuning",
+   "pages": 200,
+   "started": "2026-10-21T10:16:20+00:00",
+   "status": "ok",
+   "seconds": 925.1
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "doclaynet",
+   "split": "holdout",
+   "pages": 200,
+   "started": "2026-10-21T10:31:45+00:00",
+   "status": "ok",
+   "seconds": 1587.5
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "pubtables-1m",
+   "split": "tuning",
+   "pages": 120,
+   "started": "2026-10-21T10:58:13+00:00",
+   "status": "ok",
+   "seconds": 156.8
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "pubtables-1m",
+   "split": "holdout",
+   "pages": 120,
+   "started": "2026-10-21T11:00:50+00:00",
+   "status": "ok",
+   "seconds": 97.1
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "parsebench",
+   "split": "tuning",
+   "pages": 40,
+   "started": "2026-10-21T11:02:27+00:00",
+   "status": "ok",
+   "seconds": 123.6
+  },
+  {
+   "kind": "quality",
+   "config": "pdfluent-balanced-tatr-1.2.0",
+   "set": "parsebench",
+   "split": "holdout",
+   "pages": 40,
+   "started": "2026-10-21T11:04:30+00:00",
+   "status": "ok",
+   "seconds": 142.8
+  }
+ ],
+ "cost_eur_estimate": {
+  "spot": 0.23,
+  "on_demand": 0.9,
+  "basis": "wall clock x configs/machines.yaml price (an estimate; the bill is the record)"
+ },
+ "profile": "full",
+ "splits": [
+  "tuning",
+  "holdout"
+ ],
+ "reps": 3,
+ "runner": "docker",
+ "failures": 0
+}

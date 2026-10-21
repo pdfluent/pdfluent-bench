@@ -1,0 +1,377 @@
+{
+ "draft": false,
+ "missing": [],
+ "configs": [
+  "pdfluent-balanced",
+  "pdfluent-balanced-1.2.0",
+  "pdfluent-balanced-tatr",
+  "pdfluent-balanced-tatr-1.2.0",
+  "pdfluent-fast",
+  "pdfluent-fast-1.2.0"
+ ],
+ "not_run": {},
+ "splits": [],
+ "internal": {},
+ "runs": [
+  {
+   "run_id": "bench-c3-standard-8-20261021T090020Z",
+   "machine": "c3-standard-8",
+   "cpu_model": "Intel(R) Xeon(R) Platinum 8481C CPU @ 2.70GHz",
+   "gpus": [],
+   "harness": {
+    "commit": "ff4eb272d500ad9ba80293550977940c1ae60fde",
+    "dirty": false
+   },
+   "engine_ref": "e1f136aecf3229559009baa7eb7af4498e3aef23",
+   "datasets_hash": "5fec3c16b54e2881b202f53b8e084577212902416009975dca813d43ee9b562d",
+   "started": "2026-10-21T09:00:20+00:00",
+   "wall_clock_s": 6880.1
+  }
+ ],
+ "rows": [
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "ms_p50",
+   "label": "CPU ms/page p50, all cores",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 701.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 687.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 885.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 864.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast": {
+     "value": 20.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 18.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "ms_p95",
+   "label": "CPU ms/page p95, all cores",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 804.6,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 754.4,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 1104.2,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 1074.4,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast": {
+     "value": 50.8,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 41.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "pages_per_s",
+   "label": "CPU pages/s, all cores",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 1.411,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 1.437,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 1.148,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 1.178,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast": {
+     "value": 41.345,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 47.985,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "all",
+   "field": "peak_rss_mb",
+   "label": "CPU peak RSS MB, all cores",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 878.1,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 873.8,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 1000.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 957.4,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast": {
+     "value": 43.3,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 43.7,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "thread variables = 8"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "ms_p50",
+   "label": "CPU ms/page p50, 1 thread",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 6147.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 6129.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 7144.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 7127.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast": {
+     "value": 20.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 18.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "ms_p95",
+   "label": "CPU ms/page p95, 1 thread",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 6291.6,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 6260.8,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 8766.2,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 8729.8,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast": {
+     "value": 50.8,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 41.0,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "pages_per_s",
+   "label": "CPU pages/s, 1 thread",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 0.162,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 0.163,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 0.139,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 0.14,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast": {
+     "value": 41.391,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 47.74,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "threads": "1",
+   "field": "peak_rss_mb",
+   "label": "CPU peak RSS MB, 1 thread",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 874.6,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 876.7,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 934.7,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 979.9,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast": {
+     "value": 42.8,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 43.6,
+     "run_id": "bench-c3-standard-8-20261021T090020Z",
+     "how": "taskset -c 0 and thread variables = 1"
+    }
+   }
+  },
+  {
+   "kind": "speed",
+   "machine": "cpu",
+   "field": "cold_start_ms",
+   "label": "CPU cold start ms (median)",
+   "cells": {
+    "pdfluent-balanced": {
+     "value": 1867,
+     "run_id": "bench-c3-standard-8-20261021T090020Z"
+    },
+    "pdfluent-balanced-1.2.0": {
+     "value": 1868,
+     "run_id": "bench-c3-standard-8-20261021T090020Z"
+    },
+    "pdfluent-balanced-tatr": {
+     "value": 2418,
+     "run_id": "bench-c3-standard-8-20261021T090020Z"
+    },
+    "pdfluent-balanced-tatr-1.2.0": {
+     "value": 2368,
+     "run_id": "bench-c3-standard-8-20261021T090020Z"
+    },
+    "pdfluent-fast": {
+     "value": 113,
+     "run_id": "bench-c3-standard-8-20261021T090020Z"
+    },
+    "pdfluent-fast-1.2.0": {
+     "value": 113,
+     "run_id": "bench-c3-standard-8-20261021T090020Z"
+    }
+   }
+  }
+ ]
+}
