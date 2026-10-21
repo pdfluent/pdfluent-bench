@@ -1,0 +1,13 @@
+# One benchmark configuration. Fields: see bench/configs.py.
+name: pdfluent-fast-1.2.0
+description: PDFluent, quality="fast" -- the text layer and rules, no model.
+tool: pdfluent_fast
+package: pdfluent
+version: "1.2.0"
+vision: false
+models: []
+image: pdfluent-rc
+gpu:
+  route: false
+  why: the fast tier runs no model
+reproducible: public

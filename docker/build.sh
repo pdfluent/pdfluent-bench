@@ -6,7 +6,7 @@
 # that file travels with the copy you received, which a URL does not.
 #
 # Build the images a set of configs needs and record their digests.
-#   docker/build.sh [family ...]     families: pdfluent docling docling-gpu pymupdf4llm best
+#   docker/build.sh [family ...]     families: pdfluent pdfluent-rc docling docling-gpu pymupdf4llm best
 # Writes work/images.json: family -> image id (sha256 of the image config),
 # the tag, the base image reference and the build time. run.json copies it.
 set -euo pipefail
@@ -21,6 +21,11 @@ out="work/images.json"
 for family in "${families[@]}"; do
   args=()
   dir="$family"
+  if [ "$family" = pdfluent-rc ]; then
+    wheel="$(ls docker/pdfluent-rc/wheels/pdfluent-*.whl 2>/dev/null | head -n 1)"
+    [ -n "$wheel" ] || { echo "FATAL: no wheel in docker/pdfluent-rc/wheels/" >&2; exit 2; }
+    args=(--build-arg "PDFLUENT_WHEEL_SHA256=$(sha256sum "$wheel" 2>/dev/null | cut -d' ' -f1 || shasum -a 256 "$wheel" | cut -d' ' -f1)")
+  fi
   if [ "$family" = docling-gpu ]; then
     dir=docling
     args=(--build-arg TORCH_INDEX=https://download.pytorch.org/whl/cu124)

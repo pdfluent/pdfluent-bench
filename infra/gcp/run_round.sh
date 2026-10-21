@@ -139,7 +139,9 @@ trap 'echo "\$?" > ~/round.done' EXIT
 sudo bash /tmp/vm_setup.sh $([ -n "$gpu" ] && echo gpu || echo cpu)
 git clone -q ~/bench.bundle ~/pdfluent-bench
 cd ~/pdfluent-bench || exit 1
-families="pdfluent docling pymupdf4llm"
+# A release-candidate wheel (WHEEL=<file>) travels beside the bundle, not in git.
+[ -d ~/rc-wheel ] && cp ~/rc-wheel/*.whl docker/pdfluent-rc/wheels/
+families="${FAMILIES:-pdfluent docling pymupdf4llm}"
 [ -n "$gpu" ] && families="docling-gpu"
 # The best tier's weights and engine builds are not public; its image is built
 # only when they are provided (BUILD_BEST=1 and the variables in configs/pdfluent-best.yaml).
@@ -197,6 +199,10 @@ run_machine() {
   git bundle create "$LOGS/bench.bundle" HEAD > /dev/null
   "${scp[@]}" "$LOGS/bench.bundle" "$name:~/bench.bundle"
   "${scp[@]}" infra/gcp/vm_setup.sh "$name:/tmp/vm_setup.sh"
+  if [ -n "${WHEEL:-}" ]; then
+    "${ssh[@]}" --command="mkdir -p ~/rc-wheel"
+    "${scp[@]}" "$WHEEL" "$name:~/rc-wheel/"
+  fi
   "${ssh[@]}" --command="echo $m > /tmp/machine; echo $name > /tmp/instance"
   remote_script "$gpu" > "$LOGS/$m-remote.sh"
   "${scp[@]}" "$LOGS/$m-remote.sh" "$name:~/round.sh"

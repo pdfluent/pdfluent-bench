@@ -18,7 +18,8 @@ from skipping import skip
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MATRIX = {"pdfluent-fast", "pdfluent-balanced", "pdfluent-balanced-tatr", "pdfluent-best",
-          "docling-standard", "docling-minimal", "pymupdf4llm"}
+          "docling-standard", "docling-minimal", "pymupdf4llm",
+          "pdfluent-fast-1.2.0", "pdfluent-balanced-1.2.0", "pdfluent-balanced-tatr-1.2.0"}
 
 
 def test_the_matrix_is_complete_and_valid():
