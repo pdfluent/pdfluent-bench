@@ -70,6 +70,14 @@ def skipped_line(reason: str) -> None:
 
 # --- recipes ---------------------------------------------------------------
 
+def recipes_version(path: pathlib.Path = RECIPES) -> dict:
+    """Version and SHA-256 of the recipes file: what every result names."""
+    data = tomllib.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data.get("version"), int):
+        raise Unjudged(f"{path}: top-level integer `version` is missing")
+    return {"version": data["version"], "sha256": _sha256(path)}
+
+
 def load_recipes(path: pathlib.Path = RECIPES) -> dict[str, dict]:
     raw = tomllib.loads(path.read_text(encoding="utf-8")).get("recipe", {})
     recipes = {}
@@ -426,7 +434,9 @@ def cmd_run(args: argparse.Namespace) -> int:
     documents = score(clone, prediction)
     result, violations = judge(args.recipe, documents, split, manifest["manifest_hash"], baseline)
     violations = [f"recipe={args.recipe} document={d}: extraction raised an error" for d in failed] + violations
-    run_json = {"recipe": args.recipe, "recipe_options": recipe, "pdfluent": build,
+    recipe_info = {"name": args.recipe, "file": recipes_version(pathlib.Path(args.recipes)),
+                   "config": recipe, "extract_markdown_kwargs": recipe_kwargs(recipe, "<PDFLUENT_MODEL_DIR>")}
+    run_json = {"recipe": args.recipe, "recipe_config": recipe_info, "pdfluent": build,
                 "bench_commit": PIN, "manifest_hash": manifest["manifest_hash"],
                 "pdfs_combined": manifest["pdfs_combined"], "ground_truth_combined": manifest["ground_truth_combined"],
                 "machine": {"cpu": _cpu(), "os": platform.platform(), "python": platform.python_version()},
@@ -435,8 +445,8 @@ def cmd_run(args: argparse.Namespace) -> int:
                 "violations": violations, "bench_repo_commit": _own_commit()}
     (out / "run.json").write_text(json.dumps(run_json, indent=2) + "\n", encoding="utf-8")
     (out / "scores.json").write_text(json.dumps({"recipe": args.recipe, "manifest_hash": manifest["manifest_hash"],
-                                                 "bench_commit": PIN, "scores": result["scores"],
-                                                 "documents": documents, "split": split}, indent=1) + "\n",
+                                                 "bench_commit": PIN, "recipe_config": recipe_info,
+                                                 "scores": result["scores"], "documents": documents, "split": split}, indent=1) + "\n",
                                      encoding="utf-8")
     _print_scores(result)
     if args.no_gate:

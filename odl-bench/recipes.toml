@@ -16,6 +16,13 @@
 #
 # `routed` (fast, then balanced on the pages with a table) is not here yet.
 
+# Versioned: bump `version` on any change to a recipe. Every run.json and
+# scores.json carries the version, the file's SHA-256 and the full resolved
+# configuration of the recipe it ran, so a score always names its recipe.
+# Library defaults are unchanged; furniture and typography options are opt-in
+# here and named in the recipe (keep_furniture, include_headers/footers).
+version = 1
+
 [recipe.fast]
 quality = "fast"
 

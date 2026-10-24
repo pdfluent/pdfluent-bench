@@ -286,3 +286,10 @@ def test_the_split_loader_refuses_broken_label_files(tmp_path):
 def test_ci_verifies_the_corpus_hashes_and_runs_these_tests_with_the_clone():
     text = (ROOT / ".github" / "workflows" / "ci.yml").read_text()
     assert "bench.odl verify --fetch" in text and "ODL_CLONE" in text
+
+
+def test_every_result_names_its_recipe_version_and_configuration():
+    info = odl.recipes_version()
+    assert isinstance(info["version"], int) and len(info["sha256"]) == 64
+    src = (ROOT / "bench" / "odl.py").read_text()
+    assert src.count('"recipe_config": recipe_info') == 2   # run.json and scores.json
