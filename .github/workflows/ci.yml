@@ -50,7 +50,11 @@ jobs:
           for tool in python3.12 pdftotext mutool git; do
             command -v "$tool" >/dev/null || { echo "the runner has no $tool" >&2; exit 1; }
           done
+      - name: odl-bench corpus at the pinned commit, hashes against the manifest
+        run: python3.12 -m bench.odl verify --fetch --clone "$RUNNER_TEMP/odl-bench-clone"
       - name: Pinned tools, tests, surface check, ParseBench mini subset, schema check
+        env:
+          ODL_CLONE: ${{ runner.temp }}/odl-bench-clone
         run: make repro PY=python3.12 WORK="$RUNNER_TEMP/work"
       - uses: actions/upload-artifact@v4
         if: always()
