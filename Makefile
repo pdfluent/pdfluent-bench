@@ -20,7 +20,7 @@ TOOLS    ?= $(WORK)/tools
 REPRO_CONFIGS ?= pymupdf4llm,pdfluent-fast
 REPRO_SETS    ?= parsebench
 
-.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run
+.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run olmocr-run
 
 help:
 	@echo "make repro                        the whole public subset from a clean checkout: pinned tools,"
@@ -118,3 +118,7 @@ repro: tools
 	  --splits tuning --profile mini --reps 1 --work $(WORK) --out $$out; \
 	$$BENCH_PY -m bench validate $$out; \
 	echo "[repro] ok: $$out"
+
+# olmocr-bench: blind holdout, internal evaluation only (olmocr-bench/README.md)
+olmocr-run:
+	$(PY) -m bench.olmocr run --fetch --recipe "$(RECIPE)" --baseline "$(BASELINE)"

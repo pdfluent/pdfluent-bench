@@ -1,0 +1,19 @@
+# Copyright (c) 2026 Innovation Trigger B.V.
+#
+# PDFluent is available under two licences, at your option: the GNU AGPLv3, or
+# the PDFluent Commercial Licence. See the LICENSE file in this repository --
+# that file travels with the copy you received, which a URL does not.
+#
+# Recipes of the olmocr-bench holdout. Same format and meaning as
+# odl-bench/recipes.toml: a recipe names a set of `extract_markdown` keyword
+# arguments, nothing else. Bump `version` on any change; every run.json carries
+# the version, the file's SHA-256 and the full resolved configuration.
+version = 1
+
+[recipe.fast]
+quality = "fast"
+
+[recipe."balanced+tatr"]
+quality = "balanced"
+models = true
+tatr = true
