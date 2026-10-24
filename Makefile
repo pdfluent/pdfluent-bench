@@ -20,7 +20,7 @@ TOOLS    ?= $(WORK)/tools
 REPRO_CONFIGS ?= pymupdf4llm,pdfluent-fast
 REPRO_SETS    ?= parsebench
 
-.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run
+.PHONY: axes-combine axes-gate help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run
 
 help:
 	@echo "make repro                        the whole public subset from a clean checkout: pinned tools,"
@@ -100,6 +100,16 @@ odl-verify:
 odl-run:
 	$(PY) -m bench.odl run --fetch --clone $(ODL_CLONE) --recipe "$(RECIPE)" --baseline "$(BASELINE)" \
 	  --out results/odl-$$(date -u +%Y%m%dT%H%M%SZ)
+
+# The 19 holdout cells: `make axes-combine RUNS='results/<a> results/<b>' OUT=axis_means.json`,
+# `make axes-gate BASELINE=<file> CANDIDATE=<file>` (exit 1 on a drop, 3 when a value is missing).
+OUT       ?= axis_means.json
+CANDIDATE ?=
+axes-combine:
+	$(PY) -m bench.axes combine $(RUNS) --out $(OUT)
+
+axes-gate:
+	$(PY) -m bench.axes gate --baseline "$(BASELINE)" --candidate "$(CANDIDATE)" --tolerance 0.005
 
 public-check:
 	$(PY) scripts/check_public_surface.py
