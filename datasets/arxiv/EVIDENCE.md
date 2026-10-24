@@ -46,4 +46,64 @@ holdout registry of #971) are rejected as `sealed-holdout:<name>`.
 
 ## Results
 
-RESULTS_PLACEHOLDER
+Metadata harvested 2026-10-24 and 25 through OAI-PMH `arXivRaw`: **3,224,546 records** (two windows: datestamps
+from 2023-12-01, then everything up to 2023-12-11; together all of arXiv as of 2026-10-23).
+Reproduce the counts with `python -m bench.arxiv report --data <dir>`; the machine-readable copy is
+`reject-report.json` next to this file.
+
+### Licence values in the metadata
+
+| `license` value | records |
+|---|---|
+| `http://arxiv.org/licenses/nonexclusive-distrib/1.0/` | 1,937,672 |
+| `http://creativecommons.org/licenses/by/4.0/` | 604,366 |
+| `(missing)` | 452,704 |
+| `http://creativecommons.org/licenses/by-nc-nd/4.0/` | 92,066 |
+| `http://creativecommons.org/licenses/by-nc-sa/4.0/` | 67,636 |
+| `http://creativecommons.org/licenses/by-sa/4.0/` | 31,402 |
+| `http://creativecommons.org/publicdomain/zero/1.0/` | 22,443 |
+| `http://creativecommons.org/licenses/by/3.0/` | 7,912 |
+| `http://creativecommons.org/licenses/by-nc-sa/3.0/` | 5,871 |
+| `http://creativecommons.org/licenses/publicdomain/` | 2,474 |
+
+### Eligible pool
+
+**665,925 papers** pass the filter after the olmOCR-bench exclusion.
+
+| kept as | papers |
+|---|---|
+| CC-BY-3.0 | 7,912 |
+| CC-BY-4.0 | 604,179 |
+| CC-BY-SA-4.0 | 31,396 |
+| CC0-1.0 | 22,438 |
+
+- CC BY-SA (flagged `share_alike`): 31,396.
+- With a primary category that is math-heavy (`math.*`, `math-ph`, `stat.TH`, `cs.IT`, `cs.LO`, `cs.DM`, `cs.CC`,
+  `cs.FL`, `quant-ph`, `hep-th`, `gr-qc`): 165,777.
+- With an id from 2401 on, so an `arxiv.org/html` page can exist: 382,574.
+- The largest primary categories are cs.LG, cs.CV, cs.CL, quant-ph, cs.AI, hep-ph (see `reject-report.json`).
+
+### Reject report (everything not kept, by reason)
+
+| reason | papers |
+|---|---|
+| `licence:http://arxiv.org/licenses/nonexclusive-distrib/1.0/` | 1,937,403 |
+| `missing` | 452,704 |
+| `licence:http://creativecommons.org/licenses/by-nc-nd/4.0/` | 92,030 |
+| `licence:http://creativecommons.org/licenses/by-nc-sa/4.0/` | 67,617 |
+| `licence:http://creativecommons.org/licenses/by-nc-sa/3.0/` | 5,871 |
+| `licence:http://creativecommons.org/licenses/publicdomain/` | 2,474 |
+| `sealed-holdout:olmocr-bench` | 522 |
+
+A record with no `license` element (452,704, all with an old-style id or an id from 0704 to 0812) is rejected as `missing`.
+`sealed-holdout:olmocr-bench` counts the papers whose id appears in the olmOCR-bench list of the registry (522 ids);
+they are rejected before the licence is looked at, so some of them would have failed the licence anyway.
+
+### First sample
+
+`sample-2000.jsonl`: 2,000 licence-eligible papers, ids from 2401 on, drawn with seed `pdfluent-arxiv-sample-1`:
+1,000 math-heavy and 1,000 other, round-robin over 149 primary categories, so any prefix is as spread as the whole.
+1839 CC BY 4.0, 93 CC BY-SA 4.0 (flagged), 68 CC0 1.0.
+Each row has the arXiv id, version, licence URL, authors, title, categories, creation date, retrieval date and source route.
+**PDF, HTML and source tarballs of this sample have not been fetched**: see "Content is gated".
+
