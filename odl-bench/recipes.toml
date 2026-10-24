@@ -1,0 +1,51 @@
+# Copyright (c) 2026 Innovation Trigger B.V.
+#
+# PDFluent is available under two licences, at your option: the GNU AGPLv3, or
+# the PDFluent Commercial Licence. See the LICENSE file in this repository --
+# that file travels with the copy you received, which a URL does not.
+#
+# The recipes of the odl-bench set. One file, one place: a recipe is a name for
+# a set of `extract_markdown` keyword arguments, nothing else. The adapter
+# passes every key under `options` through; an option the installed wheel does
+# not know is a TypeError and fails the run, it is never dropped.
+#
+#   quality  "fast" or "balanced"
+#   models   true when the recipe needs the layout model (and the ONNX runtime)
+#   tatr     true when the table structure model is switched on as well
+#   options  extra keyword arguments of extract_markdown
+#
+# `routed` (fast, then balanced on the pages with a table) is not here yet.
+
+# Versioned: bump `version` on any change to a recipe. Every run.json and
+# scores.json carries the version, the file's SHA-256 and the full resolved
+# configuration of the recipe it ran, so a score always names its recipe.
+# Library defaults are unchanged; furniture and typography options are opt-in
+# here and named in the recipe (keep_furniture, include_headers/footers).
+version = 1
+
+[recipe.fast]
+quality = "fast"
+
+[recipe."fast+footers"]
+quality = "fast"
+options = { include_headers = true, include_footers = true }
+
+[recipe.balanced]
+quality = "balanced"
+models = true
+
+[recipe."balanced+kf"]
+quality = "balanced"
+models = true
+options = { keep_furniture = true }
+
+[recipe."balanced+tatr"]
+quality = "balanced"
+models = true
+tatr = true
+
+[recipe."balanced+tatr+kf"]
+quality = "balanced"
+models = true
+tatr = true
+options = { keep_furniture = true }
