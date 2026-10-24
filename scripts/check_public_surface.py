@@ -50,9 +50,11 @@ RULES = [
 ALLOWED_PATHS = {
     "engine/scripts/extraction/lexicon/en_scowl60-rel-2026.02.25.txt",
     "engine/corpus/structured/PARSEBENCH.json",
+    "datasets/arxiv/sample-2000.jsonl",
 }
-# The manifests are scanned for every rule except the tool names.
-SKIP_RULE_IN = {"engine/corpus/structured/PARSEBENCH.json": {"tool name"}}
+# The manifests are scanned for every rule except the tool names (paper titles and author surnames).
+SKIP_RULE_IN = {"engine/corpus/structured/PARSEBENCH.json": {"tool name"},
+                "datasets/arxiv/sample-2000.jsonl": {"tool name"}}
 
 
 def tracked() -> list[str]:
