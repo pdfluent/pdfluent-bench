@@ -1,0 +1,87 @@
+{
+ "axes19": {
+  "derived_from": [
+   "doclaynet-test",
+   "pubtables-1m-test",
+   "fintabnet-test",
+   "parsebench"
+  ],
+  "half": "holdout"
+ },
+ "hamming": 14,
+ "holdouts": {
+  "doclaynet-test": {
+   "file": "holdouts/doclaynet-test.jsonl",
+   "licence": "CDLA-Permissive-1.0",
+   "pages": 4951,
+   "reason": "51 of 4951 pages are registered by byte hash and document id only: their files are not on this machine, or they have neither a text layer nor a usable render",
+   "revision": "0daf93102e2efce76c3e11a274a5e0d0969391d3",
+   "seal": "d2b38769ca55c7d565932e5c9641a2d1011f9aff695ab4f5bd9f55f5f84517ba",
+   "source": "https://huggingface.co/datasets/docling-project/DocLayNet-v1.2",
+   "status": "partial",
+   "with_render": 4896,
+   "with_text": 4592
+  },
+  "docling-dpbench": {
+   "file": null,
+   "pages": 0,
+   "reason": "docling-dpbench is not on this machine; its pages re-render the DP-Bench documents, so the render hashes of dp-bench match them once it is fetched",
+   "seal": "",
+   "status": "skipped"
+  },
+  "dp-bench": {
+   "file": "holdouts/dp-bench.jsonl",
+   "pages": 200,
+   "seal": "52b4a2ff6576cc99cbe0a531920a99ff77d7080eef2b3cd05029b0901a04e68a",
+   "source": "opendataloader-bench @ 7af1d8f4d0c09f51ea1a5c6ba5f66e993286d109",
+   "status": "complete",
+   "with_render": 200,
+   "with_text": 197
+  },
+  "fintabnet-test": {
+   "file": "holdouts/fintabnet-test.jsonl",
+   "licence": "CDLA-Permissive-1.0 (FinTabNet 1.0.0); CDLA-Permissive-2.0 (FinTabNet.c)",
+   "pages": 300,
+   "revision": "e30b3df79e3c3d253af3fa5764e8ad7d702e5891",
+   "seal": "56cca1839c15e28e18827ec08053fbe2e488aa5ad13fef6d95004c6b94b5921a",
+   "source": "https://huggingface.co/datasets/Leon1207/FinTabNet (archive.zip, 16,776,878,936 bytes); https://huggingface.co/datasets/bsmock/FinTabNet.c",
+   "status": "complete",
+   "with_render": 300,
+   "with_text": 300
+  },
+  "olmocr-bench": {
+   "file": "holdouts/olmocr-bench.jsonl",
+   "pages": 1403,
+   "seal": "91ffb71d8c4debfe24415bd1c20cac21479f238ef12d947c64ee6a9cb0126ea9",
+   "source": "allenai/olmOCR-bench, hashes only (blind)",
+   "status": "complete",
+   "with_render": 1403,
+   "with_text": 1201
+  },
+  "parsebench": {
+   "file": "holdouts/parsebench.jsonl",
+   "licence": "Apache-2.0 (dataset card), over third-party documents it does not own",
+   "pages": 2039,
+   "reason": "1800 of 2039 pages are registered by byte hash and document id only: their files are not on this machine, or they have neither a text layer nor a usable render",
+   "revision": "2805a1d940f95a203e0ae4b88be9934f7765b3fc",
+   "seal": "3ca0bd7d988ffe6b08b164175c1e77d896ffe67538dce911055a8fc306d34ff5",
+   "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+   "status": "partial",
+   "with_render": 239,
+   "with_text": 217
+  },
+  "pubtables-1m-test": {
+   "file": "holdouts/pubtables-1m-test.jsonl",
+   "licence": "CDLA-Permissive-2.0 (annotations); per article, CC0 or CC BY only (documents)",
+   "pages": 400,
+   "reason": "400 of 400 pages are registered by byte hash and document id only: the pages are cut with mutool 1.23.10 and this machine has another version, so they are not materialised",
+   "revision": "35b1c097807e0b07ec5313879b85956b7b3890db",
+   "seal": "e01a7daa56edc7f290fc7540a506809696e2c9fa7a06eadec69ce3cdba0c03ff",
+   "source": "https://huggingface.co/datasets/bsmock/pubtables-1m",
+   "status": "partial",
+   "with_render": 0,
+   "with_text": 0
+  }
+ },
+ "version": 1
+}

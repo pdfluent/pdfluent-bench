@@ -20,12 +20,13 @@ TOOLS    ?= $(WORK)/tools
 REPRO_CONFIGS ?= pymupdf4llm,pdfluent-fast
 REPRO_SETS    ?= parsebench
 
-.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run
+.PHONY: registry-check help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run
 
 help:
 	@echo "make repro                        the whole public subset from a clean checkout: pinned tools,"
 	@echo "                                  tests, real ParseBench pages, run, schema check, surface check"
 	@echo "make test                         unit tests: scorers, equivalence, harness"
+	@echo "make registry-check               no sealed-holdout page in a dev, validation or training layer (#971)"
 	@echo "make validate RUNS='results/<id>' check run directories against schema/"
 	@echo "make odl-verify                  odl-bench: clone the pinned commit, check the corpus hashes"
 	@echo "make odl-run RECIPE=fast+footers BASELINE=<file>   odl-bench: one recipe, gated (see odl-bench/README.md)"
@@ -43,6 +44,9 @@ help:
 
 test:
 	$(PY) -m pytest -q tests
+
+registry-check:
+	$(PY) -m bench.registry check
 
 bench:
 	$(PY) -m bench run --machine $(MACHINE) --configs $(CONFIGS) --sets $(SETS) \
