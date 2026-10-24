@@ -188,3 +188,10 @@ states the offer. This covers the files written for this repository and the
 files under `engine/`, which are copied from the PDFluent engine and carry the
 same header. The datasets are not part of this repository and keep their own
 licences, listed in [DATASETS.md](DATASETS.md).
+
+## More from PDFluent
+
+- [PDFluent SDK](https://github.com/pdfluent/pdfluent-sdk) and its [documentation](https://pdfluent.com/docs): the engine under test.
+- [How we benchmark](https://pdfluent.com/benchmarks/how-we-measure/) and the [published results](https://pdfluent.com/benchmarks/) on pdfluent.com.
+- [pdfluent-mcp](https://github.com/pdfluent/pdfluent-mcp) and the [examples](https://github.com/pdfluent/examples).
+- [PDFluent editor](https://github.com/pdfluent/pdfluent): a free desktop PDF editor, including for commercial use.
