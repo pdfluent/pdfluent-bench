@@ -20,13 +20,15 @@ TOOLS    ?= $(WORK)/tools
 REPRO_CONFIGS ?= pymupdf4llm,pdfluent-fast
 REPRO_SETS    ?= parsebench
 
-.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check
+.PHONY: help test bench smoke report compare datasets datasets-plan images cost fixtures goldens port tools repro validate public-check odl-verify odl-run
 
 help:
 	@echo "make repro                        the whole public subset from a clean checkout: pinned tools,"
 	@echo "                                  tests, real ParseBench pages, run, schema check, surface check"
 	@echo "make test                         unit tests: scorers, equivalence, harness"
 	@echo "make validate RUNS='results/<id>' check run directories against schema/"
+	@echo "make odl-verify                  odl-bench: clone the pinned commit, check the corpus hashes"
+	@echo "make odl-run RECIPE=fast+footers BASELINE=<file>   odl-bench: one recipe, gated (see odl-bench/README.md)"
 	@echo "make public-check                 no home paths, tool names or credentials in the tree or history"
 	@echo "make bench MACHINE=<type> CONFIGS=<list|all> SETS=<list|all> [SPLITS=tuning,holdout BECAUSE=...]"
 	@echo "                                  [PROFILE=full|mini] [REPS=3] [RUNNER=native|docker]"
@@ -88,6 +90,16 @@ tools:
 
 validate:
 	$(PY) -m bench validate $(RUNS)
+
+ODL_CLONE ?= $(WORK)/odl-bench-clone
+RECIPE    ?= fast+footers
+BASELINE  ?=
+odl-verify:
+	$(PY) -m bench.odl verify --fetch --clone $(ODL_CLONE)
+
+odl-run:
+	$(PY) -m bench.odl run --fetch --clone $(ODL_CLONE) --recipe "$(RECIPE)" --baseline "$(BASELINE)" \
+	  --out results/odl-$$(date -u +%Y%m%dT%H%M%SZ)
 
 public-check:
 	$(PY) scripts/check_public_surface.py

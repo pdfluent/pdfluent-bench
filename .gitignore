@@ -8,3 +8,4 @@ __pycache__/
 /results/local-*/
 /results/smoke-*/
 /results/ci-*/
+/results/odl-*/
