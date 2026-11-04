@@ -1,14 +1,59 @@
-# pdfluent-bench
+<h1 align="center">pdfluent-bench</h1>
 
-A benchmark harness for structured extraction from PDF: headings, lists,
-tables, running text and reading order, plus speed and memory. It runs each
-tool on the same pages, on the same machine, with the same scorer, and writes
-everything a reader needs to rerun it: the tool versions, the container image
-digests, the dataset manifests and the harness commit.
+<p align="center"><strong>A benchmark harness for structured extraction from PDF.</strong><br/>
+Every tool runs on the same pages, on the same machine, with the same scorer. Everything a reader needs to rerun it is written next to the results.</p>
 
-The results of one published round are in `results/`, one directory per run.
-A number from a run is quoted elsewhere only with its claim ID, the run ID and
-the date it was measured (see [Published figures](#published-figures)).
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0--only-111111" alt="Licence: AGPL-3.0-only"/></a>
+  <a href="LICENSE-COMMERCIAL"><img src="https://img.shields.io/badge/or-commercial-111111" alt="Or the PDFluent Commercial Licence"/></a>
+  <a href="https://pdfluent.com/benchmarks/opendataloader-bench"><img src="https://img.shields.io/badge/results-pdfluent.com-111111" alt="Results on pdfluent.com"/></a>
+  <a href="https://github.com/pdfluent"><img src="https://img.shields.io/badge/by-PDFluent-111111" alt="By PDFluent"/></a>
+</p>
+
+The harness records the tool versions, the container image digests, the dataset
+manifests and the harness commit. The results of one published round are in
+`results/`, one directory per run. A number from a run is quoted elsewhere only
+with its claim ID, the run ID and the date it was measured (see
+[Published figures](#published-figures)).
+
+| Measured | How |
+|---|---|
+| Headings | F1 over the annotated items |
+| Lists | F1 over the annotated items |
+| Tables | F1 over found tables, and TEDS over table structure where the set annotates cells |
+| Reading order | Agreement over matched blocks, against the annotated order and a plain geometric order |
+| Speed | Milliseconds per page (p50 and p95), pages per second, and cold start |
+| Memory | Peak resident memory of the process tree |
+
+Running text is scored too, as the edit distance over the page's text and as an
+order-free word F1. The full list of axes is under [What is measured](#what-is-measured).
+
+## Quick start
+
+```sh
+make repro PY=python3.12
+```
+
+From a clean checkout this builds the pinned tool environments, runs the tests
+and a real-data subset, and exits non-zero if any step fails. Details are under
+[Reproduce it in one command](#reproduce-it-in-one-command).
+
+## Latest result
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pdfluent/.github/main/profile/assets/odl-overall-dark.svg">
+    <img src="https://raw.githubusercontent.com/pdfluent/.github/main/profile/assets/odl-overall-light.svg" alt="opendataloader-bench overall score chart" width="760"/>
+  </picture>
+</p>
+
+PDFluent 1.3.0 ranks above every engine on the published opendataloader-bench leaderboard (as of 3 November 2026)*.
+
+<sub>*Overall score 0.9168 (quality="auto", keep_furniture=True, Linux) against the engines listed in the benchmark README on 3 November 2026; submitted as pull request #37. Other engines have submissions open that are not yet on the leaderboard.</sub>
+
+[Full tables and how to reproduce](https://pdfluent.com/benchmarks/opendataloader-bench)
+
+---
 
 ## What is measured
 
