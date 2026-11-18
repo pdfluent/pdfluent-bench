@@ -9,3 +9,7 @@ __pycache__/
 /results/smoke-*/
 /results/ci-*/
 /results/odl-*/
+
+# Private: per-page hashes of the sealed holdouts and the arXiv sample. Aggregates only are committed.
+datasets/registry/holdouts/
+datasets/arxiv/sample-*.jsonl
