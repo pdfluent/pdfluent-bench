@@ -24,7 +24,7 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           set -u
-          pattern='^Co-Authored-By:.*(claude|anthropic)|noreply@anthropic\.com|Generated with \[?Claude|🤖 Generated with'
+          pattern='^Co-Authored-[B]y:.*(cl[a]ude|anthrop[i]c)|noreply@anthrop[i]c\.com|Generated [w]ith \[?Cl[a]ude|🤖 Generated [w]ith'
           zero=0000000000000000000000000000000000000000
           if [ "$EVENT_NAME" = "pull_request" ]; then
             range="$PR_BASE..$PR_HEAD"
@@ -36,7 +36,7 @@ jobs:
           bad=0
           for c in $(git log --format=%H $range); do
             if git log -1 --format=%B "$c" | grep -qiE "$pattern"; then
-              echo "::error::Commit $c carries tool attribution (Co-Authored-By Claude/Anthropic, noreply@anthropic.com or a 'Generated with Claude' line). Remove it from the commit message."
+              echo "::error::Commit $c carries an AI tool attribution (a co-author trailer, a vendor no-reply address or a generated-by line). Remove it from the commit message."
               bad=1
             fi
           done
@@ -48,7 +48,7 @@ jobs:
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BODY: ${{ github.event.pull_request.body }}
         run: |
-          pattern='^Co-Authored-By:.*(claude|anthropic)|noreply@anthropic\.com|Generated with \[?Claude|🤖 Generated with'
+          pattern='^Co-Authored-[B]y:.*(cl[a]ude|anthrop[i]c)|noreply@anthrop[i]c\.com|Generated [w]ith \[?Cl[a]ude|🤖 Generated [w]ith'
           if printf '%s\n%s\n' "$PR_TITLE" "$PR_BODY" | grep -qiE "$pattern"; then
             echo "::error::The pull request title or body carries tool attribution. Remove it."
             exit 1

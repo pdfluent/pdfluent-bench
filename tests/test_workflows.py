@@ -3,7 +3,7 @@
 # PDFluent is available under two licences, at your option: the GNU AGPLv3, or
 # the PDFluent Commercial Licence. See the LICENSE file in this repository --
 # that file travels with the copy you received, which a URL does not.
-"""The CI contract: own runner, no soft failure, nothing a fork can trigger."""
+"""The CI contract: hosted runners only, no soft failure, no secret a fork can reach."""
 import pathlib
 
 import yaml
@@ -30,9 +30,8 @@ def labels(job):
     return [runs_on] if isinstance(runs_on, str) else list(runs_on)
 
 
-def runs_on_the_repository_runner(workflow):
-    return all("self-hosted" in labels(j) and "pdfluent-bench" in labels(j)
-               for j in workflow["jobs"].values())
+def runs_on_hosted_runners(workflow):
+    return all("self-hosted" not in labels(j) for j in workflow["jobs"].values())
 
 
 def fork_exposure(workflow, text):
@@ -50,11 +49,9 @@ def fork_exposure(workflow, text):
     return problems
 
 
-def test_every_job_without_a_fork_trigger_runs_on_the_repository_runner():
+def test_every_job_runs_on_a_github_hosted_runner():
     for path in WORKFLOWS:
-        workflow = load(path)
-        if not set(workflow["on"]) & FORK_TRIGGERS:
-            assert runs_on_the_repository_runner(workflow), path.name
+        assert runs_on_hosted_runners(load(path)), path.name
 
 
 def test_no_job_may_fail_softly():

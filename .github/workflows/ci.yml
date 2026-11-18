@@ -1,17 +1,13 @@
-# Tests and a real-data subset on every push, on the repository's own runner.
+# Tests and a real-data subset on every push and pull request, on GitHub-hosted
+# runners (free for a public repository).
 #
-# Nothing here uses a hosted runner: the job runs on a machine labelled
-# `pdfluent-bench`, so a push costs no hosted minutes. The workflow reacts to
-# `push` and `workflow_dispatch` only, never to `pull_request`: a self-hosted
-# runner executes whatever the triggering ref contains, so code from a fork must
-# not reach it. tests/test_workflows.py enforces all of this.
-#
-# The runner needs: Linux, python3.12, poppler-utils (pdftotext), mupdf-tools
-# (mutool), git and network access to PyPI and Hugging Face. For the full run
-# it also needs docker.
+# No job uses a self-hosted runner: a hosted runner is a fresh virtual machine
+# per job, so code from a pull request cannot reach any machine of ours, and no
+# workflow here uses a secret. tests/test_workflows.py enforces both.
 name: ci
 on:
   push:
+  pull_request:
   workflow_dispatch:
     inputs:
       full:
@@ -35,17 +31,24 @@ permissions:
   contents: read
 
 concurrency:
-  group: bench-runner
-  cancel-in-progress: false
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   subset:
     name: tests and the public subset on real pages
-    runs-on: [self-hosted, linux, pdfluent-bench]
+    runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - name: Tools the harness calls
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System tools the harness calls
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q poppler-utils mupdf-tools
+      - name: Check the tools are present
         run: |
           for tool in python3.12 pdftotext mutool git; do
             command -v "$tool" >/dev/null || { echo "the runner has no $tool" >&2; exit 1; }
@@ -62,10 +65,13 @@ jobs:
     name: full round (manual)
     if: github.event_name == 'workflow_dispatch' && inputs.full
     needs: subset
-    runs-on: [self-hosted, linux, pdfluent-bench]
-    timeout-minutes: 720
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - run: scripts/make_tools.sh "$RUNNER_TEMP/tools" python3.12
       - name: Images, then the round
         env:
