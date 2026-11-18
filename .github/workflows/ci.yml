@@ -50,11 +50,20 @@ jobs:
           sudo apt-get install -y -q poppler-utils mupdf-tools
       - name: Check the tools are present
         run: |
-          for tool in python3.12 pdftotext mutool git; do
+          for tool in python3.12 pdftotext pdftoppm mutool git; do
             command -v "$tool" >/dev/null || { echo "the runner has no $tool" >&2; exit 1; }
           done
       - name: odl-bench corpus at the pinned commit, hashes against the manifest
         run: python3.12 -m bench.odl verify --fetch --clone "$RUNNER_TEMP/odl-bench-clone"
+      - name: Leak check of the data layers against the sealed holdouts
+        run: |
+          rc=0
+          python3.12 -m bench.registry check || rc=$?
+          if [ "$rc" -eq 3 ]; then
+            echo "::warning title=SKIPPED (not a pass)::the per-page holdout hashes are private and not in this checkout; the leak check ran only on what is committed"
+          elif [ "$rc" -ne 0 ]; then
+            exit "$rc"
+          fi
       - name: Pinned tools, tests, surface check, ParseBench mini subset, schema check
         env:
           ODL_CLONE: ${{ runner.temp }}/odl-bench-clone
