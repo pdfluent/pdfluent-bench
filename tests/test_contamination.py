@@ -68,6 +68,11 @@ def test_the_real_pdf_text_route_finds_a_planted_dp_bench_document():
     pdf = pathlib.Path(clone or "/nonexistent") / "pdfs" / KNOWN
     if not pdf.exists():
         skip("ODL_CLONE not set or has no pdfs/: the real-PDF plant needs the pinned odl-bench clone")
+    version = subprocess.run(["pdftotext", "-v"], capture_output=True, text=True).stderr
+    major = int(version.split("version")[1].split(".")[0]) if "version" in version else 0
+    if major < 25:
+        skip(f"poppler {major or 'unknown'} splits soft-hyphenated words differently from the poppler 25+ "
+             "that built the reference fingerprints; the synthetic plants above still run")
     text = subprocess.run(["pdftotext", "-l", "3", "-enc", "UTF-8", str(pdf), "-"],
                           capture_output=True, text=True, check=True).stdout
     found = c.match(CLEAN + [{"name": "planted.txt", "text": text}], reference())
