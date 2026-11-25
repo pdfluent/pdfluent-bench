@@ -15,6 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ALIAS: 10383561+jasperdew@users.noreply.github.com
+      # Commits made before the sign-off rule reached this repository (early November 2026). History is not
+      # rewritten on a public repository, so these three are exempt from the sign-off check only; every other
+      # commit, and these three for the identity check, are still checked.
+      LEGACY_NO_SIGNOFF: >-
+        ef4ad9e3bfc81ac5cb60e9922679eb560ebc63e5
+        fc42ad8cd6665d7673f722f4714ceb2d265ee488
+        52fa0828b5f03f4e16be67349ec21b1e38322263
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,6 +50,7 @@ jobs:
         run: |
           bad=0
           for c in $(git rev-list "${{ steps.range.outputs.range }}"); do
+            case " $LEGACY_NO_SIGNOFF " in *" $c "*) continue ;; esac
             git log -1 --format=%B "$c" | grep -q '^Signed-off-by: ' || { echo "::error::commit $c has no Signed-off-by"; bad=1; }
           done
           exit $bad
